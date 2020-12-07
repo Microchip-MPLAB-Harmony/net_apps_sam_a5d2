@@ -456,7 +456,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '100000'}
+        attributes: {value: '164000'}
   - type: Integer
     attributes: {id: IAR_IRQ_STACK_SIZE}
     children:
