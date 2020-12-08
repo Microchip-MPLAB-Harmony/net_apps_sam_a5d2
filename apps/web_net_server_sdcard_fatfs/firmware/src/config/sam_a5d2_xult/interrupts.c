@@ -168,6 +168,8 @@ IrqData irqData[] = {
     { 25,  (uint32_t) AIC_REGS,    UART1_InterruptHandler,     AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0 },
     { 32,  (uint32_t) AIC_REGS,    SDMMC1_InterruptHandler,    AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0 },
     { 35,  (uint32_t) AIC_REGS,    TC0_InterruptHandler,       AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0 },
+    { 66,  (uint32_t) AIC_REGS,    GMAC_Q1_Handler,            AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0 },
+    { 67,  (uint32_t) AIC_REGS,    GMAC_Q2_Handler,            AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0 },
 };
 
 uint32_t irqDataEntryCount = sizeof( irqData ) / sizeof( irqData[ 0 ]);
