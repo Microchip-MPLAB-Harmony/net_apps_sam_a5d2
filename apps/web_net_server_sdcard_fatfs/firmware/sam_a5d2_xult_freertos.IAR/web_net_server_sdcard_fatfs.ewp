@@ -220,9 +220,9 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>__FPU_PRESENT=1</state>
                     <state>HAVE_CONFIG_H</state>
                     <state>WOLFSSL_IGNORE_FILE_WARN</state>
+                    <state>__FPU_PRESENT=1</state>
                     <state>__SAMA5D2__</state>
                     <state>__PIC32C__</state>
                 </option>
@@ -264,7 +264,7 @@
                 </option>
                 <option>
                     <name>CCDiagSuppress</name>
-                    <state>Pe186,Pe188,Pa089</state>
+                    <state>Pe186,Pe188,Pa089,Pa039</state>
                 </option>
                 <option>
                     <name>CCDiagRemark</name>
@@ -1025,7 +1025,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>###Unitialized###</state>
+                    <state>web_net_server_sdcard_fatfs_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -1300,10 +1300,10 @@
                 <debug>0</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>NDEBUG</state>
-                    <state>__FPU_PRESENT=1</state>
                     <state>HAVE_CONFIG_H</state>
                     <state>WOLFSSL_IGNORE_FILE_WARN</state>
+                    <state>NDEBUG</state>
+                    <state>__FPU_PRESENT=1</state>
                     <state>__SAMA5D2__</state>
                     <state>__PIC32C__</state>
                 </option>
@@ -2438,6 +2438,12 @@
                                     <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\tcpip_helpers_private.h</name>
                                 </file>
                                 <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\tcpip_mac_bridge_manager.h</name>
+                                </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\tcpip_mac_bridge_private.h</name>
+                                </file>
+                                <file>
                                     <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\tcpip_manager_control.h</name>
                                 </file>
                                 <file>
@@ -2595,6 +2601,9 @@
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\tcpip_mac.h</name>
                             </file>
                             <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\tcpip_mac_bridge.h</name>
+                            </file>
+                            <file>
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\tcpip_mac_object.h</name>
                             </file>
                             <file>
@@ -2655,6 +2664,18 @@
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_transportapi.h</name>
                             </file>
                         </group>
+                    </group>
+                    <group>
+                        <name>osal</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_definitions.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_freertos.h</name>
+                        </file>
                     </group>
                     <group>
                         <name>peripheral</name>
@@ -2806,13 +2827,7 @@
                             </file>
                         </group>
                         <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_clk_h2_adapter.h</name>
-                        </file>
-                        <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_random_h2_adapter.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_reset_h2_adapter.h</name>
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_time_h2_adapter.h</name>
@@ -2838,6 +2853,9 @@
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\definitions.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\device.h</name>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\device_cache.h</name>
@@ -3093,9 +3111,6 @@
                     </group>
                     <file>
                         <name>$PROJ_DIR$\..\src\packs\ATSAMA5D27_DFP\atsama5d27.h</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\packs\ATSAMA5D27_DFP\device.h</name>
                     </file>
                 </group>
                 <group>
@@ -3363,6 +3378,9 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\curve25519.h</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\curve448.h</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\des3.h</name>
                 </file>
                 <file>
@@ -3378,13 +3396,22 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\ed25519.h</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\ed448.h</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\error-crypt.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\fe_448.h</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\fe_operations.h</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\fips_test.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\ge_448.h</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\ge_operations.h</name>
@@ -3557,15 +3584,6 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\src\http_net_print.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_definitions.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_freertos.h</name>
             </file>
         </group>
         <group>
@@ -3749,6 +3767,12 @@
                         </group>
                     </group>
                     <group>
+                        <name>osal</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_freertos.c</name>
+                        </file>
+                    </group>
+                    <group>
                         <name>peripheral</name>
                         <group>
                             <name>aic</name>
@@ -3894,6 +3918,9 @@
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\time\src\sys_time.c</name>
                             </file>
                         </group>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_random_h2_adapter.c</name>
+                        </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_time_h2_adapter.c</name>
                         </file>
@@ -4167,6 +4194,9 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\curve25519.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\curve448.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\des3.c</name>
                 </file>
                 <file>
@@ -4185,13 +4215,22 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ed25519.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ed448.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\error.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\fe_448.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\fe_low_mem.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\fe_operations.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ge_448.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ge_low_mem.c</name>
@@ -4287,6 +4326,9 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_cortexm.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_dsp32.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_int.c</name>
                 </file>
                 <file>
@@ -4297,6 +4339,9 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\tfm.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\wc_dsp.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\wc_encrypt.c</name>
@@ -4355,9 +4400,6 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\src\main.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_freertos.c</name>
             </file>
         </group>
     </group>

@@ -44,6 +44,8 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 #include "wolfssl/wolfcrypt/logging.h"
 #include "wolfssl/wolfcrypt/random.h"
 
+extern  int CheckAvailableSize(WOLFSSL *ssl, int size);
+
 
 typedef struct 
 {
