@@ -220,7 +220,6 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>__FPU_PRESENT=1</state>
                     <state>__SAMA5D2__</state>
                     <state>__PIC32C__</state>
                 </option>
@@ -1300,7 +1299,6 @@
                 <debug>0</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>__FPU_PRESENT=1</state>
                     <state>NDEBUG</state>
                 </option>
                 <option>
@@ -2240,16 +2238,10 @@
                             </file>
                         </group>
                         <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\system\sys_clk_h2_adapter.h</name>
-                        </file>
-                        <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\system\sys_time_h2_adapter.h</name>
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\system\sys_random_h2_adapter.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\system\sys_reset_h2_adapter.h</name>
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\system\system.h</name>
@@ -2294,6 +2286,9 @@
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\bsp\bsp.h</name>
                         </file>
                     </group>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\device.h</name>
+                    </file>
                     <group>
                         <name>library</name>
                         <group>
@@ -2534,6 +2529,12 @@
                                 <file>
                                     <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\library\tcpip\src\lldp_tlv.h</name>
                                 </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\library\tcpip\src\tcpip_mac_bridge_manager.h</name>
+                                </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\library\tcpip\src\tcpip_mac_bridge_private.h</name>
+                                </file>
                             </group>
                             <file>
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\library\tcpip\tcpip_helpers.h</name>
@@ -2650,6 +2651,9 @@
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\library\tcpip\tcpip.h</name>
                             </file>
                             <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\library\tcpip\tcpip_mac_bridge.h</name>
+                            </file>
+                            <file>
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\library\tcpip\tcpip_ethernet.h</name>
                             </file>
                         </group>
@@ -2744,6 +2748,18 @@
                             </group>
                         </group>
                     </group>
+                    <group>
+                        <name>osal</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\osal\osal.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\osal\osal_definitions.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\osal\osal_impl_basic.h</name>
+                        </file>
+                    </group>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\user.h</name>
                     </file>
@@ -2765,9 +2781,6 @@
                 <name>packs</name>
                 <group>
                     <name>ATSAMA5D27_DFP</name>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\packs\ATSAMA5D27_DFP\device.h</name>
-                    </file>
                     <group>
                         <name>component</name>
                         <file>
@@ -2954,15 +2967,6 @@
                 </group>
             </group>
             <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\osal\osal.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\osal\osal_definitions.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\osal\osal_impl_basic.h</name>
-            </file>
-            <file>
                 <name>$PROJ_DIR$\..\src\app.h</name>
             </file>
         </group>
@@ -2983,9 +2987,6 @@
                                 </file>
                                 <file>
                                     <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\library\tcpip\src\nbns.c</name>
-                                </file>
-                                <file>
-                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\library\tcpip\src\tcp.c</name>
                                 </file>
                                 <file>
                                     <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult\library\tcpip\src\arp.c</name>

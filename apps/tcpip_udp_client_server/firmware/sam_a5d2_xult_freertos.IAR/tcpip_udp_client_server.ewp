@@ -220,7 +220,6 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>__FPU_PRESENT=1</state>
                     <state>__SAMA5D2__</state>
                     <state>__PIC32C__</state>
                 </option>
@@ -1293,7 +1292,6 @@
                 <debug>0</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>__FPU_PRESENT=1</state>
                     <state>NDEBUG</state>
                 </option>
                 <option>
@@ -2226,16 +2224,10 @@
                             </file>
                         </group>
                         <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_clk_h2_adapter.h</name>
-                        </file>
-                        <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_time_h2_adapter.h</name>
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_random_h2_adapter.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_reset_h2_adapter.h</name>
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\system.h</name>
@@ -2280,6 +2272,9 @@
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\bsp\bsp.h</name>
                         </file>
                     </group>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\device.h</name>
+                    </file>
                     <group>
                         <name>library</name>
                         <group>
@@ -2520,6 +2515,12 @@
                                 <file>
                                     <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\lldp_tlv.h</name>
                                 </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\tcpip_mac_bridge_manager.h</name>
+                                </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\tcpip_mac_bridge_private.h</name>
+                                </file>
                             </group>
                             <file>
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\tcpip_helpers.h</name>
@@ -2636,6 +2637,9 @@
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\tcpip.h</name>
                             </file>
                             <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\tcpip_mac_bridge.h</name>
+                            </file>
+                            <file>
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\tcpip_ethernet.h</name>
                             </file>
                         </group>
@@ -2730,6 +2734,18 @@
                             </group>
                         </group>
                     </group>
+                    <group>
+                        <name>osal</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_definitions.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_freertos.h</name>
+                        </file>
+                    </group>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\user.h</name>
                     </file>
@@ -2754,9 +2770,6 @@
                 <name>packs</name>
                 <group>
                     <name>ATSAMA5D27_DFP</name>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\packs\ATSAMA5D27_DFP\device.h</name>
-                    </file>
                     <group>
                         <name>component</name>
                         <file>
@@ -2943,15 +2956,6 @@
                 </group>
             </group>
             <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_definitions.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_freertos.h</name>
-            </file>
-            <file>
                 <name>$PROJ_DIR$\..\src\app.h</name>
             </file>
             <group>
@@ -2961,52 +2965,52 @@
                     <group>
                         <name>include</name>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\croutine.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\croutine.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\event_groups.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\event_groups.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\FreeRTOS.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\FreeRTOS.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\list.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\list.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\mpu_wrappers.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\mpu_wrappers.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\portable.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\portable.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\projdefs.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\projdefs.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\queue.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\queue.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\semphr.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\semphr.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\stack_macros.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\stack_macros.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\deprecated_definitions.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\deprecated_definitions.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\task.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\task.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\timers.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\timers.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\mpu_prototypes.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\mpu_prototypes.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\stream_buffer.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\stream_buffer.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\message_buffer.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\message_buffer.h</name>
                         </file>
                     </group>
                     <group>
@@ -3047,9 +3051,6 @@
                                 </file>
                                 <file>
                                     <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\nbns.c</name>
-                                </file>
-                                <file>
-                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\tcp.c</name>
                                 </file>
                                 <file>
                                     <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\arp.c</name>
@@ -3213,6 +3214,12 @@
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\bsp\bsp.c</name>
                         </file>
                     </group>
+                    <group>
+                        <name>osal</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_freertos.c</name>
+                        </file>
+                    </group>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\tasks.c</name>
                     </file>
@@ -3284,9 +3291,6 @@
                     </file>
                 </group>
             </group>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_freertos.c</name>
-            </file>
             <file>
                 <name>$PROJ_DIR$\..\src\app.c</name>
             </file>
