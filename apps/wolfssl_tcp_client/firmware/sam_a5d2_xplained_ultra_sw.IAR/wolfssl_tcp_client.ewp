@@ -220,9 +220,9 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>__FPU_PRESENT=1</state>
                     <state>HAVE_CONFIG_H</state>
                     <state>WOLFSSL_IGNORE_FILE_WARN</state>
+                    <state>__FPU_PRESENT=1</state>
                     <state>__SAMA5D2__</state>
                     <state>__PIC32C__</state>
                 </option>
@@ -264,7 +264,7 @@
                 </option>
                 <option>
                     <name>CCDiagSuppress</name>
-                    <state>Pe188,Pe186,Pe1029,Pa089</state>
+                    <state>Pe188,Pe186,Pe1029,Pa089,Pa039</state>
                 </option>
                 <option>
                     <name>CCDiagRemark</name>
@@ -1291,9 +1291,9 @@
                 <debug>0</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>__FPU_PRESENT=1</state>
                     <state>HAVE_CONFIG_H</state>
                     <state>WOLFSSL_IGNORE_FILE_WARN</state>
+                    <state>__FPU_PRESENT=1</state>
                     <state>__SAMA5D2__</state>
                     <state>__PIC32C__</state>
                     <state>NDEBUG</state>
@@ -2263,16 +2263,10 @@
                             </file>
                         </group>
                         <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\system\sys_clk_h2_adapter.h</name>
-                        </file>
-                        <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\system\sys_time_h2_adapter.h</name>
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\system\sys_random_h2_adapter.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\system\sys_reset_h2_adapter.h</name>
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\system\system.h</name>
@@ -2323,39 +2317,9 @@
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\bsp\bsp.h</name>
                         </file>
                     </group>
-                    <group>
-                        <name>net_pres</name>
-                        <group>
-                            <name>pres</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_certstore.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_encryptionproviderapi.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_socketapi.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_transportapi.h</name>
-                            </file>
-                            <group>
-                                <name>src</name>
-                                <file>
-                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\src\net_pres_local.h</name>
-                                </file>
-                            </group>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_socketapiconversion.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_enc_glue.h</name>
-                            </file>
-                        </group>
-                    </group>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\device.h</name>
+                    </file>
                     <group>
                         <name>library</name>
                         <group>
@@ -2596,6 +2560,12 @@
                                 <file>
                                     <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\library\tcpip\src\lldp_tlv.h</name>
                                 </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\library\tcpip\src\tcpip_mac_bridge_manager.h</name>
+                                </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\library\tcpip\src\tcpip_mac_bridge_private.h</name>
+                                </file>
                             </group>
                             <file>
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\library\tcpip\tcpip_helpers.h</name>
@@ -2712,7 +2682,43 @@
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\library\tcpip\tcpip.h</name>
                             </file>
                             <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\library\tcpip\tcpip_mac_bridge.h</name>
+                            </file>
+                            <file>
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\library\tcpip\tcpip_ethernet.h</name>
+                            </file>
+                        </group>
+                    </group>
+                    <group>
+                        <name>net_pres</name>
+                        <group>
+                            <name>pres</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_socketapi.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_socketapiconversion.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_certstore.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_encryptionproviderapi.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_transportapi.h</name>
+                            </file>
+                            <group>
+                                <name>src</name>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\src\net_pres_local.h</name>
+                                </file>
+                            </group>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_enc_glue.h</name>
                             </file>
                         </group>
                     </group>
@@ -2791,6 +2797,18 @@
                             </group>
                         </group>
                     </group>
+                    <group>
+                        <name>osal</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\osal\osal.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\osal\osal_definitions.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\osal\osal_impl_basic.h</name>
+                        </file>
+                    </group>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\user.h</name>
                     </file>
@@ -2821,9 +2839,6 @@
                 <name>packs</name>
                 <group>
                     <name>ATSAMA5D27_DFP</name>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\packs\ATSAMA5D27_DFP\device.h</name>
-                    </file>
                     <group>
                         <name>component</name>
                         <file>
@@ -3010,15 +3025,6 @@
                 </group>
             </group>
             <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\osal\osal.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\osal\osal_definitions.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\osal\osal_impl_basic.h</name>
-            </file>
-            <file>
                 <name>$PROJ_DIR$\..\src\app.h</name>
             </file>
             <group>
@@ -3069,6 +3075,9 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\curve25519.h</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\curve448.h</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\des3.h</name>
                 </file>
                 <file>
@@ -3084,13 +3093,22 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\ed25519.h</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\ed448.h</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\error-crypt.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\fe_448.h</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\fe_operations.h</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\fips_test.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\ge_448.h</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\ge_operations.h</name>
@@ -3567,6 +3585,9 @@
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\system\sys_time_h2_adapter.c</name>
                         </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\system\sys_random_h2_adapter.c</name>
+                        </file>
                         <group>
                             <name>int</name>
                             <file>
@@ -3600,24 +3621,6 @@
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\bsp\bsp.c</name>
                         </file>
-                    </group>
-                    <group>
-                        <name>net_pres</name>
-                        <group>
-                            <name>pres</name>
-                            <group>
-                                <name>src</name>
-                                <file>
-                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\src\net_pres.c</name>
-                                </file>
-                            </group>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_enc_glue.c</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_cert_store.c</name>
-                            </file>
-                        </group>
                     </group>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\tasks.c</name>
@@ -3685,6 +3688,24 @@
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\fault_handlers.c</name>
                     </file>
+                    <group>
+                        <name>net_pres</name>
+                        <group>
+                            <name>pres</name>
+                            <group>
+                                <name>src</name>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\src\net_pres.c</name>
+                                </file>
+                            </group>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_enc_glue.c</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xplained_ultra_sw\net_pres\pres\net_pres_cert_store.c</name>
+                            </file>
+                        </group>
+                    </group>
                     <group>
                         <name>crypto</name>
                         <file>
@@ -3774,6 +3795,9 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\curve25519.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\curve448.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\dh.c</name>
                 </file>
                 <file>
@@ -3789,13 +3813,22 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ed25519.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ed448.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\error.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\fe_448.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\fe_low_mem.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\fe_operations.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ge_448.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ge_low_mem.c</name>
@@ -3879,6 +3912,9 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_cortexm.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_dsp32.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_int.c</name>
                 </file>
                 <file>
@@ -3889,6 +3925,9 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\tfm.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\wc_dsp.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\wc_encrypt.c</name>
