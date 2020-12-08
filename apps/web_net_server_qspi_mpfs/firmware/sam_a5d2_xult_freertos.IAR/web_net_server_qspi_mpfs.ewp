@@ -220,9 +220,9 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>__FPU_PRESENT=1</state>
                     <state>HAVE_CONFIG_H</state>
                     <state>WOLFSSL_IGNORE_FILE_WARN</state>
+                    <state>__FPU_PRESENT=1</state>
                     <state>__SAMA5D2__</state>
                     <state>__PIC32C__</state>
                 </option>
@@ -264,7 +264,7 @@
                 </option>
                 <option>
                     <name>CCDiagSuppress</name>
-                    <state>Pe186,Pe188,Pa089</state>
+                    <state>Pe186,Pe188,Pa089,Pa039</state>
                 </option>
                 <option>
                     <name>CCDiagRemark</name>
@@ -1297,9 +1297,9 @@
                 <debug>0</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>__FPU_PRESENT=1</state>
                     <state>HAVE_CONFIG_H</state>
                     <state>WOLFSSL_IGNORE_FILE_WARN</state>
+                    <state>__FPU_PRESENT=1</state>
                     <state>__SAMA5D2__</state>
                     <state>__PIC32C__</state>
                     <state>NDEBUG</state>
@@ -2329,16 +2329,10 @@
                             </group>
                         </group>
                         <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_clk_h2_adapter.h</name>
-                        </file>
-                        <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_time_h2_adapter.h</name>
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_random_h2_adapter.h</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_reset_h2_adapter.h</name>
                         </file>
                         <group>
                             <name>command</name>
@@ -2353,12 +2347,57 @@
                             </file>
                         </group>
                     </group>
+                    <group>
+                        <name>osal</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_definitions.h</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_freertos.h</name>
+                        </file>
+                    </group>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\user.h</name>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\configuration.h</name>
                     </file>
+                    <group>
+                        <name>net_pres</name>
+                        <group>
+                            <name>pres</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_certstore.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_encryptionproviderapi.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_socketapi.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_transportapi.h</name>
+                            </file>
+                            <group>
+                                <name>src</name>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\src\net_pres_local.h</name>
+                                </file>
+                            </group>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_socketapiconversion.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_enc_glue.h</name>
+                            </file>
+                        </group>
+                    </group>
                     <group>
                         <name>peripheral</name>
                         <group>
@@ -2431,39 +2470,9 @@
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\bsp\bsp.h</name>
                         </file>
                     </group>
-                    <group>
-                        <name>net_pres</name>
-                        <group>
-                            <name>pres</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_certstore.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_encryptionproviderapi.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_socketapi.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_transportapi.h</name>
-                            </file>
-                            <group>
-                                <name>src</name>
-                                <file>
-                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\src\net_pres_local.h</name>
-                                </file>
-                            </group>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_socketapiconversion.h</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_enc_glue.h</name>
-                            </file>
-                        </group>
-                    </group>
+                    <file>
+                        <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\device.h</name>
+                    </file>
                     <group>
                         <name>library</name>
                         <group>
@@ -2704,6 +2713,12 @@
                                 <file>
                                     <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\lldp_tlv.h</name>
                                 </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\tcpip_mac_bridge_manager.h</name>
+                                </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\tcpip_mac_bridge_private.h</name>
+                                </file>
                             </group>
                             <file>
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\tcpip_helpers.h</name>
@@ -2820,6 +2835,9 @@
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\tcpip.h</name>
                             </file>
                             <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\tcpip_mac_bridge.h</name>
+                            </file>
+                            <file>
                                 <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\library\tcpip\tcpip_ethernet.h</name>
                             </file>
                         </group>
@@ -2893,15 +2911,6 @@
                 </file>
             </group>
             <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_definitions.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_freertos.h</name>
-            </file>
-            <file>
                 <name>$PROJ_DIR$\..\src\app.h</name>
             </file>
             <file>
@@ -2911,9 +2920,6 @@
                 <name>packs</name>
                 <group>
                     <name>ATSAMA5D27_DFP</name>
-                    <file>
-                        <name>$PROJ_DIR$\..\src\packs\ATSAMA5D27_DFP\device.h</name>
-                    </file>
                     <group>
                         <name>component</name>
                         <file>
@@ -3147,6 +3153,9 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\curve25519.h</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\curve448.h</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\des3.h</name>
                 </file>
                 <file>
@@ -3162,13 +3171,22 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\ed25519.h</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\ed448.h</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\error-crypt.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\fe_448.h</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\fe_operations.h</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\fips_test.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\ge_448.h</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\ge_operations.h</name>
@@ -3493,52 +3511,52 @@
                     <group>
                         <name>include</name>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\croutine.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\croutine.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\event_groups.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\event_groups.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\FreeRTOS.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\FreeRTOS.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\list.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\list.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\mpu_wrappers.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\mpu_wrappers.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\portable.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\portable.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\projdefs.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\projdefs.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\queue.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\queue.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\semphr.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\semphr.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\stack_macros.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\stack_macros.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\deprecated_definitions.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\deprecated_definitions.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\task.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\task.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\timers.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\timers.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\mpu_prototypes.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\mpu_prototypes.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\stream_buffer.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\stream_buffer.h</name>
                         </file>
                         <file>
-                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\Include\message_buffer.h</name>
+                            <name>$PROJ_DIR$\..\src\third_party\rtos\FreeRTOS\Source\include\message_buffer.h</name>
                         </file>
                     </group>
                     <group>
@@ -3774,6 +3792,9 @@
                         <file>
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_time_h2_adapter.c</name>
                         </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\system\sys_random_h2_adapter.c</name>
+                        </file>
                         <group>
                             <name>command</name>
                             <file>
@@ -3790,9 +3811,33 @@
                             </file>
                         </group>
                     </group>
+                    <group>
+                        <name>osal</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_freertos.c</name>
+                        </file>
+                    </group>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\tasks.c</name>
                     </file>
+                    <group>
+                        <name>net_pres</name>
+                        <group>
+                            <name>pres</name>
+                            <group>
+                                <name>src</name>
+                                <file>
+                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\src\net_pres.c</name>
+                                </file>
+                            </group>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_enc_glue.c</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_cert_store.c</name>
+                            </file>
+                        </group>
+                    </group>
                     <group>
                         <name>peripheral</name>
                         <group>
@@ -3856,24 +3901,6 @@
                             <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\bsp\bsp.c</name>
                         </file>
                     </group>
-                    <group>
-                        <name>net_pres</name>
-                        <group>
-                            <name>pres</name>
-                            <group>
-                                <name>src</name>
-                                <file>
-                                    <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\src\net_pres.c</name>
-                                </file>
-                            </group>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_enc_glue.c</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\net_pres\pres\net_pres_cert_store.c</name>
-                            </file>
-                        </group>
-                    </group>
                     <file>
                         <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\initialization.c</name>
                     </file>
@@ -3933,9 +3960,6 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\src\internal.c</name>
                 </file>
             </group>
-            <file>
-                <name>$PROJ_DIR$\..\src\config\sam_a5d2_xult_freertos\osal\osal_freertos.c</name>
-            </file>
             <file>
                 <name>$PROJ_DIR$\..\src\app.c</name>
             </file>
@@ -4080,6 +4104,9 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\curve25519.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\curve448.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\dh.c</name>
                 </file>
                 <file>
@@ -4095,13 +4122,22 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ed25519.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ed448.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\error.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\fe_448.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\fe_low_mem.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\fe_operations.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ge_448.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ge_low_mem.c</name>
@@ -4185,6 +4221,9 @@
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_cortexm.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_dsp32.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_int.c</name>
                 </file>
                 <file>
@@ -4195,6 +4234,9 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\tfm.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\wc_dsp.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\wc_encrypt.c</name>
