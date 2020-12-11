@@ -18,4 +18,4 @@ children:
         children:
         - {type: Value, value: lib_wolfcrypt}
 - type: ElementPosition
-  attributes: {x: '1006', y: '417', id: lib_crypto}
+  attributes: {x: '860', y: '454', id: lib_crypto}
