@@ -80,7 +80,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '100960'}
+        attributes: {value: '240960'}
   - type: Setting
     attributes: {id: FREERTOS_XC32CPP_INCLUDE_DIRS}
     children:
