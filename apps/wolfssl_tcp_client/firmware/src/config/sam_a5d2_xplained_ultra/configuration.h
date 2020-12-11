@@ -191,8 +191,6 @@ extern "C" {
 #define NO_WRITEV
 #define MICROCHIP_TCPIP
 #define HAVE_FFDHE_2048
-#define HAVE_FFDHE_3072
-#define HAVE_FFDHE_4096
 #define WOLFSSL_DTLS
 #define NO_PWDBASED
 #define HAVE_TLS_EXTENSIONS
