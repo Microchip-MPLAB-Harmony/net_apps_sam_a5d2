@@ -191,10 +191,6 @@ extern "C" {
 #define NO_WRITEV
 #define MICROCHIP_TCPIP
 #define HAVE_FFDHE_2048
-#define HAVE_FFDHE_3072
-#define HAVE_FFDHE_4096
-#define HAVE_FFDHE_6144
-#define HAVE_FFDHE_8192
 #define WOLFSSL_DTLS
 #define NO_PWDBASED
 #define HAVE_TLS_EXTENSIONS
@@ -302,7 +298,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       60960
+#define TCPIP_STACK_DRAM_SIZE                       65536
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -507,7 +503,7 @@ extern "C" {
 #define HAVE_ECC
 #define HAVE_DH
 #define NO_DSA
-#define FP_MAX_BITS 16384
+#define FP_MAX_BITS 4096
 #define USE_CERT_BUFFERS_2048
 #define WC_RSA_PSS
 #define NO_DEV_RANDOM
