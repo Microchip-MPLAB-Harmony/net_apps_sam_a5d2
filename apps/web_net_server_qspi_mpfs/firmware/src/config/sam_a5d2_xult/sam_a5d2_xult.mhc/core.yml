@@ -446,49 +446,49 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '1024'}
+        attributes: {value: '65536'}
   - type: Integer
     attributes: {id: IAR_FIQ_STACK_SIZE}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '8192'}
+        attributes: {value: '65536'}
   - type: Integer
     attributes: {id: IAR_HEAP_SIZE}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '184000'}
+        attributes: {value: '512000'}
   - type: Integer
     attributes: {id: IAR_IRQ_STACK_SIZE}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '8192'}
+        attributes: {value: '65536'}
   - type: Integer
     attributes: {id: IAR_SVC_STACK_SIZE}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '1024'}
+        attributes: {value: '65536'}
   - type: Integer
     attributes: {id: IAR_UND_STACK_SIZE}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '1024'}
+        attributes: {value: '65536'}
   - type: Integer
     attributes: {id: IAR_USR_STACK_SIZE}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '16000'}
+        attributes: {value: '65536'}
   - type: KeyValueSet
     attributes: {id: ICM_INTERRUPT_PRIORITY}
     children:
