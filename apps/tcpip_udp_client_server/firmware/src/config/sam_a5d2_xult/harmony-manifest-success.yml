@@ -4,18 +4,18 @@
 
 
 project: tcpip_udp_client_server
-creation_date: 2020-12-08T17:01:30.236+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2021-12-15T17:10:57.429+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mhc_mode: Standalone            # [IDE|Standalone|Headless]
-mhc_version: v3.6.2
+mhc_version: v3.8.0
 mplabx_version: NA        # if MPLAB X plugin only
 plugin_version: NA        # if MPLAB X plugin only
 compiler: iar
 
 modules:
-    - {name: "csp", version: "v3.8.2"}
-    - {name: "core", version: "v3.8.1"}
-    - {name: "dev_packs", version: "v3.8.0"}
+    - {name: "csp", version: "v3.10.0"}
+    - {name: "core", version: "v3.10.0"}
+    - {name: "dev_packs", version: "v3.10.0"}
     - {name: "net", version: "unknown"}
-    - {name: "bsp", version: "v3.8.2"}
+    - {name: "bsp", version: "v3.10.0"}
 
