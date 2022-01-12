@@ -30,4 +30,4 @@ children:
         children:
         - {type: Value, value: 'true'}
 - type: ElementPosition
-  attributes: {x: '380', y: '20', id: drvMiim}
+  attributes: {x: '553', y: '2', id: drvMiim}

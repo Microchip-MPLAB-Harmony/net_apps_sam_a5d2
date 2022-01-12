@@ -32,5 +32,20 @@ children:
       children:
       - type: User
         attributes: {value: '2'}
+- type: Attachments
+  children:
+  - type: DirectDependency
+    attributes: {id: GMAC_PHY_Dependency}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: drvExtPhyKsz8081}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: libdrvExtPhyKsz8081}
 - type: ElementPosition
-  attributes: {x: '280', y: '20', id: drvGmac}
+  attributes: {x: '381', y: '15', id: drvGmac}
