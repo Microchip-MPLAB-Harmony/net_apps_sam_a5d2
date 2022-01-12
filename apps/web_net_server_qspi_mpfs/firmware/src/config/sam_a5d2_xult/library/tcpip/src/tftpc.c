@@ -143,7 +143,7 @@ bool TCPIP_TFTPC_Initialize(const TCPIP_STACK_MODULE_CTRL* const stackData,
 
         pClient = &gTFTPClientDcpt;
         
-        pClient->hSocket = TCPIP_UDP_ClientOpen(IP_ADDRESS_TYPE_IPV4, TCPIP_TFTP_SERVER_PORT, 0);
+        pClient->hSocket = TCPIP_UDP_ClientOpen(IP_ADDRESS_TYPE_ANY, TCPIP_TFTP_SERVER_PORT, 0);
         if(pClient->hSocket == INVALID_UDP_SOCKET)
         {
             return false;
@@ -331,7 +331,7 @@ static TFTP_RESULT TFTPIsPutReady(void)
                         return TFTP_RETRY;
                     }
                 }
-                break;
+                return TFTP_PKT_NOT_RECEIVED;
             }
             // ACK is received.
             _TFTPNotifyClients(pTftpcIf,TFTPC_EVENT_ACKED,0,0);
@@ -370,6 +370,7 @@ static TFTP_RESULT TFTPIsPutReady(void)
                     // can transfer more data blocks.
                     _tftpPutCmdState = SM_TFTP_COMM_SEND_NEXT_DATA_PKT;
                     tftpcTimer = SYS_TMR_TickCountGet();
+                    TFTPC_DEBUG_PRINT("Received Block Number : %d \r\n",blockNumber.Val);
                 }
                 else
                 {
@@ -413,6 +414,7 @@ static TFTP_RESULT TFTPIsPutReady(void)
             _tftpFlags.bits.bIsAcked = false;
             
             _tftpPutCmdState = SM_TFTP_COMM_WAIT_FOR_ACK;
+            TFTPC_DEBUG_PRINT("Transmitted Block Number : %d \r\n",MutExVar.group2._tftpBlockNumber.Val);
             return TFTP_OK;
 	// Suppress compiler warnings on unhandled SM_TFTP_COMM_WAIT_FOR_DATA,
 	// SM_TFTP_COMM_DUPLICATE_ACK, SM_TFTP_COMM_SEND_ACK, SM_TFTP_COMM_SEND_LAST_ACK enum
@@ -457,6 +459,7 @@ static void TCPIP_TFTPC_Process(void)
     bool res=true;
     bool bTimeout=false;
     uint32_t    replyPktSize=0;
+	bool bindRes = false;
     
     pClient = &gTFTPClientDcpt;
     pNetIf = _TCPIPStackAnyNetLinked(false);
@@ -478,9 +481,10 @@ static void TCPIP_TFTPC_Process(void)
             {   // wait some more
                 break;
             }
-            if(pClient->ipAddrType == IP_ADDRESS_TYPE_IPV4)
+            
+            bindRes = TCPIP_UDP_RemoteBind(pClient->hSocket, pClient->ipAddrType,TCPIP_TFTP_SERVER_PORT,&pClient->tftpServerAddr);
+            if (bindRes)
             {
-                TCPIP_UDP_RemoteBind(pClient->hSocket, pClient->ipAddrType,TCPIP_TFTP_SERVER_PORT,&pClient->tftpServerAddr);
                  // receiving from multiple TFTP servers
                 TCPIP_UDP_OptionsSet(pClient->hSocket, UDP_OPTION_STRICT_PORT, (void*)false);
                 //TCPIP_UDP_DestinationIPAddressSet(pClient->hSocket, IP_ADDRESS_TYPE_IPV4, &pClient->tftpServerAddr);
@@ -569,6 +573,7 @@ static void TCPIP_TFTPC_Process(void)
                                 TCPIP_UDP_Flush(pClient->hSocket);
                             }
                             SYS_FS_FileClose(pClient->fileDescr);
+                            SYS_CONSOLE_PRINT("\r\nNumber of bytes transmitted : %d bytes \r\n",pClient->callbackPos);
                             pClient->fileDescr = -1;
                             pClient->callbackPos = 0;
                             pClient->smState = SM_TFTP_END;
@@ -591,12 +596,14 @@ static void TCPIP_TFTPC_Process(void)
                                pClient->callbackPos = 0;
                             else
                                pClient->callbackPos = (uint32_t)status;
-                            TFTPC_DEBUG_MESSAGE("#");
+                            SYS_CONSOLE_MESSAGE("#");
                         }
                     }
                     
                     pClient->smState = SM_TFTP_PUT_COMMAND;
                 break;
+                case TFTP_PKT_NOT_RECEIVED:
+                    break;
                 case TFTP_RETRY:
                     pClient->smState = SM_TFTP_FILE_OPEN_AND_SEND_REQUEST;
                     break;
@@ -943,7 +950,7 @@ static TFTP_RESULT TFTPIsGetReady(uint8_t *getData, int32_t *len)
         {
             _tftpFlags.bits.bIsClosed = true;
         }
-        TFTPC_DEBUG_PRINT("\r\nTFTP: Total Bytes received: %d bytes \r\n ",pClient->callbackPos);
+        SYS_CONSOLE_PRINT("\r\nTFTP: Total Bytes received: %d bytes \r\n ",pClient->callbackPos);
     case SM_TFTP_COMM_SEND_ACK:
         if ( TCPIP_UDP_PutIsReady(pClient->hSocket) )
         {
@@ -961,7 +968,7 @@ static TFTP_RESULT TFTPIsGetReady(uint8_t *getData, int32_t *len)
             }
 
             _tftpGetCmdState = SM_TFTP_COMM_WAIT_FOR_DATA;
-            TFTPC_DEBUG_MESSAGE("#");
+            SYS_CONSOLE_MESSAGE("#");
             return TFTP_ACK_SEND;
         }
         break;

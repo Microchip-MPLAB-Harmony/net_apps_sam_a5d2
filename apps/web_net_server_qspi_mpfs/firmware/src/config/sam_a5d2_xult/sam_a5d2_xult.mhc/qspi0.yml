@@ -51,6 +51,15 @@ children:
 - type: Attachments
   children:
   - type: DirectCapability
+    attributes: {id: QSPI0_SPI}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'false'}
+  - type: DirectCapability
     attributes: {id: QSPI0_SQI}
     children:
     - type: Attributes
