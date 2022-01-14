@@ -241,6 +241,10 @@
               <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/system/int/sys_int.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/system/int/sys_int_mapping.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="f8" displayName="ports" projectFiles="true">
+              <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/system/ports/sys_ports.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/system/ports/sys_ports_mapping.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="f4" displayName="reset" projectFiles="true">
               <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/system/reset/sys_reset.h</itemPath>
             </logicalFolder>
@@ -909,12 +913,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>3.01</languageToolchainVersion>
+        <languageToolchainVersion>4.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
         <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.6.72"/>
+        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

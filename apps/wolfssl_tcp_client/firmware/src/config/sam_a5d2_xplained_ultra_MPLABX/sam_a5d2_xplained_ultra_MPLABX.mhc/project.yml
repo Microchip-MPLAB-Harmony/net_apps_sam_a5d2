@@ -341,7 +341,7 @@ files:
   physicalPath: driver/gmac/src/dynamic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7C8EED98FCBBB9BCFF62C7CDB190A40C
+  userChecksum: 3C50A0CBBEF82B3BF19842E8B300C46C
 - generatedChecksum: 0E1B1E293A2B25711C143C917406BA0E
   logicalPath: config/sam_a5d2_xplained_ultra_MPLABX/driver/miim/src/dynamic
   name: drv_miim.c
@@ -1917,13 +1917,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7959E2B94CEE186632B984636D40C252
-- generatedChecksum: 9334C0A65B994726FC46F66F1E4D1B7F
+- generatedChecksum: 760BA69AEFA31643E3ECD7D5F1D231C1
   logicalPath: config/sam_a5d2_xplained_ultra_MPLABX
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 9334C0A65B994726FC46F66F1E4D1B7F
+  userChecksum: 760BA69AEFA31643E3ECD7D5F1D231C1
 - generatedChecksum: A751C19ADEECD5B90ADA51DD19DB417D
   logicalPath: wolfcrypt
   name: des3.h
@@ -3618,6 +3618,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: D5F3C8B8016B12FF575690A3CC761BFD
+- generatedChecksum: 255A6D5A7B137F3FCECBF5CAB81723DA
+  logicalPath: config/sam_a5d2_xplained_ultra_MPLABX/system/ports
+  name: sys_ports.h
+  physicalPath: system/ports
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 255A6D5A7B137F3FCECBF5CAB81723DA
+- generatedChecksum: CAF280BE12C2D4F40321A45E88524D29
+  logicalPath: config/sam_a5d2_xplained_ultra_MPLABX/system/ports
+  name: sys_ports_mapping.h
+  physicalPath: system/ports
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: CAF280BE12C2D4F40321A45E88524D29
 - generatedChecksum: 89A2BB1ACE0A3BCFDBEC1528E5F76FC0
   logicalPath: config/sam_a5d2_xplained_ultra_MPLABX/system
   name: sys_random_h2_adapter.h
@@ -4268,7 +4282,7 @@ files:
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 68DABD040880DD77DFF09A3F25FC12A7
+  userChecksum: C8A5812E5C74D2F32EFB24975055D359
 - generatedChecksum: D0A155C957A5AB326FFCFB27C332B88A
   logicalPath: wolfcrypt
   name: evp.c

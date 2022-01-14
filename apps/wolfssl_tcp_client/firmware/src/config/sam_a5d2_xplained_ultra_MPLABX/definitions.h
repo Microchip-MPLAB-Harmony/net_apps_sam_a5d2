@@ -57,6 +57,7 @@
 #include "system/sys_time_h2_adapter.h"
 #include "system/sys_random_h2_adapter.h"
 #include "system/int/sys_int.h"
+#include "system/ports/sys_ports.h"
 #include "system/cache/sys_cache.h"
 #include "system/reset/sys_reset.h"
 #include "osal/osal.h"
