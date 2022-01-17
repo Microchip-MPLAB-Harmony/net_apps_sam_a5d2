@@ -19,49 +19,53 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
- *******************************************************************************/
-int aaLeaveXcpt = 0;    // @@@
-unsigned long undefFault = 0;
-//void __attribute((weak, noreturn)) undefined_instruction_irq_handler (void)
-void undefined_instruction_irq_handler (void)
+*******************************************************************************/
+
+#include "device.h"
+#include "plib_clk.h"
+
+
+
+
+
+
+/*********************************************************************************
+Initialize Generic clock
+*********************************************************************************/
+
+static void CLK_GenericClockInitialize(void)
 {
-	//while(1);
-    while(aaLeaveXcpt == 0)
-    {
-        undefFault++;
-    }
 }
 
 
-unsigned long intFault = 0;
-//void __attribute((weak, noreturn)) software_interrupt_irq_handler(void)
-void software_interrupt_irq_handler(void)
+
+/*********************************************************************************
+Initialize Peripheral clock
+*********************************************************************************/
+
+static void CLK_PeripheralClockInitialize(void)
 {
-	//while(1);
-    while(aaLeaveXcpt == 0)
-    {
-        intFault++;
-    }
+    /* Enable clock for the selected peripherals, since the rom boot will turn on
+     * certain clocks turn off all clocks not expressly enabled */
+   	PMC_REGS->PMC_PCER0=0x2043e20;
+    PMC_REGS->PMC_PCDR0=~0x2043e20;
+    PMC_REGS->PMC_PCER1=0x108008;
+    PMC_REGS->PMC_PCDR1=~0x108008;
 }
 
-unsigned long dataFault = 0;
-// void __attribute((weak, noreturn)) data_abort_irq_handler(void)
-void data_abort_irq_handler(void)
+
+
+/*********************************************************************************
+Clock Initialize
+*********************************************************************************/
+
+void CLK_Initialize( void )
 {
-	//while(1);
-    while(aaLeaveXcpt == 0)
-    {
-        dataFault++;
-    }
+	/* Initialize Generic Clock */
+	CLK_GenericClockInitialize();
+
+	/* Initialize Peripheral Clock */
+	CLK_PeripheralClockInitialize();
+
 }
 
-unsigned long prefFault = 0;
-//void __attribute((weak, noreturn)) prefetch_abort_irq_handler(void)
-void prefetch_abort_irq_handler(void)
-{
-	//while(1);
-    while(aaLeaveXcpt == 0)
-    {
-        prefFault++;
-    }
-}
