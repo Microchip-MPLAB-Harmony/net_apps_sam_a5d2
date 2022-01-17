@@ -67,7 +67,7 @@ void PIO_Initialize ( void )
 	
  /* Port B Pin 0 configuration */
 	PIOB_REGS->PIO_MSKR = 0x1U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x500U;
 	
  /* Port B Pin 2 configuration */
 	PIOB_REGS->PIO_MSKR = 0x4U;
@@ -75,15 +75,19 @@ void PIO_Initialize ( void )
 	
  /* Port B Pin 5 configuration */
 	PIOB_REGS->PIO_MSKR = 0x20U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x500U;
 	
  /* Port B Pin 6 configuration */
 	PIOB_REGS->PIO_MSKR = 0x40U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x500U;
 	
  /* Port B Pin 8 configuration */
 	PIOB_REGS->PIO_MSKR = 0x100U;
 	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+	
+ /* Port B Pin 9 configuration */
+	PIOB_REGS->PIO_MSKR = 0x200U;
+	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x200U;
 	
  /* Port B Pin 10 configuration */
 	PIOB_REGS->PIO_MSKR = 0x400U;
@@ -126,7 +130,8 @@ void PIO_Initialize ( void )
 	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
 	
  /* Port B Latch configuration */
-	PIOB_REGS->PIO_CODR = 0x261U;
+	PIOB_REGS->PIO_SODR = 0x61U;
+	PIOB_REGS->PIO_CODR = 0x261U & ~0x61U;
 
 
  /* Port D Peripheral function A configuration */

@@ -949,7 +949,6 @@
           </logicalFolder>
           <itemPath>../src/config/sam_a5d2_xult_MPLABX/sam_a5d2_xult_MPLABX.mhc/TCP_IP_STACK/TCP_IP_STACK.yml</itemPath>
         </logicalFolder>
-        <itemPath>../src/config/sam_a5d2_xult_MPLABX/sam_a5d2_xult_MPLABX.mhc/BSP_default.yml</itemPath>
         <itemPath>../src/config/sam_a5d2_xult_MPLABX/sam_a5d2_xult_MPLABX.mhc/BSP_SAM_A5D2_Xplained_Ultra.yml</itemPath>
         <itemPath>../src/config/sam_a5d2_xult_MPLABX/sam_a5d2_xult_MPLABX.mhc/cmsis.yml</itemPath>
         <itemPath>../src/config/sam_a5d2_xult_MPLABX/sam_a5d2_xult_MPLABX.mhc/core.yml</itemPath>

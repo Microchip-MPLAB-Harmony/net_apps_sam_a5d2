@@ -11,5 +11,12 @@ children:
       children:
       - type: Dynamic
         attributes: {id: tcpipHttpNet, value: 'true'}
+  - type: Integer
+    attributes: {id: TCPIP_HTTP_NET_HEAP_SIZE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tcpipHttpNet, value: '4944'}
 - type: ElementPosition
   attributes: {x: '330', y: '120', id: tcpipHttpNet}

@@ -2037,7 +2037,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x400'}
+        attributes: {id: core, value: '0x500'}
   - type: String
     attributes: {id: PORT_B_CFGR_Value10}
     children:
@@ -2128,14 +2128,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x400'}
+        attributes: {id: core, value: '0x500'}
   - type: String
     attributes: {id: PORT_B_CFGR_Value6}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x400'}
+        attributes: {id: core, value: '0x500'}
   - type: String
     attributes: {id: PORT_B_CFGR_Value8}
     children:
@@ -2149,14 +2149,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x0'}
+        attributes: {id: core, value: '0x200'}
   - type: String
     attributes: {id: PORT_B_LATCH}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x0'}
+        attributes: {id: core, value: '0x61'}
   - type: String
     attributes: {id: PORT_B_MSKR_ValueA}
     children:
