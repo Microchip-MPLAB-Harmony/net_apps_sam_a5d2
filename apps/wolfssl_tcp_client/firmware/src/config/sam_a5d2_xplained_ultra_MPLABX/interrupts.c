@@ -100,6 +100,7 @@ void HSMC_Handler( void )                __attribute__((weak, alias("DefaultInte
 void PIOA_Handler( void )                __attribute__((weak, alias("DefaultInterruptHandler")));
 void FLEXCOM0_Handler( void )            __attribute__((weak, alias("DefaultInterruptHandler")));
 void FLEXCOM1_Handler( void )            __attribute__((weak, alias("DefaultInterruptHandler")));
+void FLEXCOM2_Handler( void )            __attribute__((weak, alias("DefaultInterruptHandler")));
 void FLEXCOM3_Handler( void )            __attribute__((weak, alias("DefaultInterruptHandler")));
 void FLEXCOM4_Handler( void )            __attribute__((weak, alias("DefaultInterruptHandler")));
 void UART0_Handler( void )               __attribute__((weak, alias("DefaultInterruptHandler")));
@@ -109,6 +110,7 @@ void UART3_Handler( void )               __attribute__((weak, alias("DefaultInte
 void UART4_Handler( void )               __attribute__((weak, alias("DefaultInterruptHandler")));
 void TWIHS0_Handler( void )              __attribute__((weak, alias("DefaultInterruptHandler")));
 void TWIHS1_Handler( void )              __attribute__((weak, alias("DefaultInterruptHandler")));
+void SDMMC0_Handler( void )              __attribute__((weak, alias("DefaultInterruptHandler")));
 void SDMMC1_Handler( void )              __attribute__((weak, alias("DefaultInterruptHandler")));
 void SPI0_Handler( void )                __attribute__((weak, alias("DefaultInterruptHandler")));
 void SPI1_Handler( void )                __attribute__((weak, alias("DefaultInterruptHandler")));
@@ -132,15 +134,18 @@ void QSPI1_Handler( void )               __attribute__((weak, alias("DefaultInte
 void I2SC0_Handler( void )               __attribute__((weak, alias("DefaultInterruptHandler")));
 void I2SC1_Handler( void )               __attribute__((weak, alias("DefaultInterruptHandler")));
 void MCAN0_INT0_Handler( void )          __attribute__((weak, alias("DefaultInterruptHandler")));
+void MCAN1_INT0_Handler( void )          __attribute__((weak, alias("DefaultInterruptHandler")));
 void PTC_Handler( void )                 __attribute__((weak, alias("DefaultInterruptHandler")));
 void CLASSD_Handler( void )              __attribute__((weak, alias("DefaultInterruptHandler")));
 void L2CC_Handler( void )                __attribute__((weak, alias("DefaultInterruptHandler")));
 void MCAN0_INT1_Handler( void )          __attribute__((weak, alias("DefaultInterruptHandler")));
+void MCAN1_INT1_Handler( void )          __attribute__((weak, alias("DefaultInterruptHandler")));
 void GMAC_Q1_Handler( void )             __attribute__((weak, alias("DefaultInterruptHandler")));
 void GMAC_Q2_Handler( void )             __attribute__((weak, alias("DefaultInterruptHandler")));
 void PIOB_Handler( void )                __attribute__((weak, alias("DefaultInterruptHandler")));
 void PIOC_Handler( void )                __attribute__((weak, alias("DefaultInterruptHandler")));
 void PIOD_Handler( void )                __attribute__((weak, alias("DefaultInterruptHandler")));
+void SDMMC0_TIMER_Handler( void )        __attribute__((weak, alias("DefaultInterruptHandler")));
 void SDMMC1_TIMER_Handler( void )        __attribute__((weak, alias("DefaultInterruptHandler")));
 void SYSC_Handler( void )                __attribute__((weak, alias("DefaultInterruptHandler")));
 void ACC_Handler( void )                 __attribute__((weak, alias("DefaultInterruptHandler")));

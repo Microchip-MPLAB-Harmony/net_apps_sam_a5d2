@@ -72,22 +72,22 @@
 
 
 /*** Macros for PB_USER pin ***/
-#define PB_USER_Set()               (PIOB_REGS->PIO_SODR = (1<<4))
-#define PB_USER_Clear()             (PIOB_REGS->PIO_CODR = (1<<4))
+#define PB_USER_Set()               (PIOB_REGS->PIO_SODR = (1<<9))
+#define PB_USER_Clear()             (PIOB_REGS->PIO_CODR = (1<<9))
 #define PB_USER_Toggle()            do {\
-                                            PIOB_REGS->PIO_MSKR = (1<<4); \
-                                            PIOB_REGS->PIO_ODSR ^= (1<<4);\
+                                            PIOB_REGS->PIO_MSKR = (1<<9); \
+                                            PIOB_REGS->PIO_ODSR ^= (1<<9);\
                                         } while (0)
 #define PB_USER_OutputEnable()      do {\
-                                            PIOB_REGS->PIO_MSKR = (1<<4); \
+                                            PIOB_REGS->PIO_MSKR = (1<<9); \
                                             PIOB_REGS->PIO_CFGR |=(1 << PIO_CFGR_DIR_Pos);\
                                         }while(0)
 #define PB_USER_InputEnable()       do { \
-                                            PIOB_REGS->PIO_MSKR = (1<<4); \
+                                            PIOB_REGS->PIO_MSKR = (1<<9); \
                                             PIOB_REGS->PIO_CFGR &= ~(1 << PIO_CFGR_DIR_Pos);\
                                         } while (0)
-#define PB_USER_Get()               ((PIOB_REGS->PIO_PDSR >> 4) & 0x1)
-#define PB_USER_PIN                  PIO_PIN_PB4
+#define PB_USER_Get()               ((PIOB_REGS->PIO_PDSR >> 9) & 0x1)
+#define PB_USER_PIN                  PIO_PIN_PB9
 
 
 
@@ -144,6 +144,24 @@ typedef uint32_t PIO_PORT;
 
 typedef enum
 {
+    PIO_PIN_PA0 = 0,
+    PIO_PIN_PA1 = 1,
+    PIO_PIN_PA2 = 2,
+    PIO_PIN_PA3 = 3,
+    PIO_PIN_PA4 = 4,
+    PIO_PIN_PA5 = 5,
+    PIO_PIN_PA6 = 6,
+    PIO_PIN_PA7 = 7,
+    PIO_PIN_PA8 = 8,
+    PIO_PIN_PA9 = 9,
+    PIO_PIN_PA10 = 10,
+    PIO_PIN_PA11 = 11,
+    PIO_PIN_PA12 = 12,
+    PIO_PIN_PA13 = 13,
+    PIO_PIN_PA14 = 14,
+    PIO_PIN_PA15 = 15,
+    PIO_PIN_PA16 = 16,
+    PIO_PIN_PA17 = 17,
     PIO_PIN_PA18 = 18,
     PIO_PIN_PA19 = 19,
     PIO_PIN_PA20 = 20,
@@ -199,6 +217,36 @@ typedef enum
     PIO_PIN_PC6 = 70,
     PIO_PIN_PC7 = 71,
     PIO_PIN_PC8 = 72,
+    PIO_PIN_PC9 = 73,
+    PIO_PIN_PC10 = 74,
+    PIO_PIN_PC11 = 75,
+    PIO_PIN_PC12 = 76,
+    PIO_PIN_PC13 = 77,
+    PIO_PIN_PC14 = 78,
+    PIO_PIN_PC15 = 79,
+    PIO_PIN_PC16 = 80,
+    PIO_PIN_PC17 = 81,
+    PIO_PIN_PC18 = 82,
+    PIO_PIN_PC19 = 83,
+    PIO_PIN_PC20 = 84,
+    PIO_PIN_PC21 = 85,
+    PIO_PIN_PC22 = 86,
+    PIO_PIN_PC23 = 87,
+    PIO_PIN_PC24 = 88,
+    PIO_PIN_PC25 = 89,
+    PIO_PIN_PC26 = 90,
+    PIO_PIN_PC27 = 91,
+    PIO_PIN_PC28 = 92,
+    PIO_PIN_PC29 = 93,
+    PIO_PIN_PC30 = 94,
+    PIO_PIN_PC31 = 95,
+    PIO_PIN_PD0 = 96,
+    PIO_PIN_PD1 = 97,
+    PIO_PIN_PD2 = 98,
+    PIO_PIN_PD3 = 99,
+    PIO_PIN_PD4 = 100,
+    PIO_PIN_PD5 = 101,
+    PIO_PIN_PD6 = 102,
     PIO_PIN_PD7 = 103,
     PIO_PIN_PD8 = 104,
     PIO_PIN_PD9 = 105,
@@ -216,6 +264,14 @@ typedef enum
     PIO_PIN_PD21 = 117,
     PIO_PIN_PD22 = 118,
     PIO_PIN_PD23 = 119,
+    PIO_PIN_PD24 = 120,
+    PIO_PIN_PD25 = 121,
+    PIO_PIN_PD26 = 122,
+    PIO_PIN_PD27 = 123,
+    PIO_PIN_PD28 = 124,
+    PIO_PIN_PD29 = 125,
+    PIO_PIN_PD30 = 126,
+    PIO_PIN_PD31 = 127,
 
     /* This element should not be used in any of the PIO APIs.
        It will be used by other modules or application to denote that none of the PIO Pin is used */

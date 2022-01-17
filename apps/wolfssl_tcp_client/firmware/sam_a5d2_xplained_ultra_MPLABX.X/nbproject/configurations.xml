@@ -272,129 +272,129 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f3" displayName="packs" projectFiles="true">
-        <logicalFolder name="f1" displayName="ATSAMA5D21_DFP" projectFiles="true">
+        <logicalFolder name="f1" displayName="ATSAMA5D27_DFP" projectFiles="true">
           <logicalFolder name="f1" displayName="component" projectFiles="true">
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/acc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/adc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/aes.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/aesb.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/aic.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/aximx.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/chipid.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/classd.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/flexcom.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/gmac.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/i2sc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/icm.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/isc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/l2cc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/lcdc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/matrix.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/mcan.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/mpddrc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/pdmic.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/pio.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/pit.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/pmc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/ptc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/pwm.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/qspi.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/rstc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/rtc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/rxlp.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/sckc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/sdmmc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/secumod.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/sfc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/sfr.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/sfrbu.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/sha.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/shdwc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/smc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/spi.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/ssc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/tc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/tdes.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/trng.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/twihs.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/uart.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/udphs.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/uhphs.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/wdt.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/component/xdmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/acc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/adc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/aes.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/aesb.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/aic.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/aximx.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/chipid.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/classd.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/flexcom.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/gmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/i2sc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/icm.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/isc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/l2cc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/lcdc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/matrix.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/mcan.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/mpddrc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/pdmic.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/pio.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/pit.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/pmc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/ptc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/pwm.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/qspi.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/rstc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/rxlp.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sckc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sdmmc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/secumod.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sfc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sfr.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sfrbu.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sha.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/shdwc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/smc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/spi.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/ssc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/tc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/tdes.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/trng.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/twihs.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/uart.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/udphs.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/uhphs.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/xdmac.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="instance" projectFiles="true">
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/acc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/adc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/aes.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/aesb.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/aic.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/aximx.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/chipid.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/classd.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/flexcom0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/flexcom1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/flexcom2.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/flexcom3.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/flexcom4.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/gmac.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/i2sc0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/i2sc1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/icm.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/isc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/l2cc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/lcdc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/matrix0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/matrix1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/mcan0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/mcan1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/mpddrc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/pdmic.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/pio.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/pit.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/pmc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/ptc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/pwm.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/qspi0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/qspi1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/rstc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/rtc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/rxlp.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/saic.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/sckc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/sdmmc0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/sdmmc1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/secumod.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/sfc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/sfr.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/sfrbu.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/sha.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/shdwc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/smc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/spi0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/spi1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/ssc0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/ssc1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/tc0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/tc1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/tdes.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/trng.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/twihs0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/twihs1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/uart0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/uart1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/uart2.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/uart3.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/uart4.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/udphs.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/wdt.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/xdmac0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D21_DFP/instance/xdmac1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/acc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/adc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/aes.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/aesb.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/aic.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/aximx.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/chipid.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/classd.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom2.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom3.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom4.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/gmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/i2sc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/i2sc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/icm.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/isc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/l2cc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/lcdc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/matrix0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/matrix1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/mcan0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/mcan1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/mpddrc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pdmic.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pio.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pit.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pmc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/ptc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pwm.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/qspi0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/qspi1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/rstc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/rxlp.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/saic.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sckc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sdmmc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sdmmc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/secumod.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sfc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sfr.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sfrbu.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sha.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/shdwc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/smc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/spi0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/spi1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/ssc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/ssc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tdes.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/trng.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/twihs0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/twihs1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart2.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart3.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart4.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/udphs.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/xdmac0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/xdmac1.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f3" displayName="pio" projectFiles="true">
-            <itemPath>../src/packs/ATSAMA5D21_DFP/pio/sama5d21.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/pio/sama5d27.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/packs/ATSAMA5D21_DFP/sama5d21.h</itemPath>
+          <itemPath>../src/packs/ATSAMA5D27_DFP/sama5d27.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
           <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
@@ -908,7 +908,7 @@
     <conf name="sam_a5d2_xplained_ultra_MPLABX" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>ATSAMA5D21</targetDevice>
+        <targetDevice>ATSAMA5D27</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
@@ -980,7 +980,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_a5d2_xplained_ultra_MPLABX;../src/config/sam_a5d2_xplained_ultra_MPLABX/library;../src/config/sam_a5d2_xplained_ultra_MPLABX/library/tcpip/src;../src/config/sam_a5d2_xplained_ultra_MPLABX/library/tcpip/src/common;../src/packs/ATSAMA5D21_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl"/>
+                  value="../src;../src/config/sam_a5d2_xplained_ultra_MPLABX;../src/config/sam_a5d2_xplained_ultra_MPLABX/library;../src/config/sam_a5d2_xplained_ultra_MPLABX/library/tcpip/src;../src/config/sam_a5d2_xplained_ultra_MPLABX/library/tcpip/src/common;../src/packs/ATSAMA5D27_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -1079,7 +1079,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_a5d2_xplained_ultra_MPLABX;../src/packs/ATSAMA5D21_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5"/>
+                  value="../src;../src/config/sam_a5d2_xplained_ultra_MPLABX;../src/packs/ATSAMA5D27_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

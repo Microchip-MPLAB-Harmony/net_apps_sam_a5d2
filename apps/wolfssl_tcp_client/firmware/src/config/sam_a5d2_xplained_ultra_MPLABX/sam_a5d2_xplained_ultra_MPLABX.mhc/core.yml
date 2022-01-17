@@ -231,6 +231,27 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
   - type: Integer
+    attributes: {id: FLEXCOM2_GENERIC_CLOCK_FREQUENCY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: FLEXCOM2_INTERRUPT_PRIORITY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: FLEXCOM2_INTERRUPT_SRC_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: Integer
     attributes: {id: FLEXCOM3_GENERIC_CLOCK_FREQUENCY}
     children:
     - type: Values
@@ -925,6 +946,48 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
+  - type: Integer
+    attributes: {id: MCAN1_CLOCK_FREQUENCY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: Integer
+    attributes: {id: MCAN1_GENERIC_CLOCK_FREQUENCY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: MCAN1_INT0_INTERRUPT_PRIORITY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: MCAN1_INT0_INTERRUPT_SRC_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: MCAN1_INT1_INTERRUPT_PRIORITY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: MCAN1_INT1_INTERRUPT_SRC_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
   - type: Boolean
     attributes: {id: MPDDRC_CLOCK_ENABLE}
     children:
@@ -1612,6 +1675,13 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '0'}
   - type: KeyValueSet
+    attributes: {id: PMC_PCR_PID21_GCKCSS}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: KeyValueSet
     attributes: {id: PMC_PCR_PID22_GCKCSS}
     children:
     - type: Values
@@ -1669,6 +1739,13 @@ children:
         attributes: {id: core, value: '0'}
   - type: KeyValueSet
     attributes: {id: PMC_PCR_PID30_GCKCSS}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: PMC_PCR_PID31_GCKCSS}
     children:
     - type: Values
       children:
@@ -1739,6 +1816,13 @@ children:
         attributes: {id: core, value: '0'}
   - type: KeyValueSet
     attributes: {id: PMC_PCR_PID56_GCKCSS}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: PMC_PCR_PID57_GCKCSS}
     children:
     - type: Values
       children:
@@ -1953,7 +2037,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x500'}
+        attributes: {id: core, value: '0x400'}
   - type: String
     attributes: {id: PORT_B_CFGR_Value10}
     children:
@@ -2044,7 +2128,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x500'}
+        attributes: {id: core, value: '0x400'}
   - type: String
     attributes: {id: PORT_B_CFGR_Value6}
     children:
@@ -2114,7 +2198,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x544'}
+        attributes: {id: core, value: '0xffc000'}
   - type: String
     attributes: {id: PORT_B_MSKR_ValueG}
     children:
@@ -2128,7 +2212,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x10'}
+        attributes: {id: core, value: '0x261'}
   - type: String
     attributes: {id: PORT_D_CFGR_Value2}
     children:
@@ -2320,6 +2404,62 @@ children:
         attributes: {id: core, value: '7'}
   - type: KeyValueSet
     attributes: {id: SAIC_INTERRUPT_SRC_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: Integer
+    attributes: {id: SDMMC0_BASECLK_FREQUENCY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '12000000'}
+  - type: Integer
+    attributes: {id: SDMMC0_CLOCK_FREQUENCY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '166000000'}
+  - type: Integer
+    attributes: {id: SDMMC0_GENERIC_CLOCK_FREQUENCY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SDMMC0_INTERRUPT_PRIORITY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SDMMC0_INTERRUPT_SRC_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: Integer
+    attributes: {id: SDMMC0_MULTCLK_FREQUENCY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SDMMC0_TIMER_INTERRUPT_PRIORITY}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: SDMMC0_TIMER_INTERRUPT_SRC_TYPE}
     children:
     - type: Values
       children:
