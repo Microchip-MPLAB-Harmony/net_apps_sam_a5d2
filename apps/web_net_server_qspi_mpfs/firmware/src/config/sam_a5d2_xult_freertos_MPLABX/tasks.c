@@ -179,7 +179,7 @@ void SYS_Tasks ( void )
         DRV_MEMORY_PRIORITY_IDX0,
         (TaskHandle_t*)NULL
     );
-
+    
     xTaskCreate( _DRV_MIIM_Task,
         "DRV_MIIM_Tasks",
         DRV_MIIM_RTOS_STACK_SIZE,

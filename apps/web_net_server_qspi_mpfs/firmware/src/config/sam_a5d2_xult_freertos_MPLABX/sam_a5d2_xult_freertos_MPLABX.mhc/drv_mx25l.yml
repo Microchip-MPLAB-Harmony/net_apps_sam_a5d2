@@ -65,4 +65,4 @@ children:
         children:
         - {type: Value, value: drv_memory_MEMORY_dependency}
 - type: ElementPosition
-  attributes: {x: '43', y: '431', id: drv_mx25l}
+  attributes: {x: '41', y: '431', id: drv_mx25l}

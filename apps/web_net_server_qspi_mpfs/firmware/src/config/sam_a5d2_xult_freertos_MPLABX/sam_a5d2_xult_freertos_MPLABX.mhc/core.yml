@@ -1211,7 +1211,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: ''}
+        attributes: {value: SPI1_SPCK}
   - type: String
     attributes: {id: PIN_176_PD}
     children:
@@ -1225,14 +1225,14 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: ''}
+        attributes: {value: A}
   - type: String
     attributes: {id: PIN_178_FUNCTION_TYPE}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: ''}
+        attributes: {value: SPI1_MISO}
   - type: String
     attributes: {id: PIN_178_PD}
     children:
@@ -1246,7 +1246,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: ''}
+        attributes: {value: A}
   - type: String
     attributes: {id: PIN_17_FUNCTION_TYPE}
     children:
@@ -1260,14 +1260,14 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: ''}
+        attributes: {value: SPI1_NPCS0}
   - type: String
     attributes: {id: PIN_191_PERIPHERAL_FUNCTION}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: ''}
+        attributes: {value: A}
   - type: String
     attributes: {id: PIN_191_PU}
     children:
@@ -1296,6 +1296,34 @@ children:
       children:
       - type: User
         attributes: {value: F}
+  - type: String
+    attributes: {id: PIN_206_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SPI1_MOSI}
+  - type: String
+    attributes: {id: PIN_206_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
+  - type: String
+    attributes: {id: PIN_207_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: SPI1_NPCS1}
+  - type: String
+    attributes: {id: PIN_207_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: A}
   - type: String
     attributes: {id: PIN_20_FUNCTION_TYPE}
     children:
@@ -1332,6 +1360,20 @@ children:
       - type: User
         attributes: {value: ''}
   - type: String
+    attributes: {id: PIN_234_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: QSPI0_IO2}
+  - type: String
+    attributes: {id: PIN_234_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: F}
+  - type: String
     attributes: {id: PIN_24_PD}
     children:
     - type: Values
@@ -1345,6 +1387,76 @@ children:
       children:
       - type: User
         attributes: {value: LED_AL}
+  - type: String
+    attributes: {id: PIN_270_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: QSPI0_IO0}
+  - type: String
+    attributes: {id: PIN_270_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: F}
+  - type: String
+    attributes: {id: PIN_271_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: QSPI0_IO3}
+  - type: String
+    attributes: {id: PIN_271_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: F}
+  - type: String
+    attributes: {id: PIN_287_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: QSPI0_SCK}
+  - type: String
+    attributes: {id: PIN_287_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: F}
+  - type: String
+    attributes: {id: PIN_288_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: QSPI0_CS}
+  - type: String
+    attributes: {id: PIN_288_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: F}
+  - type: String
+    attributes: {id: PIN_289_FUNCTION_TYPE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: QSPI0_IO1}
+  - type: String
+    attributes: {id: PIN_289_PERIPHERAL_FUNCTION}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: F}
   - type: String
     attributes: {id: PIN_2_FUNCTION_TYPE}
     children:
@@ -2030,7 +2142,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x0'}
+        attributes: {id: core, value: '0xfc00000'}
   - type: String
     attributes: {id: PORT_A_MSKR_ValueG}
     children:
@@ -2282,7 +2394,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0x7c00c'}
+        attributes: {id: core, value: '0x3e07c00c'}
   - type: String
     attributes: {id: PORT_D_MSKR_ValueB}
     children:
