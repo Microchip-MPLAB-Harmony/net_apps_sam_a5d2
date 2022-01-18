@@ -825,13 +825,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 8D655819E663934AD3A384B704B9907B
-- generatedChecksum: FFD3F6B772AC9C75397AAAE7A3D88673
+- generatedChecksum: A68C31BA4ED6532DCAADDE7B586BA75D
   logicalPath: config/sam_a5d2_xult_MPLABX/peripheral/pio
   name: plib_pio.c
   physicalPath: peripheral/pio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: FFD3F6B772AC9C75397AAAE7A3D88673
+  userChecksum: A68C31BA4ED6532DCAADDE7B586BA75D
 - generatedChecksum: 2C90FC1F673A7AD4A5F5B646A77DB921
   logicalPath: config/sam_a5d2_xult_MPLABX/peripheral/qspi
   name: plib_qspi0.c
@@ -1931,13 +1931,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 15AB6693CC2E1EE7AB845EE42A6AC762
-- generatedChecksum: B221019AFBC90CE7D8F4B56C4EE95978
+- generatedChecksum: 6CD0FD13E37FD9665FB704C299844837
   logicalPath: config/sam_a5d2_xult_MPLABX
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: B221019AFBC90CE7D8F4B56C4EE95978
+  userChecksum: 6CD0FD13E37FD9665FB704C299844837
 - generatedChecksum: 32D6F5036C919DE32EFC951936B81657
   logicalPath: packs/CMSIS/CMSIS/Core_A/Include
   name: core_ca.h
