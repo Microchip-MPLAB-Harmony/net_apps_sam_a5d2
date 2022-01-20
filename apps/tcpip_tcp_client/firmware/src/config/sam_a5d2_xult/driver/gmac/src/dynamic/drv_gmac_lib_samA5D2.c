@@ -74,8 +74,12 @@ typedef struct
 } DRV_PIC32CGMAC_HW_DCPT_ARRAY;
   
 // place the descriptors in an uncached memory region
-__attribute__((__aligned__(8))) DRV_PIC32CGMAC_HW_DCPT_ARRAY gmac_dcpt_array @".region_nocache";
-
+#if defined(__IAR_SYSTEMS_ICC__)
+  static __attribute__((__aligned__(8))) DRV_PIC32CGMAC_HW_DCPT_ARRAY gmac_dcpt_array @".region_nocache";
+#elif defined(__GNUC__)
+ static __attribute__((__aligned__(8))) __attribute__((space(data),section(".region_nocache"))) DRV_PIC32CGMAC_HW_DCPT_ARRAY gmac_dcpt_array;
+  
+#endif
 uint32_t    drvGmacQueEvents;     //Priority Queue Event Status 
 //GMAC Interrupt sources for 6 Priority Queues
 INT_SOURCE  drvGmacIRQ[DRV_GMAC_NUMBER_OF_QUEUES] = {GMAC_IRQn, GMAC_Q1_IRQn, GMAC_Q2_IRQn};
@@ -114,16 +118,14 @@ void DRV_PIC32CGMAC_LibInit(DRV_GMAC_DRIVER* pMACDrv)
     // pause enable, remove FCS, MDC clock
     GMAC_REGS->GMAC_NCFGR =  GMAC_NCFGR_FD_Msk | (GMAC_NCFGR_DBW_Msk & ((0) << GMAC_NCFGR_DBW_Pos))
                           | GMAC_NCFGR_CLK_MCK_64 | GMAC_NCFGR_PEN_Msk | GMAC_NCFGR_RFCS_Msk |
-						  GMAC_NCFGR_RXBUFO(pMACDrv->sGmacData._dataOffset);  
+						  GMAC_NCFGR_RXBUFO(pMACDrv->sGmacData._dataOffset);   
 	
 	if((pMACDrv->sGmacData.gmacConfig.checksumOffloadRx) != TCPIP_MAC_CHECKSUM_NONE)
     {
         GMAC_REGS->GMAC_NCFGR |= GMAC_NCFGR_RXCOEN_Msk;
     }
-	// Set MAC address    
+    // Set MAC address
     DRV_PIC32CGMAC_LibSetMacAddr((const uint8_t *)(pMACDrv->sGmacData.gmacConfig.macAddress.v));
-	// MII mode config
-    //Configure in RMII mode
 	if((TCPIP_INTMAC_PHY_CONFIG_FLAGS) & DRV_ETHPHY_CFG_RMII)
 		GMAC_REGS->GMAC_UR = GMAC_UR_RMII(1); //initial mode set as RMII
 	else
@@ -369,26 +371,24 @@ DRV_PIC32CGMAC_RESULT DRV_PIC32CGMAC_LibRxInit(DRV_GMAC_DRIVER* pMACDrv)
 		}
 		pMACDrv->sGmacData.gmac_queue[queue_idx].pRxDesc[desc_idx-1].rx_desc_buffaddr.val |= GMAC_RX_WRAP_BIT;
 		
-        if (pMACDrv->sGmacData.gmacConfig.gmac_queue_config[queue_idx].queueRxEnable == true)
+        
+        gmacRes = _AllocateRxPacket(pMACDrv, pMACDrv->sGmacData.gmacConfig.gmac_queue_config[queue_idx].nRxDedicatedBuffers, queue_idx, GMAC_RX_STICKY_BUFFERS);	
+        if(gmacRes != DRV_PIC32CGMAC_RES_OK)
         {
-            gmacRes = _AllocateRxPacket(pMACDrv, pMACDrv->sGmacData.gmacConfig.gmac_queue_config[queue_idx].nRxDedicatedBuffers, queue_idx, GMAC_RX_STICKY_BUFFERS);	
-            if(gmacRes != DRV_PIC32CGMAC_RES_OK)
-            {
-                break;
-            }
-
-            gmacRes = _AllocateRxPacket(pMACDrv, pMACDrv->sGmacData.gmacConfig.gmac_queue_config[queue_idx].nRxAddlBuffCount, queue_idx, GMAC_RX_DYNAMIC_BUFFERS);	
-            if(gmacRes != DRV_PIC32CGMAC_RES_OK)
-            {
-                break;
-            }
-
-            gmacRes = DRV_PIC32CGMAC_LibRxBuffersAppend(pMACDrv, queue_idx,0,pMACDrv->sGmacData.gmacConfig.gmac_queue_config[queue_idx].nRxDescCnt);		
-            if(gmacRes != DRV_PIC32CGMAC_RES_OK)
-            {
-                break;
-            }
+            break;
         }
+        
+		gmacRes = _AllocateRxPacket(pMACDrv, pMACDrv->sGmacData.gmacConfig.gmac_queue_config[queue_idx].nRxAddlBuffCount, queue_idx, GMAC_RX_DYNAMIC_BUFFERS);	
+        if(gmacRes != DRV_PIC32CGMAC_RES_OK)
+		{
+            break;
+        }
+			
+		gmacRes = DRV_PIC32CGMAC_LibRxBuffersAppend(pMACDrv, queue_idx,0,pMACDrv->sGmacData.gmacConfig.gmac_queue_config[queue_idx].nRxDescCnt);		
+		if(gmacRes != DRV_PIC32CGMAC_RES_OK)
+		{
+			break;
+		}
 		
 		if (!queue_idx)
 			GMAC_REGS->GMAC_RBQB = GMAC_RBQB_ADDR_Msk & ((uint32_t)pMACDrv->sGmacData.gmac_queue[queue_idx].pRxDesc);
@@ -620,6 +620,7 @@ DRV_PIC32CGMAC_RESULT DRV_PIC32CGMAC_LibTxAckPacket(DRV_GMAC_DRIVER * pMACDrv, G
         // get packet address from buffer address
         TCPIP_MAC_SEGMENT_GAP_DCPT* pGap = (TCPIP_MAC_SEGMENT_GAP_DCPT*)(pbuff + pMACDrv->sGmacData._dcptOffset);
         pPkt = pGap->segmentPktPtr;
+        
         
         while(tailIndex != headIndex)
         {
@@ -1246,12 +1247,12 @@ static bool _MacRxPacketAck(TCPIP_MAC_PACKET* pPkt,  const void* param)
 {
     TCPIP_MAC_DATA_SEGMENT *    pDSegNext;
 	DRV_GMAC_DRIVER * pMacDrv = (DRV_GMAC_DRIVER *)param;   
+    GMAC_QUE_LIST queueIdx = (GMAC_QUE_LIST)(pMacDrv->sGmacData.gmacConfig.rxPrioNumToQueIndx[pPkt->pktPriority]);
     
     bool res = false;
 
     if(pPkt && pPkt->pDSeg)
     {
-        GMAC_QUE_LIST queueIdx = (GMAC_QUE_LIST)(pMacDrv->sGmacData.gmacConfig.rxPrioNumToQueIndx[pPkt->pktPriority]);
         while(pPkt->pDSeg)
         {
             pDSegNext = pPkt->pDSeg->next;
