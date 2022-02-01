@@ -35,17 +35,17 @@ MEMORY
 {
 	sram        (!RWX) : ORIGIN = 0x200000,   LENGTH = 128K /* sram */
 	ram         (RWX) : ORIGIN = 0x21000000, LENGTH = 0x1F000000  /* ram */
-	ram_nocache  (!RWX) : ORIGIN = 0x20000000, LENGTH = 0x1000000  /* ram (non-cached) */
+	ram_nocache  (!RWX) : ORIGIN = 0x20000000, LENGTH = 0x01000000  /* ram (non-cached) */
 	rom         (LRX) : ORIGIN = 0, LENGTH = 0
 }
 
 /* Sizes of the stacks used by the application. NOTE: you need to adjust */
-C_STACK_SIZE   = 4096;
-IRQ_STACK_SIZE = 96;
-FIQ_STACK_SIZE = 96;
-SVC_STACK_SIZE = 4096;
-ABT_STACK_SIZE = 64;
-UND_STACK_SIZE = 64;
+C_STACK_SIZE   = 1024000;
+IRQ_STACK_SIZE = 1024000;
+FIQ_STACK_SIZE = 1024;
+SVC_STACK_SIZE = 1024000;
+ABT_STACK_SIZE = 1024;
+UND_STACK_SIZE = 1024;
 
 /* Section Definitions */
 SECTIONS
@@ -147,7 +147,7 @@ SECTIONS
 	.region_nocache (NOLOAD) :
 	{
 		. = ALIGN(4);
-		*(.region_nocache)
+        *(.region_nocache.region_nocache.*)
 	} >ram_nocache
 
 	/* .bss section which is used for uninitialized data */
