@@ -1,7 +1,7 @@
 /*
  * Component description for UHPHS
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_UHPHS_COMPONENT_H_
 #define _SAMA5D2_UHPHS_COMPONENT_H_
 
@@ -493,29 +493,29 @@
 
 
 /** \brief UHPHS register offsets definitions */
-#define UHPHS_HCCAPBASE_REG_OFST       (0x00)              /**< (UHPHS_HCCAPBASE) UHPHS Host Controller Capability Register Offset */
-#define UHPHS_HCSPARAMS_REG_OFST       (0x04)              /**< (UHPHS_HCSPARAMS) UHPHS Host Controller Structural Parameters Register Offset */
-#define UHPHS_HCCPARAMS_REG_OFST       (0x08)              /**< (UHPHS_HCCPARAMS) UHPHS Host Controller Capability Parameters Register Offset */
-#define UHPHS_USBCMD_REG_OFST          (0x10)              /**< (UHPHS_USBCMD) UHPHS USB Command Register Offset */
-#define UHPHS_USBSTS_REG_OFST          (0x14)              /**< (UHPHS_USBSTS) UHPHS USB Status Register Offset */
-#define UHPHS_USBINTR_REG_OFST         (0x18)              /**< (UHPHS_USBINTR) UHPHS USB Interrupt Enable Register Offset */
-#define UHPHS_FRINDEX_REG_OFST         (0x1C)              /**< (UHPHS_FRINDEX) UHPHS USB Frame Index Register Offset */
-#define UHPHS_CTRLDSSEGMENT_REG_OFST   (0x20)              /**< (UHPHS_CTRLDSSEGMENT) UHPHS Control Data Structure Segment Register Offset */
-#define UHPHS_PERIODICLISTBASE_REG_OFST (0x24)              /**< (UHPHS_PERIODICLISTBASE) UHPHS Periodic Frame List Base Address Register Offset */
-#define UHPHS_ASYNCLISTADDR_REG_OFST   (0x28)              /**< (UHPHS_ASYNCLISTADDR) UHPHS Asynchronous List Address Register Offset */
-#define UHPHS_CONFIGFLAG_REG_OFST      (0x50)              /**< (UHPHS_CONFIGFLAG) UHPHS Configured Flag Register Offset */
-#define UHPHS_PORTSC_0_REG_OFST        (0x54)              /**< (UHPHS_PORTSC_0) UHPHS Port Status and Control Register 0 Offset */
-#define UHPHS_PORTSC_1_REG_OFST        (0x58)              /**< (UHPHS_PORTSC_1) UHPHS Port Status and Control Register 1 Offset */
-#define UHPHS_PORTSC_2_REG_OFST        (0x5C)              /**< (UHPHS_PORTSC_2) UHPHS Port Status and Control Register 2 Offset */
-#define UHPHS_INSNREG00_REG_OFST       (0x90)              /**< (UHPHS_INSNREG00) EHCI Synopsys-Specific Registers 00 Offset */
-#define UHPHS_INSNREG01_REG_OFST       (0x94)              /**< (UHPHS_INSNREG01) EHCI Synopsys-Specific Registers 01 Offset */
-#define UHPHS_INSNREG02_REG_OFST       (0x98)              /**< (UHPHS_INSNREG02) EHCI Synopsys-Specific Registers 02 Offset */
-#define UHPHS_INSNREG03_REG_OFST       (0x9C)              /**< (UHPHS_INSNREG03) EHCI Synopsys-Specific Registers 03 Offset */
-#define UHPHS_INSNREG04_REG_OFST       (0xA0)              /**< (UHPHS_INSNREG04) EHCI Synopsys-Specific Registers 04 Offset */
-#define UHPHS_INSNREG05_REG_OFST       (0xA4)              /**< (UHPHS_INSNREG05) EHCI Synopsys-Specific Registers 05 Offset */
-#define UHPHS_INSNREG06_REG_OFST       (0xA8)              /**< (UHPHS_INSNREG06) EHCI Synopsys-Specific Registers 06 Offset */
-#define UHPHS_INSNREG07_REG_OFST       (0xAC)              /**< (UHPHS_INSNREG07) EHCI Synopsys-Specific Registers 07 Offset */
-#define UHPHS_INSNREG08_REG_OFST       (0xB0)              /**< (UHPHS_INSNREG08) EHCI Synopsys-Specific Registers 08 Offset */
+#define UHPHS_HCCAPBASE_REG_OFST       (0x00)              /* (UHPHS_HCCAPBASE) UHPHS Host Controller Capability Register Offset */
+#define UHPHS_HCSPARAMS_REG_OFST       (0x04)              /* (UHPHS_HCSPARAMS) UHPHS Host Controller Structural Parameters Register Offset */
+#define UHPHS_HCCPARAMS_REG_OFST       (0x08)              /* (UHPHS_HCCPARAMS) UHPHS Host Controller Capability Parameters Register Offset */
+#define UHPHS_USBCMD_REG_OFST          (0x10)              /* (UHPHS_USBCMD) UHPHS USB Command Register Offset */
+#define UHPHS_USBSTS_REG_OFST          (0x14)              /* (UHPHS_USBSTS) UHPHS USB Status Register Offset */
+#define UHPHS_USBINTR_REG_OFST         (0x18)              /* (UHPHS_USBINTR) UHPHS USB Interrupt Enable Register Offset */
+#define UHPHS_FRINDEX_REG_OFST         (0x1C)              /* (UHPHS_FRINDEX) UHPHS USB Frame Index Register Offset */
+#define UHPHS_CTRLDSSEGMENT_REG_OFST   (0x20)              /* (UHPHS_CTRLDSSEGMENT) UHPHS Control Data Structure Segment Register Offset */
+#define UHPHS_PERIODICLISTBASE_REG_OFST (0x24)              /* (UHPHS_PERIODICLISTBASE) UHPHS Periodic Frame List Base Address Register Offset */
+#define UHPHS_ASYNCLISTADDR_REG_OFST   (0x28)              /* (UHPHS_ASYNCLISTADDR) UHPHS Asynchronous List Address Register Offset */
+#define UHPHS_CONFIGFLAG_REG_OFST      (0x50)              /* (UHPHS_CONFIGFLAG) UHPHS Configured Flag Register Offset */
+#define UHPHS_PORTSC_0_REG_OFST        (0x54)              /* (UHPHS_PORTSC_0) UHPHS Port Status and Control Register 0 Offset */
+#define UHPHS_PORTSC_1_REG_OFST        (0x58)              /* (UHPHS_PORTSC_1) UHPHS Port Status and Control Register 1 Offset */
+#define UHPHS_PORTSC_2_REG_OFST        (0x5C)              /* (UHPHS_PORTSC_2) UHPHS Port Status and Control Register 2 Offset */
+#define UHPHS_INSNREG00_REG_OFST       (0x90)              /* (UHPHS_INSNREG00) EHCI Synopsys-Specific Registers 00 Offset */
+#define UHPHS_INSNREG01_REG_OFST       (0x94)              /* (UHPHS_INSNREG01) EHCI Synopsys-Specific Registers 01 Offset */
+#define UHPHS_INSNREG02_REG_OFST       (0x98)              /* (UHPHS_INSNREG02) EHCI Synopsys-Specific Registers 02 Offset */
+#define UHPHS_INSNREG03_REG_OFST       (0x9C)              /* (UHPHS_INSNREG03) EHCI Synopsys-Specific Registers 03 Offset */
+#define UHPHS_INSNREG04_REG_OFST       (0xA0)              /* (UHPHS_INSNREG04) EHCI Synopsys-Specific Registers 04 Offset */
+#define UHPHS_INSNREG05_REG_OFST       (0xA4)              /* (UHPHS_INSNREG05) EHCI Synopsys-Specific Registers 05 Offset */
+#define UHPHS_INSNREG06_REG_OFST       (0xA8)              /* (UHPHS_INSNREG06) EHCI Synopsys-Specific Registers 06 Offset */
+#define UHPHS_INSNREG07_REG_OFST       (0xAC)              /* (UHPHS_INSNREG07) EHCI Synopsys-Specific Registers 07 Offset */
+#define UHPHS_INSNREG08_REG_OFST       (0xB0)              /* (UHPHS_INSNREG08) EHCI Synopsys-Specific Registers 08 Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief UHPHS register API structure */

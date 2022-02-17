@@ -1,7 +1,7 @@
 /*
  * Component description for PIO
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_PIO_COMPONENT_H_
 #define _SAMA5D2_PIO_COMPONENT_H_
 
@@ -3087,39 +3087,39 @@
 
 
 /** \brief PIO register offsets definitions */
-#define PIO_MSKR_REG_OFST              (0x00)              /**< (PIO_MSKR) PIO Mask Register Offset */
-#define PIO_CFGR_REG_OFST              (0x04)              /**< (PIO_CFGR) PIO Configuration Register Offset */
-#define PIO_PDSR_REG_OFST              (0x08)              /**< (PIO_PDSR) PIO Pin Data Status Register Offset */
-#define PIO_LOCKSR_REG_OFST            (0x0C)              /**< (PIO_LOCKSR) PIO Lock Status Register Offset */
-#define PIO_SODR_REG_OFST              (0x10)              /**< (PIO_SODR) PIO Set Output Data Register Offset */
-#define PIO_CODR_REG_OFST              (0x14)              /**< (PIO_CODR) PIO Clear Output Data Register Offset */
-#define PIO_ODSR_REG_OFST              (0x18)              /**< (PIO_ODSR) PIO Output Data Status Register Offset */
-#define PIO_IER_REG_OFST               (0x20)              /**< (PIO_IER) PIO Interrupt Enable Register Offset */
-#define PIO_IDR_REG_OFST               (0x24)              /**< (PIO_IDR) PIO Interrupt Disable Register Offset */
-#define PIO_IMR_REG_OFST               (0x28)              /**< (PIO_IMR) PIO Interrupt Mask Register Offset */
-#define PIO_ISR_REG_OFST               (0x2C)              /**< (PIO_ISR) PIO Interrupt Status Register Offset */
-#define PIO_IOFR_REG_OFST              (0x3C)              /**< (PIO_IOFR) PIO I/O Freeze Configuration Register Offset */
-#define PIO_S_PIO_MSKR_REG_OFST        (0x00)              /**< (PIO_S_PIO_MSKR) Secure PIO Mask Register Offset */
-#define PIO_S_PIO_CFGR_REG_OFST        (0x04)              /**< (PIO_S_PIO_CFGR) Secure PIO Configuration Register Offset */
-#define PIO_S_PIO_PDSR_REG_OFST        (0x08)              /**< (PIO_S_PIO_PDSR) Secure PIO Pin Data Status Register Offset */
-#define PIO_S_PIO_LOCKSR_REG_OFST      (0x0C)              /**< (PIO_S_PIO_LOCKSR) Secure PIO Lock Status Register Offset */
-#define PIO_S_PIO_SODR_REG_OFST        (0x10)              /**< (PIO_S_PIO_SODR) Secure PIO Set Output Data Register Offset */
-#define PIO_S_PIO_CODR_REG_OFST        (0x14)              /**< (PIO_S_PIO_CODR) Secure PIO Clear Output Data Register Offset */
-#define PIO_S_PIO_ODSR_REG_OFST        (0x18)              /**< (PIO_S_PIO_ODSR) Secure PIO Output Data Status Register Offset */
-#define PIO_S_PIO_IER_REG_OFST         (0x20)              /**< (PIO_S_PIO_IER) Secure PIO Interrupt Enable Register Offset */
-#define PIO_S_PIO_IDR_REG_OFST         (0x24)              /**< (PIO_S_PIO_IDR) Secure PIO Interrupt Disable Register Offset */
-#define PIO_S_PIO_IMR_REG_OFST         (0x28)              /**< (PIO_S_PIO_IMR) Secure PIO Interrupt Mask Register Offset */
-#define PIO_S_PIO_ISR_REG_OFST         (0x2C)              /**< (PIO_S_PIO_ISR) Secure PIO Interrupt Status Register Offset */
-#define PIO_S_PIO_SIONR_REG_OFST       (0x30)              /**< (PIO_S_PIO_SIONR) Secure PIO Set I/O Non-Secure Register Offset */
-#define PIO_S_PIO_SIOSR_REG_OFST       (0x34)              /**< (PIO_S_PIO_SIOSR) Secure PIO Set I/O Secure Register Offset */
-#define PIO_S_PIO_IOSSR_REG_OFST       (0x38)              /**< (PIO_S_PIO_IOSSR) Secure PIO I/O Security Status Register Offset */
-#define PIO_S_PIO_IOFR_REG_OFST        (0x3C)              /**< (PIO_S_PIO_IOFR) Secure PIO I/O Freeze Configuration Register Offset */
-#define PIO_WPMR_REG_OFST              (0x5E0)             /**< (PIO_WPMR) PIO Write Protection Mode Register Offset */
-#define PIO_WPSR_REG_OFST              (0x5E4)             /**< (PIO_WPSR) PIO Write Protection Status Register Offset */
-#define PIO_VERSION_REG_OFST           (0x5FC)             /**< (PIO_VERSION) PIO Version Register Offset */
-#define PIO_S_PIO_SCDR_REG_OFST        (0x1500)            /**< (PIO_S_PIO_SCDR) Secure PIO Slow Clock Divider Debouncing Register Offset */
-#define PIO_S_PIO_WPMR_REG_OFST        (0x15E0)            /**< (PIO_S_PIO_WPMR) Secure PIO Write Protection Mode Register Offset */
-#define PIO_S_PIO_WPSR_REG_OFST        (0x15E4)            /**< (PIO_S_PIO_WPSR) Secure PIO Write Protection Status Register Offset */
+#define PIO_MSKR_REG_OFST              (0x00)              /* (PIO_MSKR) PIO Mask Register Offset */
+#define PIO_CFGR_REG_OFST              (0x04)              /* (PIO_CFGR) PIO Configuration Register Offset */
+#define PIO_PDSR_REG_OFST              (0x08)              /* (PIO_PDSR) PIO Pin Data Status Register Offset */
+#define PIO_LOCKSR_REG_OFST            (0x0C)              /* (PIO_LOCKSR) PIO Lock Status Register Offset */
+#define PIO_SODR_REG_OFST              (0x10)              /* (PIO_SODR) PIO Set Output Data Register Offset */
+#define PIO_CODR_REG_OFST              (0x14)              /* (PIO_CODR) PIO Clear Output Data Register Offset */
+#define PIO_ODSR_REG_OFST              (0x18)              /* (PIO_ODSR) PIO Output Data Status Register Offset */
+#define PIO_IER_REG_OFST               (0x20)              /* (PIO_IER) PIO Interrupt Enable Register Offset */
+#define PIO_IDR_REG_OFST               (0x24)              /* (PIO_IDR) PIO Interrupt Disable Register Offset */
+#define PIO_IMR_REG_OFST               (0x28)              /* (PIO_IMR) PIO Interrupt Mask Register Offset */
+#define PIO_ISR_REG_OFST               (0x2C)              /* (PIO_ISR) PIO Interrupt Status Register Offset */
+#define PIO_IOFR_REG_OFST              (0x3C)              /* (PIO_IOFR) PIO I/O Freeze Configuration Register Offset */
+#define PIO_S_PIO_MSKR_REG_OFST        (0x00)              /* (PIO_S_PIO_MSKR) Secure PIO Mask Register Offset */
+#define PIO_S_PIO_CFGR_REG_OFST        (0x04)              /* (PIO_S_PIO_CFGR) Secure PIO Configuration Register Offset */
+#define PIO_S_PIO_PDSR_REG_OFST        (0x08)              /* (PIO_S_PIO_PDSR) Secure PIO Pin Data Status Register Offset */
+#define PIO_S_PIO_LOCKSR_REG_OFST      (0x0C)              /* (PIO_S_PIO_LOCKSR) Secure PIO Lock Status Register Offset */
+#define PIO_S_PIO_SODR_REG_OFST        (0x10)              /* (PIO_S_PIO_SODR) Secure PIO Set Output Data Register Offset */
+#define PIO_S_PIO_CODR_REG_OFST        (0x14)              /* (PIO_S_PIO_CODR) Secure PIO Clear Output Data Register Offset */
+#define PIO_S_PIO_ODSR_REG_OFST        (0x18)              /* (PIO_S_PIO_ODSR) Secure PIO Output Data Status Register Offset */
+#define PIO_S_PIO_IER_REG_OFST         (0x20)              /* (PIO_S_PIO_IER) Secure PIO Interrupt Enable Register Offset */
+#define PIO_S_PIO_IDR_REG_OFST         (0x24)              /* (PIO_S_PIO_IDR) Secure PIO Interrupt Disable Register Offset */
+#define PIO_S_PIO_IMR_REG_OFST         (0x28)              /* (PIO_S_PIO_IMR) Secure PIO Interrupt Mask Register Offset */
+#define PIO_S_PIO_ISR_REG_OFST         (0x2C)              /* (PIO_S_PIO_ISR) Secure PIO Interrupt Status Register Offset */
+#define PIO_S_PIO_SIONR_REG_OFST       (0x30)              /* (PIO_S_PIO_SIONR) Secure PIO Set I/O Non-Secure Register Offset */
+#define PIO_S_PIO_SIOSR_REG_OFST       (0x34)              /* (PIO_S_PIO_SIOSR) Secure PIO Set I/O Secure Register Offset */
+#define PIO_S_PIO_IOSSR_REG_OFST       (0x38)              /* (PIO_S_PIO_IOSSR) Secure PIO I/O Security Status Register Offset */
+#define PIO_S_PIO_IOFR_REG_OFST        (0x3C)              /* (PIO_S_PIO_IOFR) Secure PIO I/O Freeze Configuration Register Offset */
+#define PIO_WPMR_REG_OFST              (0x5E0)             /* (PIO_WPMR) PIO Write Protection Mode Register Offset */
+#define PIO_WPSR_REG_OFST              (0x5E4)             /* (PIO_WPSR) PIO Write Protection Status Register Offset */
+#define PIO_VERSION_REG_OFST           (0x5FC)             /* (PIO_VERSION) PIO Version Register Offset */
+#define PIO_S_PIO_SCDR_REG_OFST        (0x1500)            /* (PIO_S_PIO_SCDR) Secure PIO Slow Clock Divider Debouncing Register Offset */
+#define PIO_S_PIO_WPMR_REG_OFST        (0x15E0)            /* (PIO_S_PIO_WPMR) Secure PIO Write Protection Mode Register Offset */
+#define PIO_S_PIO_WPSR_REG_OFST        (0x15E4)            /* (PIO_S_PIO_WPSR) Secure PIO Write Protection Status Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief PIO_GROUP register API structure */
