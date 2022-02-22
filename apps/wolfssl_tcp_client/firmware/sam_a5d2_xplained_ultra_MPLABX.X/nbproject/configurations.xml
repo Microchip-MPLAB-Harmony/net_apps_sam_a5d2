@@ -587,6 +587,8 @@
           <logicalFolder name="f8" displayName="crypto" projectFiles="true">
             <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/crypto/src/crypto.c</itemPath>
           </logicalFolder>
+          <logicalFolder name="cstartup.S" displayName="cstartup.S" projectFiles="true">
+          </logicalFolder>
           <logicalFolder name="f5" displayName="driver" projectFiles="true">
             <logicalFolder name="f3" displayName="ethphy" projectFiles="true">
               <logicalFolder name="f1" displayName="src" projectFiles="true">
@@ -711,8 +713,8 @@
           <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/tasks.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/initialization.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/interrupts.c</itemPath>
-          <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/cstartup.S</itemPath>
           <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/fault_handlers.c</itemPath>
+          <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/cstartup.S</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f3" displayName="wolfcrypt" projectFiles="true">
@@ -898,6 +900,7 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/harmony-manifest-success.yml</itemPath>
+      <itemPath>sam_a5d2_xplained_ultra_MPLABX.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -974,6 +977,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -1031,6 +1035,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1070,6 +1075,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
