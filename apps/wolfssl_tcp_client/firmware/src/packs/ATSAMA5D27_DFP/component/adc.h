@@ -1,7 +1,7 @@
 /*
  * Component description for ADC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_ADC_COMPONENT_H_
 #define _SAMA5D2_ADC_COMPONENT_H_
 
@@ -1006,48 +1006,48 @@
 
 
 /** \brief ADC register offsets definitions */
-#define ADC_CR_REG_OFST                (0x00)              /**< (ADC_CR) Control Register Offset */
-#define ADC_MR_REG_OFST                (0x04)              /**< (ADC_MR) Mode Register Offset */
-#define ADC_SEQR1_REG_OFST             (0x08)              /**< (ADC_SEQR1) Channel Sequence Register 1 Offset */
-#define ADC_SEQR2_REG_OFST             (0x0C)              /**< (ADC_SEQR2) Channel Sequence Register 2 Offset */
-#define ADC_CHER_REG_OFST              (0x10)              /**< (ADC_CHER) Channel Enable Register Offset */
-#define ADC_CHDR_REG_OFST              (0x14)              /**< (ADC_CHDR) Channel Disable Register Offset */
-#define ADC_CHSR_REG_OFST              (0x18)              /**< (ADC_CHSR) Channel Status Register Offset */
-#define ADC_LCDR_REG_OFST              (0x20)              /**< (ADC_LCDR) Last Converted Data Register Offset */
-#define ADC_IER_REG_OFST               (0x24)              /**< (ADC_IER) Interrupt Enable Register Offset */
-#define ADC_IDR_REG_OFST               (0x28)              /**< (ADC_IDR) Interrupt Disable Register Offset */
-#define ADC_IMR_REG_OFST               (0x2C)              /**< (ADC_IMR) Interrupt Mask Register Offset */
-#define ADC_ISR_REG_OFST               (0x30)              /**< (ADC_ISR) Interrupt Status Register Offset */
-#define ADC_LCTMR_REG_OFST             (0x34)              /**< (ADC_LCTMR) Last Channel Trigger Mode Register Offset */
-#define ADC_LCCWR_REG_OFST             (0x38)              /**< (ADC_LCCWR) Last Channel Compare Window Register Offset */
-#define ADC_OVER_REG_OFST              (0x3C)              /**< (ADC_OVER) Overrun Status Register Offset */
-#define ADC_EMR_REG_OFST               (0x40)              /**< (ADC_EMR) Extended Mode Register Offset */
-#define ADC_CWR_REG_OFST               (0x44)              /**< (ADC_CWR) Compare Window Register Offset */
-#define ADC_COR_REG_OFST               (0x4C)              /**< (ADC_COR) Channel Offset Register Offset */
-#define ADC_CDR_REG_OFST               (0x50)              /**< (ADC_CDR) Channel Data Register Offset */
-#define ADC_CDR0_REG_OFST              (0x50)              /**< (ADC_CDR0) Channel Data Register Offset */
-#define ADC_CDR1_REG_OFST              (0x54)              /**< (ADC_CDR1) Channel Data Register Offset */
-#define ADC_CDR2_REG_OFST              (0x58)              /**< (ADC_CDR2) Channel Data Register Offset */
-#define ADC_CDR3_REG_OFST              (0x5C)              /**< (ADC_CDR3) Channel Data Register Offset */
-#define ADC_CDR4_REG_OFST              (0x60)              /**< (ADC_CDR4) Channel Data Register Offset */
-#define ADC_CDR5_REG_OFST              (0x64)              /**< (ADC_CDR5) Channel Data Register Offset */
-#define ADC_CDR6_REG_OFST              (0x68)              /**< (ADC_CDR6) Channel Data Register Offset */
-#define ADC_CDR7_REG_OFST              (0x6C)              /**< (ADC_CDR7) Channel Data Register Offset */
-#define ADC_CDR8_REG_OFST              (0x70)              /**< (ADC_CDR8) Channel Data Register Offset */
-#define ADC_CDR9_REG_OFST              (0x74)              /**< (ADC_CDR9) Channel Data Register Offset */
-#define ADC_CDR10_REG_OFST             (0x78)              /**< (ADC_CDR10) Channel Data Register Offset */
-#define ADC_CDR11_REG_OFST             (0x7C)              /**< (ADC_CDR11) Channel Data Register Offset */
-#define ADC_ACR_REG_OFST               (0x94)              /**< (ADC_ACR) Analog Control Register Offset */
-#define ADC_TSMR_REG_OFST              (0xB0)              /**< (ADC_TSMR) Touchscreen Mode Register Offset */
-#define ADC_XPOSR_REG_OFST             (0xB4)              /**< (ADC_XPOSR) Touchscreen X Position Register Offset */
-#define ADC_YPOSR_REG_OFST             (0xB8)              /**< (ADC_YPOSR) Touchscreen Y Position Register Offset */
-#define ADC_PRESSR_REG_OFST            (0xBC)              /**< (ADC_PRESSR) Touchscreen Pressure Register Offset */
-#define ADC_TRGR_REG_OFST              (0xC0)              /**< (ADC_TRGR) Trigger Register Offset */
-#define ADC_CVR_REG_OFST               (0xD4)              /**< (ADC_CVR) Correction Values Register Offset */
-#define ADC_CECR_REG_OFST              (0xD8)              /**< (ADC_CECR) Channel Error Correction Register Offset */
-#define ADC_TSCVR_REG_OFST             (0xDC)              /**< (ADC_TSCVR) Touchscreen Correction Values Register Offset */
-#define ADC_WPMR_REG_OFST              (0xE4)              /**< (ADC_WPMR) Write Protection Mode Register Offset */
-#define ADC_WPSR_REG_OFST              (0xE8)              /**< (ADC_WPSR) Write Protection Status Register Offset */
+#define ADC_CR_REG_OFST                (0x00)              /* (ADC_CR) Control Register Offset */
+#define ADC_MR_REG_OFST                (0x04)              /* (ADC_MR) Mode Register Offset */
+#define ADC_SEQR1_REG_OFST             (0x08)              /* (ADC_SEQR1) Channel Sequence Register 1 Offset */
+#define ADC_SEQR2_REG_OFST             (0x0C)              /* (ADC_SEQR2) Channel Sequence Register 2 Offset */
+#define ADC_CHER_REG_OFST              (0x10)              /* (ADC_CHER) Channel Enable Register Offset */
+#define ADC_CHDR_REG_OFST              (0x14)              /* (ADC_CHDR) Channel Disable Register Offset */
+#define ADC_CHSR_REG_OFST              (0x18)              /* (ADC_CHSR) Channel Status Register Offset */
+#define ADC_LCDR_REG_OFST              (0x20)              /* (ADC_LCDR) Last Converted Data Register Offset */
+#define ADC_IER_REG_OFST               (0x24)              /* (ADC_IER) Interrupt Enable Register Offset */
+#define ADC_IDR_REG_OFST               (0x28)              /* (ADC_IDR) Interrupt Disable Register Offset */
+#define ADC_IMR_REG_OFST               (0x2C)              /* (ADC_IMR) Interrupt Mask Register Offset */
+#define ADC_ISR_REG_OFST               (0x30)              /* (ADC_ISR) Interrupt Status Register Offset */
+#define ADC_LCTMR_REG_OFST             (0x34)              /* (ADC_LCTMR) Last Channel Trigger Mode Register Offset */
+#define ADC_LCCWR_REG_OFST             (0x38)              /* (ADC_LCCWR) Last Channel Compare Window Register Offset */
+#define ADC_OVER_REG_OFST              (0x3C)              /* (ADC_OVER) Overrun Status Register Offset */
+#define ADC_EMR_REG_OFST               (0x40)              /* (ADC_EMR) Extended Mode Register Offset */
+#define ADC_CWR_REG_OFST               (0x44)              /* (ADC_CWR) Compare Window Register Offset */
+#define ADC_COR_REG_OFST               (0x4C)              /* (ADC_COR) Channel Offset Register Offset */
+#define ADC_CDR_REG_OFST               (0x50)              /* (ADC_CDR) Channel Data Register Offset */
+#define ADC_CDR0_REG_OFST              (0x50)              /* (ADC_CDR0) Channel Data Register Offset */
+#define ADC_CDR1_REG_OFST              (0x54)              /* (ADC_CDR1) Channel Data Register Offset */
+#define ADC_CDR2_REG_OFST              (0x58)              /* (ADC_CDR2) Channel Data Register Offset */
+#define ADC_CDR3_REG_OFST              (0x5C)              /* (ADC_CDR3) Channel Data Register Offset */
+#define ADC_CDR4_REG_OFST              (0x60)              /* (ADC_CDR4) Channel Data Register Offset */
+#define ADC_CDR5_REG_OFST              (0x64)              /* (ADC_CDR5) Channel Data Register Offset */
+#define ADC_CDR6_REG_OFST              (0x68)              /* (ADC_CDR6) Channel Data Register Offset */
+#define ADC_CDR7_REG_OFST              (0x6C)              /* (ADC_CDR7) Channel Data Register Offset */
+#define ADC_CDR8_REG_OFST              (0x70)              /* (ADC_CDR8) Channel Data Register Offset */
+#define ADC_CDR9_REG_OFST              (0x74)              /* (ADC_CDR9) Channel Data Register Offset */
+#define ADC_CDR10_REG_OFST             (0x78)              /* (ADC_CDR10) Channel Data Register Offset */
+#define ADC_CDR11_REG_OFST             (0x7C)              /* (ADC_CDR11) Channel Data Register Offset */
+#define ADC_ACR_REG_OFST               (0x94)              /* (ADC_ACR) Analog Control Register Offset */
+#define ADC_TSMR_REG_OFST              (0xB0)              /* (ADC_TSMR) Touchscreen Mode Register Offset */
+#define ADC_XPOSR_REG_OFST             (0xB4)              /* (ADC_XPOSR) Touchscreen X Position Register Offset */
+#define ADC_YPOSR_REG_OFST             (0xB8)              /* (ADC_YPOSR) Touchscreen Y Position Register Offset */
+#define ADC_PRESSR_REG_OFST            (0xBC)              /* (ADC_PRESSR) Touchscreen Pressure Register Offset */
+#define ADC_TRGR_REG_OFST              (0xC0)              /* (ADC_TRGR) Trigger Register Offset */
+#define ADC_CVR_REG_OFST               (0xD4)              /* (ADC_CVR) Correction Values Register Offset */
+#define ADC_CECR_REG_OFST              (0xD8)              /* (ADC_CECR) Channel Error Correction Register Offset */
+#define ADC_TSCVR_REG_OFST             (0xDC)              /* (ADC_TSCVR) Touchscreen Correction Values Register Offset */
+#define ADC_WPMR_REG_OFST              (0xE4)              /* (ADC_WPMR) Write Protection Mode Register Offset */
+#define ADC_WPSR_REG_OFST              (0xE8)              /* (ADC_WPSR) Write Protection Status Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief ADC register API structure */

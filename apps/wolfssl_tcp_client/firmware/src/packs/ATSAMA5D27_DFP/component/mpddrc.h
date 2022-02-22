@@ -1,7 +1,7 @@
 /*
  * Component description for MPDDRC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_MPDDRC_COMPONENT_H_
 #define _SAMA5D2_MPDDRC_COMPONENT_H_
 
@@ -1320,47 +1320,47 @@
 
 
 /** \brief MPDDRC register offsets definitions */
-#define MPDDRC_MR_REG_OFST             (0x00)              /**< (MPDDRC_MR) Mode Register Offset */
-#define MPDDRC_RTR_REG_OFST            (0x04)              /**< (MPDDRC_RTR) Refresh Timer Register Offset */
-#define MPDDRC_CR_REG_OFST             (0x08)              /**< (MPDDRC_CR) Configuration Register Offset */
-#define MPDDRC_TPR0_REG_OFST           (0x0C)              /**< (MPDDRC_TPR0) Timing Parameter 0 Register Offset */
-#define MPDDRC_TPR1_REG_OFST           (0x10)              /**< (MPDDRC_TPR1) Timing Parameter 1 Register Offset */
-#define MPDDRC_TPR2_REG_OFST           (0x14)              /**< (MPDDRC_TPR2) Timing Parameter 2 Register Offset */
-#define MPDDRC_LPR_REG_OFST            (0x1C)              /**< (MPDDRC_LPR) Low-Power Register Offset */
-#define MPDDRC_MD_REG_OFST             (0x20)              /**< (MPDDRC_MD) Memory Device Register Offset */
-#define MPDDRC_LPDDR23_LPR_REG_OFST    (0x28)              /**< (MPDDRC_LPDDR23_LPR) Low-power DDR2 Low-power DDR3 Low-power Register Offset */
-#define MPDDRC_LPDDR2_LPDDR3_DDR3_CAL_MR4_REG_OFST (0x2C)              /**< (MPDDRC_LPDDR2_LPDDR3_DDR3_CAL_MR4) Low-power DDR2 Low-power DDR3 and DDR3 Calibration and MR4 Register Offset */
-#define MPDDRC_LPDDR2_LPDDR3_DDR3_TIM_CAL_REG_OFST (0x30)              /**< (MPDDRC_LPDDR2_LPDDR3_DDR3_TIM_CAL) Low-power DDR2 Low-power DDR3 and DDR3 Timing Calibration Register Offset */
-#define MPDDRC_IO_CALIBR_REG_OFST      (0x34)              /**< (MPDDRC_IO_CALIBR) I/O Calibration Register Offset */
-#define MPDDRC_OCMS_REG_OFST           (0x38)              /**< (MPDDRC_OCMS) OCMS Register Offset */
-#define MPDDRC_OCMS_KEY1_REG_OFST      (0x3C)              /**< (MPDDRC_OCMS_KEY1) OCMS KEY1 Register Offset */
-#define MPDDRC_OCMS_KEY2_REG_OFST      (0x40)              /**< (MPDDRC_OCMS_KEY2) OCMS KEY2 Register Offset */
-#define MPDDRC_CONF_ARBITER_REG_OFST   (0x44)              /**< (MPDDRC_CONF_ARBITER) Configuration Arbiter Register Offset */
-#define MPDDRC_TIMEOUT_REG_OFST        (0x48)              /**< (MPDDRC_TIMEOUT) Timeout Register Offset */
-#define MPDDRC_REQ_PORT_0123_REG_OFST  (0x4C)              /**< (MPDDRC_REQ_PORT_0123) Request Port 0-1-2-3 Register Offset */
-#define MPDDRC_REQ_PORT_4567_REG_OFST  (0x50)              /**< (MPDDRC_REQ_PORT_4567) Request Port 4-5-6-7 Register Offset */
-#define MPDDRC_BDW_PORT_0123_REG_OFST  (0x54)              /**< (MPDDRC_BDW_PORT_0123) Current/Maximum Bandwidth Port 0-1-2-3 Register Offset */
-#define MPDDRC_BDW_PORT_4567_REG_OFST  (0x58)              /**< (MPDDRC_BDW_PORT_4567) Current/Maximum Bandwidth Port 4-5-6-7 Register Offset */
-#define MPDDRC_RD_DATA_PATH_REG_OFST   (0x5C)              /**< (MPDDRC_RD_DATA_PATH) Read Data Path Register Offset */
-#define MPDDRC_MCFGR_REG_OFST          (0x60)              /**< (MPDDRC_MCFGR) Monitor Configuration Register Offset */
-#define MPDDRC_MADDR0_REG_OFST         (0x64)              /**< (MPDDRC_MADDR0) Monitor Address High/Low Port 0 Register Offset */
-#define MPDDRC_MADDR1_REG_OFST         (0x68)              /**< (MPDDRC_MADDR1) Monitor Address High/Low Port 1 Register Offset */
-#define MPDDRC_MADDR2_REG_OFST         (0x6C)              /**< (MPDDRC_MADDR2) Monitor Address High/Low Port 2 Register Offset */
-#define MPDDRC_MADDR3_REG_OFST         (0x70)              /**< (MPDDRC_MADDR3) Monitor Address High/Low Port 3 Register Offset */
-#define MPDDRC_MADDR4_REG_OFST         (0x74)              /**< (MPDDRC_MADDR4) Monitor Address High/Low Port 4 Register Offset */
-#define MPDDRC_MADDR5_REG_OFST         (0x78)              /**< (MPDDRC_MADDR5) Monitor Address High/Low Port 5 Register Offset */
-#define MPDDRC_MADDR6_REG_OFST         (0x7C)              /**< (MPDDRC_MADDR6) Monitor Address High/Low Port 6 Register Offset */
-#define MPDDRC_MADDR7_REG_OFST         (0x80)              /**< (MPDDRC_MADDR7) Monitor Address High/Low Port 7 Register Offset */
-#define MPDDRC_MINFO0_REG_OFST         (0x84)              /**< (MPDDRC_MINFO0) Monitor Information Port 0 Register Offset */
-#define MPDDRC_MINFO1_REG_OFST         (0x88)              /**< (MPDDRC_MINFO1) Monitor Information Port 1 Register Offset */
-#define MPDDRC_MINFO2_REG_OFST         (0x8C)              /**< (MPDDRC_MINFO2) Monitor Information Port 2 Register Offset */
-#define MPDDRC_MINFO3_REG_OFST         (0x90)              /**< (MPDDRC_MINFO3) Monitor Information Port 3 Register Offset */
-#define MPDDRC_MINFO4_REG_OFST         (0x94)              /**< (MPDDRC_MINFO4) Monitor Information Port 4 Register Offset */
-#define MPDDRC_MINFO5_REG_OFST         (0x98)              /**< (MPDDRC_MINFO5) Monitor Information Port 5 Register Offset */
-#define MPDDRC_MINFO6_REG_OFST         (0x9C)              /**< (MPDDRC_MINFO6) Monitor Information Port 6 Register Offset */
-#define MPDDRC_MINFO7_REG_OFST         (0xA0)              /**< (MPDDRC_MINFO7) Monitor Information Port 7 Register Offset */
-#define MPDDRC_WPMR_REG_OFST           (0xE4)              /**< (MPDDRC_WPMR) Write Protection Mode Register Offset */
-#define MPDDRC_WPSR_REG_OFST           (0xE8)              /**< (MPDDRC_WPSR) Write Protection Status Register Offset */
+#define MPDDRC_MR_REG_OFST             (0x00)              /* (MPDDRC_MR) Mode Register Offset */
+#define MPDDRC_RTR_REG_OFST            (0x04)              /* (MPDDRC_RTR) Refresh Timer Register Offset */
+#define MPDDRC_CR_REG_OFST             (0x08)              /* (MPDDRC_CR) Configuration Register Offset */
+#define MPDDRC_TPR0_REG_OFST           (0x0C)              /* (MPDDRC_TPR0) Timing Parameter 0 Register Offset */
+#define MPDDRC_TPR1_REG_OFST           (0x10)              /* (MPDDRC_TPR1) Timing Parameter 1 Register Offset */
+#define MPDDRC_TPR2_REG_OFST           (0x14)              /* (MPDDRC_TPR2) Timing Parameter 2 Register Offset */
+#define MPDDRC_LPR_REG_OFST            (0x1C)              /* (MPDDRC_LPR) Low-Power Register Offset */
+#define MPDDRC_MD_REG_OFST             (0x20)              /* (MPDDRC_MD) Memory Device Register Offset */
+#define MPDDRC_LPDDR23_LPR_REG_OFST    (0x28)              /* (MPDDRC_LPDDR23_LPR) Low-power DDR2 Low-power DDR3 Low-power Register Offset */
+#define MPDDRC_LPDDR2_LPDDR3_DDR3_CAL_MR4_REG_OFST (0x2C)              /* (MPDDRC_LPDDR2_LPDDR3_DDR3_CAL_MR4) Low-power DDR2 Low-power DDR3 and DDR3 Calibration and MR4 Register Offset */
+#define MPDDRC_LPDDR2_LPDDR3_DDR3_TIM_CAL_REG_OFST (0x30)              /* (MPDDRC_LPDDR2_LPDDR3_DDR3_TIM_CAL) Low-power DDR2 Low-power DDR3 and DDR3 Timing Calibration Register Offset */
+#define MPDDRC_IO_CALIBR_REG_OFST      (0x34)              /* (MPDDRC_IO_CALIBR) I/O Calibration Register Offset */
+#define MPDDRC_OCMS_REG_OFST           (0x38)              /* (MPDDRC_OCMS) OCMS Register Offset */
+#define MPDDRC_OCMS_KEY1_REG_OFST      (0x3C)              /* (MPDDRC_OCMS_KEY1) OCMS KEY1 Register Offset */
+#define MPDDRC_OCMS_KEY2_REG_OFST      (0x40)              /* (MPDDRC_OCMS_KEY2) OCMS KEY2 Register Offset */
+#define MPDDRC_CONF_ARBITER_REG_OFST   (0x44)              /* (MPDDRC_CONF_ARBITER) Configuration Arbiter Register Offset */
+#define MPDDRC_TIMEOUT_REG_OFST        (0x48)              /* (MPDDRC_TIMEOUT) Timeout Register Offset */
+#define MPDDRC_REQ_PORT_0123_REG_OFST  (0x4C)              /* (MPDDRC_REQ_PORT_0123) Request Port 0-1-2-3 Register Offset */
+#define MPDDRC_REQ_PORT_4567_REG_OFST  (0x50)              /* (MPDDRC_REQ_PORT_4567) Request Port 4-5-6-7 Register Offset */
+#define MPDDRC_BDW_PORT_0123_REG_OFST  (0x54)              /* (MPDDRC_BDW_PORT_0123) Current/Maximum Bandwidth Port 0-1-2-3 Register Offset */
+#define MPDDRC_BDW_PORT_4567_REG_OFST  (0x58)              /* (MPDDRC_BDW_PORT_4567) Current/Maximum Bandwidth Port 4-5-6-7 Register Offset */
+#define MPDDRC_RD_DATA_PATH_REG_OFST   (0x5C)              /* (MPDDRC_RD_DATA_PATH) Read Data Path Register Offset */
+#define MPDDRC_MCFGR_REG_OFST          (0x60)              /* (MPDDRC_MCFGR) Monitor Configuration Register Offset */
+#define MPDDRC_MADDR0_REG_OFST         (0x64)              /* (MPDDRC_MADDR0) Monitor Address High/Low Port 0 Register Offset */
+#define MPDDRC_MADDR1_REG_OFST         (0x68)              /* (MPDDRC_MADDR1) Monitor Address High/Low Port 1 Register Offset */
+#define MPDDRC_MADDR2_REG_OFST         (0x6C)              /* (MPDDRC_MADDR2) Monitor Address High/Low Port 2 Register Offset */
+#define MPDDRC_MADDR3_REG_OFST         (0x70)              /* (MPDDRC_MADDR3) Monitor Address High/Low Port 3 Register Offset */
+#define MPDDRC_MADDR4_REG_OFST         (0x74)              /* (MPDDRC_MADDR4) Monitor Address High/Low Port 4 Register Offset */
+#define MPDDRC_MADDR5_REG_OFST         (0x78)              /* (MPDDRC_MADDR5) Monitor Address High/Low Port 5 Register Offset */
+#define MPDDRC_MADDR6_REG_OFST         (0x7C)              /* (MPDDRC_MADDR6) Monitor Address High/Low Port 6 Register Offset */
+#define MPDDRC_MADDR7_REG_OFST         (0x80)              /* (MPDDRC_MADDR7) Monitor Address High/Low Port 7 Register Offset */
+#define MPDDRC_MINFO0_REG_OFST         (0x84)              /* (MPDDRC_MINFO0) Monitor Information Port 0 Register Offset */
+#define MPDDRC_MINFO1_REG_OFST         (0x88)              /* (MPDDRC_MINFO1) Monitor Information Port 1 Register Offset */
+#define MPDDRC_MINFO2_REG_OFST         (0x8C)              /* (MPDDRC_MINFO2) Monitor Information Port 2 Register Offset */
+#define MPDDRC_MINFO3_REG_OFST         (0x90)              /* (MPDDRC_MINFO3) Monitor Information Port 3 Register Offset */
+#define MPDDRC_MINFO4_REG_OFST         (0x94)              /* (MPDDRC_MINFO4) Monitor Information Port 4 Register Offset */
+#define MPDDRC_MINFO5_REG_OFST         (0x98)              /* (MPDDRC_MINFO5) Monitor Information Port 5 Register Offset */
+#define MPDDRC_MINFO6_REG_OFST         (0x9C)              /* (MPDDRC_MINFO6) Monitor Information Port 6 Register Offset */
+#define MPDDRC_MINFO7_REG_OFST         (0xA0)              /* (MPDDRC_MINFO7) Monitor Information Port 7 Register Offset */
+#define MPDDRC_WPMR_REG_OFST           (0xE4)              /* (MPDDRC_WPMR) Write Protection Mode Register Offset */
+#define MPDDRC_WPSR_REG_OFST           (0xE8)              /* (MPDDRC_WPSR) Write Protection Status Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief MPDDRC register API structure */
