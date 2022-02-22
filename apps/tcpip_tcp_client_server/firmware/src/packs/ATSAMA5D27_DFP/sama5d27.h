@@ -1,7 +1,7 @@
 /*
  * Header file for ATSAMA5D27
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* File generated from device description version 2021-06-28T08:59:38Z */
+/* File generated from device description version 2021-12-23T10:15:30Z */
 #ifndef _SAMA5D27_H_
 #define _SAMA5D27_H_
 
@@ -140,8 +140,8 @@ typedef enum IRQn
   PIOD_IRQn                 =  70, /* 70  Parallel Input/Output Controller (PIOD) */
   SDMMC0_TIMER_IRQn         =  71, /* 71  Secure Digital MultiMedia Card Controller (SDMMC0) */
   SDMMC1_TIMER_IRQn         =  72, /* 72  Secure Digital MultiMedia Card Controller (SDMMC1) */
-  PMC_IRQn                  =  74, /* 74  Shared between PMC RSTC RTC (PMC)   */
   RSTC_IRQn                 =  74, /* 74  Shared between PMC RSTC RTC (RSTC)  */
+  PMC_IRQn                  =  74, /* 74  Shared between PMC RSTC RTC (PMC)   */
   RTC_IRQn                  =  74, /* 74  Shared between PMC RSTC RTC (RTC)   */
   ACC_IRQn                  =  75, /* 75  Analog Comparator Controller (ACC)  */
   RXLP_IRQn                 =  76, /* 76  Low Power Asynchronous Receiver (RXLP) */
