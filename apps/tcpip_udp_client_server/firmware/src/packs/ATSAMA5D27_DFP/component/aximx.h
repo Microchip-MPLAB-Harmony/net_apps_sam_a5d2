@@ -1,7 +1,7 @@
 /*
  * Component description for AXIMX
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_AXIMX_COMPONENT_H_
 #define _SAMA5D2_AXIMX_COMPONENT_H_
 
@@ -39,7 +39,7 @@
 #define AXIMX_REMAP_REMAP(value)              (AXIMX_REMAP_REMAP_Msk & ((value) << AXIMX_REMAP_REMAP_Pos)) 
 
 /** \brief AXIMX register offsets definitions */
-#define AXIMX_REMAP_REG_OFST           (0x00)              /**< (AXIMX_REMAP) AXI Matrix Remap Register Offset */
+#define AXIMX_REMAP_REG_OFST           (0x00)              /* (AXIMX_REMAP) AXI Matrix Remap Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief AXIMX register API structure */

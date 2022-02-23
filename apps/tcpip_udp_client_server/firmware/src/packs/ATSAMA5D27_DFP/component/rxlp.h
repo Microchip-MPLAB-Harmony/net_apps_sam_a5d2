@@ -1,7 +1,7 @@
 /*
  * Component description for RXLP
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_RXLP_COMPONENT_H_
 #define _SAMA5D2_RXLP_COMPONENT_H_
 
@@ -102,12 +102,12 @@
 
 
 /** \brief RXLP register offsets definitions */
-#define RXLP_CR_REG_OFST               (0x00)              /**< (RXLP_CR) Control Register Offset */
-#define RXLP_MR_REG_OFST               (0x04)              /**< (RXLP_MR) Mode Register Offset */
-#define RXLP_RHR_REG_OFST              (0x18)              /**< (RXLP_RHR) Receive Holding Register Offset */
-#define RXLP_BRGR_REG_OFST             (0x20)              /**< (RXLP_BRGR) Baud Rate Generator Register Offset */
-#define RXLP_CMPR_REG_OFST             (0x24)              /**< (RXLP_CMPR) Comparison Register Offset */
-#define RXLP_WPMR_REG_OFST             (0xE4)              /**< (RXLP_WPMR) Write Protection Mode Register Offset */
+#define RXLP_CR_REG_OFST               (0x00)              /* (RXLP_CR) Control Register Offset */
+#define RXLP_MR_REG_OFST               (0x04)              /* (RXLP_MR) Mode Register Offset */
+#define RXLP_RHR_REG_OFST              (0x18)              /* (RXLP_RHR) Receive Holding Register Offset */
+#define RXLP_BRGR_REG_OFST             (0x20)              /* (RXLP_BRGR) Baud Rate Generator Register Offset */
+#define RXLP_CMPR_REG_OFST             (0x24)              /* (RXLP_CMPR) Comparison Register Offset */
+#define RXLP_WPMR_REG_OFST             (0xE4)              /* (RXLP_WPMR) Write Protection Mode Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief RXLP register API structure */

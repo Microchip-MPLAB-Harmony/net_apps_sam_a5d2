@@ -1,7 +1,7 @@
 /*
  * Component description for SDMMC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_SDMMC_COMPONENT_H_
 #define _SAMA5D2_SDMMC_COMPONENT_H_
 
@@ -1560,67 +1560,67 @@
 
 
 /** \brief SDMMC register offsets definitions */
-#define SDMMC_SSAR_REG_OFST            (0x00)              /**< (SDMMC_SSAR) SDMA System Address / Argument 2 Register Offset */
-#define SDMMC_BSR_REG_OFST             (0x04)              /**< (SDMMC_BSR) Block Size Register Offset */
-#define SDMMC_BCR_REG_OFST             (0x06)              /**< (SDMMC_BCR) Block Count Register Offset */
-#define SDMMC_ARG1R_REG_OFST           (0x08)              /**< (SDMMC_ARG1R) Argument 1 Register Offset */
-#define SDMMC_TMR_REG_OFST             (0x0C)              /**< (SDMMC_TMR) Transfer Mode Register Offset */
-#define SDMMC_CR_REG_OFST              (0x0E)              /**< (SDMMC_CR) Command Register Offset */
-#define SDMMC_RR_REG_OFST              (0x10)              /**< (SDMMC_RR) Response Register Offset */
-#define SDMMC_RR0_REG_OFST             (0x10)              /**< (SDMMC_RR0) Response Register Offset */
-#define SDMMC_RR1_REG_OFST             (0x14)              /**< (SDMMC_RR1) Response Register Offset */
-#define SDMMC_RR2_REG_OFST             (0x18)              /**< (SDMMC_RR2) Response Register Offset */
-#define SDMMC_RR3_REG_OFST             (0x1C)              /**< (SDMMC_RR3) Response Register Offset */
-#define SDMMC_BDPR_REG_OFST            (0x20)              /**< (SDMMC_BDPR) Buffer Data Port Register Offset */
-#define SDMMC_PSR_REG_OFST             (0x24)              /**< (SDMMC_PSR) Present State Register Offset */
-#define SDMMC_HC1R_REG_OFST            (0x28)              /**< (SDMMC_HC1R) Host Control 1 Register Offset */
-#define SDMMC_PCR_REG_OFST             (0x29)              /**< (SDMMC_PCR) Power Control Register Offset */
-#define SDMMC_BGCR_REG_OFST            (0x2A)              /**< (SDMMC_BGCR) Block Gap Control Register Offset */
-#define SDMMC_WCR_REG_OFST             (0x2B)              /**< (SDMMC_WCR) Wakeup Control Register Offset */
-#define SDMMC_CCR_REG_OFST             (0x2C)              /**< (SDMMC_CCR) Clock Control Register Offset */
-#define SDMMC_TCR_REG_OFST             (0x2E)              /**< (SDMMC_TCR) Timeout Control Register Offset */
-#define SDMMC_SRR_REG_OFST             (0x2F)              /**< (SDMMC_SRR) Software Reset Register Offset */
-#define SDMMC_NISTR_REG_OFST           (0x30)              /**< (SDMMC_NISTR) Normal Interrupt Status Register Offset */
-#define SDMMC_EISTR_REG_OFST           (0x32)              /**< (SDMMC_EISTR) Error Interrupt Status Register Offset */
-#define SDMMC_NISTER_REG_OFST          (0x34)              /**< (SDMMC_NISTER) Normal Interrupt Status Enable Register Offset */
-#define SDMMC_EISTER_REG_OFST          (0x36)              /**< (SDMMC_EISTER) Error Interrupt Status Enable Register Offset */
-#define SDMMC_NISIER_REG_OFST          (0x38)              /**< (SDMMC_NISIER) Normal Interrupt Signal Enable Register Offset */
-#define SDMMC_EISIER_REG_OFST          (0x3A)              /**< (SDMMC_EISIER) Error Interrupt Signal Enable Register Offset */
-#define SDMMC_ACESR_REG_OFST           (0x3C)              /**< (SDMMC_ACESR) Auto CMD Error Status Register Offset */
-#define SDMMC_HC2R_REG_OFST            (0x3E)              /**< (SDMMC_HC2R) Host Control 2 Register Offset */
-#define SDMMC_CA0R_REG_OFST            (0x40)              /**< (SDMMC_CA0R) Capabilities 0 Register Offset */
-#define SDMMC_CA1R_REG_OFST            (0x44)              /**< (SDMMC_CA1R) Capabilities 1 Register Offset */
-#define SDMMC_MCCAR_REG_OFST           (0x48)              /**< (SDMMC_MCCAR) Maximum Current Capabilities Register Offset */
-#define SDMMC_FERACES_REG_OFST         (0x50)              /**< (SDMMC_FERACES) Force Event Register for Auto CMD Error Status Offset */
-#define SDMMC_FEREIS_REG_OFST          (0x52)              /**< (SDMMC_FEREIS) Force Event Register for Error Interrupt Status Offset */
-#define SDMMC_AESR_REG_OFST            (0x54)              /**< (SDMMC_AESR) ADMA Error Status Register Offset */
-#define SDMMC_ASAR0_REG_OFST           (0x58)              /**< (SDMMC_ASAR0) ADMA System Address Register 0 Offset */
-#define SDMMC_PVR_REG_OFST             (0x60)              /**< (SDMMC_PVR) Preset Value Register 0 (for initialization) Offset */
-#define SDMMC_PVR0_REG_OFST            (0x60)              /**< (SDMMC_PVR0) Preset Value Register 0 (for initialization) Offset */
-#define SDMMC_PVR1_REG_OFST            (0x62)              /**< (SDMMC_PVR1) Preset Value Register 0 (for initialization) Offset */
-#define SDMMC_PVR2_REG_OFST            (0x64)              /**< (SDMMC_PVR2) Preset Value Register 0 (for initialization) Offset */
-#define SDMMC_PVR3_REG_OFST            (0x66)              /**< (SDMMC_PVR3) Preset Value Register 0 (for initialization) Offset */
-#define SDMMC_PVR4_REG_OFST            (0x68)              /**< (SDMMC_PVR4) Preset Value Register 0 (for initialization) Offset */
-#define SDMMC_PVR5_REG_OFST            (0x6A)              /**< (SDMMC_PVR5) Preset Value Register 0 (for initialization) Offset */
-#define SDMMC_PVR6_REG_OFST            (0x6C)              /**< (SDMMC_PVR6) Preset Value Register 0 (for initialization) Offset */
-#define SDMMC_PVR7_REG_OFST            (0x6E)              /**< (SDMMC_PVR7) Preset Value Register 0 (for initialization) Offset */
-#define SDMMC_SISR_REG_OFST            (0xFC)              /**< (SDMMC_SISR) Slot Interrupt Status Register Offset */
-#define SDMMC_HCVR_REG_OFST            (0xFE)              /**< (SDMMC_HCVR) Host Controller Version Register Offset */
-#define SDMMC_APSR_REG_OFST            (0x200)             /**< (SDMMC_APSR) Additional Present State Register Offset */
-#define SDMMC_MC1R_REG_OFST            (0x204)             /**< (SDMMC_MC1R) e.MMC Control 1 Register Offset */
-#define SDMMC_MC2R_REG_OFST            (0x205)             /**< (SDMMC_MC2R) e.MMC Control 2 Register Offset */
-#define SDMMC_ACR_REG_OFST             (0x208)             /**< (SDMMC_ACR) AHB Control Register Offset */
-#define SDMMC_CC2R_REG_OFST            (0x20C)             /**< (SDMMC_CC2R) Clock Control 2 Register Offset */
-#define SDMMC_RTC1R_REG_OFST           (0x210)             /**< (SDMMC_RTC1R) Retuning Timer Control 1 Register Offset */
-#define SDMMC_RTC2R_REG_OFST           (0x211)             /**< (SDMMC_RTC2R) Retuning Timer Control 2 Register Offset */
-#define SDMMC_RTCVR_REG_OFST           (0x214)             /**< (SDMMC_RTCVR) Retuning Timer Counter Value Register Offset */
-#define SDMMC_RTISTER_REG_OFST         (0x218)             /**< (SDMMC_RTISTER) Retuning Timer Interrupt Status Enable Register Offset */
-#define SDMMC_RTISIER_REG_OFST         (0x219)             /**< (SDMMC_RTISIER) Retuning Timer Interrupt Signal Enable Register Offset */
-#define SDMMC_RTISTR_REG_OFST          (0x21C)             /**< (SDMMC_RTISTR) Retuning Timer Interrupt Status Register Offset */
-#define SDMMC_RTSSR_REG_OFST           (0x21D)             /**< (SDMMC_RTSSR) Retuning Timer Status Slots Register Offset */
-#define SDMMC_TUNCR_REG_OFST           (0x220)             /**< (SDMMC_TUNCR) Tuning Control Register Offset */
-#define SDMMC_CACR_REG_OFST            (0x230)             /**< (SDMMC_CACR) Capabilities Control Register Offset */
-#define SDMMC_CALCR_REG_OFST           (0x240)             /**< (SDMMC_CALCR) Calibration Control Register Offset */
+#define SDMMC_SSAR_REG_OFST            (0x00)              /* (SDMMC_SSAR) SDMA System Address / Argument 2 Register Offset */
+#define SDMMC_BSR_REG_OFST             (0x04)              /* (SDMMC_BSR) Block Size Register Offset */
+#define SDMMC_BCR_REG_OFST             (0x06)              /* (SDMMC_BCR) Block Count Register Offset */
+#define SDMMC_ARG1R_REG_OFST           (0x08)              /* (SDMMC_ARG1R) Argument 1 Register Offset */
+#define SDMMC_TMR_REG_OFST             (0x0C)              /* (SDMMC_TMR) Transfer Mode Register Offset */
+#define SDMMC_CR_REG_OFST              (0x0E)              /* (SDMMC_CR) Command Register Offset */
+#define SDMMC_RR_REG_OFST              (0x10)              /* (SDMMC_RR) Response Register Offset */
+#define SDMMC_RR0_REG_OFST             (0x10)              /* (SDMMC_RR0) Response Register Offset */
+#define SDMMC_RR1_REG_OFST             (0x14)              /* (SDMMC_RR1) Response Register Offset */
+#define SDMMC_RR2_REG_OFST             (0x18)              /* (SDMMC_RR2) Response Register Offset */
+#define SDMMC_RR3_REG_OFST             (0x1C)              /* (SDMMC_RR3) Response Register Offset */
+#define SDMMC_BDPR_REG_OFST            (0x20)              /* (SDMMC_BDPR) Buffer Data Port Register Offset */
+#define SDMMC_PSR_REG_OFST             (0x24)              /* (SDMMC_PSR) Present State Register Offset */
+#define SDMMC_HC1R_REG_OFST            (0x28)              /* (SDMMC_HC1R) Host Control 1 Register Offset */
+#define SDMMC_PCR_REG_OFST             (0x29)              /* (SDMMC_PCR) Power Control Register Offset */
+#define SDMMC_BGCR_REG_OFST            (0x2A)              /* (SDMMC_BGCR) Block Gap Control Register Offset */
+#define SDMMC_WCR_REG_OFST             (0x2B)              /* (SDMMC_WCR) Wakeup Control Register Offset */
+#define SDMMC_CCR_REG_OFST             (0x2C)              /* (SDMMC_CCR) Clock Control Register Offset */
+#define SDMMC_TCR_REG_OFST             (0x2E)              /* (SDMMC_TCR) Timeout Control Register Offset */
+#define SDMMC_SRR_REG_OFST             (0x2F)              /* (SDMMC_SRR) Software Reset Register Offset */
+#define SDMMC_NISTR_REG_OFST           (0x30)              /* (SDMMC_NISTR) Normal Interrupt Status Register Offset */
+#define SDMMC_EISTR_REG_OFST           (0x32)              /* (SDMMC_EISTR) Error Interrupt Status Register Offset */
+#define SDMMC_NISTER_REG_OFST          (0x34)              /* (SDMMC_NISTER) Normal Interrupt Status Enable Register Offset */
+#define SDMMC_EISTER_REG_OFST          (0x36)              /* (SDMMC_EISTER) Error Interrupt Status Enable Register Offset */
+#define SDMMC_NISIER_REG_OFST          (0x38)              /* (SDMMC_NISIER) Normal Interrupt Signal Enable Register Offset */
+#define SDMMC_EISIER_REG_OFST          (0x3A)              /* (SDMMC_EISIER) Error Interrupt Signal Enable Register Offset */
+#define SDMMC_ACESR_REG_OFST           (0x3C)              /* (SDMMC_ACESR) Auto CMD Error Status Register Offset */
+#define SDMMC_HC2R_REG_OFST            (0x3E)              /* (SDMMC_HC2R) Host Control 2 Register Offset */
+#define SDMMC_CA0R_REG_OFST            (0x40)              /* (SDMMC_CA0R) Capabilities 0 Register Offset */
+#define SDMMC_CA1R_REG_OFST            (0x44)              /* (SDMMC_CA1R) Capabilities 1 Register Offset */
+#define SDMMC_MCCAR_REG_OFST           (0x48)              /* (SDMMC_MCCAR) Maximum Current Capabilities Register Offset */
+#define SDMMC_FERACES_REG_OFST         (0x50)              /* (SDMMC_FERACES) Force Event Register for Auto CMD Error Status Offset */
+#define SDMMC_FEREIS_REG_OFST          (0x52)              /* (SDMMC_FEREIS) Force Event Register for Error Interrupt Status Offset */
+#define SDMMC_AESR_REG_OFST            (0x54)              /* (SDMMC_AESR) ADMA Error Status Register Offset */
+#define SDMMC_ASAR0_REG_OFST           (0x58)              /* (SDMMC_ASAR0) ADMA System Address Register 0 Offset */
+#define SDMMC_PVR_REG_OFST             (0x60)              /* (SDMMC_PVR) Preset Value Register 0 (for initialization) Offset */
+#define SDMMC_PVR0_REG_OFST            (0x60)              /* (SDMMC_PVR0) Preset Value Register 0 (for initialization) Offset */
+#define SDMMC_PVR1_REG_OFST            (0x62)              /* (SDMMC_PVR1) Preset Value Register 0 (for initialization) Offset */
+#define SDMMC_PVR2_REG_OFST            (0x64)              /* (SDMMC_PVR2) Preset Value Register 0 (for initialization) Offset */
+#define SDMMC_PVR3_REG_OFST            (0x66)              /* (SDMMC_PVR3) Preset Value Register 0 (for initialization) Offset */
+#define SDMMC_PVR4_REG_OFST            (0x68)              /* (SDMMC_PVR4) Preset Value Register 0 (for initialization) Offset */
+#define SDMMC_PVR5_REG_OFST            (0x6A)              /* (SDMMC_PVR5) Preset Value Register 0 (for initialization) Offset */
+#define SDMMC_PVR6_REG_OFST            (0x6C)              /* (SDMMC_PVR6) Preset Value Register 0 (for initialization) Offset */
+#define SDMMC_PVR7_REG_OFST            (0x6E)              /* (SDMMC_PVR7) Preset Value Register 0 (for initialization) Offset */
+#define SDMMC_SISR_REG_OFST            (0xFC)              /* (SDMMC_SISR) Slot Interrupt Status Register Offset */
+#define SDMMC_HCVR_REG_OFST            (0xFE)              /* (SDMMC_HCVR) Host Controller Version Register Offset */
+#define SDMMC_APSR_REG_OFST            (0x200)             /* (SDMMC_APSR) Additional Present State Register Offset */
+#define SDMMC_MC1R_REG_OFST            (0x204)             /* (SDMMC_MC1R) e.MMC Control 1 Register Offset */
+#define SDMMC_MC2R_REG_OFST            (0x205)             /* (SDMMC_MC2R) e.MMC Control 2 Register Offset */
+#define SDMMC_ACR_REG_OFST             (0x208)             /* (SDMMC_ACR) AHB Control Register Offset */
+#define SDMMC_CC2R_REG_OFST            (0x20C)             /* (SDMMC_CC2R) Clock Control 2 Register Offset */
+#define SDMMC_RTC1R_REG_OFST           (0x210)             /* (SDMMC_RTC1R) Retuning Timer Control 1 Register Offset */
+#define SDMMC_RTC2R_REG_OFST           (0x211)             /* (SDMMC_RTC2R) Retuning Timer Control 2 Register Offset */
+#define SDMMC_RTCVR_REG_OFST           (0x214)             /* (SDMMC_RTCVR) Retuning Timer Counter Value Register Offset */
+#define SDMMC_RTISTER_REG_OFST         (0x218)             /* (SDMMC_RTISTER) Retuning Timer Interrupt Status Enable Register Offset */
+#define SDMMC_RTISIER_REG_OFST         (0x219)             /* (SDMMC_RTISIER) Retuning Timer Interrupt Signal Enable Register Offset */
+#define SDMMC_RTISTR_REG_OFST          (0x21C)             /* (SDMMC_RTISTR) Retuning Timer Interrupt Status Register Offset */
+#define SDMMC_RTSSR_REG_OFST           (0x21D)             /* (SDMMC_RTSSR) Retuning Timer Status Slots Register Offset */
+#define SDMMC_TUNCR_REG_OFST           (0x220)             /* (SDMMC_TUNCR) Tuning Control Register Offset */
+#define SDMMC_CACR_REG_OFST            (0x230)             /* (SDMMC_CACR) Capabilities Control Register Offset */
+#define SDMMC_CALCR_REG_OFST           (0x240)             /* (SDMMC_CALCR) Calibration Control Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SDMMC register API structure */
