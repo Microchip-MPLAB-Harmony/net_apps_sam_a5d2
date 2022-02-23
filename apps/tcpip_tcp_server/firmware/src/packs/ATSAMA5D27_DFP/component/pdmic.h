@@ -1,7 +1,7 @@
 /*
  * Component description for PDMIC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_PDMIC_COMPONENT_H_
 #define _SAMA5D2_PDMIC_COMPONENT_H_
 
@@ -157,17 +157,17 @@
 
 
 /** \brief PDMIC register offsets definitions */
-#define PDMIC_CR_REG_OFST              (0x00)              /**< (PDMIC_CR) Control Register Offset */
-#define PDMIC_MR_REG_OFST              (0x04)              /**< (PDMIC_MR) Mode Register Offset */
-#define PDMIC_CDR_REG_OFST             (0x14)              /**< (PDMIC_CDR) Converted Data Register Offset */
-#define PDMIC_IER_REG_OFST             (0x18)              /**< (PDMIC_IER) Interrupt Enable Register Offset */
-#define PDMIC_IDR_REG_OFST             (0x1C)              /**< (PDMIC_IDR) Interrupt Disable Register Offset */
-#define PDMIC_IMR_REG_OFST             (0x20)              /**< (PDMIC_IMR) Interrupt Mask Register Offset */
-#define PDMIC_ISR_REG_OFST             (0x24)              /**< (PDMIC_ISR) Interrupt Status Register Offset */
-#define PDMIC_DSPR0_REG_OFST           (0x58)              /**< (PDMIC_DSPR0) DSP Configuration Register 0 Offset */
-#define PDMIC_DSPR1_REG_OFST           (0x5C)              /**< (PDMIC_DSPR1) DSP Configuration Register 1 Offset */
-#define PDMIC_WPMR_REG_OFST            (0xE4)              /**< (PDMIC_WPMR) Write Protection Mode Register Offset */
-#define PDMIC_WPSR_REG_OFST            (0xE8)              /**< (PDMIC_WPSR) Write Protection Status Register Offset */
+#define PDMIC_CR_REG_OFST              (0x00)              /* (PDMIC_CR) Control Register Offset */
+#define PDMIC_MR_REG_OFST              (0x04)              /* (PDMIC_MR) Mode Register Offset */
+#define PDMIC_CDR_REG_OFST             (0x14)              /* (PDMIC_CDR) Converted Data Register Offset */
+#define PDMIC_IER_REG_OFST             (0x18)              /* (PDMIC_IER) Interrupt Enable Register Offset */
+#define PDMIC_IDR_REG_OFST             (0x1C)              /* (PDMIC_IDR) Interrupt Disable Register Offset */
+#define PDMIC_IMR_REG_OFST             (0x20)              /* (PDMIC_IMR) Interrupt Mask Register Offset */
+#define PDMIC_ISR_REG_OFST             (0x24)              /* (PDMIC_ISR) Interrupt Status Register Offset */
+#define PDMIC_DSPR0_REG_OFST           (0x58)              /* (PDMIC_DSPR0) DSP Configuration Register 0 Offset */
+#define PDMIC_DSPR1_REG_OFST           (0x5C)              /* (PDMIC_DSPR1) DSP Configuration Register 1 Offset */
+#define PDMIC_WPMR_REG_OFST            (0xE4)              /* (PDMIC_WPMR) Write Protection Mode Register Offset */
+#define PDMIC_WPSR_REG_OFST            (0xE8)              /* (PDMIC_WPSR) Write Protection Status Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief PDMIC register API structure */

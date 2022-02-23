@@ -1,7 +1,7 @@
 /*
  * Component description for SFR
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_SFR_COMPONENT_H_
 #define _SAMA5D2_SFR_COMPONENT_H_
 
@@ -245,21 +245,21 @@
 
 
 /** \brief SFR register offsets definitions */
-#define SFR_DDRCFG_REG_OFST            (0x04)              /**< (SFR_DDRCFG) DDR Configuration Register Offset */
-#define SFR_OHCIICR_REG_OFST           (0x10)              /**< (SFR_OHCIICR) OHCI Interrupt Configuration Register Offset */
-#define SFR_OHCIISR_REG_OFST           (0x14)              /**< (SFR_OHCIISR) OHCI Interrupt Status Register Offset */
-#define SFR_SECURE_REG_OFST            (0x28)              /**< (SFR_SECURE) Security Configuration Register Offset */
-#define SFR_UTMICKTRIM_REG_OFST        (0x30)              /**< (SFR_UTMICKTRIM) UTMI Clock Trimming Register Offset */
-#define SFR_UTMIHSTRIM_REG_OFST        (0x34)              /**< (SFR_UTMIHSTRIM) UTMI High-Speed Trimming Register Offset */
-#define SFR_UTMIFSTRIM_REG_OFST        (0x38)              /**< (SFR_UTMIFSTRIM) UTMI Full-Speed Trimming Register Offset */
-#define SFR_UTMISWAP_REG_OFST          (0x3C)              /**< (SFR_UTMISWAP) UTMI DP/DM Pin Swapping Register Offset */
-#define SFR_CAN_REG_OFST               (0x48)              /**< (SFR_CAN) CAN Memories Address-based Register Offset */
-#define SFR_SN0_REG_OFST               (0x4C)              /**< (SFR_SN0) Serial Number 0 Register Offset */
-#define SFR_SN1_REG_OFST               (0x50)              /**< (SFR_SN1) Serial Number 1 Register Offset */
-#define SFR_AICREDIR_REG_OFST          (0x54)              /**< (SFR_AICREDIR) AIC Interrupt Redirection Register Offset */
-#define SFR_L2CC_HRAMC_REG_OFST        (0x58)              /**< (SFR_L2CC_HRAMC) L2CC_HRAMC1 Offset */
-#define SFR_I2SCLKSEL_REG_OFST         (0x90)              /**< (SFR_I2SCLKSEL) I2SC Register Offset */
-#define SFR_QSPICLK_REG_REG_OFST       (0x94)              /**< (SFR_QSPICLK_REG) QSPI Clock Pad Supply Select Register Offset */
+#define SFR_DDRCFG_REG_OFST            (0x04)              /* (SFR_DDRCFG) DDR Configuration Register Offset */
+#define SFR_OHCIICR_REG_OFST           (0x10)              /* (SFR_OHCIICR) OHCI Interrupt Configuration Register Offset */
+#define SFR_OHCIISR_REG_OFST           (0x14)              /* (SFR_OHCIISR) OHCI Interrupt Status Register Offset */
+#define SFR_SECURE_REG_OFST            (0x28)              /* (SFR_SECURE) Security Configuration Register Offset */
+#define SFR_UTMICKTRIM_REG_OFST        (0x30)              /* (SFR_UTMICKTRIM) UTMI Clock Trimming Register Offset */
+#define SFR_UTMIHSTRIM_REG_OFST        (0x34)              /* (SFR_UTMIHSTRIM) UTMI High-Speed Trimming Register Offset */
+#define SFR_UTMIFSTRIM_REG_OFST        (0x38)              /* (SFR_UTMIFSTRIM) UTMI Full-Speed Trimming Register Offset */
+#define SFR_UTMISWAP_REG_OFST          (0x3C)              /* (SFR_UTMISWAP) UTMI DP/DM Pin Swapping Register Offset */
+#define SFR_CAN_REG_OFST               (0x48)              /* (SFR_CAN) CAN Memories Address-based Register Offset */
+#define SFR_SN0_REG_OFST               (0x4C)              /* (SFR_SN0) Serial Number 0 Register Offset */
+#define SFR_SN1_REG_OFST               (0x50)              /* (SFR_SN1) Serial Number 1 Register Offset */
+#define SFR_AICREDIR_REG_OFST          (0x54)              /* (SFR_AICREDIR) AIC Interrupt Redirection Register Offset */
+#define SFR_L2CC_HRAMC_REG_OFST        (0x58)              /* (SFR_L2CC_HRAMC) L2CC_HRAMC1 Offset */
+#define SFR_I2SCLKSEL_REG_OFST         (0x90)              /* (SFR_I2SCLKSEL) I2SC Register Offset */
+#define SFR_QSPICLK_REG_REG_OFST       (0x94)              /* (SFR_QSPICLK_REG) QSPI Clock Pad Supply Select Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SFR register API structure */

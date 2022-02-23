@@ -1,7 +1,7 @@
 /*
  * Component description for UDPHS
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_UDPHS_COMPONENT_H_
 #define _SAMA5D2_UDPHS_COMPONENT_H_
 
@@ -981,29 +981,29 @@
 
 
 /** \brief UDPHS register offsets definitions */
-#define UDPHS_DMANXTDSC_REG_OFST       (0x00)              /**< (UDPHS_DMANXTDSC) UDPHS DMA Next Descriptor Address Register (channel = 0) Offset */
-#define UDPHS_DMAADDRESS_REG_OFST      (0x04)              /**< (UDPHS_DMAADDRESS) UDPHS DMA Channel Address Register (channel = 0) Offset */
-#define UDPHS_DMACONTROL_REG_OFST      (0x08)              /**< (UDPHS_DMACONTROL) UDPHS DMA Channel Control Register (channel = 0) Offset */
-#define UDPHS_DMASTATUS_REG_OFST       (0x0C)              /**< (UDPHS_DMASTATUS) UDPHS DMA Channel Status Register (channel = 0) Offset */
-#define UDPHS_EPTCFG_REG_OFST          (0x00)              /**< (UDPHS_EPTCFG) UDPHS Endpoint Configuration Register (endpoint = 0) Offset */
-#define UDPHS_EPTCTLENB_REG_OFST       (0x04)              /**< (UDPHS_EPTCTLENB) UDPHS Endpoint Control Enable Register (endpoint = 0) Offset */
-#define UDPHS_EPTCTLDIS_REG_OFST       (0x08)              /**< (UDPHS_EPTCTLDIS) UDPHS Endpoint Control Disable Register (endpoint = 0) Offset */
-#define UDPHS_EPTCTL_REG_OFST          (0x0C)              /**< (UDPHS_EPTCTL) UDPHS Endpoint Control Register (endpoint = 0) Offset */
-#define UDPHS_EPTSETSTA_REG_OFST       (0x14)              /**< (UDPHS_EPTSETSTA) UDPHS Endpoint Set Status Register (endpoint = 0) Offset */
-#define UDPHS_EPTCLRSTA_REG_OFST       (0x18)              /**< (UDPHS_EPTCLRSTA) UDPHS Endpoint Clear Status Register (endpoint = 0) Offset */
-#define UDPHS_EPTSTA_REG_OFST          (0x1C)              /**< (UDPHS_EPTSTA) UDPHS Endpoint Status Register (endpoint = 0) Offset */
-#define UDPHS_CTRL_REG_OFST            (0x00)              /**< (UDPHS_CTRL) UDPHS Control Register Offset */
-#define UDPHS_FNUM_REG_OFST            (0x04)              /**< (UDPHS_FNUM) UDPHS Frame Number Register Offset */
-#define UDPHS_IEN_REG_OFST             (0x10)              /**< (UDPHS_IEN) UDPHS Interrupt Enable Register Offset */
-#define UDPHS_INTSTA_REG_OFST          (0x14)              /**< (UDPHS_INTSTA) UDPHS Interrupt Status Register Offset */
-#define UDPHS_CLRINT_REG_OFST          (0x18)              /**< (UDPHS_CLRINT) UDPHS Clear Interrupt Register Offset */
-#define UDPHS_EPTRST_REG_OFST          (0x1C)              /**< (UDPHS_EPTRST) UDPHS Endpoints Reset Register Offset */
-#define UDPHS_TST_REG_OFST             (0xE0)              /**< (UDPHS_TST) UDPHS Test Register Offset */
-#define UDPHS_ADDRSIZE_REG_OFST        (0xEC)              /**< (UDPHS_ADDRSIZE) UDPHS IP Address Size Register Offset */
-#define UDPHS_IPNAME_REG_OFST          (0xF0)              /**< (UDPHS_IPNAME) UDPHS IP Name1 Register Offset */
-#define UDPHS_IPNAME0_REG_OFST         (0xF0)              /**< (UDPHS_IPNAME0) UDPHS IP Name1 Register Offset */
-#define UDPHS_IPNAME1_REG_OFST         (0xF4)              /**< (UDPHS_IPNAME1) UDPHS IP Name1 Register Offset */
-#define UDPHS_FEATURES_REG_OFST        (0xF8)              /**< (UDPHS_FEATURES) UDPHS Features Register Offset */
+#define UDPHS_DMANXTDSC_REG_OFST       (0x00)              /* (UDPHS_DMANXTDSC) UDPHS DMA Next Descriptor Address Register (channel = 0) Offset */
+#define UDPHS_DMAADDRESS_REG_OFST      (0x04)              /* (UDPHS_DMAADDRESS) UDPHS DMA Channel Address Register (channel = 0) Offset */
+#define UDPHS_DMACONTROL_REG_OFST      (0x08)              /* (UDPHS_DMACONTROL) UDPHS DMA Channel Control Register (channel = 0) Offset */
+#define UDPHS_DMASTATUS_REG_OFST       (0x0C)              /* (UDPHS_DMASTATUS) UDPHS DMA Channel Status Register (channel = 0) Offset */
+#define UDPHS_EPTCFG_REG_OFST          (0x00)              /* (UDPHS_EPTCFG) UDPHS Endpoint Configuration Register (endpoint = 0) Offset */
+#define UDPHS_EPTCTLENB_REG_OFST       (0x04)              /* (UDPHS_EPTCTLENB) UDPHS Endpoint Control Enable Register (endpoint = 0) Offset */
+#define UDPHS_EPTCTLDIS_REG_OFST       (0x08)              /* (UDPHS_EPTCTLDIS) UDPHS Endpoint Control Disable Register (endpoint = 0) Offset */
+#define UDPHS_EPTCTL_REG_OFST          (0x0C)              /* (UDPHS_EPTCTL) UDPHS Endpoint Control Register (endpoint = 0) Offset */
+#define UDPHS_EPTSETSTA_REG_OFST       (0x14)              /* (UDPHS_EPTSETSTA) UDPHS Endpoint Set Status Register (endpoint = 0) Offset */
+#define UDPHS_EPTCLRSTA_REG_OFST       (0x18)              /* (UDPHS_EPTCLRSTA) UDPHS Endpoint Clear Status Register (endpoint = 0) Offset */
+#define UDPHS_EPTSTA_REG_OFST          (0x1C)              /* (UDPHS_EPTSTA) UDPHS Endpoint Status Register (endpoint = 0) Offset */
+#define UDPHS_CTRL_REG_OFST            (0x00)              /* (UDPHS_CTRL) UDPHS Control Register Offset */
+#define UDPHS_FNUM_REG_OFST            (0x04)              /* (UDPHS_FNUM) UDPHS Frame Number Register Offset */
+#define UDPHS_IEN_REG_OFST             (0x10)              /* (UDPHS_IEN) UDPHS Interrupt Enable Register Offset */
+#define UDPHS_INTSTA_REG_OFST          (0x14)              /* (UDPHS_INTSTA) UDPHS Interrupt Status Register Offset */
+#define UDPHS_CLRINT_REG_OFST          (0x18)              /* (UDPHS_CLRINT) UDPHS Clear Interrupt Register Offset */
+#define UDPHS_EPTRST_REG_OFST          (0x1C)              /* (UDPHS_EPTRST) UDPHS Endpoints Reset Register Offset */
+#define UDPHS_TST_REG_OFST             (0xE0)              /* (UDPHS_TST) UDPHS Test Register Offset */
+#define UDPHS_ADDRSIZE_REG_OFST        (0xEC)              /* (UDPHS_ADDRSIZE) UDPHS IP Address Size Register Offset */
+#define UDPHS_IPNAME_REG_OFST          (0xF0)              /* (UDPHS_IPNAME) UDPHS IP Name1 Register Offset */
+#define UDPHS_IPNAME0_REG_OFST         (0xF0)              /* (UDPHS_IPNAME0) UDPHS IP Name1 Register Offset */
+#define UDPHS_IPNAME1_REG_OFST         (0xF4)              /* (UDPHS_IPNAME1) UDPHS IP Name1 Register Offset */
+#define UDPHS_FEATURES_REG_OFST        (0xF8)              /* (UDPHS_FEATURES) UDPHS Features Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief UDPHS_DMA register API structure */
