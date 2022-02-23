@@ -1,7 +1,7 @@
 /*
  * Component description for SHDWC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_SHDWC_COMPONENT_H_
 #define _SAMA5D2_SHDWC_COMPONENT_H_
 
@@ -312,10 +312,10 @@
 #define SHDW_WUIR_WKUPT(value)                (SHDW_WUIR_WKUPT_Msk & ((value) << SHDW_WUIR_WKUPT_Pos)) 
 
 /** \brief SHDWC register offsets definitions */
-#define SHDW_CR_REG_OFST               (0x00)              /**< (SHDW_CR) Shutdown Control Register Offset */
-#define SHDW_MR_REG_OFST               (0x04)              /**< (SHDW_MR) Shutdown Mode Register Offset */
-#define SHDW_SR_REG_OFST               (0x08)              /**< (SHDW_SR) Shutdown Status Register Offset */
-#define SHDW_WUIR_REG_OFST             (0x0C)              /**< (SHDW_WUIR) Shutdown Wake-up Inputs Register Offset */
+#define SHDW_CR_REG_OFST               (0x00)              /* (SHDW_CR) Shutdown Control Register Offset */
+#define SHDW_MR_REG_OFST               (0x04)              /* (SHDW_MR) Shutdown Mode Register Offset */
+#define SHDW_SR_REG_OFST               (0x08)              /* (SHDW_SR) Shutdown Status Register Offset */
+#define SHDW_WUIR_REG_OFST             (0x0C)              /* (SHDW_WUIR) Shutdown Wake-up Inputs Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SHDWC register API structure */
