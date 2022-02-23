@@ -1,7 +1,7 @@
 /*
  * Component description for SFRBU
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_SFRBU_COMPONENT_H_
 #define _SAMA5D2_SFRBU_COMPONENT_H_
 
@@ -69,10 +69,10 @@
 
 
 /** \brief SFRBU register offsets definitions */
-#define SFRBU_PSWBUCTRL_REG_OFST       (0x00)              /**< (SFRBU_PSWBUCTRL) Power Switch BU Control Register Offset */
-#define SFRBU_TSRANGECFG_REG_OFST      (0x04)              /**< (SFRBU_TSRANGECFG) TS Range Configuration Register Offset */
-#define SFRBU_DDRBUMCR_REG_OFST        (0x10)              /**< (SFRBU_DDRBUMCR) DDR BU Mode Control Register Offset */
-#define SFRBU_RXLPPUCR_REG_OFST        (0x14)              /**< (SFRBU_RXLPPUCR) RXLP Pull-Up Control Register Offset */
+#define SFRBU_PSWBUCTRL_REG_OFST       (0x00)              /* (SFRBU_PSWBUCTRL) Power Switch BU Control Register Offset */
+#define SFRBU_TSRANGECFG_REG_OFST      (0x04)              /* (SFRBU_TSRANGECFG) TS Range Configuration Register Offset */
+#define SFRBU_DDRBUMCR_REG_OFST        (0x10)              /* (SFRBU_DDRBUMCR) DDR BU Mode Control Register Offset */
+#define SFRBU_RXLPPUCR_REG_OFST        (0x14)              /* (SFRBU_RXLPPUCR) RXLP Pull-Up Control Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SFRBU register API structure */
