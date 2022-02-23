@@ -1,7 +1,7 @@
 /*
  * Component description for AIC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_AIC_COMPONENT_H_
 #define _SAMA5D2_AIC_COMPONENT_H_
 
@@ -598,27 +598,27 @@
 
 
 /** \brief AIC register offsets definitions */
-#define AIC_SSR_REG_OFST               (0x00)              /**< (AIC_SSR) Source Select Register Offset */
-#define AIC_SMR_REG_OFST               (0x04)              /**< (AIC_SMR) Source Mode Register Offset */
-#define AIC_SVR_REG_OFST               (0x08)              /**< (AIC_SVR) Source Vector Register Offset */
-#define AIC_IVR_REG_OFST               (0x10)              /**< (AIC_IVR) Interrupt Vector Register Offset */
-#define AIC_FVR_REG_OFST               (0x14)              /**< (AIC_FVR) FIQ Vector Register Offset */
-#define AIC_ISR_REG_OFST               (0x18)              /**< (AIC_ISR) Interrupt Status Register Offset */
-#define AIC_IPR0_REG_OFST              (0x20)              /**< (AIC_IPR0) Interrupt Pending Register 0 Offset */
-#define AIC_IPR1_REG_OFST              (0x24)              /**< (AIC_IPR1) Interrupt Pending Register 1 Offset */
-#define AIC_IPR2_REG_OFST              (0x28)              /**< (AIC_IPR2) Interrupt Pending Register 2 Offset */
-#define AIC_IPR3_REG_OFST              (0x2C)              /**< (AIC_IPR3) Interrupt Pending Register 3 Offset */
-#define AIC_IMR_REG_OFST               (0x30)              /**< (AIC_IMR) Interrupt Mask Register Offset */
-#define AIC_CISR_REG_OFST              (0x34)              /**< (AIC_CISR) Core Interrupt Status Register Offset */
-#define AIC_EOICR_REG_OFST             (0x38)              /**< (AIC_EOICR) End of Interrupt Command Register Offset */
-#define AIC_SPU_REG_OFST               (0x3C)              /**< (AIC_SPU) Spurious Interrupt Vector Register Offset */
-#define AIC_IECR_REG_OFST              (0x40)              /**< (AIC_IECR) Interrupt Enable Command Register Offset */
-#define AIC_IDCR_REG_OFST              (0x44)              /**< (AIC_IDCR) Interrupt Disable Command Register Offset */
-#define AIC_ICCR_REG_OFST              (0x48)              /**< (AIC_ICCR) Interrupt Clear Command Register Offset */
-#define AIC_ISCR_REG_OFST              (0x4C)              /**< (AIC_ISCR) Interrupt Set Command Register Offset */
-#define AIC_DCR_REG_OFST               (0x6C)              /**< (AIC_DCR) Debug Control Register Offset */
-#define AIC_WPMR_REG_OFST              (0xE4)              /**< (AIC_WPMR) Write Protection Mode Register Offset */
-#define AIC_WPSR_REG_OFST              (0xE8)              /**< (AIC_WPSR) Write Protection Status Register Offset */
+#define AIC_SSR_REG_OFST               (0x00)              /* (AIC_SSR) Source Select Register Offset */
+#define AIC_SMR_REG_OFST               (0x04)              /* (AIC_SMR) Source Mode Register Offset */
+#define AIC_SVR_REG_OFST               (0x08)              /* (AIC_SVR) Source Vector Register Offset */
+#define AIC_IVR_REG_OFST               (0x10)              /* (AIC_IVR) Interrupt Vector Register Offset */
+#define AIC_FVR_REG_OFST               (0x14)              /* (AIC_FVR) FIQ Vector Register Offset */
+#define AIC_ISR_REG_OFST               (0x18)              /* (AIC_ISR) Interrupt Status Register Offset */
+#define AIC_IPR0_REG_OFST              (0x20)              /* (AIC_IPR0) Interrupt Pending Register 0 Offset */
+#define AIC_IPR1_REG_OFST              (0x24)              /* (AIC_IPR1) Interrupt Pending Register 1 Offset */
+#define AIC_IPR2_REG_OFST              (0x28)              /* (AIC_IPR2) Interrupt Pending Register 2 Offset */
+#define AIC_IPR3_REG_OFST              (0x2C)              /* (AIC_IPR3) Interrupt Pending Register 3 Offset */
+#define AIC_IMR_REG_OFST               (0x30)              /* (AIC_IMR) Interrupt Mask Register Offset */
+#define AIC_CISR_REG_OFST              (0x34)              /* (AIC_CISR) Core Interrupt Status Register Offset */
+#define AIC_EOICR_REG_OFST             (0x38)              /* (AIC_EOICR) End of Interrupt Command Register Offset */
+#define AIC_SPU_REG_OFST               (0x3C)              /* (AIC_SPU) Spurious Interrupt Vector Register Offset */
+#define AIC_IECR_REG_OFST              (0x40)              /* (AIC_IECR) Interrupt Enable Command Register Offset */
+#define AIC_IDCR_REG_OFST              (0x44)              /* (AIC_IDCR) Interrupt Disable Command Register Offset */
+#define AIC_ICCR_REG_OFST              (0x48)              /* (AIC_ICCR) Interrupt Clear Command Register Offset */
+#define AIC_ISCR_REG_OFST              (0x4C)              /* (AIC_ISCR) Interrupt Set Command Register Offset */
+#define AIC_DCR_REG_OFST               (0x6C)              /* (AIC_DCR) Debug Control Register Offset */
+#define AIC_WPMR_REG_OFST              (0xE4)              /* (AIC_WPMR) Write Protection Mode Register Offset */
+#define AIC_WPSR_REG_OFST              (0xE8)              /* (AIC_WPSR) Write Protection Status Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief AIC register API structure */

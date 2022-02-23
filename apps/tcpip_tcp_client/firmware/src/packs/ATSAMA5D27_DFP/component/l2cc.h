@@ -1,7 +1,7 @@
 /*
  * Component description for L2CC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_L2CC_COMPONENT_H_
 #define _SAMA5D2_L2CC_COMPONENT_H_
 
@@ -665,35 +665,35 @@
 
 
 /** \brief L2CC register offsets definitions */
-#define L2CC_IDR_REG_OFST              (0x00)              /**< (L2CC_IDR) Cache ID Register Offset */
-#define L2CC_TYPR_REG_OFST             (0x04)              /**< (L2CC_TYPR) Cache Type Register Offset */
-#define L2CC_CR_REG_OFST               (0x100)             /**< (L2CC_CR) Control Register Offset */
-#define L2CC_ACR_REG_OFST              (0x104)             /**< (L2CC_ACR) Auxiliary Control Register Offset */
-#define L2CC_TRCR_REG_OFST             (0x108)             /**< (L2CC_TRCR) Tag RAM Control Register Offset */
-#define L2CC_DRCR_REG_OFST             (0x10C)             /**< (L2CC_DRCR) Data RAM Control Register Offset */
-#define L2CC_ECR_REG_OFST              (0x200)             /**< (L2CC_ECR) Event Counter Control Register Offset */
-#define L2CC_ECFGR1_REG_OFST           (0x204)             /**< (L2CC_ECFGR1) Event Counter 1 Configuration Register Offset */
-#define L2CC_ECFGR0_REG_OFST           (0x208)             /**< (L2CC_ECFGR0) Event Counter 0 Configuration Register Offset */
-#define L2CC_EVR1_REG_OFST             (0x20C)             /**< (L2CC_EVR1) Event Counter 1 Value Register Offset */
-#define L2CC_EVR0_REG_OFST             (0x210)             /**< (L2CC_EVR0) Event Counter 0 Value Register Offset */
-#define L2CC_IMR_REG_OFST              (0x214)             /**< (L2CC_IMR) Interrupt Mask Register Offset */
-#define L2CC_MISR_REG_OFST             (0x218)             /**< (L2CC_MISR) Masked Interrupt Status Register Offset */
-#define L2CC_RISR_REG_OFST             (0x21C)             /**< (L2CC_RISR) Raw Interrupt Status Register Offset */
-#define L2CC_ICR_REG_OFST              (0x220)             /**< (L2CC_ICR) Interrupt Clear Register Offset */
-#define L2CC_CSR_REG_OFST              (0x730)             /**< (L2CC_CSR) Cache Synchronization Register Offset */
-#define L2CC_IPALR_REG_OFST            (0x770)             /**< (L2CC_IPALR) Invalidate Physical Address Line Register Offset */
-#define L2CC_IWR_REG_OFST              (0x77C)             /**< (L2CC_IWR) Invalidate Way Register Offset */
-#define L2CC_CPALR_REG_OFST            (0x7B0)             /**< (L2CC_CPALR) Clean Physical Address Line Register Offset */
-#define L2CC_CIR_REG_OFST              (0x7B8)             /**< (L2CC_CIR) Clean Index Register Offset */
-#define L2CC_CWR_REG_OFST              (0x7BC)             /**< (L2CC_CWR) Clean Way Register Offset */
-#define L2CC_CIPALR_REG_OFST           (0x7F0)             /**< (L2CC_CIPALR) Clean Invalidate Physical Address Line Register Offset */
-#define L2CC_CIIR_REG_OFST             (0x7F8)             /**< (L2CC_CIIR) Clean Invalidate Index Register Offset */
-#define L2CC_CIWR_REG_OFST             (0x7FC)             /**< (L2CC_CIWR) Clean Invalidate Way Register Offset */
-#define L2CC_DLKR_REG_OFST             (0x900)             /**< (L2CC_DLKR) Data Lockdown Register Offset */
-#define L2CC_ILKR_REG_OFST             (0x904)             /**< (L2CC_ILKR) Instruction Lockdown Register Offset */
-#define L2CC_DCR_REG_OFST              (0xF40)             /**< (L2CC_DCR) Debug Control Register Offset */
-#define L2CC_PCR_REG_OFST              (0xF60)             /**< (L2CC_PCR) Prefetch Control Register Offset */
-#define L2CC_POWCR_REG_OFST            (0xF80)             /**< (L2CC_POWCR) Power Control Register Offset */
+#define L2CC_IDR_REG_OFST              (0x00)              /* (L2CC_IDR) Cache ID Register Offset */
+#define L2CC_TYPR_REG_OFST             (0x04)              /* (L2CC_TYPR) Cache Type Register Offset */
+#define L2CC_CR_REG_OFST               (0x100)             /* (L2CC_CR) Control Register Offset */
+#define L2CC_ACR_REG_OFST              (0x104)             /* (L2CC_ACR) Auxiliary Control Register Offset */
+#define L2CC_TRCR_REG_OFST             (0x108)             /* (L2CC_TRCR) Tag RAM Control Register Offset */
+#define L2CC_DRCR_REG_OFST             (0x10C)             /* (L2CC_DRCR) Data RAM Control Register Offset */
+#define L2CC_ECR_REG_OFST              (0x200)             /* (L2CC_ECR) Event Counter Control Register Offset */
+#define L2CC_ECFGR1_REG_OFST           (0x204)             /* (L2CC_ECFGR1) Event Counter 1 Configuration Register Offset */
+#define L2CC_ECFGR0_REG_OFST           (0x208)             /* (L2CC_ECFGR0) Event Counter 0 Configuration Register Offset */
+#define L2CC_EVR1_REG_OFST             (0x20C)             /* (L2CC_EVR1) Event Counter 1 Value Register Offset */
+#define L2CC_EVR0_REG_OFST             (0x210)             /* (L2CC_EVR0) Event Counter 0 Value Register Offset */
+#define L2CC_IMR_REG_OFST              (0x214)             /* (L2CC_IMR) Interrupt Mask Register Offset */
+#define L2CC_MISR_REG_OFST             (0x218)             /* (L2CC_MISR) Masked Interrupt Status Register Offset */
+#define L2CC_RISR_REG_OFST             (0x21C)             /* (L2CC_RISR) Raw Interrupt Status Register Offset */
+#define L2CC_ICR_REG_OFST              (0x220)             /* (L2CC_ICR) Interrupt Clear Register Offset */
+#define L2CC_CSR_REG_OFST              (0x730)             /* (L2CC_CSR) Cache Synchronization Register Offset */
+#define L2CC_IPALR_REG_OFST            (0x770)             /* (L2CC_IPALR) Invalidate Physical Address Line Register Offset */
+#define L2CC_IWR_REG_OFST              (0x77C)             /* (L2CC_IWR) Invalidate Way Register Offset */
+#define L2CC_CPALR_REG_OFST            (0x7B0)             /* (L2CC_CPALR) Clean Physical Address Line Register Offset */
+#define L2CC_CIR_REG_OFST              (0x7B8)             /* (L2CC_CIR) Clean Index Register Offset */
+#define L2CC_CWR_REG_OFST              (0x7BC)             /* (L2CC_CWR) Clean Way Register Offset */
+#define L2CC_CIPALR_REG_OFST           (0x7F0)             /* (L2CC_CIPALR) Clean Invalidate Physical Address Line Register Offset */
+#define L2CC_CIIR_REG_OFST             (0x7F8)             /* (L2CC_CIIR) Clean Invalidate Index Register Offset */
+#define L2CC_CIWR_REG_OFST             (0x7FC)             /* (L2CC_CIWR) Clean Invalidate Way Register Offset */
+#define L2CC_DLKR_REG_OFST             (0x900)             /* (L2CC_DLKR) Data Lockdown Register Offset */
+#define L2CC_ILKR_REG_OFST             (0x904)             /* (L2CC_ILKR) Instruction Lockdown Register Offset */
+#define L2CC_DCR_REG_OFST              (0xF40)             /* (L2CC_DCR) Debug Control Register Offset */
+#define L2CC_PCR_REG_OFST              (0xF60)             /* (L2CC_PCR) Prefetch Control Register Offset */
+#define L2CC_POWCR_REG_OFST            (0xF80)             /* (L2CC_POWCR) Power Control Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief L2CC register API structure */
