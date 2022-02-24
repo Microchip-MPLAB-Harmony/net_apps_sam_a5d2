@@ -1,7 +1,7 @@
 /*
  * Component description for FLEXCOM
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_FLEXCOM_COMPONENT_H_
 #define _SAMA5D2_FLEXCOM_COMPONENT_H_
 
@@ -2182,76 +2182,76 @@
 
 
 /** \brief FLEXCOM register offsets definitions */
-#define FLEX_MR_REG_OFST               (0x00)              /**< (FLEX_MR) FLEXCOM Mode Register Offset */
-#define FLEX_RHR_REG_OFST              (0x10)              /**< (FLEX_RHR) FLEXCOM Receive Holding Register Offset */
-#define FLEX_THR_REG_OFST              (0x20)              /**< (FLEX_THR) FLEXCOM Transmit Holding Register Offset */
-#define FLEX_US_CR_REG_OFST            (0x200)             /**< (FLEX_US_CR) USART Control Register Offset */
-#define FLEX_US_MR_REG_OFST            (0x204)             /**< (FLEX_US_MR) USART Mode Register Offset */
-#define FLEX_US_IER_REG_OFST           (0x208)             /**< (FLEX_US_IER) USART Interrupt Enable Register Offset */
-#define FLEX_US_IDR_REG_OFST           (0x20C)             /**< (FLEX_US_IDR) USART Interrupt Disable Register Offset */
-#define FLEX_US_IMR_REG_OFST           (0x210)             /**< (FLEX_US_IMR) USART Interrupt Mask Register Offset */
-#define FLEX_US_CSR_REG_OFST           (0x214)             /**< (FLEX_US_CSR) USART Channel Status Register Offset */
-#define FLEX_US_RHR_REG_OFST           (0x218)             /**< (FLEX_US_RHR) USART Receive Holding Register Offset */
-#define FLEX_US_THR_REG_OFST           (0x21C)             /**< (FLEX_US_THR) USART Transmit Holding Register Offset */
-#define FLEX_US_BRGR_REG_OFST          (0x220)             /**< (FLEX_US_BRGR) USART Baud Rate Generator Register Offset */
-#define FLEX_US_RTOR_REG_OFST          (0x224)             /**< (FLEX_US_RTOR) USART Receiver Timeout Register Offset */
-#define FLEX_US_TTGR_REG_OFST          (0x228)             /**< (FLEX_US_TTGR) USART Transmitter Timeguard Register Offset */
-#define FLEX_US_FIDI_REG_OFST          (0x240)             /**< (FLEX_US_FIDI) USART FI DI Ratio Register Offset */
-#define FLEX_US_NER_REG_OFST           (0x244)             /**< (FLEX_US_NER) USART Number of Errors Register Offset */
-#define FLEX_US_IF_REG_OFST            (0x24C)             /**< (FLEX_US_IF) USART IrDA Filter Register Offset */
-#define FLEX_US_MAN_REG_OFST           (0x250)             /**< (FLEX_US_MAN) USART Manchester Configuration Register Offset */
-#define FLEX_US_LINMR_REG_OFST         (0x254)             /**< (FLEX_US_LINMR) USART LIN Mode Register Offset */
-#define FLEX_US_LINIR_REG_OFST         (0x258)             /**< (FLEX_US_LINIR) USART LIN Identifier Register Offset */
-#define FLEX_US_LINBRR_REG_OFST        (0x25C)             /**< (FLEX_US_LINBRR) USART LIN Baud Rate Register Offset */
-#define FLEX_US_CMPR_REG_OFST          (0x290)             /**< (FLEX_US_CMPR) USART Comparison Register Offset */
-#define FLEX_US_FMR_REG_OFST           (0x2A0)             /**< (FLEX_US_FMR) USART FIFO Mode Register Offset */
-#define FLEX_US_FLR_REG_OFST           (0x2A4)             /**< (FLEX_US_FLR) USART FIFO Level Register Offset */
-#define FLEX_US_FIER_REG_OFST          (0x2A8)             /**< (FLEX_US_FIER) USART FIFO Interrupt Enable Register Offset */
-#define FLEX_US_FIDR_REG_OFST          (0x2AC)             /**< (FLEX_US_FIDR) USART FIFO Interrupt Disable Register Offset */
-#define FLEX_US_FIMR_REG_OFST          (0x2B0)             /**< (FLEX_US_FIMR) USART FIFO Interrupt Mask Register Offset */
-#define FLEX_US_FESR_REG_OFST          (0x2B4)             /**< (FLEX_US_FESR) USART FIFO Event Status Register Offset */
-#define FLEX_US_WPMR_REG_OFST          (0x2E4)             /**< (FLEX_US_WPMR) USART Write Protection Mode Register Offset */
-#define FLEX_US_WPSR_REG_OFST          (0x2E8)             /**< (FLEX_US_WPSR) USART Write Protection Status Register Offset */
-#define FLEX_SPI_CR_REG_OFST           (0x400)             /**< (FLEX_SPI_CR) SPI Control Register Offset */
-#define FLEX_SPI_MR_REG_OFST           (0x404)             /**< (FLEX_SPI_MR) SPI Mode Register Offset */
-#define FLEX_SPI_RDR_REG_OFST          (0x408)             /**< (FLEX_SPI_RDR) SPI Receive Data Register Offset */
-#define FLEX_SPI_TDR_REG_OFST          (0x40C)             /**< (FLEX_SPI_TDR) SPI Transmit Data Register Offset */
-#define FLEX_SPI_SR_REG_OFST           (0x410)             /**< (FLEX_SPI_SR) SPI Status Register Offset */
-#define FLEX_SPI_IER_REG_OFST          (0x414)             /**< (FLEX_SPI_IER) SPI Interrupt Enable Register Offset */
-#define FLEX_SPI_IDR_REG_OFST          (0x418)             /**< (FLEX_SPI_IDR) SPI Interrupt Disable Register Offset */
-#define FLEX_SPI_IMR_REG_OFST          (0x41C)             /**< (FLEX_SPI_IMR) SPI Interrupt Mask Register Offset */
-#define FLEX_SPI_CSR_REG_OFST          (0x430)             /**< (FLEX_SPI_CSR) SPI Chip Select Register Offset */
-#define FLEX_SPI_CSR0_REG_OFST         (0x430)             /**< (FLEX_SPI_CSR0) SPI Chip Select Register Offset */
-#define FLEX_SPI_CSR1_REG_OFST         (0x434)             /**< (FLEX_SPI_CSR1) SPI Chip Select Register Offset */
-#define FLEX_SPI_FMR_REG_OFST          (0x440)             /**< (FLEX_SPI_FMR) SPI FIFO Mode Register Offset */
-#define FLEX_SPI_FLR_REG_OFST          (0x444)             /**< (FLEX_SPI_FLR) SPI FIFO Level Register Offset */
-#define FLEX_SPI_CMPR_REG_OFST         (0x448)             /**< (FLEX_SPI_CMPR) SPI Comparison Register Offset */
-#define FLEX_SPI_WPMR_REG_OFST         (0x4E4)             /**< (FLEX_SPI_WPMR) SPI Write Protection Mode Register Offset */
-#define FLEX_SPI_WPSR_REG_OFST         (0x4E8)             /**< (FLEX_SPI_WPSR) SPI Write Protection Status Register Offset */
-#define FLEX_TWI_CR_REG_OFST           (0x600)             /**< (FLEX_TWI_CR) TWI Control Register Offset */
-#define FLEX_TWI_MMR_REG_OFST          (0x604)             /**< (FLEX_TWI_MMR) TWI Master Mode Register Offset */
-#define FLEX_TWI_SMR_REG_OFST          (0x608)             /**< (FLEX_TWI_SMR) TWI Slave Mode Register Offset */
-#define FLEX_TWI_IADR_REG_OFST         (0x60C)             /**< (FLEX_TWI_IADR) TWI Internal Address Register Offset */
-#define FLEX_TWI_CWGR_REG_OFST         (0x610)             /**< (FLEX_TWI_CWGR) TWI Clock Waveform Generator Register Offset */
-#define FLEX_TWI_SR_REG_OFST           (0x620)             /**< (FLEX_TWI_SR) TWI Status Register Offset */
-#define FLEX_TWI_IER_REG_OFST          (0x624)             /**< (FLEX_TWI_IER) TWI Interrupt Enable Register Offset */
-#define FLEX_TWI_IDR_REG_OFST          (0x628)             /**< (FLEX_TWI_IDR) TWI Interrupt Disable Register Offset */
-#define FLEX_TWI_IMR_REG_OFST          (0x62C)             /**< (FLEX_TWI_IMR) TWI Interrupt Mask Register Offset */
-#define FLEX_TWI_RHR_REG_OFST          (0x630)             /**< (FLEX_TWI_RHR) TWI Receive Holding Register Offset */
-#define FLEX_TWI_THR_REG_OFST          (0x634)             /**< (FLEX_TWI_THR) TWI Transmit Holding Register Offset */
-#define FLEX_TWI_SMBTR_REG_OFST        (0x638)             /**< (FLEX_TWI_SMBTR) TWI SMBus Timing Register Offset */
-#define FLEX_TWI_ACR_REG_OFST          (0x640)             /**< (FLEX_TWI_ACR) TWI Alternative Command Register Offset */
-#define FLEX_TWI_FILTR_REG_OFST        (0x644)             /**< (FLEX_TWI_FILTR) TWI Filter Register Offset */
-#define FLEX_TWI_SWMR_REG_OFST         (0x64C)             /**< (FLEX_TWI_SWMR) TWI SleepWalking Matching Register Offset */
-#define FLEX_TWI_FMR_REG_OFST          (0x650)             /**< (FLEX_TWI_FMR) TWI FIFO Mode Register Offset */
-#define FLEX_TWI_FLR_REG_OFST          (0x654)             /**< (FLEX_TWI_FLR) TWI FIFO Level Register Offset */
-#define FLEX_TWI_FSR_REG_OFST          (0x660)             /**< (FLEX_TWI_FSR) TWI FIFO Status Register Offset */
-#define FLEX_TWI_FIER_REG_OFST         (0x664)             /**< (FLEX_TWI_FIER) TWI FIFO Interrupt Enable Register Offset */
-#define FLEX_TWI_FIDR_REG_OFST         (0x668)             /**< (FLEX_TWI_FIDR) TWI FIFO Interrupt Disable Register Offset */
-#define FLEX_TWI_FIMR_REG_OFST         (0x66C)             /**< (FLEX_TWI_FIMR) TWI FIFO Interrupt Mask Register Offset */
-#define FLEX_TWI_DR_REG_OFST           (0x6D0)             /**< (FLEX_TWI_DR) TWI Debug Register Offset */
-#define FLEX_TWI_WPMR_REG_OFST         (0x6E4)             /**< (FLEX_TWI_WPMR) TWI Write Protection Mode Register Offset */
-#define FLEX_TWI_WPSR_REG_OFST         (0x6E8)             /**< (FLEX_TWI_WPSR) TWI Write Protection Status Register Offset */
+#define FLEX_MR_REG_OFST               (0x00)              /* (FLEX_MR) FLEXCOM Mode Register Offset */
+#define FLEX_RHR_REG_OFST              (0x10)              /* (FLEX_RHR) FLEXCOM Receive Holding Register Offset */
+#define FLEX_THR_REG_OFST              (0x20)              /* (FLEX_THR) FLEXCOM Transmit Holding Register Offset */
+#define FLEX_US_CR_REG_OFST            (0x200)             /* (FLEX_US_CR) USART Control Register Offset */
+#define FLEX_US_MR_REG_OFST            (0x204)             /* (FLEX_US_MR) USART Mode Register Offset */
+#define FLEX_US_IER_REG_OFST           (0x208)             /* (FLEX_US_IER) USART Interrupt Enable Register Offset */
+#define FLEX_US_IDR_REG_OFST           (0x20C)             /* (FLEX_US_IDR) USART Interrupt Disable Register Offset */
+#define FLEX_US_IMR_REG_OFST           (0x210)             /* (FLEX_US_IMR) USART Interrupt Mask Register Offset */
+#define FLEX_US_CSR_REG_OFST           (0x214)             /* (FLEX_US_CSR) USART Channel Status Register Offset */
+#define FLEX_US_RHR_REG_OFST           (0x218)             /* (FLEX_US_RHR) USART Receive Holding Register Offset */
+#define FLEX_US_THR_REG_OFST           (0x21C)             /* (FLEX_US_THR) USART Transmit Holding Register Offset */
+#define FLEX_US_BRGR_REG_OFST          (0x220)             /* (FLEX_US_BRGR) USART Baud Rate Generator Register Offset */
+#define FLEX_US_RTOR_REG_OFST          (0x224)             /* (FLEX_US_RTOR) USART Receiver Timeout Register Offset */
+#define FLEX_US_TTGR_REG_OFST          (0x228)             /* (FLEX_US_TTGR) USART Transmitter Timeguard Register Offset */
+#define FLEX_US_FIDI_REG_OFST          (0x240)             /* (FLEX_US_FIDI) USART FI DI Ratio Register Offset */
+#define FLEX_US_NER_REG_OFST           (0x244)             /* (FLEX_US_NER) USART Number of Errors Register Offset */
+#define FLEX_US_IF_REG_OFST            (0x24C)             /* (FLEX_US_IF) USART IrDA Filter Register Offset */
+#define FLEX_US_MAN_REG_OFST           (0x250)             /* (FLEX_US_MAN) USART Manchester Configuration Register Offset */
+#define FLEX_US_LINMR_REG_OFST         (0x254)             /* (FLEX_US_LINMR) USART LIN Mode Register Offset */
+#define FLEX_US_LINIR_REG_OFST         (0x258)             /* (FLEX_US_LINIR) USART LIN Identifier Register Offset */
+#define FLEX_US_LINBRR_REG_OFST        (0x25C)             /* (FLEX_US_LINBRR) USART LIN Baud Rate Register Offset */
+#define FLEX_US_CMPR_REG_OFST          (0x290)             /* (FLEX_US_CMPR) USART Comparison Register Offset */
+#define FLEX_US_FMR_REG_OFST           (0x2A0)             /* (FLEX_US_FMR) USART FIFO Mode Register Offset */
+#define FLEX_US_FLR_REG_OFST           (0x2A4)             /* (FLEX_US_FLR) USART FIFO Level Register Offset */
+#define FLEX_US_FIER_REG_OFST          (0x2A8)             /* (FLEX_US_FIER) USART FIFO Interrupt Enable Register Offset */
+#define FLEX_US_FIDR_REG_OFST          (0x2AC)             /* (FLEX_US_FIDR) USART FIFO Interrupt Disable Register Offset */
+#define FLEX_US_FIMR_REG_OFST          (0x2B0)             /* (FLEX_US_FIMR) USART FIFO Interrupt Mask Register Offset */
+#define FLEX_US_FESR_REG_OFST          (0x2B4)             /* (FLEX_US_FESR) USART FIFO Event Status Register Offset */
+#define FLEX_US_WPMR_REG_OFST          (0x2E4)             /* (FLEX_US_WPMR) USART Write Protection Mode Register Offset */
+#define FLEX_US_WPSR_REG_OFST          (0x2E8)             /* (FLEX_US_WPSR) USART Write Protection Status Register Offset */
+#define FLEX_SPI_CR_REG_OFST           (0x400)             /* (FLEX_SPI_CR) SPI Control Register Offset */
+#define FLEX_SPI_MR_REG_OFST           (0x404)             /* (FLEX_SPI_MR) SPI Mode Register Offset */
+#define FLEX_SPI_RDR_REG_OFST          (0x408)             /* (FLEX_SPI_RDR) SPI Receive Data Register Offset */
+#define FLEX_SPI_TDR_REG_OFST          (0x40C)             /* (FLEX_SPI_TDR) SPI Transmit Data Register Offset */
+#define FLEX_SPI_SR_REG_OFST           (0x410)             /* (FLEX_SPI_SR) SPI Status Register Offset */
+#define FLEX_SPI_IER_REG_OFST          (0x414)             /* (FLEX_SPI_IER) SPI Interrupt Enable Register Offset */
+#define FLEX_SPI_IDR_REG_OFST          (0x418)             /* (FLEX_SPI_IDR) SPI Interrupt Disable Register Offset */
+#define FLEX_SPI_IMR_REG_OFST          (0x41C)             /* (FLEX_SPI_IMR) SPI Interrupt Mask Register Offset */
+#define FLEX_SPI_CSR_REG_OFST          (0x430)             /* (FLEX_SPI_CSR) SPI Chip Select Register Offset */
+#define FLEX_SPI_CSR0_REG_OFST         (0x430)             /* (FLEX_SPI_CSR0) SPI Chip Select Register Offset */
+#define FLEX_SPI_CSR1_REG_OFST         (0x434)             /* (FLEX_SPI_CSR1) SPI Chip Select Register Offset */
+#define FLEX_SPI_FMR_REG_OFST          (0x440)             /* (FLEX_SPI_FMR) SPI FIFO Mode Register Offset */
+#define FLEX_SPI_FLR_REG_OFST          (0x444)             /* (FLEX_SPI_FLR) SPI FIFO Level Register Offset */
+#define FLEX_SPI_CMPR_REG_OFST         (0x448)             /* (FLEX_SPI_CMPR) SPI Comparison Register Offset */
+#define FLEX_SPI_WPMR_REG_OFST         (0x4E4)             /* (FLEX_SPI_WPMR) SPI Write Protection Mode Register Offset */
+#define FLEX_SPI_WPSR_REG_OFST         (0x4E8)             /* (FLEX_SPI_WPSR) SPI Write Protection Status Register Offset */
+#define FLEX_TWI_CR_REG_OFST           (0x600)             /* (FLEX_TWI_CR) TWI Control Register Offset */
+#define FLEX_TWI_MMR_REG_OFST          (0x604)             /* (FLEX_TWI_MMR) TWI Master Mode Register Offset */
+#define FLEX_TWI_SMR_REG_OFST          (0x608)             /* (FLEX_TWI_SMR) TWI Slave Mode Register Offset */
+#define FLEX_TWI_IADR_REG_OFST         (0x60C)             /* (FLEX_TWI_IADR) TWI Internal Address Register Offset */
+#define FLEX_TWI_CWGR_REG_OFST         (0x610)             /* (FLEX_TWI_CWGR) TWI Clock Waveform Generator Register Offset */
+#define FLEX_TWI_SR_REG_OFST           (0x620)             /* (FLEX_TWI_SR) TWI Status Register Offset */
+#define FLEX_TWI_IER_REG_OFST          (0x624)             /* (FLEX_TWI_IER) TWI Interrupt Enable Register Offset */
+#define FLEX_TWI_IDR_REG_OFST          (0x628)             /* (FLEX_TWI_IDR) TWI Interrupt Disable Register Offset */
+#define FLEX_TWI_IMR_REG_OFST          (0x62C)             /* (FLEX_TWI_IMR) TWI Interrupt Mask Register Offset */
+#define FLEX_TWI_RHR_REG_OFST          (0x630)             /* (FLEX_TWI_RHR) TWI Receive Holding Register Offset */
+#define FLEX_TWI_THR_REG_OFST          (0x634)             /* (FLEX_TWI_THR) TWI Transmit Holding Register Offset */
+#define FLEX_TWI_SMBTR_REG_OFST        (0x638)             /* (FLEX_TWI_SMBTR) TWI SMBus Timing Register Offset */
+#define FLEX_TWI_ACR_REG_OFST          (0x640)             /* (FLEX_TWI_ACR) TWI Alternative Command Register Offset */
+#define FLEX_TWI_FILTR_REG_OFST        (0x644)             /* (FLEX_TWI_FILTR) TWI Filter Register Offset */
+#define FLEX_TWI_SWMR_REG_OFST         (0x64C)             /* (FLEX_TWI_SWMR) TWI SleepWalking Matching Register Offset */
+#define FLEX_TWI_FMR_REG_OFST          (0x650)             /* (FLEX_TWI_FMR) TWI FIFO Mode Register Offset */
+#define FLEX_TWI_FLR_REG_OFST          (0x654)             /* (FLEX_TWI_FLR) TWI FIFO Level Register Offset */
+#define FLEX_TWI_FSR_REG_OFST          (0x660)             /* (FLEX_TWI_FSR) TWI FIFO Status Register Offset */
+#define FLEX_TWI_FIER_REG_OFST         (0x664)             /* (FLEX_TWI_FIER) TWI FIFO Interrupt Enable Register Offset */
+#define FLEX_TWI_FIDR_REG_OFST         (0x668)             /* (FLEX_TWI_FIDR) TWI FIFO Interrupt Disable Register Offset */
+#define FLEX_TWI_FIMR_REG_OFST         (0x66C)             /* (FLEX_TWI_FIMR) TWI FIFO Interrupt Mask Register Offset */
+#define FLEX_TWI_DR_REG_OFST           (0x6D0)             /* (FLEX_TWI_DR) TWI Debug Register Offset */
+#define FLEX_TWI_WPMR_REG_OFST         (0x6E4)             /* (FLEX_TWI_WPMR) TWI Write Protection Mode Register Offset */
+#define FLEX_TWI_WPSR_REG_OFST         (0x6E8)             /* (FLEX_TWI_WPSR) TWI Write Protection Status Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief FLEXCOM register API structure */
