@@ -710,8 +710,8 @@
           <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/tasks.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/initialization.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/interrupts.c</itemPath>
-          <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/cstartup.S</itemPath>
           <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/fault_handlers.c</itemPath>
+          <itemPath>../src/config/sam_a5d2_xplained_ultra_MPLABX/cstartup.S</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f3" displayName="wolfcrypt" projectFiles="true">
@@ -983,7 +983,7 @@
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
         <property key="make-warnings-into-errors" value="true"/>
-        <property key="optimization-level" value="-O1"/>
+        <property key="optimization-level" value=""/>
         <property key="place-data-into-section" value="true"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>

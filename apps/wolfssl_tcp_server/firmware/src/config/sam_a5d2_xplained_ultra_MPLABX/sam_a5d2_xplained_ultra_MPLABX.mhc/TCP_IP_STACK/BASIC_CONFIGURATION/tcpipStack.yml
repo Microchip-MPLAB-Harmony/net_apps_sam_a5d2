@@ -10,14 +10,14 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '65536'}
+        attributes: {value: '102400'}
   - type: Integer
     attributes: {id: TCPIP_STACK_HEAP_SIZE_RECOMMEND}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: tcpipStack, value: '47'}
+        attributes: {id: tcpipStack, value: '61'}
   - type: Boolean
     attributes: {id: TCPIP_STACK_INTERFACE_CHANGE_SIGNALING}
     children:

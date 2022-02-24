@@ -1,7 +1,7 @@
 /*
  * Component description for CLASSD
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_CLASSD_COMPONENT_H_
 #define _SAMA5D2_CLASSD_COMPONENT_H_
 
@@ -223,16 +223,16 @@
 
 
 /** \brief CLASSD register offsets definitions */
-#define CLASSD_CR_REG_OFST             (0x00)              /**< (CLASSD_CR) Control Register Offset */
-#define CLASSD_MR_REG_OFST             (0x04)              /**< (CLASSD_MR) Mode Register Offset */
-#define CLASSD_INTPMR_REG_OFST         (0x08)              /**< (CLASSD_INTPMR) Interpolator Mode Register Offset */
-#define CLASSD_INTSR_REG_OFST          (0x0C)              /**< (CLASSD_INTSR) Interpolator Status Register Offset */
-#define CLASSD_THR_REG_OFST            (0x10)              /**< (CLASSD_THR) Transmit Holding Register Offset */
-#define CLASSD_IER_REG_OFST            (0x14)              /**< (CLASSD_IER) Interrupt Enable Register Offset */
-#define CLASSD_IDR_REG_OFST            (0x18)              /**< (CLASSD_IDR) Interrupt Disable Register Offset */
-#define CLASSD_IMR_REG_OFST            (0x1C)              /**< (CLASSD_IMR) Interrupt Mask Register Offset */
-#define CLASSD_ISR_REG_OFST            (0x20)              /**< (CLASSD_ISR) Interrupt Status Register Offset */
-#define CLASSD_WPMR_REG_OFST           (0xE4)              /**< (CLASSD_WPMR) Write Protection Mode Register Offset */
+#define CLASSD_CR_REG_OFST             (0x00)              /* (CLASSD_CR) Control Register Offset */
+#define CLASSD_MR_REG_OFST             (0x04)              /* (CLASSD_MR) Mode Register Offset */
+#define CLASSD_INTPMR_REG_OFST         (0x08)              /* (CLASSD_INTPMR) Interpolator Mode Register Offset */
+#define CLASSD_INTSR_REG_OFST          (0x0C)              /* (CLASSD_INTSR) Interpolator Status Register Offset */
+#define CLASSD_THR_REG_OFST            (0x10)              /* (CLASSD_THR) Transmit Holding Register Offset */
+#define CLASSD_IER_REG_OFST            (0x14)              /* (CLASSD_IER) Interrupt Enable Register Offset */
+#define CLASSD_IDR_REG_OFST            (0x18)              /* (CLASSD_IDR) Interrupt Disable Register Offset */
+#define CLASSD_IMR_REG_OFST            (0x1C)              /* (CLASSD_IMR) Interrupt Mask Register Offset */
+#define CLASSD_ISR_REG_OFST            (0x20)              /* (CLASSD_ISR) Interrupt Status Register Offset */
+#define CLASSD_WPMR_REG_OFST           (0xE4)              /* (CLASSD_WPMR) Write Protection Mode Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief CLASSD register API structure */

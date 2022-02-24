@@ -237,6 +237,8 @@ extern "C" {
 #define TCPIP_DHCP_TIME_SERVER_ADDRESSES            0
 #define TCPIP_DHCP_USE_OPTION_NTP_SERVER            0
 #define TCPIP_DHCP_NTP_SERVER_ADDRESSES             0
+#define TCPIP_DHCP_ARP_LEASE_CHECK_TMO              1000
+#define TCPIP_DHCP_WAIT_ARP_FAIL_CHECK_TMO          10
 
 
 
@@ -298,7 +300,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       65536
+#define TCPIP_STACK_DRAM_SIZE                       102400
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -357,13 +359,13 @@ extern "C" {
 #define TCPIP_GMAC_TX_BUFF_SIZE_DUMMY				    	64
 
 		/*** QUEUE 0 TX Configuration ***/
-#define TCPIP_GMAC_TX_DESCRIPTORS_COUNT_QUE0				8
+#define TCPIP_GMAC_TX_DESCRIPTORS_COUNT_QUE0				16
 #define TCPIP_GMAC_MAX_TX_PKT_SIZE_QUE0				    	1536
 		
 		/*** QUEUE 0 RX Configuration ***/
-#define TCPIP_GMAC_RX_DESCRIPTORS_COUNT_QUE0				8
+#define TCPIP_GMAC_RX_DESCRIPTORS_COUNT_QUE0				16
 #define TCPIP_GMAC_RX_BUFF_SIZE_QUE0				    	1536
-#define TCPIP_GMAC_RX_DEDICATED_BUFFERS_QUE0				8
+#define TCPIP_GMAC_RX_DEDICATED_BUFFERS_QUE0				16
 #define TCPIP_GMAC_RX_ADDL_BUFF_COUNT_QUE0				   	2
 #define TCPIP_GMAC_RX_BUFF_COUNT_THRESHOLD_QUE0			1
 #define TCPIP_GMAC_RX_BUFF_ALLOC_COUNT_QUE0				2

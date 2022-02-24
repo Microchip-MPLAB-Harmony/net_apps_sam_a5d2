@@ -1,7 +1,7 @@
 /*
  * Component description for SECUMOD
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T09:00:02Z */
+/* file generated from device description version 2021-12-23T10:17:04Z */
 #ifndef _SAMA5D2_SECUMOD_COMPONENT_H_
 #define _SAMA5D2_SECUMOD_COMPONENT_H_
 
@@ -417,30 +417,30 @@
 #define SECUMOD_WKPR_DET(value)               (SECUMOD_WKPR_DET_Msk & ((value) << SECUMOD_WKPR_DET_Pos)) 
 
 /** \brief SECUMOD register offsets definitions */
-#define SECUMOD_CR_REG_OFST            (0x00)              /**< (SECUMOD_CR) Control Register Offset */
-#define SECUMOD_SYSR_REG_OFST          (0x04)              /**< (SECUMOD_SYSR) System Status Register Offset */
-#define SECUMOD_SR_REG_OFST            (0x08)              /**< (SECUMOD_SR) Status Register Offset */
-#define SECUMOD_SCR_REG_OFST           (0x10)              /**< (SECUMOD_SCR) Status Clear Register Offset */
-#define SECUMOD_RAMRDY_REG_OFST        (0x14)              /**< (SECUMOD_RAMRDY) RAM Access Ready Register Offset */
-#define SECUMOD_PIOBU_REG_OFST         (0x18)              /**< (SECUMOD_PIOBU) PIO Backup Register Offset */
-#define SECUMOD_PIOBU0_REG_OFST        (0x18)              /**< (SECUMOD_PIOBU0) PIO Backup Register Offset */
-#define SECUMOD_PIOBU1_REG_OFST        (0x1C)              /**< (SECUMOD_PIOBU1) PIO Backup Register Offset */
-#define SECUMOD_PIOBU2_REG_OFST        (0x20)              /**< (SECUMOD_PIOBU2) PIO Backup Register Offset */
-#define SECUMOD_PIOBU3_REG_OFST        (0x24)              /**< (SECUMOD_PIOBU3) PIO Backup Register Offset */
-#define SECUMOD_PIOBU4_REG_OFST        (0x28)              /**< (SECUMOD_PIOBU4) PIO Backup Register Offset */
-#define SECUMOD_PIOBU5_REG_OFST        (0x2C)              /**< (SECUMOD_PIOBU5) PIO Backup Register Offset */
-#define SECUMOD_PIOBU6_REG_OFST        (0x30)              /**< (SECUMOD_PIOBU6) PIO Backup Register Offset */
-#define SECUMOD_PIOBU7_REG_OFST        (0x34)              /**< (SECUMOD_PIOBU7) PIO Backup Register Offset */
-#define SECUMOD_JTAGCR_REG_OFST        (0x68)              /**< (SECUMOD_JTAGCR) JTAG Protection Control Register Offset */
-#define SECUMOD_SCRKEY_REG_OFST        (0x70)              /**< (SECUMOD_SCRKEY) Scrambling Key Register Offset */
-#define SECUMOD_RAMACC_REG_OFST        (0x74)              /**< (SECUMOD_RAMACC) RAM Access Rights Register Offset */
-#define SECUMOD_RAMACCSR_REG_OFST      (0x78)              /**< (SECUMOD_RAMACCSR) RAM Access Rights Status Register Offset */
-#define SECUMOD_BMPR_REG_OFST          (0x7C)              /**< (SECUMOD_BMPR) Backup Mode Protection Register Offset */
-#define SECUMOD_NMPR_REG_OFST          (0x80)              /**< (SECUMOD_NMPR) Normal Mode Protection Register Offset */
-#define SECUMOD_NIEPR_REG_OFST         (0x84)              /**< (SECUMOD_NIEPR) Normal Interrupt Enable Protection Register Offset */
-#define SECUMOD_NIDPR_REG_OFST         (0x88)              /**< (SECUMOD_NIDPR) Normal Interrupt Disable Protection Register Offset */
-#define SECUMOD_NIMPR_REG_OFST         (0x8C)              /**< (SECUMOD_NIMPR) Normal Interrupt Mask Protection Register Offset */
-#define SECUMOD_WKPR_REG_OFST          (0x90)              /**< (SECUMOD_WKPR) Wakeup Protection Register Offset */
+#define SECUMOD_CR_REG_OFST            (0x00)              /* (SECUMOD_CR) Control Register Offset */
+#define SECUMOD_SYSR_REG_OFST          (0x04)              /* (SECUMOD_SYSR) System Status Register Offset */
+#define SECUMOD_SR_REG_OFST            (0x08)              /* (SECUMOD_SR) Status Register Offset */
+#define SECUMOD_SCR_REG_OFST           (0x10)              /* (SECUMOD_SCR) Status Clear Register Offset */
+#define SECUMOD_RAMRDY_REG_OFST        (0x14)              /* (SECUMOD_RAMRDY) RAM Access Ready Register Offset */
+#define SECUMOD_PIOBU_REG_OFST         (0x18)              /* (SECUMOD_PIOBU) PIO Backup Register Offset */
+#define SECUMOD_PIOBU0_REG_OFST        (0x18)              /* (SECUMOD_PIOBU0) PIO Backup Register Offset */
+#define SECUMOD_PIOBU1_REG_OFST        (0x1C)              /* (SECUMOD_PIOBU1) PIO Backup Register Offset */
+#define SECUMOD_PIOBU2_REG_OFST        (0x20)              /* (SECUMOD_PIOBU2) PIO Backup Register Offset */
+#define SECUMOD_PIOBU3_REG_OFST        (0x24)              /* (SECUMOD_PIOBU3) PIO Backup Register Offset */
+#define SECUMOD_PIOBU4_REG_OFST        (0x28)              /* (SECUMOD_PIOBU4) PIO Backup Register Offset */
+#define SECUMOD_PIOBU5_REG_OFST        (0x2C)              /* (SECUMOD_PIOBU5) PIO Backup Register Offset */
+#define SECUMOD_PIOBU6_REG_OFST        (0x30)              /* (SECUMOD_PIOBU6) PIO Backup Register Offset */
+#define SECUMOD_PIOBU7_REG_OFST        (0x34)              /* (SECUMOD_PIOBU7) PIO Backup Register Offset */
+#define SECUMOD_JTAGCR_REG_OFST        (0x68)              /* (SECUMOD_JTAGCR) JTAG Protection Control Register Offset */
+#define SECUMOD_SCRKEY_REG_OFST        (0x70)              /* (SECUMOD_SCRKEY) Scrambling Key Register Offset */
+#define SECUMOD_RAMACC_REG_OFST        (0x74)              /* (SECUMOD_RAMACC) RAM Access Rights Register Offset */
+#define SECUMOD_RAMACCSR_REG_OFST      (0x78)              /* (SECUMOD_RAMACCSR) RAM Access Rights Status Register Offset */
+#define SECUMOD_BMPR_REG_OFST          (0x7C)              /* (SECUMOD_BMPR) Backup Mode Protection Register Offset */
+#define SECUMOD_NMPR_REG_OFST          (0x80)              /* (SECUMOD_NMPR) Normal Mode Protection Register Offset */
+#define SECUMOD_NIEPR_REG_OFST         (0x84)              /* (SECUMOD_NIEPR) Normal Interrupt Enable Protection Register Offset */
+#define SECUMOD_NIDPR_REG_OFST         (0x88)              /* (SECUMOD_NIDPR) Normal Interrupt Disable Protection Register Offset */
+#define SECUMOD_NIMPR_REG_OFST         (0x8C)              /* (SECUMOD_NIMPR) Normal Interrupt Mask Protection Register Offset */
+#define SECUMOD_WKPR_REG_OFST          (0x90)              /* (SECUMOD_WKPR) Wakeup Protection Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SECUMOD register API structure */
