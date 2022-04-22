@@ -8,6 +8,51 @@ nav_order: 99
 
 # Microchip MPLABÂ® Harmony 3 Release Notes
 
+## Harmony 3 Network application examples for SAMA5D2 family  v3.8.0
+
+### New Features
+New features added in this release are as follows:
+
+- Applications migrated from MHC to MCC
+- Migration of select applications to the Net Plugin (beta)
+- Ported the IAR projects to MPLABX
+
+### KNOWN ISSUES
+The current known issues are as follows:
+* IAR projects are not supported in this release
+* SAMA5D2 MPLABX demos should not overwrite the linker script ddr.ld when regenerated.
+    - Otherwise the GMAC descriptors: gmac_dcpt_array will not be placed in the '.region_nocache'
+* SAMA5D2 MPLABX demos should not overwrite the mpfs_net_img.c file when regenerated
+    - The symbols used in this automatically generated file are not present in the project
+* SAMA5D2 projects should be built with -O0 optimization and at least 16 descriptors.
+    - Higher optimization may cause GMAC driver lock up.
+    - Investigation is in progress.
+
+
+
+
+
+### Development Tools
+
+- [MPLAB® X IDE v6.00](https://www.microchip.com/mplab/mplab-x-ide) or later
+- [MPLAB® XC32 C/C++ Compiler v4.00](https://www.microchip.com/mplab/compilers) or later
+- [Harmony net repository, 3.8.0](https://github.com/Microchip-MPLAB-Harmony/net/tree/v3.8.0)
+- [Harmony net_apps_sam_a5d2 demo apps repositories, 3.8.0](https://github.com/Microchip-MPLAB-Harmony/net_apps_sam_a5d2/tree/v3.8.0)
+
+
+#### Development Kit Support
+
+This release supports applications for the following development kits
+
+| Development Kits |
+| --- |
+| [SAM A5D2 Xplained Ultra Evaluation Kit](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT) |
+
+
+## Full release notes
+
+- See the full [Net 3.8.0 Release notes](https://github.com/Microchip-MPLAB-Harmony/net/tree/v3.8.0)
+
 ## Harmony 3 Network application examples for SAMA5D2 family  v3.7.0
 
 ### New Features
