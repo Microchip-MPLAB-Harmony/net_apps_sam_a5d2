@@ -721,6 +721,23 @@
                 <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/sntp.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/tcpip_announce.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/udp.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/telnet.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/dhcpv6.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/zero_conf_helper.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/zero_conf_multicast_dns.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/ftpc.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/iperf.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/dhcp_server.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/smtpc.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/tftpc.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/berkeley_api.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/tftps.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/zero_conf_link_local.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/ftp.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/ndp.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/igmp.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/icmpv6.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/library/tcpip/src/ipv6.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
