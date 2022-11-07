@@ -63,8 +63,8 @@
 #include "system/sys_time_h2_adapter.h"
 #include "system/sys_random_h2_adapter.h"
 #include "driver/gmac/drv_gmac.h"
-#include "driver/sdmmc/drv_sdmmc.h"
 #include "system/command/sys_command.h"
+#include "driver/sdmmc/drv_sdmmc.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/matrix/plib_matrix.h"
 #include "peripheral/l2cc/plib_l2cc.h"
@@ -216,8 +216,8 @@ typedef struct
 
 
     SYS_MODULE_OBJ  tcpip;
+   SYS_MODULE_OBJ  drvMiim_0;
 
-    SYS_MODULE_OBJ  drvMiim;
     SYS_MODULE_OBJ  sysDebug;
 
     SYS_MODULE_OBJ  netPres;
