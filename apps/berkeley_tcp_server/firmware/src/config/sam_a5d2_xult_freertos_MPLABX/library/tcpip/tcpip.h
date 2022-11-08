@@ -150,7 +150,7 @@ typedef union
     This type describes the supported IP address types.
 
   Remarks:
-    None.
+    8 bit value only.
 */
 
 typedef enum
@@ -298,7 +298,7 @@ typedef const void*   IPV6_ADDR_HANDLE;
     by the TCP/IP stack.
 
   Remarks:
-    None.
+    16 bit values only.
 */
 
 typedef enum
@@ -396,6 +396,8 @@ typedef enum
 #define TCPIP_STACK_IF_NAME_ALIAS_ETH       "eth"
 /* alias for Wi-Fi interface */
 #define TCPIP_STACK_IF_NAME_ALIAS_WLAN      "wlan"
+/* alias for PPP interface */
+#define TCPIP_STACK_IF_NAME_ALIAS_PPP       "ppp"
 
 // *****************************************************************************
 /* Configuration Power Modes
@@ -698,13 +700,17 @@ typedef struct TCPIP_STACK_INIT
 #include "tcpip/tcpip_manager.h"
 #include "tcpip/tcpip_heap.h"
 #include "tcpip/tcpip_helpers.h"
+#include "tcpip/ndp.h"
 #include "tcpip/ipv4.h"
 #include "tcpip/dhcp.h"
 #include "tcpip/dns.h"
 #include "tcpip/ipv6.h"
+#include "tcpip/icmpv6.h"
+#include "tcpip/dhcpv6.h"
 #include "tcpip/arp.h"
 #include "tcpip/tcp.h"
 #include "tcpip/udp.h"
+#include "tcpip/berkeley_api.h"
 #include "tcpip/icmp.h"
 #include "tcpip/nbns.h"
 #include "tcpip/sntp.h"

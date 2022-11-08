@@ -55,9 +55,9 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include "configuration.h"
-#include "definitions.h" 
-#include "tcpip/tcpip.h"
+#include "definitions.h"
 
+#define MAX_CLIENT (3)
 // *****************************************************************************
 // *****************************************************************************
 // Section: Type Definitions
@@ -77,22 +77,16 @@
 
 typedef enum
 {
-    /* In this state, the application waits for the initialization of the TCP/IP stack
-     * to complete. */
     APP_TCPIP_WAIT_INIT,
-
-    /* In this state, the application waits for a IP Address */
+	/* Application's state machine's initial state. */
     APP_TCPIP_WAIT_FOR_IP,
-
-    APP_TCPIP_OPENING_SERVER,
-
-    APP_TCPIP_WAIT_FOR_CONNECTION,
-
-    APP_TCPIP_SERVING_CONNECTION,
-
-    APP_TCPIP_CLOSING_CONNECTION,
-
+    APP_BSD_INIT,
+    APP_BSD_CREATE_SOCKET,
+    APP_BSD_BIND,
+    APP_BSD_LISTEN,
+    APP_BSD_OPERATION,
     APP_TCPIP_ERROR,
+
 } APP_STATES;
 
 
@@ -114,7 +108,10 @@ typedef struct
     /* The application's current state */
     APP_STATES state;
 
-    TCP_SOCKET              socket;
+    /* TODO: Define any additional data used by the application. */
+    SOCKET bsdServerSocket;
+    SOCKET ClientSock[MAX_CLIENT];
+
 
 } APP_DATA;
 
@@ -201,16 +198,7 @@ void APP_Initialize ( void );
 void APP_Tasks ( void );
 
 
-
 #endif /* _APP_H */
-
-//DOM-IGNORE-BEGIN
-#ifdef __cplusplus
-}
-#endif
-//DOM-IGNORE-END
-
 /*******************************************************************************
  End of File
  */
-
