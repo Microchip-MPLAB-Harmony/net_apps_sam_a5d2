@@ -1,10 +1,10 @@
-# TCP/IP TCP Client
+# TCP/IP TCP Berkeley Client
 
-The TCP Client configuration demonstrates creating a network client with the MPLAB Harmony TCP API to make a TCP/IP connection to a web server.
+The TCP Berkeley Client configuration demonstrates creating a network client with the MPLAB Harmony TCP API to make a TCP/IP connection to a web server.
 
-**TCP/IP TCP Client MHC Configuration**
+**TCP/IP TCP Berkeley Client MHC Configuration**
 
-The following Project Graph diagram shows the Harmony components included in the TCP Client demonstration application.
+The following Project Graph diagram shows the Harmony components included in the TCP Berkeley Client demonstration application.
 
 -   MHC is launched by selecting **Tools \> Embedded \> MPLAB® Harmony 3 Configurator** from the MPLAB X IDE and after successful database migration , TCP/IP demo project is ready to be configured and regenerated.
 
@@ -47,7 +47,7 @@ The following Project Graph diagram shows the Harmony components included in the
     The MIIM Driver supports asynchronous read/write and scan operations for accessing the external PHY registers and notification when MIIM operations have completed.
 
 
-**TCP/IP TCP Client Hardware Configuration**
+**TCP/IP TCP Berkeley Client Hardware Configuration**
 
 This section describes the hardware configuration for ATSAM A5D2 Xplained Ultra Evaluation Kit and one can be used for the respective application demonstration.
 
@@ -70,16 +70,16 @@ This section describes the hardware configuration for ATSAM A5D2 Xplained Ultra 
     -   Establish a connection between the router/switch with the SAM A5D2 Xplained Ultra Evaluation Kit through the RJ45 connector
 
 
-**TCP/IP TCP Client Application**
+**TCP/IP TCP Berkeley Client Application**
 
-This table lists the name and location of the IAR IDE project folder for the demonstration.
+This table lists the name and location of the MPLABX IDE project folder for the demonstration.
 
 |Project Name|Target Device|Target Development Board|Description|
 |------------|-------------|------------------------|-----------|
-|sam\_a5d2\_xult.IAR|ATSAMA5D27|SAM A5D2 Xplained Ultra + KSZ8081 PHY Daughter board|Demonstrates the TCP/IP TCP Client on development board with SAMA5D2 device and an on-board KSZ8081 PHY. This is a non-RTOS implementation|
-|sam\_a5d2\_xult\_freertos.IAR|ATSAMA5D27|SAM A5D2 Xplained Ultra + KSZ8081 PHY Daughter board|Demonstrates the TCP/IP TCP Client on development board with SAMA5D2 device and an on-board KSZ8081 PHY. This is a FreeRTOS implementation|
+|sam\_a5d2\_xult\_MPLABX.X|ATSAMA5D27|SAM A5D2 Xplained Ultra + KSZ8081 PHY Daughter board|Demonstrates the TCP/IP TCP Berkeley Client on development board with SAMA5D2 device and an on-board KSZ8081 PHY. This is a non-RTOS implementation|
+|sam\_a5d2\_xult\_freertos\_MPLABX.X|ATSAMA5D27|SAM A5D2 Xplained Ultra + KSZ8081 PHY Daughter board|Demonstrates the TCP/IP TCP Berkeley Client on development board with SAMA5D2 device and an on-board KSZ8081 PHY. This is a FreeRTOS implementation|
 
-1.  Build the demo by opening the project in the IAR Embedded Workbench
+1.  Build the demo by opening the project in the MPLABX IDE.
 
 2.  Copy the project output, harmony.bin, to the SD card that is used to load the executable and run it on the SAM9X60-EK board. Note: the boot loader on the SD card, boot.bin, should be configured to load the harmony.bin image, not a uboot.bin image.
 
@@ -112,7 +112,7 @@ This table lists the name and location of the IAR IDE project folder for the dem
 
         ![berkeley_tcp_client_project](../../docs/GUID-864A99A2-6D10-4402-A946-959FDDE6B485-low.png)
 
-    2.  For TCP Client test, input the following command from the serial port:
+    2.  For TCP Berkeley Client test, input the following command from the serial port:
 
         **openurl < url \>** - The < url \> argument must be a fully formed URL; for instance, http://www.microchip.com/.
 

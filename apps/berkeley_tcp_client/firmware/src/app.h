@@ -76,22 +76,25 @@
 
 typedef enum
 {
-	/* Application's state machine's initial state. */
-	APP_STATE_INIT=0,
+    APP_WAITING_FOR_INITIALIZATION,
 
-        APP_TCPIP_WAIT_FOR_IP,
+    /* In this state, the application waits for a IP Address */
+    APP_TCPIP_WAIT_FOR_IP,
 
-        APP_TCPIP_WAITING_FOR_COMMAND,
+    APP_TCPIP_WAITING_FOR_COMMAND_READY,
+    APP_TCPIP_WAITING_FOR_COMMAND_INPUT,
 
-        APP_TCPIP_WAIT_ON_DNS,
+    APP_DNS_START_RESOLUTION,
 
-        APP_TCPIP_WAIT_FOR_CONNECTION,
+    APP_DNS_GET_RESULT,
 
-        APP_TCPIP_WAIT_FOR_RESPONSE,
-
-        APP_TCPIP_CLOSING_CONNECTION,
-
-        APP_TCPIP_ERROR,
+    APP_BSD_START,
+    APP_BSD_CONNECT,
+    APP_BSD_SEND,
+    APP_BSD_OPERATION,
+    APP_BSD_CLOSE,
+    APP_TCPIP_ERROR,
+	/* TODO: Define states used by the application state machine. */
 
 } APP_STATES;
 
@@ -115,13 +118,15 @@ typedef struct
     APP_STATES state;
 
     /* TODO: Define any additional data used by the application. */
-    TCP_SOCKET              socket;
+    SOCKET             socket;
 
     char *            host;
 
     char *            path;
+
     uint16_t          port;
 
+    struct sockaddr_in addr;
 } APP_DATA;
 
 
