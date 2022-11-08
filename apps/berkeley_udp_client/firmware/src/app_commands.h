@@ -40,7 +40,7 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 
 #ifndef APP_COMMANDS_H
 #define	APP_COMMANDS_H
-#include <stdbool.h>
+
 #ifdef	__cplusplus
 extern "C" {
 #endif

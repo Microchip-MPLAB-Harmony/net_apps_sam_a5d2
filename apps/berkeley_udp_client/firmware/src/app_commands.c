@@ -39,10 +39,10 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *****************************************************************************/
 // DOM-IGNORE-END
 
-
+#include "tcpip/tcpip.h"
 #include "app_commands.h"
 #include "app.h"
-#include "tcpip/tcpip.h"
+
 #if defined(TCPIP_STACK_COMMAND_ENABLE)
 
 
@@ -50,14 +50,19 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 static void _APP_Commands_SendUDPPacket(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv);
 static void _APP_Commands_SetOptions(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv);
 static void _APP_Commands_GetOptions(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv);
-static void _APP_Commands_SetTimeout(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv);
+#ifdef TCPIP_STACK_USE_IPV6
+static void _APP_Commands_IPVersion(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv);
+#endif
+
 
 static const SYS_CMD_DESCRIPTOR    appCmdTbl[]=
 {
-    {"sendudp",     _APP_Commands_SendUDPPacket,        ": Sends the UDP Packet"},
-    {"getopt",      _APP_Commands_GetOptions,           ": Gets the hostname, port and message"},
-    {"setopt",      _APP_Commands_SetOptions,           ": Sets the current hostname, port, and message"},
-    {"settmo",      _APP_Commands_SetTimeout,           ": Sets the current receive timeout"},
+    {"sendpacket",     _APP_Commands_SendUDPPacket,     ": Sends the UDP Packet"},
+    {"getoptions",     _APP_Commands_GetOptions,        ": Gets the hostname, port and message"},
+    {"setoptions",     _APP_Commands_SetOptions,        ": Sets the current hostname, port, and message"},
+#ifdef TCPIP_STACK_USE_IPV6
+    {"ipver",       _APP_Commands_IPVersion,            ": Changes the IP version to use"},
+#endif
 };
 
 bool APP_Commands_Init()
@@ -86,8 +91,8 @@ void _APP_Commands_SendUDPPacket(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** a
 
     if (argc != 1)
     {
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: sendudp\r\n");
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: sendudp\r\n");
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: sendpacket\r\n");
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: sendpacket\r\n");
         return;
     }
     APP_Send_Packet = true;
@@ -100,8 +105,8 @@ void _APP_Commands_SetOptions(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv
 
     if (argc != 4)
     {
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: setopt <hostname> <port> <message>\r\n");
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: setopt 10.0.1.4 9760 Hello\r\n");
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: setoptions <hostname> <port> <message>\r\n");
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: setoptions 10.0.1.4 9760 Hello\r\n");
         return;
     }
 
@@ -115,11 +120,11 @@ char bufferArea[3][80];
 void _APP_Commands_GetOptions(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv)
 {
     const void* cmdIoParam = pCmdIO->cmdIoParam;
-    
+
     if (argc != 1)
     {
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: getopt\r\n");
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: getopt\r\n");
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: getoptions\r\n");
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: getoptions\r\n");
         return;
     }
 
@@ -132,33 +137,39 @@ void _APP_Commands_GetOptions(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv
      (*pCmdIO->pCmdApi->msg)(cmdIoParam, bufferArea[2]);
 
 }
-
 extern APP_DATA appData;
-void _APP_Commands_SetTimeout(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv)
+#ifdef TCPIP_STACK_USE_IPV6
+void _APP_Commands_IPVersion(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv)
 {
     const void* cmdIoParam = pCmdIO->cmdIoParam;
-
-
     if (argc != 2)
     {
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: settmo <ms>\r\n");
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: settmo 2000\r\n");
-        (*pCmdIO->pCmdApi->print)(cmdIoParam, "Current tmo is: %d\r\n", appData.tmoMs);
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: ipver <ANY|4|6>\r\n");
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: ipver 6\r\n");
+        return;
+
+    }
+    if (strcmp("ANY", argv[1]) == 0)
+    {
+        appData.hints.ai_family = 0;
         return;
     }
-
-    int tmoMs = atoi(argv[1]);
-    if (tmoMs == 0)
+    else if (strcmp("4", argv[1]) == 0)
     {
-        (*pCmdIO->pCmdApi->print)(cmdIoParam, "%s is not a valid tmo. Retry.\r\n", argv[1]);
+        appData.hints.ai_family = AF_INET;
+        return;
     }
-    else
+    else if (strcmp("6", argv[1]) == 0)
     {
-        appData.tmoMs = tmoMs; 
-        (*pCmdIO->pCmdApi->print)(cmdIoParam, "Set the timeout to: %d\r\n", tmoMs);
+        appData.hints.ai_family = AF_INET6;
+        return;
     }
-
+    (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: ipver <ANY|4|6>\r\n");
+    (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: ipver 6\r\n");
 
 }
+#endif
+
+
 
 #endif

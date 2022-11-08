@@ -55,7 +55,12 @@
 #include "tcpip/tcpip.h"
 
 #include "app_commands.h"
-int8_t _APP_PumpDNS(const char * hostname, IPV4_ADDR *ipv4Addr);
+#include "system_config.h"
+#include <errno.h>
+#if (__XC32_VERSION < 4000) || (__XC32_VERSION == 243739000)
+// xc32 versions >= v4.0 no longer have sys/errno.h 
+#include <sys/errno.h>
+#endif
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data Definitions
@@ -75,12 +80,10 @@ int8_t _APP_PumpDNS(const char * hostname, IPV4_ADDR *ipv4Addr);
     This structure should be initialized by the APP_Initialize function.
     
     Application strings and buffers are be defined outside this structure.
-*/
+ */
 
 APP_DATA appData;
 
-// print buffer
-char printBuffer[180];
 
 // *****************************************************************************
 // *****************************************************************************
@@ -89,7 +92,7 @@ char printBuffer[180];
 // *****************************************************************************
 
 /* TODO:  Add any necessary callback functions.
-*/
+ */
 
 
 // *****************************************************************************
@@ -99,7 +102,7 @@ char printBuffer[180];
 // *****************************************************************************
 
 /* TODO:  Add any necessary local functions.
-*/
+ */
 
 
 // *****************************************************************************
@@ -116,15 +119,16 @@ char printBuffer[180];
     See prototype in app.h.
  */
 
-void APP_Initialize ( void )
-{
+void APP_Initialize(void) {
     /* Place the App state machine in its initial state. */
     appData.state = APP_TCPIP_WAIT_INIT;
-    appData.tmoMs = 1000;
-    
-    /* TODO: Initialize your application's state machine and other
-     */
+
+
+    /* Intialize the app state to wait for
+     * media attach. */
+#if defined(TCPIP_STACK_COMMAND_ENABLE)
     APP_Commands_Init();
+#endif
 }
 
 
@@ -135,32 +139,27 @@ void APP_Initialize ( void )
   Remarks:
     See prototype in app.h.
  */
+char buffer[180];
 
-void APP_Tasks ( void )
-{
-    SYS_STATUS          tcpipStat;
-    const char          *netName, *netBiosName;
-    static IPV4_ADDR    dwLastIP[2] = { {-1}, {-1} };
-    IPV4_ADDR           ipAddr;
-    TCPIP_NET_HANDLE    netH;
-    int                 i, nNets;
-    /* Check the application's current state. */
-    switch ( appData.state )
-    {
+void APP_Tasks(void) {
+    SYS_STATUS tcpipStat;
+    const char *netName, *netBiosName;
+    int i, nNets;
+    TCPIP_NET_HANDLE netH;
+
+    switch (appData.state) {
+
         case APP_TCPIP_WAIT_INIT:
             tcpipStat = TCPIP_STACK_Status(sysObj.tcpip);
-            if(tcpipStat < 0)
-            {   // some error occurred
+            if (tcpipStat < 0) { // some error occurred
                 SYS_CONSOLE_MESSAGE(" APP: TCP/IP stack initialization failed!\r\n");
                 appData.state = APP_TCPIP_ERROR;
-            }
-            else if(tcpipStat == SYS_STATUS_READY)
-            {
+            } else if (tcpipStat == SYS_STATUS_READY) {
                 // now that the stack is ready we can check the 
                 // available interfaces 
                 nNets = TCPIP_STACK_NumberOfNetworksGet();
-                for(i = 0; i < nNets; i++)
-                {
+
+                for (i = 0; i < nNets; i++) {
 
                     netH = TCPIP_STACK_IndexToNet(i);
                     netName = TCPIP_STACK_NetNameGet(netH);
@@ -176,184 +175,150 @@ void APP_Tasks ( void )
 
                 }
                 appData.state = APP_TCPIP_WAIT_FOR_IP;
-
             }
+
             break;
 
 
         case APP_TCPIP_WAIT_FOR_IP:
-
-            // if the IP address of an interface has changed
-            // display the new value on the system console
             nNets = TCPIP_STACK_NumberOfNetworksGet();
-
-            for (i = 0; i < nNets; i++)
-            {
+            for (i = 0; i < nNets; i++) {
                 netH = TCPIP_STACK_IndexToNet(i);
-				if(!TCPIP_STACK_NetIsReady(netH))
-				{
-					return; // interface not ready yet!
-				}
+                if (!TCPIP_STACK_NetIsReady(netH)) {
+                    return; // interface not ready yet!
+                }
+                IPV4_ADDR           ipAddr;
                 ipAddr.Val = TCPIP_STACK_NetAddress(netH);
-                if(dwLastIP[i].Val != ipAddr.Val)
-                {
-                    dwLastIP[i].Val = ipAddr.Val;
-
-                    SYS_CONSOLE_MESSAGE(TCPIP_STACK_NetNameGet(netH));
-                    SYS_CONSOLE_MESSAGE(" IP Address: ");
-                    SYS_CONSOLE_PRINT("%d.%d.%d.%d \r\n", ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);
-                
-                }
-			}
-			// all interfaces ready. Could start transactions!!!
-			appData.state = APP_TCPIP_WAITING_FOR_COMMAND;
-            SYS_CONSOLE_MESSAGE("Waiting for command type: sendudp\r\n");
-            
-			break;
+                SYS_CONSOLE_MESSAGE(TCPIP_STACK_NetNameGet(netH));
+                SYS_CONSOLE_MESSAGE(" IP Address: ");
+                SYS_CONSOLE_PRINT("%d.%d.%d.%d \r\n", ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]);            
+            }
+            // all interfaces ready. Could start transactions!!!
+            appData.state = APP_TCPIP_WAITING_FOR_COMMAND;
+            //... etc.
+            break;
         case APP_TCPIP_WAITING_FOR_COMMAND:
-
         {
-            if (APP_Send_Packet)
-            {
-                TCPIP_DNS_RESULT result;
-                APP_Send_Packet = false;
-                result = TCPIP_DNS_Resolve(APP_Hostname_Buffer, TCPIP_DNS_TYPE_A);
-                if (result == TCPIP_DNS_RES_NAME_IS_IPADDRESS)
-                {
-                    IPV4_ADDR addr;
-                    TCPIP_Helper_StringToIPAddress(APP_Hostname_Buffer, &addr);
-                    uint16_t port = atoi(APP_Port_Buffer);
-                    appData.socket = TCPIP_UDP_ClientOpen(IP_ADDRESS_TYPE_IPV4,
-                                                          port,
-                                                          (IP_MULTI_ADDRESS*) &addr);
-                    if (appData.socket == INVALID_SOCKET)
-                    {
-                        SYS_CONSOLE_MESSAGE("Could not start connection\r\n");
-                        appData.state = APP_TCPIP_WAITING_FOR_COMMAND;
-                    }
+#if defined(TCPIP_STACK_COMMAND_ENABLE)
+            if (APP_Send_Packet) {
+                int res = getaddrinfo(APP_Hostname_Buffer, NULL, &appData.hints, &appData.addressInfo);
+                if (res == 0) {
+                    APP_Send_Packet = false;
                     SYS_CONSOLE_MESSAGE("Starting connection\r\n");
-                    appData.state = APP_TCPIP_WAIT_FOR_CONNECTION;
+                    appData.state = APP_BSD_CREATE_SOCKET;
+                    break;
+                } else if (res == EAI_AGAIN) {
+                    break;
+                } else {
+                    SYS_CONSOLE_PRINT("getaddrinfo returned %d aborting sendpacket call\r\n", res);
+                    APP_Send_Packet = false;
                     break;
                 }
-                if (result < 0)
-                {
-                    SYS_CONSOLE_MESSAGE("Error in DNS aborting 2\r\n");
-                    break;
-                }
-                appData.state = APP_TCPIP_WAIT_ON_DNS;
+            }
+#endif
+        }
+            break;
+
+        case APP_BSD_CREATE_SOCKET:
+        {
+            SOCKET udpSkt = socket(appData.addressInfo->ai_family, SOCK_DGRAM, IPPROTO_UDP);
+            if (udpSkt == SOCKET_ERROR) {
+                SYS_CONSOLE_MESSAGE("Aborting because of invalid socket\r\n");
+                freeaddrinfo(appData.addressInfo);
+                appData.state = APP_TCPIP_WAITING_FOR_COMMAND;
+                return;
+            } else {
+                appData.socket = (SOCKET) udpSkt;
             }
         }
-        break;
 
-        case APP_TCPIP_WAIT_ON_DNS:
+        case APP_BSD_BIND:
         {
-            IPV4_ADDR addr;
-            switch (_APP_PumpDNS(APP_Hostname_Buffer, &addr))
-            {
-                case -1:
-                {
-                    // Some sort of error, already reported
+#if defined(TCPIP_STACK_COMMAND_ENABLE)
+            struct sockaddr_in6 addr;
+            SOCKADDR_IN *ptr = (SOCKADDR_IN*) (&addr);
+            int addrlen = sizeof (struct sockaddr_in6);
+            if (appData.addressInfo->ai_family == AF_INET6) {
+                addr.sin6_family = AF_INET6;
+                addr.sin6_port = atoi(APP_Port_Buffer);
+                addr.sin6_addr.in6_u.u6_addr16[0] = 0x0120;
+                addr.sin6_addr.in6_u.u6_addr16[1] = 0x7004;
+                addr.sin6_addr.in6_u.u6_addr16[2] = 0x0b00;
+                addr.sin6_addr.in6_u.u6_addr16[3] = 0x6709;
+                addr.sin6_addr.in6_u.u6_addr16[4] = 0x0402;
+                addr.sin6_addr.in6_u.u6_addr16[5] = 0xffa3;
+                addr.sin6_addr.in6_u.u6_addr16[6] = 0x50fe;
+                addr.sin6_addr.in6_u.u6_addr16[7] = 0x978d;
+
+            } else {
+                ptr->sin_family = AF_INET;
+                ptr->sin_port = atoi(APP_Port_Buffer);
+                ptr->sin_addr.S_un.S_addr = IP_ADDR_ANY;
+            }
+            if (bind(appData.socket, (struct sockaddr*) &addr, addrlen) == SOCKET_ERROR) {
+                SYS_CONSOLE_MESSAGE("Aborting because could not bind\r\n");
+                freeaddrinfo(appData.addressInfo);
+                closesocket(appData.socket);
+                appData.state = APP_TCPIP_WAITING_FOR_COMMAND;
+                break;
+            }
+#endif
+        }
+
+        case APP_TCPIP_SEND:
+        {
+#if defined(TCPIP_STACK_COMMAND_ENABLE)
+            if (appData.addressInfo->ai_family == AF_INET6) {
+                ((struct sockaddr_in6*) ((appData.addressInfo->ai_addr)))->sin6_port = atoi(APP_Port_Buffer);
+            } else {
+                ((struct sockaddr_in*) ((appData.addressInfo->ai_addr)))->sin_port = atoi(APP_Port_Buffer);
+            }
+            if (sendto(appData.socket, (const char*) &APP_Message_Buffer, strlen(APP_Message_Buffer), 0, appData.addressInfo->ai_addr, appData.addressInfo->ai_addrlen) > 0) {
+                appData.state = APP_TCPIP_RECV;
+                appData.systemCount = SYS_TMR_SystemCountGet() + (SYS_TMR_SystemCountFrequencyGet() * 10);
+            } else {
+                SYS_CONSOLE_MESSAGE("Aborting because send failed\r\n");
+                freeaddrinfo(appData.addressInfo);
+                closesocket(appData.socket);
+                appData.state = APP_TCPIP_WAITING_FOR_COMMAND;
+            }
+#endif            
+        }
+            break;
+
+        case APP_TCPIP_RECV:
+        {
+
+            int size;
+            int i = recvfrom(appData.socket, (char*) &buffer, sizeof (buffer), 0, (struct sockaddr*) (&appData.rxaddr), &size);
+            if (i < 0 && errno != EWOULDBLOCK) {
+                // Error occured
+                SYS_CONSOLE_MESSAGE("Aborting because received failed\r\n");
+                freeaddrinfo(appData.addressInfo);
+                closesocket(appData.socket);
+                appData.state = APP_TCPIP_WAITING_FOR_COMMAND;
+            } else if (i == 0) {
+                break;
+            } else if (i < 0 && errno == EWOULDBLOCK) {
+                if (SYS_TMR_SystemCountGet() > appData.systemCount) {
+                    SYS_CONSOLE_MESSAGE("Aborting because of timeout waiting for reply\r\n");
+                    freeaddrinfo(appData.addressInfo);
+                    closesocket(appData.socket);
                     appData.state = APP_TCPIP_WAITING_FOR_COMMAND;
                 }
-                break;
-                case 0:
-                {
-                    // Still waiting
-                }
-                break;
-                case 1:
-                {
-                    uint16_t port = atoi(APP_Port_Buffer);
-                    appData.socket = TCPIP_UDP_ClientOpen(IP_ADDRESS_TYPE_IPV4,
-                                                          port,
-                                                          (IP_MULTI_ADDRESS*) &addr);
-                    if (appData.socket == INVALID_SOCKET)
-                    {
-                        SYS_CONSOLE_MESSAGE("Could not start connection\r\n");
-                        appData.state = APP_TCPIP_WAITING_FOR_COMMAND;
-                    }
-                    SYS_CONSOLE_MESSAGE("Starting connection\r\n");
-                    appData.state = APP_TCPIP_WAIT_FOR_CONNECTION;
-                }
-                break;
+            } else {
+                SYS_CONSOLE_MESSAGE(buffer);
+                freeaddrinfo(appData.addressInfo);
+                closesocket(appData.socket);
+                appData.state = APP_TCPIP_WAITING_FOR_COMMAND;
             }
         }
-        break;
-
-        case APP_TCPIP_WAIT_FOR_CONNECTION:
-        {
-            if (!TCPIP_UDP_IsConnected(appData.socket))
-            {
-                break;
-            }
-            if(TCPIP_UDP_PutIsReady(appData.socket) == 0)
-            {
-                break;
-            }
-            TCPIP_UDP_ArrayPut(appData.socket, (uint8_t*)APP_Message_Buffer, strlen(APP_Message_Buffer));
-            TCPIP_UDP_Flush(appData.socket);
-            appData.mTimeOut = SYS_TMR_SystemCountGet() + (SYS_TMR_SystemCountFrequencyGet() * (uint64_t)appData.tmoMs) / 1000ull;
-            appData.state = APP_TCPIP_WAIT_FOR_RESPONSE;
-        }
-        break;
-
-        case APP_TCPIP_WAIT_FOR_RESPONSE:
-        {
-            memset(printBuffer, 0, sizeof(printBuffer));
-            if (SYS_TMR_SystemCountGet() > appData.mTimeOut)
-            {
-                SYS_CONSOLE_MESSAGE("\r\nTime out waiting for response\r\n");
-                TCPIP_UDP_Close(appData.socket);
-                appData.state = APP_TCPIP_WAITING_FOR_COMMAND;
-                break;
-            }
-            if (!TCPIP_UDP_IsConnected(appData.socket))
-            {
-                SYS_CONSOLE_MESSAGE("\r\nConnection Closed\r\n");
-                appData.state = APP_TCPIP_WAITING_FOR_COMMAND;
-                break;
-            }
-            if (TCPIP_UDP_GetIsReady(appData.socket))
-            {
-                TCPIP_UDP_ArrayGet(appData.socket, (uint8_t*)printBuffer, sizeof(printBuffer) - 1);
-                TCPIP_UDP_Discard(appData.socket);
-                SYS_CONSOLE_PRINT("%s", printBuffer);
-                TCPIP_UDP_Close(appData.socket);
-                appData.state = APP_TCPIP_WAITING_FOR_COMMAND;
-
-            }
-        }
-
-        break;
+            break;
         default:
             break;
     }
 }
 
-
-int8_t _APP_PumpDNS(const char * hostname, IPV4_ADDR *ipv4Addr)
-{
-    int8_t retval = -1;
-    TCPIP_DNS_RESULT result = TCPIP_DNS_IsResolved(hostname, (IP_MULTI_ADDRESS*)ipv4Addr, IP_ADDRESS_TYPE_IPV4);
-
-    switch (result)
-    {
-        case TCPIP_DNS_RES_OK:
-            // We now have an IPv4 Address
-            // Open a socket
-            retval = 1;
-            break;
-        case TCPIP_DNS_RES_PENDING:
-            retval = 0;
-            break;
-        case TCPIP_DNS_RES_SERVER_TMO:
-        default:
-            SYS_CONSOLE_MESSAGE("TCPIP_DNS_IsResolved returned failure\r\n");
-    }
-
-    return retval;
-}
- 
 
 /*******************************************************************************
  End of File

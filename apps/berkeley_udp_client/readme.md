@@ -1,8 +1,8 @@
-# TCP/IP UDP Client Server
+# TCP/IP UDP Berkeley Client
 
-The UDP Client Server configuration demonstrates creating a network client and a network server that uses the MPLAB Harmony UDP API. This demonstration shows how the UDP/IP loopback works and it is a combination of the TCP/IP UDP Client and TCP/IP UDP Server application.
+The UDP Berkeley Client configuration demonstrates creating a network Client with the API to make a UDP/IP connection to a specified port.
 
-**TCP/IP UDP Client Server MHC Configuration**
+**TCP/IP UDP Berkeley Client MHC Configuration**
 
 The following Project Graph diagram shows the Harmony components included in this application demonstration.
 
@@ -45,7 +45,7 @@ The following Project Graph diagram shows the Harmony components included in thi
     The MIIM Driver supports asynchronous read/write and scan operations for accessing the external PHY registers and notification when MIIM operations have completed.
 
 
-**TCP/IP UDP Client Hardware Configuration**
+**TCP/IP UDP Berkeley Client Hardware Configuration**
 
 This section describes the hardware configuration for ATSAM A5D2 Xplained Ultra Evaluation Kit and one can be used for the respective application demonstration.
 
@@ -68,26 +68,20 @@ This section describes the hardware configuration for ATSAM A5D2 Xplained Ultra 
     -   Establish a connection between the router/switch with the SAM A5D2 Xplained Ultra Evaluation Kit through the RJ45 connector
 
 
-**TCP/IP UDP Client Server Running Application**
+**TCP/IP UDP Berkeley Client Running Application**
 
-This table lists the name and location of the IAR IDE project folder for the demonstration.
+This table lists the name and location of the MPLABX IDE project folder for the demonstration.
 
 |Project Name|Target Device|Target Development Board|Description|
 |------------|-------------|------------------------|-----------|
-|sam\_a5d2\_xult.IAR|ATSAMA5D27|SAM A5D2 Xplained Ultra + KSZ8081 PHY Daughter board|Demonstrates the TCP/IP UDP Client/Server on development board with SAMA5D2 device and an on-board KSZ8081 PHY. This is a Non-RTOS implementation|
-|sam\_a5d2\_xult\_freertos.IAR|ATSAMA5D27|SAM A5D2 Xplained Ultra + KSZ8081 PHY Daughter board|Demonstrates the TCP/IP UDP Client/Server on development board with SAMA5D2 device and an on-board KSZ8081 PHY. This is a FreeRtos implementation|
+|sam\_a5d2\_xult\_MPLABX.X|ATSAMA5D27|SAM A5D2 Xplained Ultra + KSZ8081 PHY Daughter board|Demonstrates the TCP/IP UDP Berkeley Client on development board with SAMA5D2 device and an on-board KSZ8081 PHY. This is a Non-RTOS implementation|
+|sam\_a5d2\_xult\_freertos\_MPLABX.X|ATSAMA5D27|SAM A5D2 Xplained Ultra + KSZ8081 PHY Daughter board|Demonstrates the TCP/IP UDP Berkeley Client on development board with SAMA5D2 device and an on-board KSZ8081 PHY. This is a FreeRtos implementation|
 
 There are three sequential commands implemented in this demonstration.
 
-1.  **setudppacketoptions** < hostname \> < port \> < message \> - This command specifies the following parameters for the UDP packet: Destination IP Address or Host name, Destination Port and Message to transfer
+1.  Build the demo by opening the project in the MPLABX IDE
 
-2.  **getudppacketoptions** - This command displays the current options
-
-3.  **sendudppacket** - This command sends a UDP packet
-
-4.  Build the demo by opening the project in the IAR Embedded Workbench
-
-5.  Copy the project output, harmony.bin, to the SD card that is used to load the executable and run it on the SAM9X60-EK board. Note: the boot loader on the SD card, boot.bin, should be configured to load the harmony.bin image, not a uboot.bin image.
+2.  Copy the project output, harmony.bin, to the SD card that is used to load the executable and run it on the SAM9X60-EK board. Note: the boot loader on the SD card, boot.bin, should be configured to load the harmony.bin image, not a uboot.bin image.
 
 
 **Running Demonstration Steps**
@@ -114,23 +108,22 @@ There are three sequential commands implemented in this demonstration.
 
 3.  Execution :
 
-    1.  Set the UDP packet options by typing **setudppacketoptions** at the terminal console.
+    **setoptions**, **getoptions** and **sendpacket** are the UDP Berkeley client APP commands.
 
-    2.  Verify the UDP packet settings by typing **getudppacketoptions** at the terminal console.
+    1.  Set the UDP packet options by typing **setoptions** at the terminal console.
 
-    3.  Send the UDP packet to the destination using the **sendudppacket** command.
+    2.  Verify the UDP packet settings by typing **getoptions** at the terminal console.
 
-    4.  After the **sendudppacket** command is input, the demonstration will make a DNS query to look up the host name and send a UDP packet to that host.
+    3.  Send the UDP packet to the destination using the **sendpacket** command.
 
-    5.  The output message will be received by the UDP server on the port that is configured by the command **setudppacketoption**.
+    4.  After the **sendpacket** command is input, the demonstration will make a DNS query to look up the host name and send a UDP packet to that host.
 
-4.  Testing the UDP Server part of demonstration:
+    5.  The output message will be received by the UDP server on the port that is configured by the command **setoptions**.
 
-    1.  As soon as a valid IP address is assigned through the DHCP to the demonstration, it is ready to accept a UDP/IP connection on port 9760.
+    6.  For UDP Berkeley Client test, the UDP Server application is required to run on the computer \(SocketTest, Packet Sender etc\). This demonstration is tested with **SocketTest v3.0\(http://sockettest.sourceforge.net/\)** .
 
-    2.  Send a UDP packet to the IP address of the hardware board and port 9760 from any UDP Client application running on the computer \(SocketTest, Packet Sender etc\).
+    7. Open the **SocketTest** software and select UDP server for the configured port number as per the command **setoptions**.
 
-    3.  The UDP Server demonstration running on the evaluation kit will echo back everything it receives along the connection.
 
 
 **Parent topic:**[MPLAB® Harmony 3 TCP/IP Application for SAM A5D2 Family](../../docs/GUID-E0336200-D959-4A15-BD0E-C418C0991ADD.md)
