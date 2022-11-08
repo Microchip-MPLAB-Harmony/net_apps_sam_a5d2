@@ -1,8 +1,8 @@
-# TCP/IP UDP Server
+# TCP/IP UDP Berkeley Server
 
-The UDP Server configuration demonstrates creating a network server that uses the MPLAB Harmony UDP API to create a UDP/IP echo server on port 9760.
+The UDP Berkeley Server configuration demonstrates creating a network server that uses the MPLAB Harmony UDP API to create a UDP/IP echo server on port 9760.
 
-**TCP/IP UDP Server MHC Configuration**
+**TCP/IP UDP Berkeley Server MHC Configuration**
 
 The following Project Graph diagram shows the Harmony components included in this application demonstration.
 
@@ -68,16 +68,16 @@ This section describes the hardware configuration for ATSAM A5D2 Xplained Ultra 
     -   Establish a connection between the router/switch with the SAM A5D2 Xplained Ultra Evaluation Kit through the RJ45 connector
 
 
-**TCP/IP UDP Server Running Application**
+**TCP/IP UDP Berkeley Server Running Application**
 
-This table lists the name and location of the IAR IDE project folder for the demonstration.
+This table lists the name and location of the MPLABX IDE project folder for the demonstration.
 
 |Project Name|Target Device|Target Development Board|Description|
 |------------|-------------|------------------------|-----------|
-|sam\_a5d2\_xult.IAR|ATSAMA5D27|SAM A5D2 Xplained Ultra + KSZ8081 PHY Daughter board|Demonstrates the TCP/IP UDP Server on development board with SAMA5D2 device and an on-board KSZ8081 PHY. This is a Non-RTOS implementation|
-|sam\_a5d2\_xult\_freertos.IAR|ATSAMA5D27|SAM A5D2 Xplained Ultra + KSZ8081 PHY Daughter board|Demonstrates the TCP/IP UDP Server on development board with SAMA5D2 device and an on-board KSZ8081 PHY. This is a FreeRtos implementation|
+|sam\_a5d2\_xult\_MPLABX.X|ATSAMA5D27|SAM A5D2 Xplained Ultra + KSZ8081 PHY Daughter board|Demonstrates the TCP/IP UDP Berkeley Server on development board with SAMA5D2 device and an on-board KSZ8081 PHY. This is a Non-RTOS implementation|
+|sam\_a5d2\_xult\_freertos\_MPLABX.X|ATSAMA5D27|SAM A5D2 Xplained Ultra + KSZ8081 PHY Daughter board|Demonstrates the TCP/IP UDP Berkeley Server on development board with SAMA5D2 device and an on-board KSZ8081 PHY. This is a FreeRtos implementation|
 
-1.  Build the demo by opening the project in the IAR Embedded Workbench
+1.  Build the demo by opening the project in the MPLABX IDE
 
 2.  Copy the project output, harmony.bin, to the SD card that is used to load the executable and run it on the SAM9X60-EK board. Note: the boot loader on the SD card, boot.bin, should be configured to load the harmony.bin image, not a uboot.bin image.
 
@@ -110,7 +110,7 @@ This table lists the name and location of the IAR IDE project folder for the dem
 
     2.  Send a UDP packet to the IP address of the hardware board and port 9760 from any UDP Client application running on the computer \(SocketTest, Packet Sender etc\).
 
-    3.  The UDP Server demonstration running on the evaluation kit will echo back everything it receives along the connection.
+    3.  The UDP Berkeley Server demonstration running on the evaluation kit will echo back everything it receives along the connection.
 
 
 **Parent topic:**[MPLAB® Harmony 3 TCP/IP Application for SAM A5D2 Family](../../docs/GUID-E0336200-D959-4A15-BD0E-C418C0991ADD.md)
