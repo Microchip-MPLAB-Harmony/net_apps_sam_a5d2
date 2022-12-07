@@ -20,18 +20,18 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_FLEXCOM3_INSTANCE_
 #define _SAMA5D2_FLEXCOM3_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for FLEXCOM3 peripheral ========== */
-#define FLEXCOM3_INSTANCE_ID                     _UL_(22)   
-#define FLEXCOM3_CLOCK_ID                        _UL_(22)   
-#define FLEXCOM3_DMAC_ID_TX                      _UL_(17)   
-#define FLEXCOM3_DMAC_ID_RX                      _UL_(18)   
-#define FLEXCOM3_USART_FIFO_SIZE                 _UL_(32)   
-#define FLEXCOM3_SPI_FIFO_SIZE                   _UL_(32)   
-#define FLEXCOM3_TWI_FIFO_SIZE                   _UL_(16)   
+#define FLEXCOM3_INSTANCE_ID                     (22)       
+#define FLEXCOM3_CLOCK_ID                        (22)       
+#define FLEXCOM3_DMAC_ID_TX                      (17)       
+#define FLEXCOM3_DMAC_ID_RX                      (18)       
+#define FLEXCOM3_USART_FIFO_SIZE                 (32)       
+#define FLEXCOM3_SPI_FIFO_SIZE                   (32)       
+#define FLEXCOM3_TWI_FIFO_SIZE                   (16)       
 
 #endif /* _SAMA5D2_FLEXCOM3_INSTANCE_ */

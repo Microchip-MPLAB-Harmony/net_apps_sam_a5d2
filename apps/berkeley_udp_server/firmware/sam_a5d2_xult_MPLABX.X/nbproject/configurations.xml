@@ -917,7 +917,7 @@
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.6.72"/>
+        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.9.106"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

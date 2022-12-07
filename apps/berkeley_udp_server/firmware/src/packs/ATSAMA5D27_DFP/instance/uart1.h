@@ -20,17 +20,17 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_UART1_INSTANCE_
 #define _SAMA5D2_UART1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for UART1 peripheral ========== */
-#define UART1_INSTANCE_ID                        _UL_(25)   
-#define UART1_CLOCK_ID                           _UL_(25)   
-#define UART1_DMAC_ID_TX                         _UL_(37)   
-#define UART1_DMAC_ID_RX                         _UL_(38)   
-#define UART1_BRSRCCK_PERIPH_CLK                 _UL_(0)    /* MCK */
-#define UART1_BRSRCCK_GCLK                       _UL_(0)    /* GCLK */
+#define UART1_INSTANCE_ID                        (25)       
+#define UART1_CLOCK_ID                           (25)       
+#define UART1_DMAC_ID_TX                         (37)       
+#define UART1_DMAC_ID_RX                         (38)       
+#define UART1_BRSRCCK_PERIPH_CLK                 (0)        /* MCK */
+#define UART1_BRSRCCK_GCLK                       (0)        /* GCLK */
 
 #endif /* _SAMA5D2_UART1_INSTANCE_ */
