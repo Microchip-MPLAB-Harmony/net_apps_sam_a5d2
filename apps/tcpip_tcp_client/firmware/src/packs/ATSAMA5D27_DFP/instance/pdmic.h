@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_PDMIC_INSTANCE_
 #define _SAMA5D2_PDMIC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PDMIC peripheral ========== */
-#define PDMIC_INSTANCE_ID                        _UL_(48)   
-#define PDMIC_CLOCK_ID                           _UL_(48)   
-#define PDMIC_DMAC_ID_RX                         _UL_(50)   
+#define PDMIC_INSTANCE_ID                        (48)       
+#define PDMIC_CLOCK_ID                           (48)       
+#define PDMIC_DMAC_ID_RX                         (50)       
 
 #endif /* _SAMA5D2_PDMIC_INSTANCE_ */
