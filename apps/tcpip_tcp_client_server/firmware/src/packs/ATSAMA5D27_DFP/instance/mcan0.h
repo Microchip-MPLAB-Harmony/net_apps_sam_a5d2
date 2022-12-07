@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_MCAN0_INSTANCE_
 #define _SAMA5D2_MCAN0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for MCAN0 peripheral ========== */
-#define MCAN0_INSTANCE_ID                        _UL_(56)   
-#define MCAN0_CLOCK_ID                           _UL_(56)   
-#define MCAN0_ID_MCAN0_INT0                      _UL_(56)   
-#define MCAN0_ID_MCAN0_INT1                      _UL_(64)   
+#define MCAN0_INSTANCE_ID                        (56)       
+#define MCAN0_CLOCK_ID                           (56)       
+#define MCAN0_ID_MCAN0_INT0                      (56)       
+#define MCAN0_ID_MCAN0_INT1                      (64)       
 
 #endif /* _SAMA5D2_MCAN0_INSTANCE_ */

@@ -30,6 +30,7 @@
                 <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
                   <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/driver/gmac/src/dynamic/_gmac_dcpt_lists.h</itemPath>
                   <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/driver/gmac/src/dynamic/drv_gmac_lib.h</itemPath>
+                  <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/driver/gmac/src/dynamic/drv_gmac_lib_sam.h</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/driver/gmac/src/drv_gmac_local.h</itemPath>
               </logicalFolder>
@@ -776,6 +777,7 @@
           <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/interrupts.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/fault_handlers.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/freertos_hooks.c</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/cstartup.S</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f4" displayName="FreeRTOS" projectFiles="true">
@@ -912,6 +914,7 @@
       <itemPath>../src/app.c</itemPath>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app_commands.c</itemPath>
+      <itemPath>../src/config/sam_a5d2_xult_freertos_MPLABX/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -1027,7 +1030,7 @@
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.6.72"/>
+        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.9.106"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
