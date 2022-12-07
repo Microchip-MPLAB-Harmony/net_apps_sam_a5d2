@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_SSC1_INSTANCE_
 #define _SAMA5D2_SSC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SSC1 peripheral ========== */
-#define SSC1_INSTANCE_ID                         _UL_(44)   
-#define SSC1_CLOCK_ID                            _UL_(44)   
-#define SSC1_DMAC_ID_TX                          _UL_(23)   
-#define SSC1_DMAC_ID_RX                          _UL_(24)   
+#define SSC1_INSTANCE_ID                         (44)       
+#define SSC1_CLOCK_ID                            (44)       
+#define SSC1_DMAC_ID_TX                          (23)       
+#define SSC1_DMAC_ID_RX                          (24)       
 
 #endif /* _SAMA5D2_SSC1_INSTANCE_ */

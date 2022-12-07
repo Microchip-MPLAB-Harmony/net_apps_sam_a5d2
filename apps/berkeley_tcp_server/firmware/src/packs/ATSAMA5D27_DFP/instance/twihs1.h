@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_TWIHS1_INSTANCE_
 #define _SAMA5D2_TWIHS1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for TWIHS1 peripheral ========== */
-#define TWIHS1_INSTANCE_ID                       _UL_(30)   
-#define TWIHS1_CLOCK_ID                          _UL_(30)   
-#define TWIHS1_DMAC_ID_TX                        _UL_(2)    
-#define TWIHS1_DMAC_ID_RX                        _UL_(3)    
+#define TWIHS1_INSTANCE_ID                       (30)       
+#define TWIHS1_CLOCK_ID                          (30)       
+#define TWIHS1_DMAC_ID_TX                        (2)        
+#define TWIHS1_DMAC_ID_RX                        (3)        
 
 #endif /* _SAMA5D2_TWIHS1_INSTANCE_ */
