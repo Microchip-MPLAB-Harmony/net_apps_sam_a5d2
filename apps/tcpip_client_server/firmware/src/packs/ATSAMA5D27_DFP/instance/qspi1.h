@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_QSPI1_INSTANCE_
 #define _SAMA5D2_QSPI1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for QSPI1 peripheral ========== */
-#define QSPI1_INSTANCE_ID                        _UL_(53)   
-#define QSPI1_CLOCK_ID                           _UL_(53)   
-#define QSPI1_DMAC_ID_TX                         _UL_(48)   
-#define QSPI1_DMAC_ID_RX                         _UL_(49)   
+#define QSPI1_INSTANCE_ID                        (53)       
+#define QSPI1_CLOCK_ID                           (53)       
+#define QSPI1_DMAC_ID_TX                         (48)       
+#define QSPI1_DMAC_ID_RX                         (49)       
 
 #endif /* _SAMA5D2_QSPI1_INSTANCE_ */

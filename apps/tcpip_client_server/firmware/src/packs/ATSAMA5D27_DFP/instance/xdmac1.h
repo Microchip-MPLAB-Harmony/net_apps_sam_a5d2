@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_XDMAC1_INSTANCE_
 #define _SAMA5D2_XDMAC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for XDMAC1 peripheral ========== */
-#define XDMAC1_INSTANCE_ID                       _UL_(7)    
-#define XDMAC1_CLOCK_ID                          _UL_(7)    
+#define XDMAC1_INSTANCE_ID                       (7)        
+#define XDMAC1_CLOCK_ID                          (7)        
 
 #endif /* _SAMA5D2_XDMAC1_INSTANCE_ */
