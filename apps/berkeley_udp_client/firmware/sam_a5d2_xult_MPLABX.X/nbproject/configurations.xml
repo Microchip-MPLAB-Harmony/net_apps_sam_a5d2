@@ -914,12 +914,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.00</languageToolchainVersion>
+        <languageToolchainVersion>4.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.6.72"/>
+        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.9.106"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
