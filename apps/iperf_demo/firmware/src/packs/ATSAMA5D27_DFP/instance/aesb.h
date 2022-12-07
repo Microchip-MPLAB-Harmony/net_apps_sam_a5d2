@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_AESB_INSTANCE_
 #define _SAMA5D2_AESB_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for AESB peripheral ========== */
-#define AESB_INSTANCE_ID                         _UL_(10)   
-#define AESB_CLOCK_ID                            _UL_(10)   
+#define AESB_INSTANCE_ID                         (10)       
+#define AESB_CLOCK_ID                            (10)       
 
 #endif /* _SAMA5D2_AESB_INSTANCE_ */
