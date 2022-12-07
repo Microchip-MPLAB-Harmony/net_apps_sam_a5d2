@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_ICM_INSTANCE_
 #define _SAMA5D2_ICM_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for ICM peripheral ========== */
-#define ICM_INSTANCE_ID                          _UL_(8)    
-#define ICM_CLOCK_ID                             _UL_(8)    
+#define ICM_INSTANCE_ID                          (8)        
+#define ICM_CLOCK_ID                             (8)        
 
 #endif /* _SAMA5D2_ICM_INSTANCE_ */
