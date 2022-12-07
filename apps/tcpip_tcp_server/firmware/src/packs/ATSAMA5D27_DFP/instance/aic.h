@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_AIC_INSTANCE_
 #define _SAMA5D2_AIC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for AIC peripheral ========== */
-#define AIC_INSTANCE_ID                          _UL_(62)   
-#define AIC_ID_AIC_IRQ                           _UL_(49)   
+#define AIC_INSTANCE_ID                          (62)       
+#define AIC_ID_AIC_IRQ                           (49)       
 
 #endif /* _SAMA5D2_AIC_INSTANCE_ */
