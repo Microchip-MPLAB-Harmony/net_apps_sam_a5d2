@@ -20,17 +20,17 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_UART4_INSTANCE_
 #define _SAMA5D2_UART4_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for UART4 peripheral ========== */
-#define UART4_INSTANCE_ID                        _UL_(28)   
-#define UART4_CLOCK_ID                           _UL_(28)   
-#define UART4_DMAC_ID_TX                         _UL_(43)   
-#define UART4_DMAC_ID_RX                         _UL_(44)   
-#define UART4_BRSRCCK_PERIPH_CLK                 _UL_(0)    /* MCK */
-#define UART4_BRSRCCK_GCLK                       _UL_(0)    /* GCLK */
+#define UART4_INSTANCE_ID                        (28)       
+#define UART4_CLOCK_ID                           (28)       
+#define UART4_DMAC_ID_TX                         (43)       
+#define UART4_DMAC_ID_RX                         (44)       
+#define UART4_BRSRCCK_PERIPH_CLK                 (0)        /* MCK */
+#define UART4_BRSRCCK_GCLK                       (0)        /* GCLK */
 
 #endif /* _SAMA5D2_UART4_INSTANCE_ */
