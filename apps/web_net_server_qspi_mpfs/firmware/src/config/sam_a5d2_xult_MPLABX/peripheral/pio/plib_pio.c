@@ -44,6 +44,8 @@
 #include "plib_pio.h"
 #include "interrupts.h"
 
+
+
 /******************************************************************************
   Function:
     PIO_Initialize ( void )
@@ -57,99 +59,99 @@
 void PIO_Initialize ( void )
 {
  /* Port A Peripheral function F configuration */
-	PIOA_REGS->PIO_MSKR = 0xfc00000U;
-	PIOA_REGS->PIO_CFGR = 0x6U;
+   PIOA_REGS->PIO_MSKR = 0xfc00000U;
+   PIOA_REGS->PIO_CFGR = 0x6U;
 
 
  /* Port B Peripheral function F configuration */
-	PIOB_REGS->PIO_MSKR = 0xffc000U;
-	PIOB_REGS->PIO_CFGR = 0x6U;
-	
+   PIOB_REGS->PIO_MSKR = 0xffc000U;
+   PIOB_REGS->PIO_CFGR = 0x6U;
+
  /* Port B Peripheral function GPIO configuration */
-	PIOB_REGS->PIO_MSKR = 0x261U;
-	PIOB_REGS->PIO_CFGR = 0x0U;
-	
+   PIOB_REGS->PIO_MSKR = 0x261U;
+   PIOB_REGS->PIO_CFGR = 0x0U;
+
  /* Port B Pin 0 configuration */
-	PIOB_REGS->PIO_MSKR = 0x1U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x500U;
-	
+   PIOB_REGS->PIO_MSKR = 0x1U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x500U;
+
  /* Port B Pin 2 configuration */
-	PIOB_REGS->PIO_MSKR = 0x4U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
-	
+   PIOB_REGS->PIO_MSKR = 0x4U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+
  /* Port B Pin 5 configuration */
-	PIOB_REGS->PIO_MSKR = 0x20U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x500U;
-	
+   PIOB_REGS->PIO_MSKR = 0x20U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x500U;
+
  /* Port B Pin 6 configuration */
-	PIOB_REGS->PIO_MSKR = 0x40U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x500U;
-	
+   PIOB_REGS->PIO_MSKR = 0x40U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x500U;
+
  /* Port B Pin 8 configuration */
-	PIOB_REGS->PIO_MSKR = 0x100U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
-	
+   PIOB_REGS->PIO_MSKR = 0x100U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+
  /* Port B Pin 9 configuration */
-	PIOB_REGS->PIO_MSKR = 0x200U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x200U;
-	
+   PIOB_REGS->PIO_MSKR = 0x200U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x200U;
+
  /* Port B Pin 10 configuration */
-	PIOB_REGS->PIO_MSKR = 0x400U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
-	
+   PIOB_REGS->PIO_MSKR = 0x400U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+
  /* Port B Pin 15 configuration */
-	PIOB_REGS->PIO_MSKR = 0x8000U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
-	
+   PIOB_REGS->PIO_MSKR = 0x8000U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+
  /* Port B Pin 16 configuration */
-	PIOB_REGS->PIO_MSKR = 0x10000U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
-	
+   PIOB_REGS->PIO_MSKR = 0x10000U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+
  /* Port B Pin 17 configuration */
-	PIOB_REGS->PIO_MSKR = 0x20000U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
-	
+   PIOB_REGS->PIO_MSKR = 0x20000U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+
  /* Port B Pin 18 configuration */
-	PIOB_REGS->PIO_MSKR = 0x40000U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
-	
+   PIOB_REGS->PIO_MSKR = 0x40000U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+
  /* Port B Pin 19 configuration */
-	PIOB_REGS->PIO_MSKR = 0x80000U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
-	
+   PIOB_REGS->PIO_MSKR = 0x80000U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+
  /* Port B Pin 20 configuration */
-	PIOB_REGS->PIO_MSKR = 0x100000U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
-	
+   PIOB_REGS->PIO_MSKR = 0x100000U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+
  /* Port B Pin 21 configuration */
-	PIOB_REGS->PIO_MSKR = 0x200000U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
-	
+   PIOB_REGS->PIO_MSKR = 0x200000U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+
  /* Port B Pin 22 configuration */
-	PIOB_REGS->PIO_MSKR = 0x400000U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
-	
+   PIOB_REGS->PIO_MSKR = 0x400000U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+
  /* Port B Pin 23 configuration */
-	PIOB_REGS->PIO_MSKR = 0x800000U;
-	PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
-	
+   PIOB_REGS->PIO_MSKR = 0x800000U;
+   PIOB_REGS->PIO_CFGR = (PIOB_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x400U;
+
  /* Port B Latch configuration */
-	PIOB_REGS->PIO_SODR = 0x61U;
-	PIOB_REGS->PIO_CODR = 0x261U & ~0x61U;
+   PIOB_REGS->PIO_SODR = 0x61U;
+   PIOB_REGS->PIO_CODR = 0x261U & ~0x61U;
 
 
  /* Port D Peripheral function A configuration */
-	PIOD_REGS->PIO_MSKR = 0x3e07c00cU;
-	PIOD_REGS->PIO_CFGR = 0x1U;
-	
+   PIOD_REGS->PIO_MSKR = 0x3e07c00cU;
+   PIOD_REGS->PIO_CFGR = 0x1U;
+
  /* Port D Pin 2 configuration */
-	PIOD_REGS->PIO_MSKR = 0x4U;
-	PIOD_REGS->PIO_CFGR = (PIOD_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x200U;
-	
+   PIOD_REGS->PIO_MSKR = 0x4U;
+   PIOD_REGS->PIO_CFGR = (PIOD_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x200U;
+
  /* Port D Pin 3 configuration */
-	PIOD_REGS->PIO_MSKR = 0x8U;
-	PIOD_REGS->PIO_CFGR = (PIOD_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x200U;
-	
+   PIOD_REGS->PIO_MSKR = 0x8U;
+   PIOD_REGS->PIO_CFGR = (PIOD_REGS->PIO_CFGR & (PIO_CFGR_FUNC_Msk)) | 0x200U;
+
 
 
 
@@ -190,6 +192,7 @@ uint32_t PIO_PortRead(PIO_PORT port)
     return PIO_REGS->PIO_GROUP[port].PIO_PDSR;
 }
 
+
 // *****************************************************************************
 /* Function:
     void PIO_PortWrite (PIO_PORT port, uint32_t mask, uint32_t value);
@@ -206,6 +209,7 @@ void PIO_PortWrite(PIO_PORT port, uint32_t mask, uint32_t value)
     PIO_REGS->PIO_GROUP[port].PIO_ODSR = value;
 }
 
+
 // *****************************************************************************
 /* Function:
     uint32_t PIO_PortLatchRead ( PIO_PORT port )
@@ -220,6 +224,7 @@ uint32_t PIO_PortLatchRead(PIO_PORT port)
 {
     return PIO_REGS->PIO_GROUP[port].PIO_ODSR;
 }
+
 
 // *****************************************************************************
 /* Function:
@@ -281,7 +286,7 @@ void PIO_PortToggle(PIO_PORT port, uint32_t mask)
 void PIO_PortInputEnable(PIO_PORT port, uint32_t mask)
 {
     PIO_REGS->PIO_GROUP[port].PIO_MSKR = mask;
-    PIO_REGS->PIO_GROUP[port].PIO_CFGR &= ~PIO_CFGR_DIR_Msk;	
+    PIO_REGS->PIO_GROUP[port].PIO_CFGR &= ~PIO_CFGR_DIR_Msk;
 }
 
 // *****************************************************************************

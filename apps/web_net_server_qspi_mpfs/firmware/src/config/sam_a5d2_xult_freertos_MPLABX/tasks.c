@@ -104,8 +104,14 @@ void _DRV_MIIM_Task(  void *pvParameters  )
 {
     while(1)
     {
-        DRV_MIIM_Tasks(sysObj.drvMiim);
+       
+       
+       DRV_MIIM_Tasks(sysObj.drvMiim_0);
+       
+       
+       
         vTaskDelay(1 / portTICK_PERIOD_MS);
+       
     }
 }
 
@@ -179,7 +185,7 @@ void SYS_Tasks ( void )
         DRV_MEMORY_PRIORITY_IDX0,
         (TaskHandle_t*)NULL
     );
-    
+
     xTaskCreate( _DRV_MIIM_Task,
         "DRV_MIIM_Tasks",
         DRV_MIIM_RTOS_STACK_SIZE,

@@ -20,12 +20,12 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_SFRBU_INSTANCE_
 #define _SAMA5D2_SFRBU_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SFRBU peripheral ========== */
-#define SFRBU_INSTANCE_ID                        _UL_(77)   
+#define SFRBU_INSTANCE_ID                        (77)       
 
 #endif /* _SAMA5D2_SFRBU_INSTANCE_ */
