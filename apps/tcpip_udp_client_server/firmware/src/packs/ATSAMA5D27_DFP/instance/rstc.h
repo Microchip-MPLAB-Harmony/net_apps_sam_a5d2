@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_RSTC_INSTANCE_
 #define _SAMA5D2_RSTC_INSTANCE_
 

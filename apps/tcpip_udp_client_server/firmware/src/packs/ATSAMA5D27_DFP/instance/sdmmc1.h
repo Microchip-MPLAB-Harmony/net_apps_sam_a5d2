@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_SDMMC1_INSTANCE_
 #define _SAMA5D2_SDMMC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SDMMC1 peripheral ========== */
-#define SDMMC1_INSTANCE_ID                       _UL_(32)   
-#define SDMMC1_CLOCK_ID                          _UL_(32)   
+#define SDMMC1_INSTANCE_ID                       (32)       
+#define SDMMC1_CLOCK_ID                          (32)       
 
 #endif /* _SAMA5D2_SDMMC1_INSTANCE_ */

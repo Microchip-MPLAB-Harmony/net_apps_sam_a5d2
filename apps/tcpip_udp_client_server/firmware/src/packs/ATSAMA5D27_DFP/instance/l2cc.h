@@ -20,12 +20,12 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_L2CC_INSTANCE_
 #define _SAMA5D2_L2CC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for L2CC peripheral ========== */
-#define L2CC_INSTANCE_ID                         _UL_(63)   
+#define L2CC_INSTANCE_ID                         (63)       
 
 #endif /* _SAMA5D2_L2CC_INSTANCE_ */
