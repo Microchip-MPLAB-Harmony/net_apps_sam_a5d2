@@ -108,7 +108,7 @@ extern "C" {
 
 
 #define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			1
-#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			1
+#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			2
 #define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		0
 #define SYS_CONSOLE_PRINT_BUFFER_SIZE        		200
 
@@ -415,24 +415,24 @@ extern "C" {
 #define TCPIP_GMAC_RX_BUFF_COUNT_THRESHOLD_QUE2          0
 #define TCPIP_GMAC_RX_BUFF_ALLOC_COUNT_QUE2              0
 #define TCPIP_GMAC_RX_FILTERS                       \
-														TCPIP_MAC_RX_FILTER_TYPE_BCAST_ACCEPT |\
-														TCPIP_MAC_RX_FILTER_TYPE_MCAST_ACCEPT |\
-														TCPIP_MAC_RX_FILTER_TYPE_UCAST_ACCEPT |\
-														TCPIP_MAC_RX_FILTER_TYPE_CRC_ERROR_REJECT |\
-														  0
-	   
+                                                        TCPIP_MAC_RX_FILTER_TYPE_BCAST_ACCEPT |\
+                                                        TCPIP_MAC_RX_FILTER_TYPE_MCAST_ACCEPT |\
+                                                        TCPIP_MAC_RX_FILTER_TYPE_UCAST_ACCEPT |\
+                                                        TCPIP_MAC_RX_FILTER_TYPE_CRC_ERROR_REJECT |\
+                                                          0
+       
 #define TCPIP_GMAC_SCREEN1_COUNT_QUE        0 
 #define TCPIP_GMAC_SCREEN2_COUNT_QUE        0       
 
 #define TCPIP_GMAC_ETH_OPEN_FLAGS                   \
-														TCPIP_ETH_OPEN_AUTO |\
-														TCPIP_ETH_OPEN_FDUPLEX |\
-														TCPIP_ETH_OPEN_HDUPLEX |\
-														TCPIP_ETH_OPEN_100 |\
-														TCPIP_ETH_OPEN_10 |\
-														TCPIP_ETH_OPEN_MDIX_AUTO |\
-														TCPIP_ETH_OPEN_RMII |\
-														0
+                                                        TCPIP_ETH_OPEN_AUTO |\
+                                                        TCPIP_ETH_OPEN_FDUPLEX |\
+                                                        TCPIP_ETH_OPEN_HDUPLEX |\
+                                                        TCPIP_ETH_OPEN_100 |\
+                                                        TCPIP_ETH_OPEN_10 |\
+                                                        TCPIP_ETH_OPEN_MDIX_AUTO |\
+                                                        TCPIP_ETH_OPEN_RMII |\
+                                                        0
 
 #define TCPIP_GMAC_MODULE_ID                       GMAC_BASE_ADDRESS
 
