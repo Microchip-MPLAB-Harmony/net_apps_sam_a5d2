@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2021-12-23T10:17:04Z */
+/* file generated from device description version 2022-02-21T21:02:22Z */
 #ifndef _SAMA5D2_SHA_INSTANCE_
 #define _SAMA5D2_SHA_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SHA peripheral ========== */
-#define SHA_INSTANCE_ID                          _UL_(12)   
-#define SHA_CLOCK_ID                             _UL_(12)   
-#define SHA_DMAC_ID_TX                           _UL_(30)   
+#define SHA_INSTANCE_ID                          (12)       
+#define SHA_CLOCK_ID                             (12)       
+#define SHA_DMAC_ID_TX                           (30)       
 
 #endif /* _SAMA5D2_SHA_INSTANCE_ */
