@@ -8,6 +8,61 @@ nav_order: 99
 
 # Microchip MPLABÂ® Harmony 3 Release Notes
 
+## Harmony 3 Network application examples for SAMA5D2 family  v3.9.0
+
+### New Features
+New features added in this release are as follows:
+
+- New MPLABX applications added to the SAM9X60 applications repository
+- All applications use MCC for configuration
+- All applications use the Net Plugin (beta)
+
+### KNOWN ISSUES
+The current known issues are as follows:
+* The xc32 uses FPU operations for (u)int64_t types.
+    However, the ISRs do not save the FPU registers and can thus corrupt
+    calculations that take place in sys_time.c, resulting in errors in the time keeping.
+    Some demos for which time keeping is critical - iperf, wolfmqtt, etc. -
+    will result in timeouts and the functionality is broken.
+* The FreeRTOS demos (web_net_super_set_sdcard_fatfs/wolfmqtt_demo, iperf, berkeley_tcp_client, etc.) fail to initialize
+    (due to FPU operations ?)
+    Issue is under investigation.
+    Debugging with MPLABX IDE is not possible for SAMA5D2 platform.
+* iperf demo has really low throughput on TCP using '-O1' build.
+    Issue is under investigation.
+    The UDP throughput is not affected.
+* SAMA5D2 MPLABX demos should not overwrite the mpfs_net_img.c file when regenerated
+    - The symbols used in this automatically generated file are not present in the project
+* wolfMQTT demos need to have the file third_party/wolfMQTT/mqtt_socket.c built without xc32 option 'Make warnings into errors'
+    - That is because it uses the obsolete #include <sys/errno.h>
+* DHCPv6 line #1041 the format specifier '%zu' is treated as an error by
+    the xc32 on SAM platforms. xc21 will correct this issue in a next release.
+
+
+
+
+### Development Tools
+
+- [MPLAB® X IDE v6.05](https://www.microchip.com/mplab/mplab-x-ide) or later
+- [MPLAB® XC32 C/C++ Compiler v4.20](https://www.microchip.com/mplab/compilers) or later
+- [Harmony net repository, 3.9.0](https://github.com/Microchip-MPLAB-Harmony/net/tree/v3.9.0)
+- [Harmony net_apps_sam_a5d2 demo apps repositories, 3.9.0](https://github.com/Microchip-MPLAB-Harmony/net_apps_sam_a5d2/tree/v3.9.0)
+- MPLAB Code Configurator (MCC), 5.2.1
+
+
+#### Development Kit Support
+
+This release supports applications for the following development kits
+
+| Development Kits |
+| --- |
+| [SAM A5D2 Xplained Ultra Evaluation Kit](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT) |
+
+
+## Full release notes
+
+- See the full [Net 3.9.0 Release notes](https://github.com/Microchip-MPLAB-Harmony/net/tree/v3.9.0)
+
 ## Harmony 3 Network application examples for SAMA5D2 family  v3.8.0
 
 ### New Features
