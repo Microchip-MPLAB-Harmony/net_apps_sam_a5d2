@@ -1,8 +1,3 @@
----
-title: Release notes
-nav_order: 99
----
-
 ![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
 ![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
 
@@ -13,7 +8,7 @@ nav_order: 99
 ### New Features
 New features added in this release are as follows:
 
-- New MPLABX applications added to the SAM9X60 applications repository
+- New MPLABX applications added to the SAMA5D2 applications repository
 - All applications use MCC for configuration
 - All applications use the Net Plugin (beta)
 
@@ -37,8 +32,6 @@ The current known issues are as follows:
     - That is because it uses the obsolete #include <sys/errno.h>
 * DHCPv6 line #1041 the format specifier '%zu' is treated as an error by
     the xc32 on SAM platforms. xc21 will correct this issue in a next release.
-
-
 
 
 ### Development Tools
