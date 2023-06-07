@@ -1,27 +1,4 @@
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
-*
-* Subject to your compliance with these terms, you may use Microchip software
-* and any derivatives exclusively with Microchip products. It is your
-* responsibility to comply with third party license terms applicable to your
-* use of third party software (including open source software) that may
-* accompany Microchip software.
-*
-* THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
-* EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
-* WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
-* PARTICULAR PURPOSE.
-*
-* IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
-* INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
-* WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
-* BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE
-* FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
-* ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
-* THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
-
-/*******************************************************************************
   MPLAB Harmony Application Header File
 
   Company:
@@ -54,8 +31,15 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdlib.h>
-#include "system_config.h"
-#include "system_definitions.h"
+#include "configuration.h"
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+extern "C" {
+
+#endif
+// DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
@@ -64,7 +48,7 @@
 // *****************************************************************************
 
 // *****************************************************************************
-/* Application States
+/* Application states
 
   Summary:
     Application states enumeration
@@ -76,15 +60,10 @@
 
 typedef enum
 {
-	/* Application's state machine's initial state. */
-	APP_STATE_INIT=0,
-
-    APP_TCPIP_WAIT_FOR_IP,
-
-    /* In this state, the application can do TCP/IP transactions. */
-    APP_TCPIP_TRANSACT,
-
-    APP_TCPIP_ERROR,
+    /* Application's state machine's initial state. */
+    APP_STATE_INIT=0,
+    APP_STATE_SERVICE_TASKS,
+    /* TODO: Define states used by the application state machine. */
 
 } APP_STATES;
 
@@ -108,15 +87,8 @@ typedef struct
     APP_STATES state;
 
     /* TODO: Define any additional data used by the application. */
-    TCP_SOCKET              socket;
-
-    char *            host;
-
-    char *            path;
-    uint16_t          port;
 
 } APP_DATA;
-
 
 // *****************************************************************************
 // *****************************************************************************
@@ -126,7 +98,6 @@ typedef struct
 /* These routines are called by drivers when certain events occur.
 */
 
-	
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Initialization and State Machine Functions
@@ -141,8 +112,8 @@ typedef struct
      MPLAB Harmony application initialization routine.
 
   Description:
-    This function initializes the Harmony application.  It places the 
-    application in its initial state and prepares it to run so that its 
+    This function initializes the Harmony application.  It places the
+    application in its initial state and prepares it to run so that its
     APP_Tasks function can be called.
 
   Precondition:
@@ -197,10 +168,16 @@ void APP_Initialize ( void );
     This routine must be called from SYS_Tasks() routine.
  */
 
-void APP_Tasks ( void );
+void APP_Tasks( void );
 
+//DOM-IGNORE-BEGIN
+#ifdef __cplusplus
+}
+#endif
+//DOM-IGNORE-END
 
 #endif /* _APP_H */
+
 /*******************************************************************************
  End of File
  */
