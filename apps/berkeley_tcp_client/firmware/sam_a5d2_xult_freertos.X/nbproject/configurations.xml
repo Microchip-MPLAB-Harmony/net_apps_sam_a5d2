@@ -905,7 +905,7 @@
         <ScriptingSetting key="boot.use" value="true"/>
         <ScriptingSetting key="boot.entry_adr" value=""/>
         <ScriptingSetting key="boot.path"
-                          value="C:\microchip\h3\net_apps_sam_a5d2\apps\binaries\at91bootstrap.elf"/>
+                          value="${ProjectDir}\..\..\..\binaries\at91bootstrap.elf"/>
         <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
