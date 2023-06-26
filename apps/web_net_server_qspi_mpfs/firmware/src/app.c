@@ -176,7 +176,7 @@ void APP_Tasks ( void )
                 appData.state = APP_TCPIP_ERROR;
             }
             else if(rawRes > 0)
-            {   // done successfuly
+            {   // done successfully
                 appData.state = APP_MOUNT_DISK;
             }
             // else wait some more...
@@ -256,11 +256,13 @@ void APP_Tasks ( void )
                 LEDstate ^= APP_LED_STATE_ON;
                 if(LEDstate == 1)
                 {
-                    APP_LED_1StateSet();
+                    //APP_LED_1StateSet();
+                    APP_LED_3StateSet();
                 }
                 else
                 {
-                    APP_LED_1StateClear();
+                    //APP_LED_1StateClear();
+                    APP_LED_3StateClear();
                 }
             }
 

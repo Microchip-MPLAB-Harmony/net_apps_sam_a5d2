@@ -3,13 +3,9 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>sam_a5d2_xult_freertos_MPLABX</name>
-            <creation-uuid>e54023e9-3948-44ef-bf6f-29d8b223e555</creation-uuid>
+            <name>web_net_server_qspi_mpfs</name>
+            <creation-uuid>7c80d793-1a3d-4043-a873-2ee509b367f2</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions>c</c-extensions>
-            <cpp-extensions/>
-            <header-extensions>h</header-extensions>
-            <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
@@ -17,7 +13,7 @@
             </sourceRootList>
             <confList>
                 <confElem>
-                    <name>sam_a5d2_xult_freertos_MPLABX</name>
+                    <name>sam_a5d2_xult</name>
                     <type>2</type>
                 </confElem>
             </confList>

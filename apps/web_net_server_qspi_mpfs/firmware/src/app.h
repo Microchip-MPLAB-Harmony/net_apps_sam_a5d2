@@ -89,11 +89,29 @@ extern "C" {
 #define APP_LED_1StateClear()       LED_AH_PB11_Off()
 #define APP_LED_1StateToggle()      LED_AH_PB11_Toggle()
 #else
+/*
 #define APP_SWITCH_1StateGet()      SWITCH_Get()
 #define APP_LED_1StateGet()         LED1_Get()
 #define APP_LED_1StateSet()         LED1_Set()
 #define APP_LED_1StateClear()       LED1_Clear()
 #define APP_LED_1StateToggle()      LED1_Toggle()
+ */
+#define APP_SWITCH_1StateGet()      SWITCH_AL_PB9_Get()
+#define APP_LED_1StateGet()         LED_GREEN_Get()
+#define APP_LED_1StateSet()         LED_GREEN_On()
+#define APP_LED_1StateClear()       LED_GREEN_Off()
+#define APP_LED_1StateToggle()      LED_GREEN_Toggle()
+    
+#define APP_LED_2StateGet()         LED_BLUE_Get()
+#define APP_LED_2StateSet()         LED_BLUE_On()
+#define APP_LED_2StateClear()       LED_BLUE_Off()
+#define APP_LED_2StateToggle()      LED_BLUE_Toggle()
+    
+#define APP_LED_3StateGet()         LED_RED_Get()
+#define APP_LED_3StateSet()         LED_RED_On()
+#define APP_LED_3StateClear()       LED_RED_Off()
+#define APP_LED_3StateToggle()      LED_RED_Toggle()
+
 #endif 
 
 // Application SYS_FS mount points
