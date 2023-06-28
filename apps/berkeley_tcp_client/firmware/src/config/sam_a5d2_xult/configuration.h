@@ -96,7 +96,7 @@ extern "C" {
 
 #define SYS_CMD_ENABLE
 #define SYS_CMD_DEVICE_MAX_INSTANCES       SYS_CONSOLE_DEVICE_MAX_INSTANCES
-#define SYS_CMD_PRINT_BUFFER_SIZE          2560
+#define SYS_CMD_PRINT_BUFFER_SIZE          2560U
 #define SYS_CMD_BUFFER_DMA_READY
 
 
@@ -107,10 +107,10 @@ extern "C" {
 #define SYS_DEBUG_USE_CONSOLE
 
 
-#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			1
-#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			2
-#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		0
-#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		2560
+#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
+#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(1U)
+#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		(0U)
+#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		(2560U)
 
 
 
@@ -215,9 +215,6 @@ extern "C" {
 
 
 
-#define TCPIP_STACK_USE_ICMPV6_SERVER
-
-
 /*** ARP Configuration ***/
 #define TCPIP_ARP_CACHE_ENTRIES                 		5
 #define TCPIP_ARP_CACHE_DELETE_OLD		        	true
@@ -233,6 +230,9 @@ extern "C" {
 #define TCPIP_ARP_PRIMARY_CACHE_ONLY		        	true
 #define TCPIP_ARP_COMMANDS false
 
+
+
+#define TCPIP_STACK_USE_ICMPV6_SERVER
 
 
 #define TCPIP_IPV6_NDP_MAX_RTR_SOLICITATION_DELAY 	1
@@ -377,6 +377,7 @@ extern "C" {
 
 /*** GMAC Configuration ***/
 #define DRV_GMAC
+#define DRV_SAMA5D2
 #define TCPIP_GMAC_TX_DESCRIPTORS_COUNT_DUMMY    1
 #define TCPIP_GMAC_RX_DESCRIPTORS_COUNT_DUMMY    1
 #define TCPIP_GMAC_RX_BUFF_SIZE_DUMMY            64
