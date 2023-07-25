@@ -72,7 +72,7 @@ extern "C" {
 #define APP_LED_2StateGet()         LED_AH_PB12_Get()
 #define APP_LED_3StateGet()         LED_AH_PB13_Get()
   
-#define APP_SWITCH_1StateGet()      (0)
+#define APP_SWITCH_1StateGet()      SW1_Get()
 #define APP_LED_1StateGet()         LED_AH_PB11_Get()
 #define APP_LED_1StateSet()         LED_AH_PB11_On()
 #define APP_LED_1StateClear()       LED_AH_PB11_Off()
@@ -80,20 +80,39 @@ extern "C" {
 #else    
 #if defined (__PIC32C__) || defined(__SAMA5D2__)        
 /* This section is highly customizable based on application's specific needs. */
+/*
 #define APP_SWITCH_1StateGet()      SWITCH_Get()
 #define APP_SWITCH_2StateGet()      SWITCH_Get()
 #define APP_SWITCH_3StateGet()      SWITCH_Get()
+*/
 #elif defined (__PIC32MZ__)
 /* This section is highly customizable based on application's specific needs. */
 #define APP_SWITCH_1StateGet()      SWITCH1_Get()
 #define APP_SWITCH_2StateGet()      SWITCH2_Get()
 #define APP_SWITCH_3StateGet()      SWITCH2_Get()
 #endif
-
-#define APP_LED_1StateSet()         LED1_Set()
+/*
+#define APP_SWITCH_1StateGet()      SWITCH_Get()
 #define APP_LED_1StateGet()         LED1_Get()
+#define APP_LED_1StateSet()         LED1_Set()
 #define APP_LED_1StateClear()       LED1_Clear()
 #define APP_LED_1StateToggle()      LED1_Toggle()
+ */
+#define APP_SWITCH_1StateGet()      SWITCH_AL_PB9_Get()
+#define APP_LED_1StateGet()         LED_GREEN_Get()
+#define APP_LED_1StateSet()         LED_GREEN_On()
+#define APP_LED_1StateClear()       LED_GREEN_Off()
+#define APP_LED_1StateToggle()      LED_GREEN_Toggle()
+    
+#define APP_LED_2StateGet()         LED_BLUE_Get()
+#define APP_LED_2StateSet()         LED_BLUE_On()
+#define APP_LED_2StateClear()       LED_BLUE_Off()
+#define APP_LED_2StateToggle()      LED_BLUE_Toggle()
+    
+#define APP_LED_3StateGet()         LED_RED_Get()
+#define APP_LED_3StateSet()         LED_RED_On()
+#define APP_LED_3StateClear()       LED_RED_Off()
+#define APP_LED_3StateToggle()      LED_RED_Toggle()
 
 #if defined(__PIC32MZ__)
 #define APP_LED_2StateSet()         LED2_Set()
