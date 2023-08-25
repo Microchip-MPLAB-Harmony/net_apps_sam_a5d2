@@ -13,14 +13,14 @@ B3,PB20,,GMAC_GTX0,n/a,n/a,No,Disabled,No,Yes,Glitch Filter,0x0
 B4,PB13,,Available,In,,,,,,,
 B5,PB11,,Available,In,,,,,,,
 B6,PB4,,Available,In,,,,,,,
-B7,PB5,LED_GREEN,LED_AL,n/a,n/a,No,Disabled,Yes,No,Glitch Filter,0x0
+B7,PB5,LED_GREEN,LED_AL,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
 C1,PB31,,Available,In,,,,,,,
 C2,PB28,,Available,In,,,,,,,
 C3,PB22,,GMAC_GMDC,n/a,n/a,No,Disabled,No,Yes,Glitch Filter,0x0
 C4,PB17,,GMAC_GRXER,n/a,n/a,No,Disabled,No,Yes,Glitch Filter,0x0
-C5,PB14,,GMAC_GTXCK,n/a,n/a,No,Disabled,No,Yes,Glitch Filter,0x0
+C5,PB14,,GMAC_GTXCK,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
 C6,PB7,,Available,In,,,,,,,
-C7,PB6,LED_RED,LED_AL,n/a,n/a,No,Disabled,Yes,No,Glitch Filter,0x0
+C7,PB6,LED_RED,LED_AL,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
 D1,PC9,,Available,In,,,,,,,
 D2,PB30,,Available,In,,,,,,,
 D3,PB29,,Available,In,,,,,,,
@@ -62,7 +62,7 @@ J4,PD5,,Available,In,,,,,,,
 J5,PD18,,ICE_NTRST,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
 J6,PD4,,Available,In,,,,,,,
 J7,PD7,,Available,In,,,,,,,
-J8,PB0,LED_BLUE,LED_AH,n/a,n/a,No,Disabled,Yes,No,Glitch Filter,0x0
+J8,PB0,LED_BLUE,LED_AL,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
 J9,PC26,,Available,In,,,,,,,
 J10,PC8,,Available,In,,,,,,,
 K1,PD3,,UART1_UTXD1,n/a,n/a,No,Disabled,Yes,No,Glitch Filter,0x0
@@ -106,8 +106,8 @@ N17,PA17,,Available,In,,,,,,,
 P5,PIOBU5,,Available,In,,,,,,,
 P6,PIOBU6,,Available,In,,,,,,,
 P10,PA1,,Available,In,,,,,,,
-P12,PA20,,SDMMC1_DAT2,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
-P13,PA26,,Available,In,,,,,,,
+P12,PA20,,Available,In,,,,,,,
+P13,PA26,,QSPI0_IO2,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
 P15,PA11,,Available,In,,,,,,,
 P16,PA13,,Available,In,,,,,,,
 P17,PC0,,Available,In,,,,,,,
@@ -117,21 +117,21 @@ R4,PIOBU4,,Available,In,,,,,,,
 R5,PIOBU3,,Available,In,,,,,,,
 R10,PA3,,Available,In,,,,,,,
 R12,PA6,,Available,In,,,,,,,
-R13,PA21,,SDMMC1_DAT3,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
-R15,PA30,,SDMMC1_CD,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
-R16,PA28,,SDMMC1_CMD,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+R13,PA21,,Available,In,,,,,,,
+R15,PA30,,Available,In,,,,,,,
+R16,PA28,,Available,In,,,,,,,
 R17,PA31,,Available,In,,,,,,,
 T11,PA2,,Available,In,,,,,,,
 T12,PA5,,Available,In,,,,,,,
 T13,PA7,,Available,In,,,,,,,
-T14,PA19,,SDMMC1_DAT1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
-T15,PA24,,Available,In,,,,,,,
-T16,PA27,,Available,In,,,,,,,
-T17,PA29,,SDMMC1_WP,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+T14,PA19,,Available,In,,,,,,,
+T15,PA24,,QSPI0_IO0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+T16,PA27,,QSPI0_IO3,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+T17,PA29,,Available,In,,,,,,,
 U11,PA0,,Available,In,,,,,,,
 U12,PA4,,Available,In,,,,,,,
 U13,PA10,,Available,In,,,,,,,
-U14,PA18,,SDMMC1_DAT0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
-U15,PA22,,SDMMC1_CK,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
-U16,PA23,,Available,In,,,,,,,
-U17,PA25,,Available,In,,,,,,,
+U14,PA18,,Available,In,,,,,,,
+U15,PA22,,QSPI0_SCK,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+U16,PA23,,QSPI0_CS,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+U17,PA25,,QSPI0_IO1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0

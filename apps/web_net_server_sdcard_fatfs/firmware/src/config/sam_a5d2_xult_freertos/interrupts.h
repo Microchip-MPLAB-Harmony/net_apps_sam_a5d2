@@ -59,7 +59,6 @@
 
 void GMAC_InterruptHandler (void);
 void UART1_InterruptHandler (void);
-void SDMMC1_InterruptHandler (void);
 void TC0_InterruptHandler (void);
 
 
