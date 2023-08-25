@@ -77,7 +77,7 @@ static void lAPP_Tasks(  void *pvParameters  )
     while(true)
     {
         APP_Tasks();
-        vTaskDelay(5U / portTICK_PERIOD_MS);
+        vTaskDelay(10U / portTICK_PERIOD_MS);
     }
 }
 
@@ -109,7 +109,7 @@ void _DRV_MIIM_Task(  void *pvParameters  )
     {
        
        
-       DRV_MIIM_Tasks(sysObj.drvMiim_0);
+       DRV_MIIM_OBJECT_BASE_Default.DRV_MIIM_Tasks(sysObj.drvMiim_0);
        
        
        
@@ -124,7 +124,7 @@ void _NET_PRES_Tasks(  void *pvParameters  )
     while(1)
     {
         NET_PRES_Tasks(sysObj.netPres);
-        vTaskDelay(1 / portTICK_PERIOD_MS);
+        vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 }
 
@@ -134,7 +134,7 @@ static void lSYS_FS_Tasks(  void *pvParameters  )
     while(true)
     {
         SYS_FS_Tasks();
-        vTaskDelay(1U / portTICK_PERIOD_MS);
+        vTaskDelay(10U / portTICK_PERIOD_MS);
     }
 }
 

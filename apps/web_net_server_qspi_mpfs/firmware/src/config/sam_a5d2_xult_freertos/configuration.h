@@ -641,7 +641,6 @@ extern "C" {
 #define WOLFSSL_AES_SMALL_TABLES
 #define NO_MD4
 #define WOLFSSL_SHA224
-#define NO_DES3
 #define WOLFSSL_AES_128
 #define WOLFSSL_AES_192
 #define WOLFSSL_AES_256
@@ -661,7 +660,6 @@ extern "C" {
 #define NO_DSA
 #define FP_MAX_BITS 4096
 #define USE_CERT_BUFFERS_2048
-#define WC_RSA_PSS
 #define NO_DEV_RANDOM
 #define HAVE_HASHDRBG
 #define WC_NO_HARDEN
@@ -676,7 +674,7 @@ extern "C" {
 #define NET_PRES_NUM_SOCKETS 10
 
 /* Net Pres RTOS Configurations*/
-#define NET_PRES_RTOS_STACK_SIZE                12288
+#define NET_PRES_RTOS_STACK_SIZE                8192 //20038
 #define NET_PRES_RTOS_TASK_PRIORITY             1
 	
 #define FREERTOS

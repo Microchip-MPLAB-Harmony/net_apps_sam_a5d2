@@ -83,7 +83,7 @@ extern "C" {
 #define L1_DCACHE_CLEAN_ALL()                          dcache_CleanAll()
 #define L1_DCACHE_INVALIDATE_ALL()                     dcache_InvalidateAll()
 #define L1_DCACHE_CLEAN_INVALIDATE_ALL()               dcache_CleanInvalidateAll()
- 
+
 #define L2_DCACHE_IN_USE                               true
 #define L2_DCACHE_CLEAN_ALL()                          PLIB_L2CC_CleanCache()
 #define L2_DCACHE_INVALIDATE_BY_ADDR(addr,sz)          PLIB_L2CC_InvalidateCacheByAddr(addr,sz)
