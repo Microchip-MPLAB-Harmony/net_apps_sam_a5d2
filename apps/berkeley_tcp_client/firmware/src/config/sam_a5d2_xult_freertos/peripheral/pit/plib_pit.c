@@ -47,9 +47,9 @@
 #include <stddef.h>
 #include "device.h"
 #include "plib_pit.h"
+#include "interrupts.h"
 
 #define PIT_COUNTER_FREQUENCY       (83000000U / 16U)
-
 
 // *****************************************************************************
 // *****************************************************************************
@@ -68,7 +68,7 @@ typedef struct
 // Section: File Scope or Global Constants
 // *****************************************************************************
 // *****************************************************************************
-static PIT_OBJECT pit;
+volatile static PIT_OBJECT pit;
 
 
 void PIT_TimerInitialize(void)
@@ -167,25 +167,10 @@ void PIT_DelayUs(uint32_t delay_us)
     }
 }
 
-void PIT_TimerCallbackSet(PIT_CALLBACK callback, uintptr_t context)
-{
-    pit.callback = callback;
-    pit.context = context;
-}
 
-void PIT_InterruptHandler(void)
+bool PIT_TimerPeriodHasExpired(void)
 {
-    uint32_t interruptStatus = PIT_REGS->PIT_SR;
-    if(interruptStatus != 0U)
-	{
-        volatile uint32_t reg = PIT_REGS->PIT_PIVR;
-        (void)reg;
-        pit.tickCounter++;
-        if((pit.callback) != NULL)
-        {
-            pit.callback(pit.context);
-        }
-    }
+    return ((PIT_REGS->PIT_SR & PIT_SR_PITS_Msk) != 0U);
 }
 /*******************************************************************************
  End of File
