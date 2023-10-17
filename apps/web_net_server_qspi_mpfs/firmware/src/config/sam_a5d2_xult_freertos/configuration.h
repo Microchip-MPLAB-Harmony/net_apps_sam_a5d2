@@ -158,7 +158,7 @@ extern "C" {
 /* Memory Driver Instance 0 RTOS Configurations*/
 #define DRV_MEMORY_STACK_SIZE_IDX0               1024
 #define DRV_MEMORY_PRIORITY_IDX0                 1
-#define DRV_MEMORY_RTOS_DELAY_IDX0               1U
+#define DRV_MEMORY_RTOS_DELAY_IDX0               10U
 
 /* MX25L Driver Instance Configuration */
 #define DRV_MX25L_INDEX                       (0U)
@@ -423,6 +423,10 @@ extern "C" {
 #define TCPIP_IPV6_EXTERN_PACKET_PROCESS   false
 
 
+#define TCPIP_IPV6_G3_PLC_SUPPORT                       false
+
+
+
 /*** IPv4 Configuration ***/
 #define TCPIP_IPV4_ARP_SLOTS                        10
 #define TCPIP_IPV4_EXTERN_PACKET_PROCESS   false
@@ -674,7 +678,7 @@ extern "C" {
 #define NET_PRES_NUM_SOCKETS 10
 
 /* Net Pres RTOS Configurations*/
-#define NET_PRES_RTOS_STACK_SIZE                8192 //20038
+#define NET_PRES_RTOS_STACK_SIZE                8192
 #define NET_PRES_RTOS_TASK_PRIORITY             1
 	
 #define FREERTOS
