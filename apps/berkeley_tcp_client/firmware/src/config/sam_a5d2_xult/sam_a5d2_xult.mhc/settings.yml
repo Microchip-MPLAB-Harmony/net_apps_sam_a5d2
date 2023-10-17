@@ -1,7 +1,6 @@
-!!com.microchip.mh3.configuration.project.model.ProjectSettings
+format_version: v1.0
 configName: sam_a5d2_xult
 folderName: sam_a5d2_xult
-format_version: v1.0
 frameworkPath: C:\microchip\h3
 processor: ATSAMA5D27
 projectName: sam_a5d2_xult
