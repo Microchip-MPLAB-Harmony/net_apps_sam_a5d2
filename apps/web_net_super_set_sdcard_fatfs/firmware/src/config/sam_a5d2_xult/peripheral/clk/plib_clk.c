@@ -27,12 +27,38 @@
 
 
 
+/*********************************************************************************
+Initialize AUDIO PLL
+*********************************************************************************/
+
+static void CLK_AudioPLLInitialize(void)
+{
+    /* Disable PLL */
+    PMC_REGS->PMC_AUDIO_PLL0 = 0;
+
+    /* Release PLL from reset */
+    PMC_REGS->PMC_AUDIO_PLL0 |= PMC_AUDIO_PLL0_RESETN(1);
+
+    /* Configure PLL parameters */
+    PMC_REGS->PMC_AUDIO_PLL0 |= PMC_AUDIO_PLL0_QDPMC(6) | PMC_AUDIO_PLL0_ND(57);
+    PMC_REGS->PMC_AUDIO_PLL1 = PMC_AUDIO_PLL1_QDAUDIO(1) | PMC_AUDIO_PLL1_DIV(0x2) | PMC_AUDIO_PLL1_FRACR(1398101);
+
+    /* Enable PLL */
+    PMC_REGS->PMC_AUDIO_PLL0 |= PMC_AUDIO_PLL0_PLLEN(1) | PMC_AUDIO_PLL0_PADEN(0) | PMC_AUDIO_PLL0_PMCEN(1);
+
+    /* Wait for 100 us for PLL in Calling/Driver code */
+}
 
 
 /*********************************************************************************
 Initialize Generic clock
 *********************************************************************************/
 
+static void CLK_GenericClockInitialize(void)
+{
+    /* Enable GCLK for peripheral ID 32 */
+    PMC_REGS->PMC_PCR = PMC_PCR_PID(32) | PMC_PCR_GCKCSS(0x5) | PMC_PCR_CMD_Msk | PMC_PCR_GCKDIV(0) | PMC_PCR_EN_Msk | PMC_PCR_GCKEN_Msk;
+}
 
 
 
@@ -58,6 +84,12 @@ Clock Initialize
 
 void CLK_Initialize( void )
 {
+    /* Initialize Audio PLL */
+    CLK_AudioPLLInitialize();
+
+    /* Initialize Generic Clock */
+    CLK_GenericClockInitialize();
+
     /* Initialize Peripheral Clock */
     CLK_PeripheralClockInitialize();
 
