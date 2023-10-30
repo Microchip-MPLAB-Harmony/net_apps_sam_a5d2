@@ -65,65 +65,63 @@
 /* MISRA C-2012 Rule 11.1 */
 /* MISRA C-2012 Rule 11.3 */
 /* MISRA C-2012 Rule 11.8 */
-// <editor-fold defaultstate="collapsed" desc="DRV_MEMORY Instance 0 Initialization Data">
-
-static uint8_t gDrvMemory0EraseBuffer[DRV_MX25L_ERASE_BUFFER_SIZE] CACHE_ALIGN;
-
-static DRV_MEMORY_CLIENT_OBJECT gDrvMemory0ClientObject[DRV_MEMORY_CLIENTS_NUMBER_IDX0];
-
-static DRV_MEMORY_BUFFER_OBJECT gDrvMemory0BufferObject[DRV_MEMORY_BUF_Q_SIZE_IDX0];
-
-static const DRV_MEMORY_DEVICE_INTERFACE drvMemory0DeviceAPI = {
-    .Open               = DRV_MX25L_Open,
-    .Close              = DRV_MX25L_Close,
-    .Status             = DRV_MX25L_Status,
-    .SectorErase        = DRV_MX25L_SectorErase,
-    .Read               = DRV_MX25L_Read,
-    .PageWrite          = DRV_MX25L_PageWrite,
-    .EventHandlerSet    = NULL,
-    .GeometryGet        = (DRV_MEMORY_DEVICE_GEOMETRY_GET)DRV_MX25L_GeometryGet,
-    .TransferStatusGet  = (DRV_MEMORY_DEVICE_TRANSFER_STATUS_GET)DRV_MX25L_TransferStatusGet
-};
-static const DRV_MEMORY_INIT drvMemory0InitData =
-{
-    .memDevIndex                = DRV_MX25L_INDEX,
-    .memoryDevice               = &drvMemory0DeviceAPI,
-    .isMemDevInterruptEnabled   = false,
-    .isFsEnabled                = true,
-    .deviceMediaType            = (uint8_t)SYS_FS_MEDIA_TYPE_SPIFLASH,
-    .ewBuffer                   = &gDrvMemory0EraseBuffer[0],
-    .clientObjPool              = (uintptr_t)&gDrvMemory0ClientObject[0],
-    .bufferObj                  = (uintptr_t)&gDrvMemory0BufferObject[0],
-    .queueSize                  = DRV_MEMORY_BUF_Q_SIZE_IDX0,
-    .nClientsMax                = DRV_MEMORY_CLIENTS_NUMBER_IDX0
-};
-
-// </editor-fold>
 /* Forward declaration of GMAC initialization data */
 const TCPIP_MODULE_MAC_PIC32C_CONFIG tcpipGMACInitData;
 
 
-// <editor-fold defaultstate="collapsed" desc="DRV_MX25L Initialization Data">
-
-static const DRV_MX25L_PLIB_INTERFACE drvMX25LPlibAPI = {
-    .CommandWrite  = QSPI0_CommandWrite,
-    .RegisterRead  = QSPI0_RegisterRead,
-    .RegisterWrite = QSPI0_RegisterWrite,
-    .MemoryRead    = QSPI0_MemoryRead,
-    .MemoryWrite   = QSPI0_MemoryWrite
-};
-
-static const DRV_MX25L_INIT drvMX25LInitData =
-{
-    .mx25lPlib         = &drvMX25LPlibAPI,
-};
-
-// </editor-fold>
 /* Forward declaration of MIIM 0 initialization data */
 static const DRV_MIIM_INIT drvMiimInitData_0;
 
 /* Forward declaration of PHY initialization data */
 const DRV_ETHPHY_INIT tcpipPhyInitData_KSZ8081;
+
+// <editor-fold defaultstate="collapsed" desc="DRV_SDMMC Instance 0 Initialization Data">
+
+/* SDMMC Client Objects Pool */
+static DRV_SDMMC_CLIENT_OBJ drvSDMMC0ClientObjPool[DRV_SDMMC_IDX0_CLIENTS_NUMBER];
+
+/* SDMMC Transfer Objects Pool */
+static DRV_SDMMC_BUFFER_OBJ drvSDMMC0BufferObjPool[DRV_SDMMC_IDX0_QUEUE_SIZE];
+
+static const DRV_SDMMC_PLIB_API drvSDMMC0PlibAPI = {
+    .sdhostCallbackRegister = (DRV_SDMMC_PLIB_CALLBACK_REGISTER)SDMMC1_CallbackRegister,
+    .sdhostInitModule = (DRV_SDMMC_PLIB_INIT_MODULE)SDMMC1_ModuleInit,
+    .sdhostSetClock  = (DRV_SDMMC_PLIB_SET_CLOCK)SDMMC1_ClockSet,
+    .sdhostIsCmdLineBusy = (DRV_SDMMC_PLIB_IS_CMD_LINE_BUSY)SDMMC1_IsCmdLineBusy,
+    .sdhostIsDatLineBusy = (DRV_SDMMC_PLIB_IS_DATA_LINE_BUSY)SDMMC1_IsDatLineBusy,
+    .sdhostSendCommand = (DRV_SDMMC_PLIB_SEND_COMMAND)SDMMC1_CommandSend,
+    .sdhostReadResponse = (DRV_SDMMC_PLIB_READ_RESPONSE)SDMMC1_ResponseRead,
+    .sdhostSetBlockCount = (DRV_SDMMC_PLIB_SET_BLOCK_COUNT)SDMMC1_BlockCountSet,
+    .sdhostSetBlockSize = (DRV_SDMMC_PLIB_SET_BLOCK_SIZE)SDMMC1_BlockSizeSet,
+    .sdhostSetBusWidth = (DRV_SDMMC_PLIB_SET_BUS_WIDTH)SDMMC1_BusWidthSet,
+    .sdhostSetSpeedMode = (DRV_SDMMC_PLIB_SET_SPEED_MODE)SDMMC1_SpeedModeSet,
+    .sdhostSetupDma = (DRV_SDMMC_PLIB_SETUP_DMA)SDMMC1_DmaSetup,
+    .sdhostGetCommandError = (DRV_SDMMC_PLIB_GET_COMMAND_ERROR)SDMMC1_CommandErrorGet,
+    .sdhostGetDataError = (DRV_SDMMC_PLIB_GET_DATA_ERROR)SDMMC1_DataErrorGet,
+    .sdhostClockEnable = (DRV_SDMMC_PLIB_CLOCK_ENABLE)SDMMC1_ClockEnable,
+    .sdhostResetError = (DRV_SDMMC_PLIB_RESET_ERROR)SDMMC1_ErrorReset,
+    .sdhostIsCardAttached = (DRV_SDMMC_PLIB_IS_CARD_ATTACHED)SDMMC1_IsCardAttached,
+    .sdhostIsWriteProtected = (DRV_SDMMC_PLIB_IS_WRITE_PROTECTED)NULL,
+};
+
+/*** SDMMC Driver Initialization Data ***/
+static const DRV_SDMMC_INIT drvSDMMC0InitData =
+{
+    .sdmmcPlib                      = &drvSDMMC0PlibAPI,
+    .bufferObjPool                  = (uintptr_t)&drvSDMMC0BufferObjPool[0],
+    .bufferObjPoolSize              = DRV_SDMMC_IDX0_QUEUE_SIZE,
+    .clientObjPool                  = (uintptr_t)&drvSDMMC0ClientObjPool[0],
+    .numClients                     = DRV_SDMMC_IDX0_CLIENTS_NUMBER,
+    .protocol                       = DRV_SDMMC_IDX0_PROTOCOL_SUPPORT,
+    .cardDetectionMethod            = DRV_SDMMC_IDX0_CARD_DETECTION_METHOD,
+    .cardDetectionPollingIntervalMs = 0,
+    .isWriteProtectCheckEnabled     = false,
+    .speedMode                      = DRV_SDMMC_IDX0_CONFIG_SPEED_MODE,
+    .busWidth                       = DRV_SDMMC_IDX0_CONFIG_BUS_WIDTH,
+	.sleepWhenIdle 					= false,
+    .isFsEnabled                    = true,
+};
+// </editor-fold>
 
 
 
@@ -351,7 +349,8 @@ const TCPIP_STACK_MODULE_CONFIG TCPIP_STACK_MODULE_CONFIG_TBL [] =
     {TCPIP_MODULE_SNTP,             &tcpipSNTPInitData},            // TCPIP_MODULE_SNTP
 
     {TCPIP_MODULE_HTTP_NET_SERVER,  &tcpipHTTPNetInitData},         // TCPIP_MODULE_HTTP_NET_SERVER
-    {TCPIP_MODULE_SMTPC, &tcpipSMTPCInitData},                                  // TCPIP_MODULE_SMTPC,
+    {TCPIP_MODULE_SMTPC,            &tcpipSMTPCInitData},           // TCPIP_MODULE_SMTPC,
+    {TCPIP_MODULE_COMMAND,          0},                             // TCPIP_MODULE_COMMAND,
     { TCPIP_MODULE_MANAGER,         &tcpipHeapConfig },             // TCPIP_MODULE_MANAGER
 
 // MAC modules
@@ -601,52 +600,52 @@ const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] =
     {NULL}
 };
 
-
-static const SYS_FS_FUNCTIONS MPFSFunctions =
+static const SYS_FS_FUNCTIONS FatFsFunctions =
 {
-    .mount             = MPFS_Mount,
-    .unmount           = MPFS_Unmount,
-    .open              = MPFS_Open,
-    .read_t            = MPFS_Read,
-    .close             = MPFS_Close,
-    .seek              = MPFS_Seek,
-    .fstat             = MPFS_Stat,
-    .tell              = MPFS_GetPosition,
-    .eof               = MPFS_EOF,
-    .size              = MPFS_GetSize,
-    .openDir           = MPFS_DirOpen,
-    .readDir           = MPFS_DirRead,
-    .closeDir          = MPFS_DirClose,
-    .getlabel          = NULL,
-    .currWD            = NULL,
-    .getstrn           = NULL,
-    .write_t           = NULL,
-    .mkdir             = NULL,
-    .chdir             = NULL,
-    .remove_t          = NULL,
-    .setlabel          = NULL,
-    .truncate          = NULL,
-    .chdrive           = NULL,
-    .chmode            = NULL,
-    .chtime            = NULL,
-    .rename_t           = NULL,
-    .sync              = NULL,
-    .putchr            = NULL,
-    .putstrn           = NULL,
-    .formattedprint    = NULL,
-    .testerror         = NULL,
-    .formatDisk        = NULL,
-    .partitionDisk     = NULL,
-    .getCluster        = NULL
+    .mount             = FATFS_mount,
+    .unmount           = FATFS_unmount,
+    .open              = FATFS_open,
+    .read_t              = FATFS_read,
+    .close             = FATFS_close,
+    .seek              = FATFS_lseek,
+    .fstat             = FATFS_stat,
+    .getlabel          = FATFS_getlabel,
+    .currWD            = FATFS_getcwd,
+    .getstrn           = FATFS_gets,
+    .openDir           = FATFS_opendir,
+    .readDir           = FATFS_readdir,
+    .closeDir          = FATFS_closedir,
+    .chdir             = FATFS_chdir,
+    .chdrive           = FATFS_chdrive,
+    .write_t             = FATFS_write,
+    .tell              = FATFS_tell,
+    .eof               = FATFS_eof,
+    .size              = FATFS_size,
+    .mkdir             = FATFS_mkdir,
+    .remove_t            = FATFS_unlink,
+    .setlabel          = FATFS_setlabel,
+    .truncate          = FATFS_truncate,
+    .chmode            = FATFS_chmod,
+    .chtime            = FATFS_utime,
+    .rename_t            = FATFS_rename,
+    .sync              = FATFS_sync,
+    .putchr            = FATFS_putc,
+    .putstrn           = FATFS_puts,
+    .formattedprint    = FATFS_printf,
+    .testerror         = FATFS_error,
+    .formatDisk        = (FORMAT_DISK)FATFS_mkfs,
+    .partitionDisk     = FATFS_fdisk,
+    .getCluster        = FATFS_getclusters
 };
+
 
 
 
 static const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
 {
     {
-        .nativeFileSystemType = MPFS2,
-        .nativeFileSystemFunctions = &MPFSFunctions
+        .nativeFileSystemType = FAT,
+        .nativeFileSystemFunctions = &FatFsFunctions
     }
 };
 // </editor-fold>
@@ -793,11 +792,13 @@ void SYS_Initialize ( void* data )
 
     Matrix_Initialize();
 
+    PLIB_L2CC_Initialize();
+
     AIC_INT_Initialize();
     
 	WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk; 		// Disable WDT 
 
-    QSPI0_Initialize();
+	SDMMC1_Initialize();
 
 
 
@@ -807,13 +808,10 @@ void SYS_Initialize ( void* data )
     /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 
 
-    sysObj.drvMemory0 = DRV_MEMORY_Initialize((SYS_MODULE_INDEX)DRV_MEMORY_INDEX_0, (SYS_MODULE_INIT *)&drvMemory0InitData);
-
-    sysObj.drvMX25L = DRV_MX25L_Initialize((SYS_MODULE_INDEX)DRV_MX25L_INDEX, (SYS_MODULE_INIT *)&drvMX25LInitData);
-
-
    /* Initialize the MIIM Driver Instance 0*/
    sysObj.drvMiim_0 = DRV_MIIM_OBJECT_BASE_Default.DRV_MIIM_Initialize(DRV_MIIM_DRIVER_INDEX_0, (const SYS_MODULE_INIT *) &drvMiimInitData_0); 
+
+   sysObj.drvSDMMC0 = DRV_SDMMC_Initialize(DRV_SDMMC_INDEX_0,(SYS_MODULE_INIT *)&drvSDMMC0InitData);
 
 
     /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  

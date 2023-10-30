@@ -96,11 +96,11 @@ extern "C" {
 
 #define SYS_CMD_ENABLE
 #define SYS_CMD_DEVICE_MAX_INSTANCES       SYS_CONSOLE_DEVICE_MAX_INSTANCES
-#define SYS_CMD_PRINT_BUFFER_SIZE          2560U
+#define SYS_CMD_PRINT_BUFFER_SIZE          2250U
 #define SYS_CMD_BUFFER_DMA_READY
 
 /* Command System Service RTOS Configurations*/
-#define SYS_CMD_RTOS_STACK_SIZE                256
+#define SYS_CMD_RTOS_STACK_SIZE                2048
 #define SYS_CMD_RTOS_TASK_PRIORITY             1
 
 
@@ -129,6 +129,11 @@ extern "C" {
 #define SYS_FS_STACK_SIZE                 1024
 #define SYS_FS_PRIORITY                   1
 
+#define SYS_FS_FAT_VERSION                "v0.15"
+#define SYS_FS_FAT_READONLY               false
+#define SYS_FS_FAT_CODE_PAGE              437
+#define SYS_FS_FAT_MAX_SS                 SYS_FS_MEDIA_MAX_BLOCK_SIZE
+#define SYS_FS_FAT_ALIGNED_BUFFER_LEN     512
 
 
 
@@ -148,24 +153,8 @@ extern "C" {
 // Section: Driver Configuration
 // *****************************************************************************
 // *****************************************************************************
-/* Memory Driver Global Configuration Options */
-#define DRV_MEMORY_INSTANCES_NUMBER          (1U)
-
-/* Memory Driver Instance 0 Configuration */
-#define DRV_MEMORY_INDEX_0                   0
-#define DRV_MEMORY_CLIENTS_NUMBER_IDX0       2
-#define DRV_MEMORY_BUF_Q_SIZE_IDX0    1
-/* Memory Driver Instance 0 RTOS Configurations*/
-#define DRV_MEMORY_STACK_SIZE_IDX0               1024
-#define DRV_MEMORY_PRIORITY_IDX0                 1
-#define DRV_MEMORY_RTOS_DELAY_IDX0               10U
-
-/* MX25L Driver Instance Configuration */
-#define DRV_MX25L_INDEX                       (0U)
-#define DRV_MX25L_CLIENTS_NUMBER              (1U)
-#define DRV_MX25L_START_ADDRESS               (0x0U)
-#define DRV_MX25L_PAGE_SIZE                   (256U)
-#define DRV_MX25L_ERASE_BUFFER_SIZE           (4096U)
+/* SDMMC Driver Global Configuration Options */
+#define DRV_SDMMC_INSTANCES_NUMBER                       (1U)
 
 /*** MIIM Driver Configuration ***/
 #define DRV_MIIM_ETH_MODULE_ID_0                GMAC_BASE_ADDRESS
@@ -180,6 +169,22 @@ extern "C" {
 /* MIIM RTOS Configurations*/
 #define DRV_MIIM_RTOS_STACK_SIZE                1024
 #define DRV_MIIM_RTOS_TASK_PRIORITY             1
+
+
+
+/*** SDMMC Driver Instance 0 Configuration ***/
+#define DRV_SDMMC_INDEX_0                                0
+#define DRV_SDMMC_IDX0_CLIENTS_NUMBER                    1
+#define DRV_SDMMC_IDX0_QUEUE_SIZE                        2
+#define DRV_SDMMC_IDX0_PROTOCOL_SUPPORT                  DRV_SDMMC_PROTOCOL_SD
+#define DRV_SDMMC_IDX0_CONFIG_SPEED_MODE                 DRV_SDMMC_SPEED_MODE_DEFAULT
+#define DRV_SDMMC_IDX0_CONFIG_BUS_WIDTH                  DRV_SDMMC_BUS_WIDTH_4_BIT
+#define DRV_SDMMC_IDX0_CARD_DETECTION_METHOD             DRV_SDMMC_CD_METHOD_USE_SDCD
+
+/* SDMMC Driver Instance 0 RTOS Configurations*/
+#define DRV_SDMMC_STACK_SIZE_IDX0                         1024
+#define DRV_SDMMC_PRIORITY_IDX0                           1
+#define DRV_SDMMC_RTOS_DELAY_IDX0                         10U
 
 
 
@@ -286,6 +291,10 @@ extern "C" {
 #define WOLFSSL_USER_IO
 #define NO_WRITEV
 #define MICROCHIP_TCPIP
+#include "osal/osal.h"
+#define XMALLOC_OVERRIDE
+#define XMALLOC(s, h, type)  OSAL_Malloc((s))
+#define XFREE(p, h, type)    OSAL_Free((p))
 #define WOLFSSL_DTLS
 #define NO_PWDBASED
 #define NO_ERROR_STRINGS
@@ -419,6 +428,10 @@ extern "C" {
 #define TCPIP_IPV6_EXTERN_PACKET_PROCESS   false
 
 
+#define TCPIP_IPV6_G3_PLC_SUPPORT                       false
+
+
+
 /*** IPv4 Configuration ***/
 #define TCPIP_IPV4_ARP_SLOTS                        10
 #define TCPIP_IPV4_EXTERN_PACKET_PROCESS   false
@@ -453,7 +466,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       102400
+#define TCPIP_STACK_DRAM_SIZE                       152250
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -637,6 +650,7 @@ extern "C" {
 #define WOLFSSL_AES_SMALL_TABLES
 #define NO_MD4
 #define WOLFSSL_SHA224
+#define NO_DES3
 #define WOLFSSL_AES_128
 #define WOLFSSL_AES_192
 #define WOLFSSL_AES_256
@@ -656,6 +670,7 @@ extern "C" {
 #define NO_DSA
 #define FP_MAX_BITS 4096
 #define USE_CERT_BUFFERS_2048
+#define WC_RSA_PSS
 #define NO_DEV_RANDOM
 #define HAVE_HASHDRBG
 #define WC_NO_HARDEN
@@ -670,7 +685,7 @@ extern "C" {
 #define NET_PRES_NUM_SOCKETS 10
 
 /* Net Pres RTOS Configurations*/
-#define NET_PRES_RTOS_STACK_SIZE                10024
+#define NET_PRES_RTOS_STACK_SIZE                12288
 #define NET_PRES_RTOS_TASK_PRIORITY             1
 	
 #define FREERTOS

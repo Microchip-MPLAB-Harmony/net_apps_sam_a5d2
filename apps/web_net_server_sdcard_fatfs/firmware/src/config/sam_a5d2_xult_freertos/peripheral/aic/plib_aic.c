@@ -70,6 +70,7 @@ static struct
     { 3U,  FreeRTOS_Tick_Handler,      AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
     { 5U,  GMAC_InterruptHandler,      AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
     { 25U, UART1_InterruptHandler,     AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
+    { 32U, SDMMC1_InterruptHandler,    AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
     { 35U, TC0_InterruptHandler,       AIC_SMR_SRCTYPE_INT_LEVEL_SENSITIVE_Val,  0x0U },
 };
 

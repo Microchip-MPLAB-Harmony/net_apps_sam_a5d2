@@ -50,7 +50,6 @@
 #include <stdbool.h>
 #include "crypto/crypto.h"
 #include "peripheral/pit/plib_pit.h"
-#include "driver/memory/drv_memory.h"
 #include "peripheral/tc/plib_tc0.h"
 #include "system/time/sys_time.h"
 #include "bsp/bsp.h"
@@ -65,23 +64,27 @@
 #include "system/sys_time_h2_adapter.h"
 #include "system/sys_random_h2_adapter.h"
 #include "driver/gmac/drv_gmac.h"
-#include "driver/mx25l/drv_mx25l.h"
 #include "system/command/sys_command.h"
+#include "driver/sdmmc/drv_sdmmc.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/matrix/plib_matrix.h"
+#include "peripheral/l2cc/plib_l2cc.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/aic/plib_aic.h"
 #include "driver/miim/drv_miim.h"
 #include "wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h"
-#include "peripheral/qspi/plib_qspi0.h"
 #include "net_pres/pres/net_pres.h"
 #include "net_pres/pres/net_pres_encryptionproviderapi.h"
 #include "net_pres/pres/net_pres_transportapi.h"
 #include "net_pres/pres/net_pres_socketapi.h"
 #include "system/fs/sys_fs.h"
 #include "system/fs/sys_fs_media_manager.h"
-#include "system/fs/mpfs/mpfs.h"
+#include "system/fs/sys_fs_fat_interface.h"
+#include "system/fs/fat_fs/file_system/ff.h"
+#include "system/fs/fat_fs/file_system/ffconf.h"
+#include "system/fs/fat_fs/hardware_access/diskio.h"
+#include "peripheral/sdmmc/plib_sdmmc1.h"
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
 #include "FreeRTOS.h"
@@ -218,17 +221,18 @@ Remarks:
 typedef struct
 {
     SYS_MODULE_OBJ  sysTime;
-    SYS_MODULE_OBJ  drvMemory0;
     SYS_MODULE_OBJ  sysConsole0;
 
 
     SYS_MODULE_OBJ  tcpip;
-    SYS_MODULE_OBJ  drvMX25L;
    SYS_MODULE_OBJ  drvMiim_0;
 
     SYS_MODULE_OBJ  sysDebug;
 
     SYS_MODULE_OBJ  netPres;
+
+    SYS_MODULE_OBJ  drvSDMMC0;
+
 
 
 } SYSTEM_OBJECTS;
