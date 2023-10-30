@@ -4,7 +4,7 @@
 
 
 project: web_net_server_qspi_mpfs
-creation_date: 2023-10-10T16:47:48.043+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2023-10-17T17:37:59.164+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.3.7
@@ -20,7 +20,7 @@ modules:
     - {name: "dev_packs", version: "v3.18.0"}
     - {name: "littlefs", version: "v2.6.1"}
     - {name: "wolfssl", version: "v5.4.0"}
-    - {name: "net", version: "v3.10.1-15-g8cab035"}
+    - {name: "net", version: "v3.10.1-20-g857fdb7"}
     - {name: "bsp", version: "v3.17.0"}
     - {name: "crypto", version: "v3.8.0"}
     - {name: "CMSIS-FreeRTOS", version: "v10.5.1"}
