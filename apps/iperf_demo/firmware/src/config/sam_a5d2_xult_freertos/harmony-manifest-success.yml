@@ -4,7 +4,7 @@
 
 
 project: iperf_demo
-creation_date: 2023-10-26T16:32:06.272+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2023-10-26T16:49:56.758+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.3.7
@@ -21,4 +21,5 @@ modules:
     - {name: "net", version: "v3.10.1-21-g26148c4"}
     - {name: "bsp", version: "v3.17.0"}
     - {name: "crypto", version: "v3.8.0"}
+    - {name: "CMSIS-FreeRTOS", version: "v10.5.1"}
 
