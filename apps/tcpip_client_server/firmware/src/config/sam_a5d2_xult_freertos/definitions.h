@@ -59,6 +59,7 @@
 #include "system/sys_random_h2_adapter.h"
 #include "system/int/sys_int.h"
 #include "system/ports/sys_ports.h"
+#include "system/reset/sys_reset.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
 #include "driver/gmac/drv_gmac.h"
@@ -80,6 +81,10 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "app.h"
+#include "app1.h"
+#include "app2.h"
+#include "app3.h"
+#include "app4.h"
 
 
 

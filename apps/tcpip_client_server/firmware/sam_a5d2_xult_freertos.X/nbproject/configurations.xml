@@ -45,8 +45,8 @@
               </logicalFolder>
               <itemPath>../src/config/sam_a5d2_xult_freertos/driver/miim/drv_miim.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/sam_a5d2_xult_freertos/driver/driver_common.h</itemPath>
             <itemPath>../src/config/sam_a5d2_xult_freertos/driver/driver.h</itemPath>
+            <itemPath>../src/config/sam_a5d2_xult_freertos/driver/driver_common.h</itemPath>
           </logicalFolder>
           <logicalFolder name="library" displayName="library" projectFiles="true">
             <logicalFolder name="tcpip" displayName="tcpip" projectFiles="true">
@@ -193,9 +193,9 @@
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="osal" displayName="osal" projectFiles="true">
-            <itemPath>../src/config/sam_a5d2_xult_freertos/osal/osal_freertos.h</itemPath>
-            <itemPath>../src/config/sam_a5d2_xult_freertos/osal/osal.h</itemPath>
             <itemPath>../src/config/sam_a5d2_xult_freertos/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/sam_a5d2_xult_freertos/osal/osal.h</itemPath>
+            <itemPath>../src/config/sam_a5d2_xult_freertos/osal/osal_freertos.h</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="aic" displayName="aic" projectFiles="true">
@@ -239,8 +239,8 @@
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/console/src/sys_console_uart_definitions.h</itemPath>
             </logicalFolder>
             <logicalFolder name="debug" displayName="debug" projectFiles="true">
-              <itemPath>../src/config/sam_a5d2_xult_freertos/system/debug/sys_debug.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/debug/src/sys_debug_local.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/system/debug/sys_debug.h</itemPath>
             </logicalFolder>
             <logicalFolder name="int" displayName="int" projectFiles="true">
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/int/sys_int_mapping.h</itemPath>
@@ -258,15 +258,13 @@
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/time/sys_time.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/time/sys_time_definitions.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/sam_a5d2_xult_freertos/system/system_module.h</itemPath>
-            <itemPath>../src/config/sam_a5d2_xult_freertos/system/system_common.h</itemPath>
             <itemPath>../src/config/sam_a5d2_xult_freertos/system/sys_time_h2_adapter.h</itemPath>
-            <itemPath>../src/config/sam_a5d2_xult_freertos/system/system.h</itemPath>
             <itemPath>../src/config/sam_a5d2_xult_freertos/system/sys_random_h2_adapter.h</itemPath>
+            <itemPath>../src/config/sam_a5d2_xult_freertos/system/system.h</itemPath>
+            <itemPath>../src/config/sam_a5d2_xult_freertos/system/system_common.h</itemPath>
+            <itemPath>../src/config/sam_a5d2_xult_freertos/system/system_module.h</itemPath>
           </logicalFolder>
           <itemPath>../src/config/sam_a5d2_xult_freertos/device.h</itemPath>
-          <itemPath>../src/config/sam_a5d2_xult_freertos/configuration.h</itemPath>
-          <itemPath>../src/config/sam_a5d2_xult_freertos/user.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/device_cache.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/system_config.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/definitions.h</itemPath>
@@ -275,7 +273,9 @@
           <itemPath>../src/config/sam_a5d2_xult_freertos/system_definitions.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/config.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/toolchain_specifics.h</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/user.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/sys_tasks.h</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/configuration.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
@@ -297,22 +297,6 @@
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/list.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/task.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/portable.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/list.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/semphr.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/deprecated_definitions.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/task.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/event_groups.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/mpu_wrappers.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/FreeRTOS.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/projdefs.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/stack_macros.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/mpu_prototypes.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/stream_buffer.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/croutine.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/queue.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/message_buffer.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/timers.h</itemPath>
           </logicalFolder>
           <logicalFolder name="portable" displayName="portable" projectFiles="true">
             <logicalFolder name="XC32" displayName="XC32" projectFiles="true">
@@ -429,7 +413,6 @@
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/mcan1.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom3.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/l2cc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/smc.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/i2sc1.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pit.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tc1.h</itemPath>
@@ -446,6 +429,7 @@
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/twihs0.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tc0.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/secumod.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/hsmc.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMA5D27_DFP/pio/sama5d27.h</itemPath>
@@ -464,6 +448,11 @@
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="system" displayName="system" projectFiles="true">
+        <logicalFolder name="tmr" displayName="tmr" projectFiles="true">
+          <itemPath>../src/config/sam_a5d2_xult_freertos/system/tmr/sys_tmr.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="wolfcrypt" displayName="wolfcrypt" projectFiles="true">
@@ -567,15 +556,12 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/wc_encrypt.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/memory.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/ripemd.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/idea.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/visibility.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/cmac.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/blake2-impl.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/arc4.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/rabbit.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sha512.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/asn_public.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/hc128.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/ecc.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/pkcs11.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/signature.h</itemPath>
@@ -602,7 +588,16 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/camellia.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/rsa.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/wc_pkcs11.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/siphash.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sakke.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/eccsi.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/kdf.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/falcon.h</itemPath>
       </logicalFolder>
+      <itemPath>../src/app1.h</itemPath>
+      <itemPath>../src/app2.h</itemPath>
+      <itemPath>../src/app3.h</itemPath>
+      <itemPath>../src/app4.h</itemPath>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -756,9 +751,9 @@
           <itemPath>../src/config/sam_a5d2_xult_freertos/cstartup.S</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/interrupts.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/initialization.c</itemPath>
-          <itemPath>../src/config/sam_a5d2_xult_freertos/tasks.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/freertos_hooks.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/fault_handlers.c</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/tasks.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
@@ -828,7 +823,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/chacha.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sp_arm64.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/integer.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/idea.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/cmac.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/wc_port.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/des3.c</itemPath>
@@ -838,7 +832,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/wolfmath.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/rc2.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/dh.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/hc128.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/blake2s.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/fe_low_mem.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/pwdbased.c</itemPath>
@@ -850,7 +843,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/ripemd.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/wolfevent.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/tfm.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/rabbit.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/dsa.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/ed448.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/misc.c</itemPath>
@@ -882,16 +874,26 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/curve25519.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/hash.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/logging.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/eccsi.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/kdf.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/siphash.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/falcon.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sakke.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
-      <itemPath>../src/app.c</itemPath>
       <itemPath>../src/config/sam_a5d2_xult_freertos/pin_configurations.csv</itemPath>
+      <itemPath>../src/app1.c</itemPath>
+      <itemPath>../src/app2.c</itemPath>
+      <itemPath>../src/app3.c</itemPath>
+      <itemPath>../src/app4.c</itemPath>
+      <itemPath>../src/app.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>tcpip_client_server.mc3</itemPath>
+      <itemPath>../src/config/sam_a5d2_xult_freertos/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -907,7 +909,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>jlink</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.10</languageToolchainVersion>
+        <languageToolchainVersion>4.35</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -919,7 +921,7 @@
         <ScriptingSetting key="boot.use" value="true"/>
         <ScriptingSetting key="boot.entry_adr" value=""/>
         <ScriptingSetting key="boot.path"
-                          value="${ProjectDir}\..\..\..\binaries\at91bootstrap.elf"/>
+                          value="${ProjectDir}\..\..\..\..\deps\at91bootstrap_sam_a5d2_binaries\at91bootstrap.elf"/>
         <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
