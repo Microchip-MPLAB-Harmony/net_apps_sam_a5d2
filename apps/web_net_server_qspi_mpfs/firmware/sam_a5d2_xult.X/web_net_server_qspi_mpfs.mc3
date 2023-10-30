@@ -18501,7 +18501,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipStack&gt;
   &lt;tcpipStack dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_DRAM_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;102400&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;182400&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tcpipStack&gt;
 &lt;/tcpipStack&gt;
@@ -20462,7 +20462,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\configuration.h</file>
-         <hash>69c5ac9b3acfba4924a19d19b09914a2909d3cde7e41906b63b966d59d70c58e</hash>
+         <hash>8a44935ff6f78ebaa7f06f6ec66ec98996eb49d648dc54818d6b9336ebd4eebd</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\pic32mz-crypt.h</file>
@@ -21230,7 +21230,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\driver\gmac\src\dynamic\drv_gmac_lib_samA5D2.c</file>
-         <hash>066c893cad21915fabfe96f61331ba1dbb76e48058c0518d1d58a25b4cb6f364</hash>
+         <hash>a2278b8bf2e2f14bf7634bacc0cb3e1d0f0c596c097a19da22fefa42f46ed301</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\library\tcpip\dns.h</file>
@@ -21642,7 +21642,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\driver\gmac\src\dynamic\drv_gmac.c</file>
-         <hash>9dbd872b88897925d44d01c6248d3b3d541f11d18dcb36e53c3d6d17d8e27ee7</hash>
+         <hash>ec76666fa8119d45514373a33a553e0fa95e855087bf5e82748b4d7e55a4f58d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\component\mcan.h</file>
@@ -22006,7 +22006,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\library\tcpip\src\berkeley_manager.h</file>
-         <hash>19254a00f9a2c37a0f1199ce4053502487426784a97b7902832d734cff7106d8</hash>
+         <hash>523b55a8af2a7783868f95c9529ad55d260daad19a2f59214c63654fa85b0ee5</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_armthumb.c</file>
