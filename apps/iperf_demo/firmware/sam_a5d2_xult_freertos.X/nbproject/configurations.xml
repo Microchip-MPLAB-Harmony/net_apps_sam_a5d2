@@ -45,6 +45,8 @@
               </logicalFolder>
               <itemPath>../src/config/sam_a5d2_xult_freertos/driver/miim/drv_miim.h</itemPath>
             </logicalFolder>
+            <itemPath>../src/config/sam_a5d2_xult_freertos/driver/driver.h</itemPath>
+            <itemPath>../src/config/sam_a5d2_xult_freertos/driver/driver_common.h</itemPath>
           </logicalFolder>
           <logicalFolder name="library" displayName="library" projectFiles="true">
             <logicalFolder name="tcpip" displayName="tcpip" projectFiles="true">
@@ -273,6 +275,7 @@
           <itemPath>../src/config/sam_a5d2_xult_freertos/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/user.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/configuration.h</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
@@ -294,22 +297,6 @@
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/list.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/task.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/message_buffer.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/timers.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/semphr.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/stack_macros.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/croutine.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/deprecated_definitions.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/FreeRTOS.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/portable.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/event_groups.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/queue.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/mpu_wrappers.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/task.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/list.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/projdefs.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/mpu_prototypes.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/Include/stream_buffer.h</itemPath>
           </logicalFolder>
           <logicalFolder name="portable" displayName="portable" projectFiles="true">
             <logicalFolder name="XC32" displayName="XC32" projectFiles="true">
@@ -426,7 +413,6 @@
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/mcan1.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom3.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/l2cc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/smc.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/i2sc1.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pit.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tc1.h</itemPath>
@@ -443,6 +429,7 @@
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/twihs0.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tc0.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/secumod.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/hsmc.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMA5D27_DFP/pio/sama5d27.h</itemPath>
@@ -461,6 +448,11 @@
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="system" displayName="system" projectFiles="true">
+        <logicalFolder name="tmr" displayName="tmr" projectFiles="true">
+          <itemPath>../src/config/sam_a5d2_xult_freertos/system/tmr/sys_tmr.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="wolfcrypt" displayName="wolfcrypt" projectFiles="true">
@@ -564,15 +556,12 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/wc_encrypt.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/memory.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/ripemd.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/idea.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/visibility.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/cmac.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/blake2-impl.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/arc4.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/rabbit.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sha512.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/asn_public.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/hc128.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/ecc.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/pkcs11.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/signature.h</itemPath>
@@ -599,6 +588,11 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/camellia.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/rsa.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/wc_pkcs11.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/falcon.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/eccsi.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/siphash.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/kdf.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sakke.h</itemPath>
       </logicalFolder>
       <itemPath>../src/app_commands.h</itemPath>
       <itemPath>../src/app.h</itemPath>
@@ -827,7 +821,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/chacha.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sp_arm64.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/integer.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/idea.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/cmac.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/wc_port.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/des3.c</itemPath>
@@ -837,7 +830,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/wolfmath.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/rc2.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/dh.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/hc128.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/blake2s.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/fe_low_mem.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/pwdbased.c</itemPath>
@@ -849,7 +841,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/ripemd.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/wolfevent.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/tfm.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/rabbit.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/dsa.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/ed448.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/misc.c</itemPath>
@@ -881,6 +872,11 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/curve25519.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/hash.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/logging.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sakke.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/kdf.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/falcon.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/eccsi.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/siphash.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/config/sam_a5d2_xult_freertos/pin_configurations.csv</itemPath>
@@ -891,6 +887,7 @@
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>iperf_demo.mc3</itemPath>
+      <itemPath>../src/config/sam_a5d2_xult_freertos/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -906,7 +903,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>jlink</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.10</languageToolchainVersion>
+        <languageToolchainVersion>4.35</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -918,7 +915,7 @@
         <ScriptingSetting key="boot.use" value="true"/>
         <ScriptingSetting key="boot.entry_adr" value=""/>
         <ScriptingSetting key="boot.path"
-                          value="${ProjectDir}\..\..\..\binaries\at91bootstrap.elf"/>
+                          value="${ProjectDir}\..\..\..\..\deps\at91bootstrap_sam_a5d2_binaries\at91bootstrap.elf"/>
         <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
@@ -946,6 +943,149 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
+      <item path="../src/third_party/wolfssl/wolfssl/wolfcrypt/src/tfm.c"
+            ex="false"
+            overriding="true">
+        <C32>
+          <property key="additional-warnings" value="true"/>
+          <property key="addresss-attribute-use" value="false"/>
+          <property key="enable-app-io" value="false"/>
+          <property key="enable-omit-frame-pointer" value="false"/>
+          <property key="enable-symbols" value="true"/>
+          <property key="enable-unroll-loops" value="false"/>
+          <property key="exclude-floating-point" value="false"/>
+          <property key="extra-include-directories"
+                    value="../src;../src/config/sam_a5d2_xult_freertos;../src/config/sam_a5d2_xult_freertos/library;../src/config/sam_a5d2_xult_freertos/library/tcpip/src;../src/config/sam_a5d2_xult_freertos/library/tcpip/src/common;../src/packs/ATSAMA5D27_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl"/>
+          <property key="generate-16-bit-code" value="false"/>
+          <property key="generate-micro-compressed-code" value="false"/>
+          <property key="isolate-each-function" value="true"/>
+          <property key="make-warnings-into-errors" value="true"/>
+          <property key="optimization-level" value="-O1"/>
+          <property key="place-data-into-section" value="true"/>
+          <property key="post-instruction-scheduling" value="default"/>
+          <property key="pre-instruction-scheduling" value="default"/>
+          <property key="preprocessor-macros"
+                    value="HAVE_CONFIG_H;WOLFSSL_IGNORE_FILE_WARN"/>
+          <property key="strict-ansi" value="false"/>
+          <property key="support-ansi" value="false"/>
+          <property key="tentative-definitions" value="-fno-common"/>
+          <property key="toplevel-reordering" value=""/>
+          <property key="unaligned-access" value=""/>
+          <property key="use-cci" value="false"/>
+          <property key="use-iar" value="false"/>
+          <property key="use-indirect-calls" value="false"/>
+        </C32>
+        <C32-AR>
+          <property key="additional-options-chop-files" value="false"/>
+        </C32-AR>
+        <C32-AS>
+          <property key="assembler-symbols" value=""/>
+          <property key="enable-symbols" value="true"/>
+          <property key="exclude-floating-point-library" value="false"/>
+          <property key="expand-macros" value="false"/>
+          <property key="extra-include-directories-for-assembler" value=""/>
+          <property key="extra-include-directories-for-preprocessor" value=""/>
+          <property key="false-conditionals" value="false"/>
+          <property key="generate-16-bit-code" value="false"/>
+          <property key="generate-micro-compressed-code" value="false"/>
+          <property key="keep-locals" value="false"/>
+          <property key="list-assembly" value="false"/>
+          <property key="list-source" value="false"/>
+          <property key="list-symbols" value="false"/>
+          <property key="oXC32asm-list-to-file" value="false"/>
+          <property key="omit-debug-dirs" value="false"/>
+          <property key="omit-forms" value="false"/>
+          <property key="preprocessor-macros" value=""/>
+          <property key="warning-level" value=""/>
+        </C32-AS>
+        <C32-CO>
+          <property key="coverage-enable" value=""/>
+          <property key="stack-guidance" value="false"/>
+        </C32-CO>
+        <C32-LD>
+          <property key="additional-options-use-response-files" value="false"/>
+          <property key="additional-options-write-sla" value="false"/>
+          <property key="allocate-dinit" value="false"/>
+          <property key="code-dinit" value="false"/>
+          <property key="ebase-addr" value=""/>
+          <property key="enable-check-sections" value="false"/>
+          <property key="exclude-floating-point-library" value="false"/>
+          <property key="exclude-standard-libraries" value="false"/>
+          <property key="extra-lib-directories" value=""/>
+          <property key="fill-flash-options-addr" value=""/>
+          <property key="fill-flash-options-const" value=""/>
+          <property key="fill-flash-options-how" value="0"/>
+          <property key="fill-flash-options-inc-const" value="1"/>
+          <property key="fill-flash-options-increment" value=""/>
+          <property key="fill-flash-options-seq" value=""/>
+          <property key="fill-flash-options-what" value="0"/>
+          <property key="generate-16-bit-code" value="false"/>
+          <property key="generate-cross-reference-file" value="false"/>
+          <property key="generate-micro-compressed-code" value="false"/>
+          <property key="heap-size" value="1024000"/>
+          <property key="input-libraries" value=""/>
+          <property key="kseg-length" value=""/>
+          <property key="kseg-origin" value=""/>
+          <property key="linker-symbols" value=""/>
+          <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
+          <property key="no-device-startup-code" value="true"/>
+          <property key="no-startup-files" value="false"/>
+          <property key="oXC32ld-extra-opts" value=""/>
+          <property key="optimization-level" value=""/>
+          <property key="preprocessor-macros" value=""/>
+          <property key="remove-unused-sections" value="true"/>
+          <property key="report-memory-usage" value="false"/>
+          <property key="serial-length" value=""/>
+          <property key="serial-origin" value=""/>
+          <property key="stack-size" value=""/>
+          <property key="symbol-stripping" value=""/>
+          <property key="trace-symbols" value=""/>
+          <property key="warn-section-align" value="false"/>
+        </C32-LD>
+        <C32CPP>
+          <property key="additional-warnings" value="false"/>
+          <property key="addresss-attribute-use" value="false"/>
+          <property key="check-new" value="false"/>
+          <property key="eh-specs" value="true"/>
+          <property key="enable-app-io" value="false"/>
+          <property key="enable-omit-frame-pointer" value="false"/>
+          <property key="enable-symbols" value="true"/>
+          <property key="enable-unroll-loops" value="false"/>
+          <property key="exceptions" value="true"/>
+          <property key="exclude-floating-point" value="false"/>
+          <property key="extra-include-directories"
+                    value="../src;../src/config/sam_a5d2_xult_freertos;../src/packs/ATSAMA5D27_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5"/>
+          <property key="generate-16-bit-code" value="false"/>
+          <property key="generate-micro-compressed-code" value="false"/>
+          <property key="isolate-each-function" value="true"/>
+          <property key="make-warnings-into-errors" value="false"/>
+          <property key="optimization-level" value="-O1"/>
+          <property key="place-data-into-section" value="false"/>
+          <property key="post-instruction-scheduling" value="default"/>
+          <property key="pre-instruction-scheduling" value="default"/>
+          <property key="preprocessor-macros" value=""/>
+          <property key="rtti" value="true"/>
+          <property key="strict-ansi" value="false"/>
+          <property key="toplevel-reordering" value=""/>
+          <property key="unaligned-access" value=""/>
+          <property key="use-cci" value="false"/>
+          <property key="use-iar" value="false"/>
+          <property key="use-indirect-calls" value="false"/>
+        </C32CPP>
+        <C32Global>
+          <property key="common-include-directories" value=""/>
+          <property key="gp-relative-option" value=""/>
+          <property key="legacy-libc" value="false"/>
+          <property key="mdtcm" value=""/>
+          <property key="mitcm" value=""/>
+          <property key="mstacktcm" value="false"/>
+          <property key="omit-pack-options" value="1"/>
+          <property key="relaxed-math" value="false"/>
+          <property key="save-temps" value="false"/>
+          <property key="stack-smashing" value=""/>
+          <property key="wpo-lto" value="false"/>
+        </C32Global>
+      </item>
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
@@ -961,7 +1101,7 @@
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
         <property key="make-warnings-into-errors" value="true"/>
-        <property key="optimization-level" value="-O1"/>
+        <property key="optimization-level" value="-O3"/>
         <property key="place-data-into-section" value="true"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
