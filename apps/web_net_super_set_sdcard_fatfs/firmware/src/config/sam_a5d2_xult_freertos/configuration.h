@@ -327,6 +327,10 @@ extern "C" {
 #define TCPIP_IPV6_EXTERN_PACKET_PROCESS   false
 
 
+#define TCPIP_IPV6_G3_PLC_SUPPORT                       false
+
+
+
 /*** telnet Configuration ***/
 #define TCPIP_STACK_USE_TELNET_SERVER
 #define TCPIP_TELNET_MAX_CONNECTIONS    2
