@@ -165,8 +165,11 @@ void _APP_ClientTasks()
                         SYS_CONSOLE_MESSAGE("Could not start connection\r\n");
                         appData.clientState = APP_TCPIP_WAITING_FOR_COMMAND;
                     }
-                    SYS_CONSOLE_MESSAGE("Starting connection\r\n");
-                    appData.clientState = APP_TCPIP_WAIT_FOR_CONNECTION;
+                    else
+                    {
+                        SYS_CONSOLE_MESSAGE("Starting connection\r\n");
+                        appData.clientState = APP_TCPIP_WAIT_FOR_CONNECTION;
+                    }
                     break;
                 }
                 if (result < 0)
@@ -212,8 +215,11 @@ void _APP_ClientTasks()
                         SYS_CONSOLE_MESSAGE("Could not start connection\r\n");
                         appData.clientState = APP_TCPIP_WAITING_FOR_COMMAND;
                     }
-                    SYS_CONSOLE_MESSAGE("Starting connection\r\n");
-                    appData.clientState = APP_TCPIP_WAIT_FOR_CONNECTION;
+                    else
+                    {
+                        SYS_CONSOLE_MESSAGE("Starting connection\r\n");
+                        appData.clientState = APP_TCPIP_WAIT_FOR_CONNECTION;
+                    }
                 }
                 break;
             }
@@ -248,7 +254,7 @@ void _APP_ClientTasks()
             {
                 TCPIP_TCP_ArrayGet(appData.clientSocket, (uint8_t*)buffer, sizeof(buffer) - 1);
                 SYS_CONSOLE_PRINT("%s", buffer);
-              	gDataReceived = true;
+                gDataReceived = true;
             }
             if(gDataReceived)
             {
@@ -316,8 +322,8 @@ void _APP_ServerTasks()
             uint16_t w, w2;
             uint8_t AppBuffer[160 + 1];
             // Figure out how many bytes have been received and how many we can transmit.
-            wMaxGet = TCPIP_TCP_GetIsReady(appData.serverSocket);	// Get TCP RX FIFO byte count
-            wMaxPut = TCPIP_TCP_PutIsReady(appData.serverSocket);	// Get TCP TX FIFO free space
+            wMaxGet = TCPIP_TCP_GetIsReady(appData.serverSocket);   // Get TCP RX FIFO byte count
+            wMaxPut = TCPIP_TCP_PutIsReady(appData.serverSocket);   // Get TCP TX FIFO free space
 
             // Make sure we don't take more bytes out of the RX FIFO than we can put into the TX FIFO
             if(wMaxPut < wMaxGet)
