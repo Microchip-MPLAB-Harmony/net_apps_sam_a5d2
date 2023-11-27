@@ -83,10 +83,7 @@ extern "C" {
 #define SYS_TIME_INDEX_0                            (0)
 #define SYS_TIME_MAX_TIMERS                         (5)
 #define SYS_TIME_HW_COUNTER_WIDTH                   (32)
-#define SYS_TIME_HW_COUNTER_PERIOD                  (4294967295U)
-#define SYS_TIME_HW_COUNTER_HALF_PERIOD             (SYS_TIME_HW_COUNTER_PERIOD>>1)
-#define SYS_TIME_CPU_CLOCK_FREQUENCY                (498000000)
-#define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (2200)
+#define SYS_TIME_TICK_FREQ_IN_HZ                    (1000.01204)
 
 #define SYS_CONSOLE_INDEX_0                       0
 
@@ -100,7 +97,7 @@ extern "C" {
 #define SYS_CMD_BUFFER_DMA_READY
 
 /* Command System Service RTOS Configurations*/
-#define SYS_CMD_RTOS_STACK_SIZE                2048
+#define SYS_CMD_RTOS_STACK_SIZE                2548
 #define SYS_CMD_RTOS_TASK_PRIORITY             1
 
 
@@ -297,7 +294,7 @@ extern "C" {
 #define TCPIP_IF_GMAC  
 
 #define TCPIP_NETWORK_DEFAULT_HOST_NAME_IDX0              "MCHPBOARD_C"
-#define TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0               "00:04:25:1C:A0:02"
+#define TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0               "00:04:25:1C:A2:0b"
 
 #define TCPIP_NETWORK_DEFAULT_IP_ADDRESS_IDX0         "192.168.100.11"
 #define TCPIP_NETWORK_DEFAULT_IP_MASK_IDX0            "255.255.255.0"
@@ -354,7 +351,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       382250
+#define TCPIP_STACK_DRAM_SIZE                       122250
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -557,7 +554,7 @@ extern "C" {
 #define NO_HC128
 #define NO_RABBIT
 #define HAVE_ECC
-#define HAVE_DH
+#define NO_DH
 #define NO_DSA
 #define FP_MAX_BITS 8192
 #define USE_CERT_BUFFERS_2048
@@ -576,7 +573,7 @@ extern "C" {
 #define NET_PRES_NUM_SOCKETS 10
 
 /* Net Pres RTOS Configurations*/
-#define NET_PRES_RTOS_STACK_SIZE                12288
+#define NET_PRES_RTOS_STACK_SIZE                24038
 #define NET_PRES_RTOS_TASK_PRIORITY             1
 	
 #define FREERTOS
