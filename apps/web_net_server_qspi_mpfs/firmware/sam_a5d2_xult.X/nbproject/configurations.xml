@@ -1380,7 +1380,7 @@
                   value="0x200000-0x23ffff"/>
         <property key="programoptions.preserveuserid" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
-        <property key="programoptions.resetafterprogram" value="true"/>
+        <property key="programoptions.resetafterprogram" value="false"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
         <property key="script.reset_delay" value="0"/>
@@ -1417,7 +1417,7 @@
         <property key="programoptions.preserveprogrammemory" value="false"/>
         <property key="programoptions.preserveprogramrange.ranges"
                   value="0x200000-0x23ffff"/>
-        <property key="programoptions.resetafterprogram" value="true"/>
+        <property key="programoptions.resetafterprogram" value="false"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
         <property key="script.reset_delay" value="0"/>
