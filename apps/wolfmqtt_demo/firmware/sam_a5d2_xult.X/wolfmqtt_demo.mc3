@@ -3801,7 +3801,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PRESENTATION LAYER" name="harmonyGroupAttachments"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;Attachments&gt;
   &lt;Attachments dnOrder=&quot;0&quot;&gt;
-    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;Net_Pres_Crypto_Dependency&quot; namespace=&quot;net_Pres&quot;/&gt;
+    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;Net_Pres_Crypto_Dependency&quot; namespace=&quot;net_Pres&quot; targetAttachmentID=&quot;TCP/IP STACK:net_Pres:Net_Pres_Crypto_Dependency&quot; targetComponentID=&quot;TCP/IP STACK&quot;/&gt;
   &lt;/Attachments&gt;
 &lt;/Attachments&gt;
 </value>
@@ -3818,7 +3818,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TCP/IP STACK" name="harmonyGroupAttachments"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;Attachments&gt;
   &lt;Attachments dnOrder=&quot;0&quot;&gt;
-    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;net_Pres:Net_Pres_Crypto_Dependency&quot; namespace=&quot;PRESENTATION LAYER&quot;/&gt;
+    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;net_Pres:Net_Pres_Crypto_Dependency&quot; namespace=&quot;PRESENTATION LAYER&quot; targetAttachmentID=&quot;lib_wolfssl&quot; targetComponentID=&quot;lib_wolfssl&quot;/&gt;
     &lt;Attachment dnOrder=&quot;1&quot; id=&quot;tcpipStack:Core_SysConsole_Dependency&quot; namespace=&quot;BASIC CONFIGURATION&quot; targetAttachmentID=&quot;sys_console&quot; targetComponentID=&quot;sys_console_0&quot;/&gt;
   &lt;/Attachments&gt;
 &lt;/Attachments&gt;
@@ -8525,9 +8525,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_dh"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_dh&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -8665,9 +8663,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -9091,7 +9087,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfmqtt" name="WMQTT_CSTM_APP_TEMPLATE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfmqtt&gt;
   &lt;lib_wolfmqtt dnOrder=&quot;0&quot; id=&quot;WMQTT_CSTM_APP_TEMPLATE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/lib_wolfmqtt&gt;
 &lt;/lib_wolfmqtt&gt;
 </value>
@@ -9109,7 +9107,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfmqtt" name="WMQTT_NET_GLUE_DEBUG_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfmqtt&gt;
   &lt;lib_wolfmqtt dnOrder=&quot;0&quot; id=&quot;WMQTT_NET_GLUE_DEBUG_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/lib_wolfmqtt&gt;
 &lt;/lib_wolfmqtt&gt;
 </value>
@@ -9282,6 +9282,16 @@
           &lt;/String&gt;
         &lt;/Attributes&gt;
       &lt;/DirectDependency&gt;
+      &lt;DirectCapability dnOrder=&quot;1&quot; id=&quot;lib_wolfssl&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;TCP/IP&amp;amp;#160;STACK&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;PRESENTATION&amp;amp;#160;LAYER:net_Pres:Net_Pres_Crypto_Dependency&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectCapability&gt;
     &lt;/Attachments&gt;
   &lt;/lib_wolfssl&gt;
 &lt;/lib_wolfssl&gt;
@@ -15617,7 +15627,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipStack&gt;
   &lt;tcpipStack dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_DRAM_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;102400&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;250400&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tcpipStack&gt;
 &lt;/tcpipStack&gt;
@@ -17548,7 +17558,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\configuration.h</file>
-         <hash>a7138c3570b808e82bae5ed727264f9511ebca835d6aa367f42adc497c25a4cd</hash>
+         <hash>7e3ee1d71f974402066a154e39df6fddbc10543008e3306bc29d3482b5112585</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\pic32mz-crypt.h</file>
@@ -17781,6 +17791,10 @@
       <entry>
          <file>..\src\config\sam_a5d2_xult\driver\gmac\src\dynamic\_gmac_dcpt_lists.h</file>
          <hash>519537782349dc1ba5154b6a9a34b54800893cbf029fb5930a7873ae48cac355</hash>
+      </entry>
+      <entry>
+         <file>..\src\app_mqtt_commands.c</file>
+         <hash>f16764aa10b8e28dade2fc954572d3627e00940fe5c924e217f09c7f06fb18c9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult\library\tcpip\src\tcp.c</file>
@@ -18216,7 +18230,7 @@
       </entry>
       <entry>
          <file>..\src\app_mqtt_task.h</file>
-         <hash>2dffa9754534ede78f171f03d0cb4e4c0b2226d122548d150208deb036dcfa88</hash>
+         <hash>5908107a1647ee8b933f1b2c8eb679f2bd124b5ce5ee2a15f49fbb2371efdc5c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\instance\isc.h</file>
@@ -18244,7 +18258,7 @@
       </entry>
       <entry>
          <file>..\src\app_mqtt_task.c</file>
-         <hash>d86326d0e2fd0d75023d5f5d303f71456198d3806b67515335f63876e653968f</hash>
+         <hash>d743c6dd088144e2a1356e9c3ca179dd728de858b3cbdedd56fe477f52d57463</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMA5D27_DFP\component\sfc.h</file>
