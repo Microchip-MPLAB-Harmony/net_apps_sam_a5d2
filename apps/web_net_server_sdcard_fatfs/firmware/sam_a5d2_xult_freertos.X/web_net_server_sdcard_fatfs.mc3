@@ -2058,7 +2058,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PRESENTATION LAYER" name="harmonyGroupAttachments"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;Attachments&gt;
   &lt;Attachments dnOrder=&quot;0&quot;&gt;
-    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;Net_Pres_Crypto_Dependency&quot; namespace=&quot;net_Pres&quot;/&gt;
+    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;Net_Pres_Crypto_Dependency&quot; namespace=&quot;net_Pres&quot; targetAttachmentID=&quot;TCP/IP STACK:net_Pres:Net_Pres_Crypto_Dependency&quot; targetComponentID=&quot;TCP/IP STACK&quot;/&gt;
   &lt;/Attachments&gt;
 &lt;/Attachments&gt;
 </value>
@@ -2075,7 +2075,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TCP/IP STACK" name="harmonyGroupAttachments"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;Attachments&gt;
   &lt;Attachments dnOrder=&quot;0&quot;&gt;
-    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;net_Pres:Net_Pres_Crypto_Dependency&quot; namespace=&quot;PRESENTATION LAYER&quot;/&gt;
+    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;net_Pres:Net_Pres_Crypto_Dependency&quot; namespace=&quot;PRESENTATION LAYER&quot; targetAttachmentID=&quot;lib_wolfssl&quot; targetComponentID=&quot;lib_wolfssl&quot;/&gt;
     &lt;Attachment dnOrder=&quot;1&quot; id=&quot;tcpipStack:Core_SysConsole_Dependency&quot; namespace=&quot;BASIC CONFIGURATION&quot; targetAttachmentID=&quot;sys_console&quot; targetComponentID=&quot;sys_console_0&quot;/&gt;
   &lt;/Attachments&gt;
 &lt;/Attachments&gt;
@@ -8242,9 +8242,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_rsaPss"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_rsaPss&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -8397,9 +8395,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_tdes"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_tdes&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -8475,6 +8471,16 @@
           &lt;/String&gt;
         &lt;/Attributes&gt;
       &lt;/DirectDependency&gt;
+      &lt;DirectCapability dnOrder=&quot;1&quot; id=&quot;lib_wolfssl&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;TCP/IP&amp;amp;#160;STACK&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;PRESENTATION&amp;amp;#160;LAYER:net_Pres:Net_Pres_Crypto_Dependency&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectCapability&gt;
     &lt;/Attachments&gt;
   &lt;/lib_wolfssl&gt;
 &lt;/lib_wolfssl&gt;
@@ -9341,7 +9347,7 @@
   &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_RTOS_STACK_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;net_Pres&quot; value=&quot;32768&quot;/&gt;
-      &lt;User dnOrder=&quot;1&quot; value=&quot;49152&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;79152&quot;/&gt;
     &lt;/Values&gt;
   &lt;/net_Pres&gt;
 &lt;/net_Pres&gt;
@@ -11916,7 +11922,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_time" name="SYS_TIME_ACHIEVABLE_TICK_RATE_HZ"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_time&gt;
   &lt;sys_time dnOrder=&quot;0&quot; id=&quot;SYS_TIME_ACHIEVABLE_TICK_RATE_HZ&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_time&quot; value=&quot;100001204&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_time&gt;
 &lt;/sys_time&gt;
 </value>
@@ -11934,7 +11942,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_time" name="SYS_TIME_OPERATING_MODE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_time&gt;
   &lt;sys_time dnOrder=&quot;0&quot; id=&quot;SYS_TIME_OPERATING_MODE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;TICK BASED&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_time&gt;
 &lt;/sys_time&gt;
 </value>
@@ -11957,6 +11972,58 @@
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sys_time&quot; value=&quot;tc0&quot;/&gt;
     &lt;/Values&gt;
+  &lt;/sys_time&gt;
+&lt;/sys_time&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_time" name="SYS_TIME_TICKLESS_LOCAL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_time&gt;
+  &lt;sys_time dnOrder=&quot;0&quot; id=&quot;SYS_TIME_TICKLESS_LOCAL&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sys_time&gt;
+&lt;/sys_time&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_time" name="SYS_TIME_TICKLESS_SOURCE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_time&gt;
+  &lt;sys_time dnOrder=&quot;0&quot; id=&quot;SYS_TIME_TICKLESS_SOURCE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sys_time&gt;
+&lt;/sys_time&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_time" name="SYS_TIME_TICK_BASED_LOCAL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_time&gt;
+  &lt;sys_time dnOrder=&quot;0&quot; id=&quot;SYS_TIME_TICK_BASED_LOCAL&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sys_time&gt;
+&lt;/sys_time&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_time" name="SYS_TIME_TICK_BASED_SOURCE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_time&gt;
+  &lt;sys_time dnOrder=&quot;0&quot; id=&quot;SYS_TIME_TICK_BASED_SOURCE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
   &lt;/sys_time&gt;
 &lt;/sys_time&gt;
 </value>
@@ -12160,7 +12227,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc0&gt;
   &lt;tc0 dnOrder=&quot;0&quot; id=&quot;SYS_TIME_PLIB_OPERATION_MODE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;SYS_TIME_PLIB_MODE_COMPARE&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;SYS_TIME_PLIB_MODE_PERIOD&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc0&gt;
 &lt;/tc0&gt;
@@ -12181,7 +12248,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc0" name="SYS_TIME_TICK_RATE_MS"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc0&gt;
   &lt;tc0 dnOrder=&quot;0&quot; id=&quot;SYS_TIME_TICK_RATE_MS&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;1.0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/tc0&gt;
 &lt;/tc0&gt;
 </value>
@@ -12547,11 +12616,11 @@
   &lt;tc0 dnOrder=&quot;0&quot; id=&quot;TC0_IER_CPAS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
     &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc0&gt;
 &lt;/tc0&gt;
@@ -12562,7 +12631,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc0&gt;
   &lt;tc0 dnOrder=&quot;0&quot; id=&quot;TC0_IER_CPCS&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;false&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc0&gt;
 &lt;/tc0&gt;
@@ -12602,7 +12671,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc0&gt;
   &lt;tc0 dnOrder=&quot;0&quot; id=&quot;TC0_TIMER_PERIOD_COUNT&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;82999&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc0&gt;
 &lt;/tc0&gt;
@@ -12612,8 +12681,13 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc0" name="TC0_TIMER_PERIOD_MS"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc0&gt;
   &lt;tc0 dnOrder=&quot;0&quot; id=&quot;TC0_TIMER_PERIOD_MS&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;0.0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc0&quot; value=&quot;1.0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tc0&gt;
 &lt;/tc0&gt;
@@ -17348,7 +17422,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipStack&gt;
   &lt;tcpipStack dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_DRAM_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;152250&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;252250&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tcpipStack&gt;
 &lt;/tcpipStack&gt;
@@ -19722,7 +19796,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\initialization.c</file>
-         <hash>25a374b2fecfab701eeb7619a9e842d43eac22fef85667161cf5113d59945d15</hash>
+         <hash>d7f3ed6696705f6c1d34a21f51a0b6fc486799dda344639b89354c94885b0f9e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\http_net.c</file>
@@ -20454,7 +20528,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\system\time\sys_time_definitions.h</file>
-         <hash>46537746b1d12ece6b682c9be1c8f3f219663c638c21a51a973762b7b393afe6</hash>
+         <hash>cc0d00616cb683322f8a66b8c5afce4d65e5a5b972c613d6e562f9a5a5d47c8f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\library\tcpip\src\http_net_manager.h</file>
@@ -20822,7 +20896,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\peripheral\tc\plib_tc0.c</file>
-         <hash>af3e0f211a187f4f4b8268f29d8cd8256eb3d2b420349d59a7188707a4c0e4d0</hash>
+         <hash>dbe141e96eb73b88763ba9cbc3578ad5edc5309389d9a9a64ec2fab9c73b02fc</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\system\reset\sys_reset.h</file>
@@ -20914,7 +20988,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\configuration.h</file>
-         <hash>5e9b68d840dfe6947a4889fe8c2ba2d89b16a7e230cd6d12181ed63eadb44502</hash>
+         <hash>4050f1a12cec63c45889f53686ea44294acdcd53fecf14611383755d7319e972</hash>
       </entry>
       <entry>
          <file>..\src\web_pages\footer.htm</file>
@@ -21034,7 +21108,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\system\time\src\sys_time_local.h</file>
-         <hash>df56f970664902417d798760e44978cf4b84c108cf0761647a383e91db76980c</hash>
+         <hash>b5911e9527666f333c003f69b86f92b9b88712a365d0d5f92c6e816e9f43b4c6</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\port\pic32\crypt_sha1_sam11105.c</file>
@@ -21070,7 +21144,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\system\time\src\sys_time.c</file>
-         <hash>fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271</hash>
+         <hash>dc74d512b721a836d281971589587797699785b284c73ef9a4e48023eff77c8c</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\srp.c</file>
