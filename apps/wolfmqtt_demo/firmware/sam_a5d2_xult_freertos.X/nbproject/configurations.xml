@@ -635,7 +635,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/internal.h</itemPath>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
-      <itemPath>../src/app_commands.h</itemPath>
       <itemPath>../src/app_mqtt_task.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -966,7 +965,6 @@
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>wolfmqtt_demo.mc3</itemPath>
-      <itemPath>../src/config/sam_a5d2_xult/harmony-manifest-success.yml</itemPath>
       <itemPath>../src/config/sam_a5d2_xult_freertos/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
@@ -981,7 +979,7 @@
         <targetDevice>ATSAMA5D27</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>jlink</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.35</languageToolchainVersion>
         <platform>3</platform>
@@ -1192,7 +1190,7 @@
         <property key="programoptions.preserveprogrammemory" value="false"/>
         <property key="programoptions.preserveprogramrange.ranges"
                   value="0x200000-0x23ffff"/>
-        <property key="programoptions.resetafterprogram" value="true"/>
+        <property key="programoptions.resetafterprogram" value="false"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
         <property key="script.reset_delay" value="0"/>
@@ -1224,7 +1222,7 @@
         <property key="programoptions.preserveprogrammemory" value="false"/>
         <property key="programoptions.preserveprogramrange.ranges"
                   value="0x200000-0x23ffff"/>
-        <property key="programoptions.resetafterprogram" value="true"/>
+        <property key="programoptions.resetafterprogram" value="false"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
         <property key="script.reset_delay" value="0"/>
