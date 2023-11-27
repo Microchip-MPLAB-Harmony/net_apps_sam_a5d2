@@ -182,7 +182,7 @@ extern "C" {
 #define WMQTT_NET_GLUE_FORCE_TLS			false
 #define WMQTT_NET_GLUE_IPV6					false
 #define WMQTT_NET_GLUE_MAX_BROKER_NAME		64
-#define WMQTT_NET_GLUE_DEBUG_ENABLE			false
+#define WMQTT_NET_GLUE_DEBUG_ENABLE			true
 #define WMQTT_NET_GLUE_ERROR_STRINGS		true
 #define WMQTT_NET_GLUE_MALLOC				malloc
 #define WMQTT_NET_GLUE_FREE					free
@@ -270,9 +270,6 @@ extern "C" {
 
 
 
-#define TCPIP_STACK_USE_ICMPV6_SERVER
-
-
 /*** ARP Configuration ***/
 #define TCPIP_ARP_CACHE_ENTRIES                 		5
 #define TCPIP_ARP_CACHE_DELETE_OLD		        	true
@@ -288,6 +285,9 @@ extern "C" {
 #define TCPIP_ARP_PRIMARY_CACHE_ONLY		        	true
 #define TCPIP_ARP_COMMANDS false
 
+
+
+#define TCPIP_STACK_USE_ICMPV6_SERVER
 
 
 #define TCPIP_IPV6_NDP_MAX_RTR_SOLICITATION_DELAY 	1
@@ -372,7 +372,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       102400
+#define TCPIP_STACK_DRAM_SIZE                       250400
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -572,7 +572,7 @@ extern "C" {
 #define NO_HC128
 #define NO_RABBIT
 #define HAVE_ECC
-#define HAVE_DH
+#define NO_DH
 #define NO_DSA
 #define FP_MAX_BITS 8192
 #define USE_CERT_BUFFERS_2048
