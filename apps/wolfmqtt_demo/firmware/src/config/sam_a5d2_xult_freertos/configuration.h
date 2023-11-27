@@ -188,7 +188,7 @@ extern "C" {
 #define WMQTT_NET_GLUE_FORCE_TLS			false
 #define WMQTT_NET_GLUE_IPV6					false
 #define WMQTT_NET_GLUE_MAX_BROKER_NAME		64
-#define WMQTT_NET_GLUE_DEBUG_ENABLE			false
+#define WMQTT_NET_GLUE_DEBUG_ENABLE			true
 #define WMQTT_NET_GLUE_ERROR_STRINGS		true
 #define WMQTT_NET_GLUE_MALLOC				malloc
 #define WMQTT_NET_GLUE_FREE					free
@@ -280,9 +280,6 @@ extern "C" {
 
 
 
-#define TCPIP_STACK_USE_ICMPV6_SERVER
-
-
 /*** ARP Configuration ***/
 #define TCPIP_ARP_CACHE_ENTRIES                 		5
 #define TCPIP_ARP_CACHE_DELETE_OLD		        	true
@@ -298,6 +295,9 @@ extern "C" {
 #define TCPIP_ARP_PRIMARY_CACHE_ONLY		        	true
 #define TCPIP_ARP_COMMANDS false
 
+
+
+#define TCPIP_STACK_USE_ICMPV6_SERVER
 
 
 #define TCPIP_IPV6_NDP_MAX_RTR_SOLICITATION_DELAY 	1
