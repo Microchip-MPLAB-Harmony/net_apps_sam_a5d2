@@ -2086,7 +2086,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PRESENTATION LAYER" name="harmonyGroupAttachments"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;Attachments&gt;
   &lt;Attachments dnOrder=&quot;0&quot;&gt;
-    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;Net_Pres_Crypto_Dependency&quot; namespace=&quot;net_Pres&quot;/&gt;
+    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;Net_Pres_Crypto_Dependency&quot; namespace=&quot;net_Pres&quot; targetAttachmentID=&quot;TCP/IP STACK:net_Pres:Net_Pres_Crypto_Dependency&quot; targetComponentID=&quot;TCP/IP STACK&quot;/&gt;
   &lt;/Attachments&gt;
 &lt;/Attachments&gt;
 </value>
@@ -2103,7 +2103,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TCP/IP STACK" name="harmonyGroupAttachments"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;Attachments&gt;
   &lt;Attachments dnOrder=&quot;0&quot;&gt;
-    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;net_Pres:Net_Pres_Crypto_Dependency&quot; namespace=&quot;PRESENTATION LAYER&quot;/&gt;
+    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;net_Pres:Net_Pres_Crypto_Dependency&quot; namespace=&quot;PRESENTATION LAYER&quot; targetAttachmentID=&quot;lib_wolfssl&quot; targetComponentID=&quot;lib_wolfssl&quot;/&gt;
     &lt;Attachment dnOrder=&quot;1&quot; id=&quot;tcpipStack:Core_SysConsole_Dependency&quot; namespace=&quot;BASIC CONFIGURATION&quot; targetAttachmentID=&quot;sys_console&quot; targetComponentID=&quot;sys_console_0&quot;/&gt;
   &lt;/Attachments&gt;
 &lt;/Attachments&gt;
@@ -2174,7 +2174,7 @@
     &lt;/ComponentGraph&gt;
     &lt;ComponentGraph dnOrder=&quot;5&quot; id=&quot;PRESENTATION LAYER&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
-        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;net_Pres&quot; x=&quot;19&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;net_Pres&quot; x=&quot;21&quot; y=&quot;22&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
     &lt;ComponentGraph dnOrder=&quot;6&quot; id=&quot;TCP/IP STACK&quot;&gt;
@@ -9098,6 +9098,16 @@
           &lt;/String&gt;
         &lt;/Attributes&gt;
       &lt;/DirectDependency&gt;
+      &lt;DirectCapability dnOrder=&quot;1&quot; id=&quot;lib_wolfssl&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;TCP/IP&amp;amp;#160;STACK&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;PRESENTATION&amp;amp;#160;LAYER:net_Pres:Net_Pres_Crypto_Dependency&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectCapability&gt;
     &lt;/Attachments&gt;
   &lt;/lib_wolfssl&gt;
 &lt;/lib_wolfssl&gt;
@@ -9964,7 +9974,7 @@
   &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_RTOS_STACK_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;net_Pres&quot; value=&quot;32768&quot;/&gt;
-      &lt;User dnOrder=&quot;1&quot; value=&quot;49152&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;96152&quot;/&gt;
     &lt;/Values&gt;
   &lt;/net_Pres&gt;
 &lt;/net_Pres&gt;
@@ -22740,7 +22750,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\configuration.h</file>
-         <hash>6a9ef51bd99c62b6b2cff8591fd0ae5e884809d75be5795c69d9e4d957ddd684</hash>
+         <hash>fddf4c1599caed87e25b51897af600c25a16c726d0893bb4c4ff618b7802eff5</hash>
       </entry>
       <entry>
          <file>..\src\web_pages\footer.htm</file>
@@ -23228,7 +23238,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d2_xult_freertos\definitions.h</file>
-         <hash>28fe6d2799a4ec1a5ece67ca95d77c63997baf5ff2a085cd07b84ac24e157715</hash>
+         <hash>9358963dc0be0c4b59df6c8a7918128e6f33b5058bd7d254f83f8b68c34a5a22</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\md5.c</file>

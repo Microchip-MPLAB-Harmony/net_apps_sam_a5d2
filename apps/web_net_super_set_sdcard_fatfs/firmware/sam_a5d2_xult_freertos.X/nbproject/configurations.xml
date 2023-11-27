@@ -1041,7 +1041,7 @@
         <targetDevice>ATSAMA5D27</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>jlink</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.35</languageToolchainVersion>
         <platform>3</platform>
@@ -1086,7 +1086,6 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -1144,7 +1143,6 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1184,7 +1182,6 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -1252,7 +1249,7 @@
         <property key="programoptions.preserveprogrammemory" value="false"/>
         <property key="programoptions.preserveprogramrange.ranges"
                   value="0x200000-0x23ffff"/>
-        <property key="programoptions.resetafterprogram" value="true"/>
+        <property key="programoptions.resetafterprogram" value="false"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
         <property key="script.reset_delay" value="0"/>
@@ -1284,7 +1281,7 @@
         <property key="programoptions.preserveprogrammemory" value="false"/>
         <property key="programoptions.preserveprogramrange.ranges"
                   value="0x200000-0x23ffff"/>
-        <property key="programoptions.resetafterprogram" value="true"/>
+        <property key="programoptions.resetafterprogram" value="false"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
         <property key="script.reset_delay" value="0"/>
