@@ -915,7 +915,6 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_a5d2_xult/harmony-manifest-success.yml</itemPath>
       <itemPath>wolfssl_tcp_server.mc3</itemPath>
       <itemPath>../src/config/sam_a5d2_xult_freertos/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
