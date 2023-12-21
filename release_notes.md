@@ -19,6 +19,7 @@
 - Updated demo documentation.
 
 ### Known Issues
+- wolfssl_tcp_client with FreeRTOS fails during TLS Handshake.
 - Build warnings for third_party/wolfMQTT/mqtt_socket.c in wolfMQTT demo. Workaround is to uncheck 'Make warnings into errors' in xc32 options.
 
 
