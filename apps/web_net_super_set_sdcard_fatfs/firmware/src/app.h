@@ -99,7 +99,7 @@ extern "C" {
 #define APP_LED_1StateClear()       LED1_Clear()
 #define APP_LED_1StateToggle()      LED1_Toggle()
  */
-#define APP_SWITCH_1StateGet()      SWITCH_AL_PB9_Get()
+#define APP_SWITCH_1StateGet()      SWITCH_USER_Get()
 #define APP_LED_1StateGet()         LED_GREEN_Get()
 #define APP_LED_1StateSet()         LED_GREEN_On()
 #define APP_LED_1StateClear()       LED_GREEN_Off()
