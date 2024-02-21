@@ -256,13 +256,11 @@ void APP_Tasks ( void )
                 LEDstate ^= APP_LED_STATE_ON;
                 if(LEDstate == 1)
                 {
-                    //APP_LED_1StateSet();
-                    APP_LED_3StateSet();
+                    APP_LED_1StateSet();
                 }
                 else
                 {
-                    //APP_LED_1StateClear();
-                    APP_LED_3StateClear();
+                    APP_LED_1StateClear();
                 }
             }
 
