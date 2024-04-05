@@ -49,6 +49,7 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "crypto/crypto.h"
+#include "bsp/bsp.h"
 #include "peripheral/pit/plib_pit.h"
 #include "peripheral/tc/plib_tc0.h"
 #include "system/time/sys_time.h"
