@@ -632,6 +632,7 @@ void SYS_Initialize ( void* data )
 
 
 
+	BSP_Initialize();
   
 
  
