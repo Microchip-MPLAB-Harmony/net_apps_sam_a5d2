@@ -516,11 +516,13 @@ const DRV_ETHPHY_INIT tcpipPhyInitData_KSZ8041 =
     .phyAddress             = DRV_KSZ8041_PHY_ADDRESS,
     .phyFlags               = DRV_KSZ8041_PHY_CONFIG_FLAGS,
     .pPhyObject             = &DRV_ETHPHY_OBJECT_KSZ8041,
-    .resetFunction          = 0,
     .ethphyTmo              = &drvksz8041Tmo,
     .pMiimObject            = &DRV_MIIM_OBJECT_BASE_Default,
     .pMiimInit              = &drvMiimInitData_0,
     .miimIndex              = 0,
+
+
+    .resetFunction          = 0,
 };
 
 
@@ -630,6 +632,7 @@ void SYS_Initialize ( void* data )
 
 
 
+	BSP_Initialize();
   
 
  
