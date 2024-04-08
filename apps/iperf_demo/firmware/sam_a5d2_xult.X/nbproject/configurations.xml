@@ -180,15 +180,8 @@
           </logicalFolder>
           <logicalFolder name="net_pres" displayName="net_pres" projectFiles="true">
             <logicalFolder name="pres" displayName="pres" projectFiles="true">
-              <logicalFolder name="src" displayName="src" projectFiles="true">
-                <itemPath>../src/config/sam_a5d2_xult/net_pres/pres/src/net_pres_local.h</itemPath>
-              </logicalFolder>
-              <itemPath>../src/config/sam_a5d2_xult/net_pres/pres/net_pres_certstore.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult/net_pres/pres/net_pres_enc_glue.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult/net_pres/pres/net_pres.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult/net_pres/pres/net_pres_socketapiconversion.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult/net_pres/pres/net_pres_transportapi.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult/net_pres/pres/net_pres_encryptionproviderapi.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult/net_pres/pres/net_pres_socketapi.h</itemPath>
             </logicalFolder>
           </logicalFolder>
@@ -363,7 +356,6 @@
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sdmmc0.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/i2sc1.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pit.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/smc.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tc1.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/matrix1.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/trng.h</itemPath>
@@ -487,7 +479,6 @@
         </logicalFolder>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/integer.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/hash.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/hc128.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/hmac.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/curve25519.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/error-crypt.h</itemPath>
@@ -498,7 +489,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/blake2-impl.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sp.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/rc2.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/rabbit.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/mpi_class.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/mpi_superclass.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/misc.h</itemPath>
@@ -538,7 +528,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/fe_operations.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/fe_448.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/srp.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/idea.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sha.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/ed25519.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/blake2.h</itemPath>
@@ -564,6 +553,13 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sakke.h</itemPath>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>iperf_demo.mc3</itemPath>
+      <itemPath>../src/config/sam_a5d2_xult/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -621,7 +617,6 @@
                 <logicalFolder name="common" displayName="common" projectFiles="true">
                   <itemPath>../src/config/sam_a5d2_xult/library/tcpip/src/helpers.c</itemPath>
                 </logicalFolder>
-                <itemPath>../src/config/sam_a5d2_xult/library/tcpip/src/sntp.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult/library/tcpip/src/oahash.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult/library/tcpip/src/tcpip_manager.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult/library/tcpip/src/tcpip_commands.c</itemPath>
@@ -642,18 +637,8 @@
                 <itemPath>../src/config/sam_a5d2_xult/library/tcpip/src/arp.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult/library/tcpip/src/tcpip_helpers.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult/library/tcpip/src/icmp.c</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult/library/tcpip/src/nbns.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult/library/tcpip/src/iperf.c</itemPath>
               </logicalFolder>
-            </logicalFolder>
-          </logicalFolder>
-          <logicalFolder name="net_pres" displayName="net_pres" projectFiles="true">
-            <logicalFolder name="pres" displayName="pres" projectFiles="true">
-              <logicalFolder name="src" displayName="src" projectFiles="true">
-                <itemPath>../src/config/sam_a5d2_xult/net_pres/pres/src/net_pres.c</itemPath>
-              </logicalFolder>
-              <itemPath>../src/config/sam_a5d2_xult/net_pres/pres/net_pres_enc_glue.c</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult/net_pres/pres/net_pres_cert_store.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
@@ -818,13 +803,6 @@
       <itemPath>../src/config/sam_a5d2_xult/pin_configurations.csv</itemPath>
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>iperf_demo.mc3</itemPath>
-      <itemPath>../src/config/sam_a5d2_xult/harmony-manifest-success.yml</itemPath>
-    </logicalFolder>
   </logicalFolder>
   <sourceRootList>
     <Elem>../src</Elem>
@@ -837,14 +815,14 @@
         <targetDevice>ATSAMA5D27</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>jlink</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.35</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
-        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.6.69"/>
+        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.10.213"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
@@ -873,8 +851,8 @@
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
-        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -O binary ${ImageDir}/${ConfName}.X.${IMAGE_TYPE}.elf ${ImageDir}/harmony.bin</makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -1025,7 +1003,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
+        <property key="appendMe" value="-marm"/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -1051,6 +1029,7 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
+        <appendMe value="-marm"/>
       </C32>
       <C32-AR>
         <property key="additional-options-chop-files" value="false"/>
@@ -1172,6 +1151,7 @@
         <property key="communication.speed" value="4"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
         <property key="jlink.override" value=""/>
@@ -1189,9 +1169,11 @@
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
+        <property key="programoptions.preserveprogrammemory.ranges"
+                  value="0x200000-0x23ffff"/>
         <property key="programoptions.preserveprogramrange.ranges"
                   value="0x200000-0x23ffff"/>
-        <property key="programoptions.resetafterprogram" value="false"/>
+        <property key="programoptions.resetafterprogram" value="true"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
         <property key="script.reset_delay" value="0"/>
@@ -1205,8 +1187,10 @@
         <property key="communication.speed" value="4"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
+        <property key="jlink.override" value=""/>
         <property key="lastid" value=""/>
         <property key="loader.board_file" value="${ProjectDir}/board.xboard"/>
         <property key="memories.bootflash" value="true"/>
@@ -1221,9 +1205,9 @@
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
-        <property key="programoptions.preserveprogramrange.ranges"
+        <property key="programoptions.preserveprogrammemory.ranges"
                   value="0x200000-0x23ffff"/>
-        <property key="programoptions.resetafterprogram" value="false"/>
+        <property key="programoptions.resetafterprogram" value="true"/>
         <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="1"/>
         <property key="script.reset_delay" value="0"/>
