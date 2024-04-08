@@ -172,12 +172,6 @@ extern "C" {
 
 
 
-/*** NBNS Configuration ***/
-#define TCPIP_STACK_USE_NBNS
-#define TCPIP_NBNS_TASK_TICK_RATE   110
-
-
-
 /*** TCP Configuration ***/
 #define TCPIP_TCP_MAX_SEG_SIZE_TX		        	1460
 #define TCPIP_TCP_SOCKET_DEFAULT_TX_SIZE			512
@@ -451,24 +445,6 @@ extern "C" {
 
 
 
-/*** SNTP Configuration ***/
-#define TCPIP_STACK_USE_SNTP_CLIENT
-#define TCPIP_NTP_DEFAULT_IF		        	"GMAC"
-#define TCPIP_NTP_VERSION             			4
-#define TCPIP_NTP_DEFAULT_CONNECTION_TYPE   	IP_ADDRESS_TYPE_IPV4
-#define TCPIP_NTP_EPOCH		                	2208988800ul
-#define TCPIP_NTP_REPLY_TIMEOUT		        	6
-#define TCPIP_NTP_MAX_STRATUM		        	15
-#define TCPIP_NTP_TIME_STAMP_TMO				660
-#define TCPIP_NTP_SERVER		        		"pool.ntp.org"
-#define TCPIP_NTP_SERVER_MAX_LENGTH				30
-#define TCPIP_NTP_QUERY_INTERVAL				600
-#define TCPIP_NTP_FAST_QUERY_INTERVAL	    	14
-#define TCPIP_NTP_TASK_TICK_RATE				1100
-#define TCPIP_NTP_RX_QUEUE_LIMIT				2
-
-
-
 /*** announce Configuration ***/
 #define TCPIP_STACK_USE_ANNOUNCE
 #define TCPIP_ANNOUNCE_MAX_PAYLOAD 	512
@@ -535,16 +511,6 @@ extern "C" {
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
 // ---------- FUNCTIONAL CONFIGURATION END ----------
-
-/* MPLAB Harmony Net Presentation Layer Definitions*/
-#define NET_PRES_NUM_INSTANCE 1
-#define NET_PRES_NUM_SOCKETS 10
-
-/* Net Pres RTOS Configurations*/
-#define NET_PRES_RTOS_STACK_SIZE                12288
-#define NET_PRES_RTOS_TASK_PRIORITY             1
-	
-
 
 #define DRV_KSZ8081_PHY_CONFIG_FLAGS       ( 0 \
                                                     | DRV_ETHPHY_CFG_RMII \
