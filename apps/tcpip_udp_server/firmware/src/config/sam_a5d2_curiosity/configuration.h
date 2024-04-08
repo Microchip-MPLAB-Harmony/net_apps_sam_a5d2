@@ -79,13 +79,6 @@ extern "C" {
 // Section: System Service Configuration
 // *****************************************************************************
 // *****************************************************************************
-
-#define SYS_CMD_ENABLE
-#define SYS_CMD_DEVICE_MAX_INSTANCES       SYS_CONSOLE_DEVICE_MAX_INSTANCES
-#define SYS_CMD_PRINT_BUFFER_SIZE          4096U
-#define SYS_CMD_BUFFER_DMA_READY
-
-
 /* TIME System Service Configuration Options */
 #define SYS_TIME_INDEX_0                            (0)
 #define SYS_TIME_MAX_TIMERS                         (5)
@@ -94,6 +87,18 @@ extern "C" {
 #define SYS_TIME_HW_COUNTER_HALF_PERIOD             (SYS_TIME_HW_COUNTER_PERIOD>>1)
 #define SYS_TIME_CPU_CLOCK_FREQUENCY                (498000000)
 #define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (2200)
+
+#define SYS_CONSOLE_INDEX_0                       0
+
+
+
+
+
+#define SYS_CMD_ENABLE
+#define SYS_CMD_DEVICE_MAX_INSTANCES       SYS_CONSOLE_DEVICE_MAX_INSTANCES
+#define SYS_CMD_PRINT_BUFFER_SIZE          4096U
+#define SYS_CMD_BUFFER_DMA_READY
+
 
 
 #define SYS_DEBUG_ENABLE
@@ -106,11 +111,6 @@ extern "C" {
 #define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(1U)
 #define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		(0U)
 #define SYS_CONSOLE_PRINT_BUFFER_SIZE        		(4096U)
-
-
-#define SYS_CONSOLE_INDEX_0                       0
-
-
 
 
 
@@ -157,6 +157,188 @@ extern "C" {
 #define TCPIP_DNS_CLIENT_DELETE_OLD_ENTRIES			true
 #define TCPIP_DNS_CLIENT_CONSOLE_CMD               	true
 #define TCPIP_DNS_CLIENT_USER_NOTIFICATION   false
+
+
+
+/*** ICMPv4 Server Configuration ***/
+#define TCPIP_STACK_USE_ICMP_SERVER
+#define TCPIP_ICMP_ECHO_ALLOW_BROADCASTS    false
+
+
+
+/*** DHCP Configuration ***/
+#define TCPIP_STACK_USE_DHCP_CLIENT
+#define TCPIP_DHCP_TIMEOUT                          10
+#define TCPIP_DHCP_TASK_TICK_RATE                   5
+#define TCPIP_DHCP_HOST_NAME_SIZE                   20
+#define TCPIP_DHCP_CLIENT_CONNECT_PORT              68
+#define TCPIP_DHCP_SERVER_LISTEN_PORT               67
+#define TCPIP_DHCP_CLIENT_CONSOLE_CMD               true
+
+#define TCPIP_DHCP_USE_OPTION_TIME_SERVER           0
+#define TCPIP_DHCP_TIME_SERVER_ADDRESSES            0
+#define TCPIP_DHCP_USE_OPTION_NTP_SERVER            0
+#define TCPIP_DHCP_NTP_SERVER_ADDRESSES             0
+#define TCPIP_DHCP_ARP_LEASE_CHECK_TMO              1000
+#define TCPIP_DHCP_WAIT_ARP_FAIL_CHECK_TMO          10
+
+
+
+/*** ARP Configuration ***/
+#define TCPIP_ARP_CACHE_ENTRIES                 		5
+#define TCPIP_ARP_CACHE_DELETE_OLD		        	true
+#define TCPIP_ARP_CACHE_SOLVED_ENTRY_TMO			1200
+#define TCPIP_ARP_CACHE_PENDING_ENTRY_TMO			60
+#define TCPIP_ARP_CACHE_PENDING_RETRY_TMO			2
+#define TCPIP_ARP_CACHE_PERMANENT_QUOTA		    		50
+#define TCPIP_ARP_CACHE_PURGE_THRESHOLD		    		75
+#define TCPIP_ARP_CACHE_PURGE_QUANTA		    		1
+#define TCPIP_ARP_CACHE_ENTRY_RETRIES		    		3
+#define TCPIP_ARP_GRATUITOUS_PROBE_COUNT			1
+#define TCPIP_ARP_TASK_PROCESS_RATE		        	2000
+#define TCPIP_ARP_PRIMARY_CACHE_ONLY		        	true
+#define TCPIP_ARP_COMMANDS false
+
+
+
+#define TCPIP_STACK_USE_ICMPV6_SERVER
+
+
+#define TCPIP_IPV6_NDP_MAX_RTR_SOLICITATION_DELAY 	1
+#define TCPIP_IPV6_NDP_RTR_SOLICITATION_INTERVAL 	4
+#define TCPIP_IPV6_NDP_MAX_RTR_SOLICITATIONS 		3
+#define TCPIP_IPV6_NDP_MAX_MULTICAST_SOLICIT 		3
+#define TCPIP_IPV6_NDP_MAX_UNICAST_SOLICIT 			3
+#define TCPIP_IPV6_NDP_MAX_ANYCAST_DELAY_TIME 		1
+#define TCPIP_IPV6_NDP_MAX_NEIGHBOR_ADVERTISEMENT 	3
+#define TCPIP_IPV6_NDP_REACHABLE_TIME 				30
+#define TCPIP_IPV6_NDP_RETRANS_TIMER 				1
+#define TCPIP_IPV6_NDP_DELAY_FIRST_PROBE_TIME 		5
+#define TCPIP_IPV6_NDP_VALID_LIFETIME_TWO_HOURS 	(60 * 60 * 2)
+#define TCPIP_IPV6_MTU_INCREASE_TIMEOUT 			600
+#define TCPIP_IPV6_NDP_TASK_TIMER_RATE 				32
+
+
+	/*** tcpip_cmd Configuration ***/
+	#define TCPIP_STACK_COMMAND_ENABLE
+
+
+
+/* Network Configuration Index 0 */
+#define TCPIP_NETWORK_DEFAULT_INTERFACE_NAME_IDX0 "GMAC"
+#define TCPIP_IF_GMAC  
+
+#define TCPIP_NETWORK_DEFAULT_HOST_NAME_IDX0              "MCHPBOARD_C"
+#define TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0               "00:04:25:1C:A0:02"
+
+#define TCPIP_NETWORK_DEFAULT_IP_ADDRESS_IDX0         "192.168.100.11"
+#define TCPIP_NETWORK_DEFAULT_IP_MASK_IDX0            "255.255.255.0"
+#define TCPIP_NETWORK_DEFAULT_GATEWAY_IDX0            "192.168.100.1"
+#define TCPIP_NETWORK_DEFAULT_DNS_IDX0                "192.168.100.1"
+#define TCPIP_NETWORK_DEFAULT_SECOND_DNS_IDX0         "0.0.0.0"
+#define TCPIP_NETWORK_DEFAULT_POWER_MODE_IDX0         "full"
+#define TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS_IDX0            \
+                                                    TCPIP_NETWORK_CONFIG_DHCP_CLIENT_ON |\
+                                                    TCPIP_NETWORK_CONFIG_DNS_CLIENT_ON |\
+                                                    TCPIP_NETWORK_CONFIG_IP_STATIC
+                                                    
+#define TCPIP_NETWORK_DEFAULT_MAC_DRIVER_IDX0         DRV_GMAC_Object
+
+
+
+
+/*** IPv6 Configuration ***/
+#define TCPIP_IPV6_DEFAULT_ALLOCATION_BLOCK_SIZE 		64
+#define TCPIP_IPV6_MINIMUM_LINK_MTU 					1280
+#define TCPIP_IPV6_DEFAULT_LINK_MTU 					1500
+#define TCPIP_IPV6_DEFAULT_CUR_HOP_LIMIT 				64
+#define TCPIP_IPV6_DEFAULT_BASE_REACHABLE_TIME 			30
+#define TCPIP_IPV6_DEFAULT_RETRANSMIT_TIME 				1000
+#define TCPIP_IPV6_QUEUE_NEIGHBOR_PACKET_LIMIT 			1
+#define TCPIP_IPV6_NEIGHBOR_CACHE_ENTRY_STALE_TIMEOUT 	600
+#define TCPIP_IPV6_QUEUE_MCAST_PACKET_LIMIT 			4
+#define TCPIP_IPV6_QUEUED_MCAST_PACKET_TIMEOUT 			10
+#define TCPIP_IPV6_TASK_PROCESS_RATE 					1000
+#define TCPIP_IPV6_INIT_TASK_PROCESS_RATE 				32
+#define TCPIP_IPV6_ULA_GENERATE_ENABLE 					false
+#define TCPIP_IPV6_ULA_NTP_ACCESS_TMO 					12000
+#define TCPIP_IPV6_ULA_NTP_VALID_WINDOW 				1000
+#define TCPIP_IPV6_FRAGMENT_PKT_TIMEOUT 				60
+#define TCPIP_IPV6_RX_FRAGMENTED_BUFFER_SIZE 			1514
+#define TCPIP_IPV6_EXTERN_PACKET_PROCESS   false
+
+
+#define TCPIP_IPV6_G3_PLC_SUPPORT                       false
+
+
+
+/*** IPv4 Configuration ***/
+#define TCPIP_IPV4_ARP_SLOTS                        10
+#define TCPIP_IPV4_EXTERN_PACKET_PROCESS   false
+
+#define TCPIP_IPV4_COMMANDS false
+
+#define TCPIP_IPV4_FORWARDING_ENABLE    false 
+
+
+
+
+
+/*** TCPIP Heap Configuration ***/
+#define TCPIP_STACK_USE_INTERNAL_HEAP
+#define TCPIP_STACK_DRAM_SIZE                       49152
+#define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
+
+#define TCPIP_STACK_MALLOC_FUNC                     malloc
+
+#define TCPIP_STACK_CALLOC_FUNC                     calloc
+
+#define TCPIP_STACK_FREE_FUNC                       free
+
+
+
+#define TCPIP_STACK_HEAP_USE_FLAGS                   TCPIP_STACK_HEAP_FLAG_ALLOC_UNCACHED
+
+#define TCPIP_STACK_HEAP_USAGE_CONFIG                TCPIP_STACK_HEAP_USE_DEFAULT
+
+#define TCPIP_STACK_SUPPORTED_HEAPS                  1
+
+
+
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: TCPIP Stack Configuration
+// *****************************************************************************
+// *****************************************************************************
+
+#define TCPIP_STACK_USE_IPV4
+#define TCPIP_STACK_USE_IPV6
+#define TCPIP_STACK_USE_UDP
+
+#define TCPIP_STACK_TICK_RATE		        		5
+#define TCPIP_STACK_SECURE_PORT_ENTRIES             10
+#define TCPIP_STACK_LINK_RATE		        		333
+
+#define TCPIP_STACK_ALIAS_INTERFACE_SUPPORT   false
+
+#define TCPIP_PACKET_LOG_ENABLE     0
+
+/* TCP/IP stack event notification */
+#define TCPIP_STACK_USE_EVENT_NOTIFICATION
+#define TCPIP_STACK_USER_NOTIFICATION   false
+#define TCPIP_STACK_DOWN_OPERATION   true
+#define TCPIP_STACK_IF_UP_DOWN_OPERATION   true
+#define TCPIP_STACK_MAC_DOWN_OPERATION  true
+#define TCPIP_STACK_INTERFACE_CHANGE_SIGNALING   false
+#define TCPIP_STACK_CONFIGURATION_SAVE_RESTORE   true
+#define TCPIP_STACK_EXTERN_PACKET_PROCESS   false
+#define TCPIP_STACK_RUN_TIME_INIT   false
+
+#define TCPIP_STACK_INTMAC_COUNT           1
+
+
+
 
 
 /*** GMAC Configuration ***/
@@ -228,9 +410,11 @@ extern "C" {
 
 
 
-/*** ICMPv4 Server Configuration ***/
-#define TCPIP_STACK_USE_ICMP_SERVER
-#define TCPIP_ICMP_ECHO_ALLOW_BROADCASTS    false
+/*** announce Configuration ***/
+#define TCPIP_STACK_USE_ANNOUNCE
+#define TCPIP_ANNOUNCE_MAX_PAYLOAD 	512
+#define TCPIP_ANNOUNCE_TASK_RATE    333
+#define TCPIP_ANNOUNCE_NETWORK_DIRECTED_BCAST             			false
 
 
 
@@ -244,68 +428,6 @@ extern "C" {
 #define TCPIP_UDP_USE_RX_CHECKSUM             			true
 #define TCPIP_UDP_COMMANDS   false
 #define TCPIP_UDP_EXTERN_PACKET_PROCESS   false
-
-
-
-/*** DHCP Configuration ***/
-#define TCPIP_STACK_USE_DHCP_CLIENT
-#define TCPIP_DHCP_TIMEOUT                          10
-#define TCPIP_DHCP_TASK_TICK_RATE                   5
-#define TCPIP_DHCP_HOST_NAME_SIZE                   20
-#define TCPIP_DHCP_CLIENT_CONNECT_PORT              68
-#define TCPIP_DHCP_SERVER_LISTEN_PORT               67
-#define TCPIP_DHCP_CLIENT_CONSOLE_CMD               true
-
-#define TCPIP_DHCP_USE_OPTION_TIME_SERVER           0
-#define TCPIP_DHCP_TIME_SERVER_ADDRESSES            0
-#define TCPIP_DHCP_USE_OPTION_NTP_SERVER            0
-#define TCPIP_DHCP_NTP_SERVER_ADDRESSES             0
-#define TCPIP_DHCP_ARP_LEASE_CHECK_TMO              1000
-#define TCPIP_DHCP_WAIT_ARP_FAIL_CHECK_TMO          10
-
-
-
-/*** ARP Configuration ***/
-#define TCPIP_ARP_CACHE_ENTRIES                 		5
-#define TCPIP_ARP_CACHE_DELETE_OLD		        	true
-#define TCPIP_ARP_CACHE_SOLVED_ENTRY_TMO			1200
-#define TCPIP_ARP_CACHE_PENDING_ENTRY_TMO			60
-#define TCPIP_ARP_CACHE_PENDING_RETRY_TMO			2
-#define TCPIP_ARP_CACHE_PERMANENT_QUOTA		    		50
-#define TCPIP_ARP_CACHE_PURGE_THRESHOLD		    		75
-#define TCPIP_ARP_CACHE_PURGE_QUANTA		    		1
-#define TCPIP_ARP_CACHE_ENTRY_RETRIES		    		3
-#define TCPIP_ARP_GRATUITOUS_PROBE_COUNT			1
-#define TCPIP_ARP_TASK_PROCESS_RATE		        	2000
-#define TCPIP_ARP_PRIMARY_CACHE_ONLY		        	true
-#define TCPIP_ARP_COMMANDS false
-
-
-
-	/*** tcpip_cmd Configuration ***/
-	#define TCPIP_STACK_COMMAND_ENABLE
-
-
-
-/* Network Configuration Index 0 */
-#define TCPIP_NETWORK_DEFAULT_INTERFACE_NAME_IDX0 "GMAC"
-#define TCPIP_IF_GMAC  
-
-#define TCPIP_NETWORK_DEFAULT_HOST_NAME_IDX0              "MCHPBOARD_C"
-#define TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0               "00:04:25:1C:A0:02"
-
-#define TCPIP_NETWORK_DEFAULT_IP_ADDRESS_IDX0         "192.168.100.11"
-#define TCPIP_NETWORK_DEFAULT_IP_MASK_IDX0            "255.255.255.0"
-#define TCPIP_NETWORK_DEFAULT_GATEWAY_IDX0            "192.168.100.1"
-#define TCPIP_NETWORK_DEFAULT_DNS_IDX0                "192.168.100.1"
-#define TCPIP_NETWORK_DEFAULT_SECOND_DNS_IDX0         "0.0.0.0"
-#define TCPIP_NETWORK_DEFAULT_POWER_MODE_IDX0         "full"
-#define TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS_IDX0            \
-                                                    TCPIP_NETWORK_CONFIG_DHCP_CLIENT_ON |\
-                                                    TCPIP_NETWORK_CONFIG_DNS_CLIENT_ON |\
-                                                    TCPIP_NETWORK_CONFIG_IP_STATIC
-                                                    
-#define TCPIP_NETWORK_DEFAULT_MAC_DRIVER_IDX0         DRV_GMAC_Object
 
 
 #define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
@@ -324,75 +446,6 @@ extern "C" {
 #define DRV_ETHPHY_KSZ8041_NEG_INIT_TMO            1
 #define DRV_ETHPHY_KSZ8041_NEG_DONE_TMO            2000
 #define DRV_ETHPHY_KSZ8041_RESET_CLR_TMO           500
-
-
-
-/*** IPv4 Configuration ***/
-#define TCPIP_IPV4_ARP_SLOTS                        10
-#define TCPIP_IPV4_EXTERN_PACKET_PROCESS   false
-
-#define TCPIP_IPV4_COMMANDS false
-
-#define TCPIP_IPV4_FORWARDING_ENABLE    false 
-
-
-
-
-
-/*** TCPIP Heap Configuration ***/
-#define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       49152
-#define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
-
-#define TCPIP_STACK_MALLOC_FUNC                     malloc
-
-#define TCPIP_STACK_CALLOC_FUNC                     calloc
-
-#define TCPIP_STACK_FREE_FUNC                       free
-
-
-
-#define TCPIP_STACK_HEAP_USE_FLAGS                   TCPIP_STACK_HEAP_FLAG_ALLOC_UNCACHED
-
-#define TCPIP_STACK_HEAP_USAGE_CONFIG                TCPIP_STACK_HEAP_USE_DEFAULT
-
-#define TCPIP_STACK_SUPPORTED_HEAPS                  1
-
-
-
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: TCPIP Stack Configuration
-// *****************************************************************************
-// *****************************************************************************
-
-#define TCPIP_STACK_USE_IPV4
-#define TCPIP_STACK_USE_UDP
-
-#define TCPIP_STACK_TICK_RATE		        		5
-#define TCPIP_STACK_SECURE_PORT_ENTRIES             10
-#define TCPIP_STACK_LINK_RATE		        		333
-
-#define TCPIP_STACK_ALIAS_INTERFACE_SUPPORT   false
-
-#define TCPIP_PACKET_LOG_ENABLE     0
-
-/* TCP/IP stack event notification */
-#define TCPIP_STACK_USE_EVENT_NOTIFICATION
-#define TCPIP_STACK_USER_NOTIFICATION   false
-#define TCPIP_STACK_DOWN_OPERATION   true
-#define TCPIP_STACK_IF_UP_DOWN_OPERATION   true
-#define TCPIP_STACK_MAC_DOWN_OPERATION  true
-#define TCPIP_STACK_INTERFACE_CHANGE_SIGNALING   false
-#define TCPIP_STACK_CONFIGURATION_SAVE_RESTORE   true
-#define TCPIP_STACK_EXTERN_PACKET_PROCESS   false
-#define TCPIP_STACK_RUN_TIME_INIT   false
-
-#define TCPIP_STACK_INTMAC_COUNT           1
-
-
-
 
 
 
