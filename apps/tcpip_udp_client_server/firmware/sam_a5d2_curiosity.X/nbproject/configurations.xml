@@ -8,6 +8,9 @@
         <logicalFolder name="sam_a5d2_curiosity"
                        displayName="sam_a5d2_curiosity"
                        projectFiles="true">
+          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
+            <itemPath>../src/config/sam_a5d2_curiosity/bsp/bsp.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="driver" displayName="driver" projectFiles="true">
             <logicalFolder name="ethphy" displayName="ethphy" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
@@ -400,6 +403,12 @@
       <itemPath>../src/app.h</itemPath>
       <itemPath>../src/app_commands.h</itemPath>
     </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>tcpip_udp_client_server.mc3</itemPath>
+    </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
@@ -418,6 +427,9 @@
         <logicalFolder name="sam_a5d2_curiosity"
                        displayName="sam_a5d2_curiosity"
                        projectFiles="true">
+          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
+            <itemPath>../src/config/sam_a5d2_curiosity/bsp/bsp.c</itemPath>
+          </logicalFolder>
           <logicalFolder name="driver" displayName="driver" projectFiles="true">
             <logicalFolder name="ethphy" displayName="ethphy" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
@@ -465,6 +477,10 @@
                 <itemPath>../src/config/sam_a5d2_curiosity/library/tcpip/src/udp.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_curiosity/library/tcpip/src/tcpip_heap_alloc.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_curiosity/library/tcpip/src/hash_fnv.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_curiosity/library/tcpip/src/ipv6.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_curiosity/library/tcpip/src/tcpip_announce.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_curiosity/library/tcpip/src/ndp.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_curiosity/library/tcpip/src/icmpv6.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -530,12 +546,6 @@
       <itemPath>../src/config/sam_a5d2_curiosity/pin_configurations.csv</itemPath>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app_commands.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>tcpip_udp_client_server.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -620,6 +630,7 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
+        <appendMe value="-marm"/>
       </C32>
       <C32-AR>
         <property key="additional-options-chop-files" value="false"/>
@@ -741,6 +752,7 @@
         <property key="communication.speed" value="4"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
         <property key="jlink.override" value=""/>
@@ -758,6 +770,8 @@
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
+        <property key="programoptions.preserveprogrammemory.ranges"
+                  value="0x200000-0x23ffff"/>
         <property key="programoptions.preserveprogramrange.ranges"
                   value="0x200000-0x23ffff"/>
         <property key="programoptions.resetafterprogram" value="true"/>
@@ -774,6 +788,7 @@
         <property key="communication.speed" value="4"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
         <property key="jlink.override" value=""/>
@@ -791,7 +806,7 @@
         <property key="programoptions.eraseb4program" value="false"/>
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
-        <property key="programoptions.preserveprogramrange.ranges"
+        <property key="programoptions.preserveprogrammemory.ranges"
                   value="0x200000-0x23ffff"/>
         <property key="programoptions.resetafterprogram" value="true"/>
         <property key="script.has_reset" value="true"/>
