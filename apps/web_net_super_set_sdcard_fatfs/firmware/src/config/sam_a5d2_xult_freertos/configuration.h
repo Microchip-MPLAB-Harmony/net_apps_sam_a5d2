@@ -199,6 +199,12 @@ extern "C" {
 #define TCPIP_STACK_USE_ICMP_SERVER
 #define TCPIP_ICMP_ECHO_ALLOW_BROADCASTS    false
 
+/*** ICMPv4 Client Configuration ***/
+#define TCPIP_STACK_USE_ICMP_CLIENT
+#define TCPIP_ICMP_ECHO_REQUEST_TIMEOUT        500
+#define TCPIP_ICMP_TASK_TICK_RATE              33
+#define TCPIP_STACK_MAX_CLIENT_ECHO_REQUESTS   4
+#define TCPIP_ICMP_COMMAND_ENABLE              false
 
 /******************************************************************************/
 /*wolfSSL TLS Layer Configuration*/
@@ -249,6 +255,22 @@ extern "C" {
 #define TCPIP_TCP_EXTERN_PACKET_PROCESS   false
 #define TCPIP_TCP_DISABLE_CRYPTO_USAGE		        	    false
 
+
+
+#define TCPIP_STACK_USE_ZEROCONF_LINK_LOCAL
+#define TCPIP_ZC_LL_PROBE_WAIT 1
+#define TCPIP_ZC_LL_PROBE_MIN 1
+#define TCPIP_ZC_LL_PROBE_MAX 2
+#define TCPIP_ZC_LL_PROBE_NUM 3
+#define TCPIP_ZC_LL_ANNOUNCE_WAIT 2
+#define TCPIP_ZC_LL_ANNOUNCE_NUM 2
+#define TCPIP_ZC_LL_ANNOUNCE_INTERVAL 2
+#define TCPIP_ZC_LL_MAX_CONFLICTS 10
+#define TCPIP_ZC_LL_RATE_LIMIT_INTERVAL 60
+#define TCPIP_ZC_LL_DEFEND_INTERVAL 10
+#define TCPIP_ZC_LL_IPV4_LLBASE 0xa9fe0100
+#define TCPIP_ZC_LL_IPV4_LLBASE_MASK 0xffff
+#define TCPIP_ZC_LL_TASK_TICK_RATE 113
 
 
 /*** ARP Configuration ***/
@@ -374,6 +396,18 @@ extern "C" {
 #define TCPIP_FTPC_DATA_SKT_RX_BUFF_SIZE_DFLT        0
 
 
+/*** iperf Configuration ***/
+#define TCPIP_STACK_USE_IPERF
+#define TCPIP_IPERF_TX_BUFFER_SIZE		4096
+#define TCPIP_IPERF_RX_BUFFER_SIZE  	4096
+#define TCPIP_IPERF_TX_WAIT_TMO     	100
+#define TCPIP_IPERF_TX_QUEUE_LIMIT  	2
+#define TCPIP_IPERF_TIMING_ERROR_MARGIN 0
+#define TCPIP_IPERF_MAX_INSTANCES       1
+#define TCPIP_IPERF_TX_BW_LIMIT  		1
+
+
+
 /*** IPv4 Configuration ***/
 #define TCPIP_IPV4_ARP_SLOTS                        10
 #define TCPIP_IPV4_EXTERN_PACKET_PROCESS   false
@@ -452,8 +486,8 @@ extern "C" {
 #define NET_PRES_NUM_SOCKETS 10
 
 /* Net Pres RTOS Configurations*/
-#define NET_PRES_RTOS_STACK_SIZE                24038
-#define NET_PRES_RTOS_TASK_PRIORITY             1
+#define NET_PRES_RTOS_STACK_SIZE                8192
+#define NET_PRES_RTOS_TASK_PRIORITY             4
 	
 #define FREERTOS
 
@@ -533,6 +567,12 @@ extern "C" {
 
 
 
+/*** NBNS Configuration ***/
+#define TCPIP_STACK_USE_NBNS
+#define TCPIP_NBNS_TASK_TICK_RATE   110
+
+
+
 /*** HTTP NET Configuration ***/
 #define TCPIP_STACK_USE_HTTP_NET_SERVER
 #define TCPIP_HTTP_NET_MAX_HEADER_LEN		    		15
@@ -582,12 +622,6 @@ extern "C" {
 
 
 
-/*** NBNS Configuration ***/
-#define TCPIP_STACK_USE_NBNS
-#define TCPIP_NBNS_TASK_TICK_RATE   110
-
-
-
 /*** DHCP Configuration ***/
 #define TCPIP_STACK_USE_DHCP_CLIENT
 #define TCPIP_DHCP_TIMEOUT                          10
@@ -612,6 +646,66 @@ extern "C" {
 	/*** tcpip_cmd Configuration ***/
 	#define TCPIP_STACK_COMMAND_ENABLE
 
+
+
+/*** DHCP Server v2 Configuration ***/
+#define TCPIP_STACK_USE_DHCP_SERVER_V2
+#define TCPIP_DHCPS_MAX_LEASES              32
+#define TCPIP_DHCPS_ICMP_PROBES             1
+#define TCPIP_DHCPS_CONFLICT_ATTEMPTS       1
+#define TCPIP_DHCPS_TASK_PROCESS_RATE       200
+#define TCPIP_DHCPS_CLIENT_ID_MAX_SIZE      16
+#define TCPIP_DHCPS_ICMP_ECHO_DATA_SIZE     16
+#define TCPIP_DHCPS_ICMP_ECHO_RETRIES       2
+#define TCPIP_DHCPS_INTERFACE_COUNT    		1
+
+#define TCPIP_DHCPS_OPTION_ROUTER_VALUES        1
+#define TCPIP_DHCPS_OPTION_DNS_VALUES           2
+#define TCPIP_DHCPS_OPTION_TIME_SERVER_VALUES   1
+#define TCPIP_DHCPS_OPTION_NAME_SERVER_VALUES   1
+#define TCPIP_DHCPS_OPTION_NTP_SERVER_VALUES    1
+#define TCPIP_DHCPS_OPTION_T1_T2_SUPPRESS       false
+
+#define TCPIP_DHCPS_MAX_EVENT_REGISTRATIONS     1
+#define TCPIP_DHCPS_REPORT_ERROR_EVENT          true
+#define TCPIP_DHCPS_REPORT_CLIENT_EVENT         true
+#define TCPIP_DHCPS_ENABLE_STATISTICS           false
+#define TCPIP_DHCPS_DYNAMIC_DB_ACCESS           false
+#define TCPIP_DHCPS_MULTI_THREADED_ACCESS       false
+
+#define TCPIP_DHCPS_INTERFACE_INDEX_IDX0        0
+#define TCPIP_DHCPS_MAX_LEASE_NUM_IDX0          32
+#define TCPIP_DHCPS_LEASEDURATION_DFLT_IDX0     28800
+#define TCPIP_DHCPS_SERVER_IP_ADDRESS_IDX0      "192.168.1.1"
+#define TCPIP_DHCPS_START_IP_ADDR_IDX0          "192.168.1.100"
+#define TCPIP_DHCPS_MASK_PREFIX_NUM_IDX0      	24
+#define TCPIP_DHCPS_ROUTER_IP_ADDR_IDX0         "192.168.1.1"
+#define TCPIP_DHCPS_DNS_IP_ADDR_IDX0            "192.168.1.1"
+#define TCPIP_DHCPS_TIMESERVER_IP_ADDR_IDX0     ""
+#define TCPIP_DHCPS_NAMESERVER_IP_ADDR_IDX0     ""
+#define TCPIP_DHCPS_NTPSERVER_IP_ADDR_IDX0      ""
+#define TCPIP_DHCPS_CONFIG_FLAG_IDX0            \
+                                                0
+        
+#define TCPIP_DHCPS_LEASEDURATION_MIN_IDX0      60
+#define TCPIP_DHCPS_LEASEDURATION_MAX_IDX0      0
+#define TCPIP_DHCPS_UNREQ_TMO_IDX0              0
+        
+#define TCPIP_DHCPS_T1RENEW_MULT_FACT_IDX0      1
+#define TCPIP_DHCPS_T1RENEW_DIV_FACT_IDX0       2
+#define TCPIP_DHCPS_T2REBIND_MULT_FACT_IDX0     7
+#define TCPIP_DHCPS_T2REBIND_DIV_FACT_IDX0      8
+        
+
+
+
+
+
+
+/*** Berkeley API Configuration ***/
+#define TCPIP_STACK_USE_BERKELEY_API
+#define MAX_BSD_SOCKETS 					4
+#define TCPIP_STACK_USE_BERKELEY_API
 
 
 /*** TCPIP Heap Configuration ***/
@@ -672,7 +766,7 @@ extern "C" {
 
 /* TCP/IP RTOS Configurations*/
 #define TCPIP_RTOS_STACK_SIZE                1024
-#define TCPIP_RTOS_PRIORITY             1
+#define TCPIP_RTOS_PRIORITY             3
 
 
 /*** GMAC Configuration ***/

@@ -87,10 +87,10 @@
 #define LED_BLUE_Get() ((PIOB_REGS->PIO_PDSR >> 0) & 0x1)
 #define LED_BLUE_On() (PIOB_REGS->PIO_SODR = (1UL<<0))
 #define LED_BLUE_Off() (PIOB_REGS->PIO_CODR = (1UL<<0))
-/*** SWITCH Macros for SWITCH_AL_PB9 ***/
-#define SWITCH_AL_PB9_Get() ((PIOB_REGS->PIO_PDSR >> 9) & 0x1)
-#define SWITCH_AL_PB9_STATE_PRESSED 0
-#define SWITCH_AL_PB9_STATE_RELEASED 1
+/*** SWITCH Macros for SWITCH_USER ***/
+#define SWITCH_USER_Get() ((PIOB_REGS->PIO_PDSR >> 9) & 0x1)
+#define SWITCH_USER_STATE_PRESSED 0
+#define SWITCH_USER_STATE_RELEASED 1
 
 
 
