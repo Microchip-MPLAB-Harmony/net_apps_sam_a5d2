@@ -167,11 +167,6 @@ const TCPIP_ICMP_MODULE_CONFIG tcpipICMPInitData =
     0
 };
 
-/*** NBNS Server Initialization Data ***/
-const TCPIP_NBNS_MODULE_CONFIG tcpipNBNSInitData =
-{ 
-    0
-};
 
 
 
@@ -194,6 +189,13 @@ const TCPIP_DNS_CLIENT_MODULE_CONFIG tcpipDNSClientInitData =
     .nIPv6Entries  = TCPIP_DNS_CLIENT_CACHE_PER_IPV6_ADDRESS,
 };
 
+
+/*** IPv6 Initialization Data ***/
+const TCPIP_IPV6_MODULE_CONFIG  tcpipIPv6InitData = 
+{
+    .rxfragmentBufSize      = TCPIP_IPV6_RX_FRAGMENTED_BUFFER_SIZE,
+    .fragmentPktRxTimeout   = TCPIP_IPV6_FRAGMENT_PKT_TIMEOUT,
+};
 
 
 /*** IPv4 Initialization Data ***/
@@ -247,12 +249,14 @@ const TCPIP_STACK_MODULE_CONFIG TCPIP_STACK_MODULE_CONFIG_TBL [] =
     {TCPIP_MODULE_ICMP,             0},                             // TCPIP_MODULE_ICMP
 
     {TCPIP_MODULE_ARP,              &tcpipARPInitData},             // TCPIP_MODULE_ARP
+    {TCPIP_MODULE_IPV6,             &tcpipIPv6InitData},            // TCPIP_MODULE_IPV6
+    {TCPIP_MODULE_ICMPV6,           0},                             // TCPIP_MODULE_ICMPV6
+    {TCPIP_MODULE_NDP,              0},                             // TCPIP_MODULE_NDP
     {TCPIP_MODULE_UDP,              &tcpipUDPInitData},             // TCPIP_MODULE_UDP
     {TCPIP_MODULE_TCP,              &tcpipTCPInitData},             // TCPIP_MODULE_TCP
     {TCPIP_MODULE_DHCP_CLIENT,      &tcpipDHCPInitData},            // TCPIP_MODULE_DHCP_CLIENT
     {TCPIP_MODULE_ANNOUNCE,         &tcpipAnnounceInitData},        // TCPIP_MODULE_ANNOUNCE
     {TCPIP_MODULE_DNS_CLIENT,       &tcpipDNSClientInitData},       // TCPIP_MODULE_DNS_CLIENT
-    {TCPIP_MODULE_NBNS,             &tcpipNBNSInitData},            // TCPIP_MODULE_NBNS
     {TCPIP_MODULE_SNTP,             &tcpipSNTPInitData},            // TCPIP_MODULE_SNTP
 
     {TCPIP_MODULE_COMMAND,          0},                             // TCPIP_MODULE_COMMAND,
@@ -512,11 +516,13 @@ const DRV_ETHPHY_INIT tcpipPhyInitData_KSZ8081 =
     .phyAddress             = DRV_KSZ8081_PHY_ADDRESS,
     .phyFlags               = DRV_KSZ8081_PHY_CONFIG_FLAGS,
     .pPhyObject             = &DRV_ETHPHY_OBJECT_KSZ8081,
-    .resetFunction          = 0,
     .ethphyTmo              = &drvksz8081Tmo,
     .pMiimObject            = &DRV_MIIM_OBJECT_BASE_Default,
     .pMiimInit              = &drvMiimInitData_0,
     .miimIndex              = 0,
+
+
+    .resetFunction          = 0,
 };
 
 
