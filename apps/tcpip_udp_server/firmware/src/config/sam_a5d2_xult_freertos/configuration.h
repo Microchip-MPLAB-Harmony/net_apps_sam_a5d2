@@ -172,37 +172,6 @@ extern "C" {
 
 
 
-/*** NBNS Configuration ***/
-#define TCPIP_STACK_USE_NBNS
-#define TCPIP_NBNS_TASK_TICK_RATE   110
-
-
-
-/*** TCP Configuration ***/
-#define TCPIP_TCP_MAX_SEG_SIZE_TX		        	1460
-#define TCPIP_TCP_SOCKET_DEFAULT_TX_SIZE			512
-#define TCPIP_TCP_SOCKET_DEFAULT_RX_SIZE			512
-#define TCPIP_TCP_DYNAMIC_OPTIONS             			true
-#define TCPIP_TCP_START_TIMEOUT_VAL		        	1000
-#define TCPIP_TCP_DELAYED_ACK_TIMEOUT		    		100
-#define TCPIP_TCP_FIN_WAIT_2_TIMEOUT		    		5000
-#define TCPIP_TCP_KEEP_ALIVE_TIMEOUT		    		10000
-#define TCPIP_TCP_CLOSE_WAIT_TIMEOUT		    		0
-#define TCPIP_TCP_MAX_RETRIES		            		5
-#define TCPIP_TCP_MAX_UNACKED_KEEP_ALIVES			6
-#define TCPIP_TCP_MAX_SYN_RETRIES		        	3
-#define TCPIP_TCP_AUTO_TRANSMIT_TIMEOUT_VAL			40
-#define TCPIP_TCP_WINDOW_UPDATE_TIMEOUT_VAL			200
-#define TCPIP_TCP_MAX_SOCKETS		                10
-#define TCPIP_TCP_TASK_TICK_RATE		        	5
-#define TCPIP_TCP_MSL_TIMEOUT		        	    0
-#define TCPIP_TCP_QUIET_TIME		        	    0
-#define TCPIP_TCP_COMMANDS   false
-#define TCPIP_TCP_EXTERN_PACKET_PROCESS   false
-#define TCPIP_TCP_DISABLE_CRYPTO_USAGE		        	    false
-
-
-
 /*** DHCP Configuration ***/
 #define TCPIP_STACK_USE_DHCP_CLIENT
 #define TCPIP_DHCP_TIMEOUT                          10
@@ -221,6 +190,9 @@ extern "C" {
 
 
 
+#define TCPIP_STACK_USE_ICMPV6_SERVER
+
+
 /*** ARP Configuration ***/
 #define TCPIP_ARP_CACHE_ENTRIES                 		5
 #define TCPIP_ARP_CACHE_DELETE_OLD		        	true
@@ -236,9 +208,6 @@ extern "C" {
 #define TCPIP_ARP_PRIMARY_CACHE_ONLY		        	true
 #define TCPIP_ARP_COMMANDS false
 
-
-
-#define TCPIP_STACK_USE_ICMPV6_SERVER
 
 
 #define TCPIP_IPV6_NDP_MAX_RTR_SOLICITATION_DELAY 	1
@@ -351,7 +320,6 @@ extern "C" {
 
 #define TCPIP_STACK_USE_IPV4
 #define TCPIP_STACK_USE_IPV6
-#define TCPIP_STACK_USE_TCP
 #define TCPIP_STACK_USE_UDP
 
 #define TCPIP_STACK_TICK_RATE		        		5
@@ -451,24 +419,6 @@ extern "C" {
 
 
 
-/*** SNTP Configuration ***/
-#define TCPIP_STACK_USE_SNTP_CLIENT
-#define TCPIP_NTP_DEFAULT_IF		        	"GMAC"
-#define TCPIP_NTP_VERSION             			4
-#define TCPIP_NTP_DEFAULT_CONNECTION_TYPE   	IP_ADDRESS_TYPE_IPV4
-#define TCPIP_NTP_EPOCH		                	2208988800ul
-#define TCPIP_NTP_REPLY_TIMEOUT		        	6
-#define TCPIP_NTP_MAX_STRATUM		        	15
-#define TCPIP_NTP_TIME_STAMP_TMO				660
-#define TCPIP_NTP_SERVER		        		"pool.ntp.org"
-#define TCPIP_NTP_SERVER_MAX_LENGTH				30
-#define TCPIP_NTP_QUERY_INTERVAL				600
-#define TCPIP_NTP_FAST_QUERY_INTERVAL	    	14
-#define TCPIP_NTP_TASK_TICK_RATE				1100
-#define TCPIP_NTP_RX_QUEUE_LIMIT				2
-
-
-
 /*** announce Configuration ***/
 #define TCPIP_STACK_USE_ANNOUNCE
 #define TCPIP_ANNOUNCE_MAX_PAYLOAD 	512
@@ -487,63 +437,6 @@ extern "C" {
 #define TCPIP_UDP_USE_RX_CHECKSUM             			true
 #define TCPIP_UDP_COMMANDS   false
 #define TCPIP_UDP_EXTERN_PACKET_PROCESS   false
-
-
-
-/*** wolfCrypt Library Configuration ***/
-#define MICROCHIP_PIC32
-#define MICROCHIP_MPLAB_HARMONY
-#define MICROCHIP_MPLAB_HARMONY_3
-#define HAVE_MCAPI
-#define SIZEOF_LONG_LONG 8
-#define WOLFSSL_USER_IO
-#define NO_WRITEV
-#define NO_FILESYSTEM
-#define USE_FAST_MATH
-#define NO_PWDBASED
-#define HAVE_MCAPI
-#define WOLF_CRYPTO_CB  // provide call-back support
-#define WOLFCRYPT_ONLY
-// ---------- FUNCTIONAL CONFIGURATION START ----------
-#define WOLFSSL_AES_SMALL_TABLES
-#define NO_MD4
-#define WOLFSSL_SHA224
-#define WOLFSSL_AES_128
-#define WOLFSSL_AES_192
-#define WOLFSSL_AES_256
-#define WOLFSSL_AES_DIRECT
-#define HAVE_AES_DECRYPT
-#define HAVE_AES_ECB
-#define HAVE_AES_CBC
-#define WOLFSSL_AES_COUNTER
-#define WOLFSSL_AES_OFB
-#define HAVE_AESGCM
-#define HAVE_AESCCM
-#define NO_RC4
-#define NO_HC128
-#define NO_RABBIT
-#define HAVE_ECC
-#define NO_DH
-#define NO_DSA
-#define FP_MAX_BITS 4096
-#define USE_CERT_BUFFERS_2048
-#define NO_DEV_RANDOM
-#define HAVE_HASHDRBG
-#define WC_NO_HARDEN
-#define FREERTOS
-#define NO_SIG_WRAPPER
-#define NO_ERROR_STRINGS
-#define NO_WOLFSSL_MEMORY
-// ---------- FUNCTIONAL CONFIGURATION END ----------
-
-/* MPLAB Harmony Net Presentation Layer Definitions*/
-#define NET_PRES_NUM_INSTANCE 1
-#define NET_PRES_NUM_SOCKETS 10
-
-/* Net Pres RTOS Configurations*/
-#define NET_PRES_RTOS_STACK_SIZE                12288
-#define NET_PRES_RTOS_TASK_PRIORITY             1
-	
 
 
 #define DRV_KSZ8081_PHY_CONFIG_FLAGS       ( 0 \
