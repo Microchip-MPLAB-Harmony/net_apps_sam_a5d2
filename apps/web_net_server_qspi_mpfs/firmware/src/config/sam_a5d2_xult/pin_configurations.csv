@@ -2,7 +2,7 @@ Pin Number,Pin ID,Custom Name,Function,Direction,Latch,Open Drain,PIO Interrupt,
 A1,PB23,,GMAC_GMDIO,n/a,n/a,No,Disabled,No,Yes,Glitch Filter,0x0
 A2,PB21,,GMAC_GTX1,n/a,n/a,No,Disabled,No,Yes,Glitch Filter,0x0
 A3,PB18,,GMAC_GRX0,n/a,n/a,No,Disabled,No,Yes,Glitch Filter,0x0
-A4,PB9,SWITCH_AL_PB9,SWITCH_AL,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
+A4,PB9,SWITCH_USER,SWITCH_AL,n/a,n/a,No,Disabled,No,No,Glitch Filter,0x0
 A5,PB8,,Available,In,,,,,,,
 A6,PB3,,Available,In,,,,,,,
 A7,PB2,,Available,In,,,,,,,

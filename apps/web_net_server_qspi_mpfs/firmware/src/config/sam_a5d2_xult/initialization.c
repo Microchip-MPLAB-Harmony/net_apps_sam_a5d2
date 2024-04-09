@@ -667,11 +667,13 @@ const DRV_ETHPHY_INIT tcpipPhyInitData_KSZ8081 =
     .phyAddress             = DRV_KSZ8081_PHY_ADDRESS,
     .phyFlags               = DRV_KSZ8081_PHY_CONFIG_FLAGS,
     .pPhyObject             = &DRV_ETHPHY_OBJECT_KSZ8081,
-    .resetFunction          = 0,
     .ethphyTmo              = &drvksz8081Tmo,
     .pMiimObject            = &DRV_MIIM_OBJECT_BASE_Default,
     .pMiimInit              = &drvMiimInitData_0,
     .miimIndex              = 0,
+
+
+    .resetFunction          = 0,
 };
 
 
