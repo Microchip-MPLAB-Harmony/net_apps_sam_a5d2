@@ -3,6 +3,45 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Network Application Examples for SAMA5D2 Family, v3.11.0
+
+### New Features
+- Added demo applications for SAMA5D29 Curiosity Development Board.
+
+### Improvements and Bug Fixes
+- Removed the extra/unneeded modules from SAMA5D27-XULT demos.
+- Fixed the wolfSSL+FreeRTOS demos to work with secure port 443.
+- Updated the demo documentation and included SAMA5D29 Curiosity.
+
+### Known Issues
+- Build warnings for third_party/wolfMQTT/mqtt_socket.c in wolfMQTT demo. Workaround is to uncheck 'Make warnings into errors' in xc32 options.
+- While regenerating the web_net_server_qspi_mpfs demo configurations do not overwrite the mpfs_net_img.c file.
+	- The symbols used in the automatically generated file are not present in the project.
+
+### Development Tools
+
+- [MPLAB® X IDE, v6.20](https://www.microchip.com/mplab/mplab-x-ide) or later
+- [MPLAB® XC32 C/C++ Compiler, v4.35](https://www.microchip.com/mplab/compilers) or later
+- [MPLAB® Code Configurator(MCC) Plugin, v5.5.0](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) or later
+- [MPLAB® Harmony v3 net repository, v3.11.1](https://github.com/Microchip-MPLAB-Harmony/net/tree/v3.11.1)
+- [MPLAB® Harmony v3 net\_apps\_sam\_a5d2 demo apps repository, v3.11.0](https://github.com/Microchip-MPLAB-Harmony/net_apps_sam_a5d2/tree/v3.11.0)
+
+### Development Kit Support
+
+This release supports applications for the following development kit.
+
+| Development Kits |
+| --- |
+| [SAM A5D2 Xplained Ultra Evaluation Kit](https://www.microchip.com/Developmenttools/ProductDetails/ATSAMA5D2C-XULT) |
+| [SAMA5D29 Curiosity Development Board](https://www.microchip.com/en-us/development-tool/EV07R15A) |
+
+
+## Net Release Notes
+
+- See the [Net 3.11.1 Release Notes](https://github.com/Microchip-MPLAB-Harmony/net/tree/v3.11.1)
+
+---
+
 ## Network Application Examples for SAMA5D2 Family, v3.10.0
 
 ### New Features
