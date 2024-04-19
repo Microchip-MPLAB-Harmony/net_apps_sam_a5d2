@@ -136,17 +136,6 @@ const TCPIP_TCP_MODULE_CONFIG tcpipTCPInitData =
 
 
 
-/*** SNTP Client Initialization Data ***/
-const TCPIP_SNTP_MODULE_CONFIG tcpipSNTPInitData =
-{
-    .ntp_server             = TCPIP_NTP_SERVER,
-    .ntp_interface          = TCPIP_NTP_DEFAULT_IF,
-    .ntp_connection_type    = TCPIP_NTP_DEFAULT_CONNECTION_TYPE,
-    .ntp_reply_timeout      = TCPIP_NTP_REPLY_TIMEOUT,
-    .ntp_stamp_timeout      = TCPIP_NTP_TIME_STAMP_TMO,
-    .ntp_success_interval   = TCPIP_NTP_QUERY_INTERVAL,
-    .ntp_error_interval     = TCPIP_NTP_FAST_QUERY_INTERVAL,
-};
 
 
 
@@ -172,11 +161,6 @@ const TCPIP_ICMP_MODULE_CONFIG tcpipICMPInitData =
     0
 };
 
-/*** NBNS Server Initialization Data ***/
-const TCPIP_NBNS_MODULE_CONFIG tcpipNBNSInitData =
-{ 
-    0
-};
 
 
 
@@ -267,8 +251,6 @@ const TCPIP_STACK_MODULE_CONFIG TCPIP_STACK_MODULE_CONFIG_TBL [] =
     {TCPIP_MODULE_DHCP_CLIENT,      &tcpipDHCPInitData},            // TCPIP_MODULE_DHCP_CLIENT
     {TCPIP_MODULE_ANNOUNCE,         &tcpipAnnounceInitData},        // TCPIP_MODULE_ANNOUNCE
     {TCPIP_MODULE_DNS_CLIENT,       &tcpipDNSClientInitData},       // TCPIP_MODULE_DNS_CLIENT
-    {TCPIP_MODULE_NBNS,             &tcpipNBNSInitData},            // TCPIP_MODULE_NBNS
-    {TCPIP_MODULE_SNTP,             &tcpipSNTPInitData},            // TCPIP_MODULE_SNTP
 
     {TCPIP_MODULE_BERKELEY,         &tcpipBerkeleyInitData},        // TCPIP_MODULE_BERKELEY
     {TCPIP_MODULE_COMMAND,          0},                             // TCPIP_MODULE_COMMAND,
