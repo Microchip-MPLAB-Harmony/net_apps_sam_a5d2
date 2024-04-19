@@ -4,7 +4,7 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>tcpip_udp_client_server</name>
-            <creation-uuid>035907d9-4a1a-4df8-a016-e2513118f547</creation-uuid>
+            <creation-uuid>62964d35-17f2-43cc-b298-effa431e2859</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

@@ -25,9 +25,9 @@
             <logicalFolder name="gmac" displayName="gmac" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
                 <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
-                  <itemPath>../src/config/sam_a5d2_xult_freertos/driver/gmac/src/dynamic/drv_gmac_lib_sam.h</itemPath>
-                  <itemPath>../src/config/sam_a5d2_xult_freertos/driver/gmac/src/dynamic/drv_gmac_lib.h</itemPath>
                   <itemPath>../src/config/sam_a5d2_xult_freertos/driver/gmac/src/dynamic/_gmac_dcpt_lists.h</itemPath>
+                  <itemPath>../src/config/sam_a5d2_xult_freertos/driver/gmac/src/dynamic/drv_gmac_lib.h</itemPath>
+                  <itemPath>../src/config/sam_a5d2_xult_freertos/driver/gmac/src/dynamic/drv_gmac_lib_sam.h</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/driver/gmac/src/drv_gmac_local.h</itemPath>
               </logicalFolder>
@@ -53,139 +53,139 @@
                   <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/common/sys_fs_shell.h</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_packet.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tftpc_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/zero_conf_link_local_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_types.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/udp_manager.h</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcp_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_heap_alloc.h</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dnss_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/snmpv3_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/snmp_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ftpc_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_manager_control.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcps_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcpv6_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/smtpc_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/link_list.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_helpers_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcp_server_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tftps_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/smtp_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_mac_bridge_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ftpc_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/http_net_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcps_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ftp_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ipv6_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/udp_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dnss_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_notify.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/http_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ndp_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/snmp_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ipv4_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tftpc_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/lldp_manager.h</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dns_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/iperf_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/sntp_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/arp_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/zero_conf_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/lldp_tlv.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/igmp_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_module_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/smtpc_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/zero_conf_helper.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/http_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/lldp_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcp_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/nbns_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/oahash.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/telnet_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ftp_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcp_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcp_server_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_announce_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tftps_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcpv6_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcp_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/hash_fnv.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/berkeley_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_reboot_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_mac_bridge_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/icmpv6_manager.h</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dns_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcpv6_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/icmp_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/sntp_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/zero_conf_link_local_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/udp_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/lldp_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ftp_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/lldp_tlv.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcp_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_manager_control.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ddns_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ftp_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/zero_conf_helper.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_mac_bridge_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_heap_alloc.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcp_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_notify.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tftps_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ipv4_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/link_list.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/snmp_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/iperf_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tftpc_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcp_server_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_announce_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_types.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/hash_fnv.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ftpc_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/arp_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ndp_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/zero_conf_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/http_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/udp_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tftps_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcpv6_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/smtpc_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcp_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_module_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/igmp_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcps_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/telnet_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/http_net_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/lldp_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ipv6_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_helpers_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_reboot_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/oahash.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_commands_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/icmpv6_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/berkeley_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tftpc_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcp_server_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dns_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/snmpv3_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ipv6_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/http_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dnss_private.h</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ipv4_manager.h</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/igmp_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ipv6_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/icmp_manager.h</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/http_net_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ndp_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_commands_manager.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/arp_private.h</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ddns_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/snmp_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/smtpc_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcps_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/arp_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_mac_bridge_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/smtp_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/nbns_manager.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ndp_private.h</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ftpc_private.h</itemPath>
               </logicalFolder>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/dnss.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/zero_conf_multicast_dns.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/lldp.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/dhcp_server.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_reboot.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_common_ports.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/ddns.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_commands.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/telnet.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/snmpv3.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_ethernet.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_heap.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/dhcpv6.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/smtpc.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/igmp.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/ftp.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/iperf.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/dhcps.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/http_net.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/arp.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/icmpv6.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_mac.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/ftpc.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_manager.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/dhcp.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/snmp.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/nbns.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_announce.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/ipv6.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tftpc.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/smtp.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_mac_bridge.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_helpers.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tftps.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_mac_object.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcp.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/icmp.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/sntp.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/dns.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/udp.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/http.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/ndp.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/zero_conf_link_local.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/berkeley_api.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/dhcp.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/telnet.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/ipv4.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/snmp.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/snmpv3.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/icmpv6.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_announce.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/http.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/berkeley_api.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_common_ports.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_ethernet.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_mac.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_helpers.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/dhcps.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/icmp.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/dns.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/nbns.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/dhcp_server.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/lldp.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/ddns.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/arp.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcp.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_commands.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/udp.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/ndp.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/dnss.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/http_net.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_reboot.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_manager.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tftpc.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/dhcpv6.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_heap.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/sntp.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/igmp.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/zero_conf_multicast_dns.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_mac_bridge.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/iperf.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/ftpc.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/ftp.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tftps.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/smtpc.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/tcpip_mac_object.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="net_pres" displayName="net_pres" projectFiles="true">
             <logicalFolder name="pres" displayName="pres" projectFiles="true">
-              <itemPath>../src/config/sam_a5d2_xult_freertos/net_pres/pres/net_pres.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/net_pres/pres/net_pres_socketapiconversion.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/net_pres/pres/net_pres.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/net_pres/pres/net_pres_socketapi.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="osal" displayName="osal" projectFiles="true">
-            <itemPath>../src/config/sam_a5d2_xult_freertos/osal/osal_freertos.h</itemPath>
-            <itemPath>../src/config/sam_a5d2_xult_freertos/osal/osal.h</itemPath>
             <itemPath>../src/config/sam_a5d2_xult_freertos/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/sam_a5d2_xult_freertos/osal/osal.h</itemPath>
+            <itemPath>../src/config/sam_a5d2_xult_freertos/osal/osal_freertos.h</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="aic" displayName="aic" projectFiles="true">
@@ -226,9 +226,9 @@
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/command/sys_command.h</itemPath>
             </logicalFolder>
             <logicalFolder name="console" displayName="console" projectFiles="true">
-              <itemPath>../src/config/sam_a5d2_xult_freertos/system/console/src/sys_console_uart.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/console/sys_console.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/console/src/sys_console_local.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/system/console/src/sys_console_uart.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/console/src/sys_console_uart_definitions.h</itemPath>
             </logicalFolder>
             <logicalFolder name="debug" displayName="debug" projectFiles="true">
@@ -240,55 +240,55 @@
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/int/sys_int.h</itemPath>
             </logicalFolder>
             <logicalFolder name="ports" displayName="ports" projectFiles="true">
-              <itemPath>../src/config/sam_a5d2_xult_freertos/system/ports/sys_ports_mapping.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/ports/sys_ports.h</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/system/ports/sys_ports_mapping.h</itemPath>
             </logicalFolder>
             <logicalFolder name="reset" displayName="reset" projectFiles="true">
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/reset/sys_reset.h</itemPath>
             </logicalFolder>
             <logicalFolder name="time" displayName="time" projectFiles="true">
+              <itemPath>../src/config/sam_a5d2_xult_freertos/system/time/sys_time_definitions.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/time/src/sys_time_local.h</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/time/sys_time.h</itemPath>
-              <itemPath>../src/config/sam_a5d2_xult_freertos/system/time/sys_time_definitions.h</itemPath>
             </logicalFolder>
-            <itemPath>../src/config/sam_a5d2_xult_freertos/system/system_module.h</itemPath>
             <itemPath>../src/config/sam_a5d2_xult_freertos/system/system_common.h</itemPath>
-            <itemPath>../src/config/sam_a5d2_xult_freertos/system/sys_time_h2_adapter.h</itemPath>
+            <itemPath>../src/config/sam_a5d2_xult_freertos/system/system_module.h</itemPath>
             <itemPath>../src/config/sam_a5d2_xult_freertos/system/system.h</itemPath>
+            <itemPath>../src/config/sam_a5d2_xult_freertos/system/sys_time_h2_adapter.h</itemPath>
             <itemPath>../src/config/sam_a5d2_xult_freertos/system/sys_random_h2_adapter.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/config/sam_a5d2_xult_freertos/device.h</itemPath>
-          <itemPath>../src/config/sam_a5d2_xult_freertos/configuration.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/user.h</itemPath>
-          <itemPath>../src/config/sam_a5d2_xult_freertos/device_cache.h</itemPath>
-          <itemPath>../src/config/sam_a5d2_xult_freertos/system_config.h</itemPath>
-          <itemPath>../src/config/sam_a5d2_xult_freertos/definitions.h</itemPath>
-          <itemPath>../src/config/sam_a5d2_xult_freertos/interrupts.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/FreeRTOSConfig.h</itemPath>
-          <itemPath>../src/config/sam_a5d2_xult_freertos/system_definitions.h</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/configuration.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/toolchain_specifics.h</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/definitions.h</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/device.h</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/system_config.h</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/sys_tasks.h</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/interrupts.h</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/device_cache.h</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/system_definitions.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
         <logicalFolder name="Source" displayName="Source" projectFiles="true">
           <logicalFolder name="include" displayName="include" projectFiles="true">
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stack_macros.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/queue.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/message_buffer.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/portable.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/croutine.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/timers.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/semphr.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/event_groups.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/list.h</itemPath>
-            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/timers.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/semphr.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/queue.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/croutine.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/task.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/list.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stack_macros.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/portable.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h</itemPath>
           </logicalFolder>
           <logicalFolder name="portable" displayName="portable" projectFiles="true">
             <logicalFolder name="XC32" displayName="XC32" projectFiles="true">
@@ -306,122 +306,122 @@
                        displayName="ATSAMA5D27_DFP"
                        projectFiles="true">
           <logicalFolder name="component" displayName="component" projectFiles="true">
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/pmc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sfr.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/udphs.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/rxlp.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sfc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/tc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/aes.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/aesb.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/component/qspi.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sfrbu.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/pio.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/acc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/secumod.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/adc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/trng.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/flexcom.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/uhphs.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/matrix.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/gmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/icm.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sdmmc.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/component/uart.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sckc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/shdwc.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/component/classd.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/isc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/xdmac.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/chipid.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/tdes.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/mpddrc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/mcan.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/pdmic.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/smc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/ptc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/lcdc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/i2sc.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/component/pit.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/component/spi.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/shdwc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/matrix.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/chipid.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/mpddrc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/smc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/aesb.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/tc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/ptc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/trng.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/acc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/adc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/tdes.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/aes.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/aximx.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/twihs.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/mcan.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/xdmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/pio.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/gmac.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/component/l2cc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sdmmc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sckc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/pmc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/rstc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sfc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/udphs.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sfr.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/component/wdt.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/component/ssc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/icm.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sha.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/aximx.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/pwm.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/twihs.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/uhphs.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/i2sc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/lcdc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sfrbu.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/component/aic.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/component/rstc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/isc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/pwm.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/secumod.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/pdmic.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/sha.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/flexcom.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/component/rxlp.h</itemPath>
           </logicalFolder>
           <logicalFolder name="instance" displayName="instance" projectFiles="true">
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/aximx.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/lcdc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pio.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/udphs.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sfc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/aesb.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/ssc0.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/qspi0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/spi0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/chipid.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/saic.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/matrix0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/ssc1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pmc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tdes.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sdmmc0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sckc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/classd.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/matrix1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/mpddrc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/isc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sfr.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/shdwc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/gmac.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/wdt.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/xdmac0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sfrbu.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/aic.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart3.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/xdmac1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart2.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/icm.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom4.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pwm.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/aes.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/rtc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart4.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sha.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pdmic.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/trng.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/mcan0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/rstc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom2.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sdmmc1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/mcan1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom3.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/l2cc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/i2sc1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pit.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tc1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/i2sc0.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/ptc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/qspi1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/spi1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/twihs1.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/adc.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/rxlp.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/acc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/twihs0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/shdwc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/i2sc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/trng.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/xdmac1.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/xdmac0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/aic.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pio.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart2.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/secumod.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sdmmc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/aximx.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/qspi1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/i2sc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pdmic.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart4.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/twihs1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/gmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/aesb.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/uart3.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/hsmc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pit.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sckc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/acc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/udphs.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/ptc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tdes.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/twihs0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/spi0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sha.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/adc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/mcan0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/ssc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sfrbu.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pwm.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/saic.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/lcdc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/mcan1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/ssc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/mpddrc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/classd.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom3.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/chipid.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/aes.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom2.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/l2cc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pmc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sfr.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/isc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/rstc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sfc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/flexcom4.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/sdmmc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/matrix1.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/icm.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/matrix0.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/spi1.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMA5D27_DFP/pio/sama5d27.h</itemPath>
@@ -432,11 +432,11 @@
           <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
             <logicalFolder name="Core_A" displayName="Core_A" projectFiles="true">
               <logicalFolder name="Include" displayName="Include" projectFiles="true">
+                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_cp15.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_gcc.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/core_ca.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_cp15.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_compiler.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_iccarm.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_compiler.h</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -450,7 +450,6 @@
                    projectFiles="true">
       <itemPath>Makefile</itemPath>
       <itemPath>tcpip_udp_client_server.mc3</itemPath>
-      <itemPath>../src/config/sam_a5d2_xult_freertos/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -477,8 +476,8 @@
             <logicalFolder name="ethphy" displayName="ethphy" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
                 <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
-                  <itemPath>../src/config/sam_a5d2_xult_freertos/driver/ethphy/src/dynamic/drv_extphy_ksz8081.c</itemPath>
                   <itemPath>../src/config/sam_a5d2_xult_freertos/driver/ethphy/src/dynamic/drv_ethphy.c</itemPath>
+                  <itemPath>../src/config/sam_a5d2_xult_freertos/driver/ethphy/src/dynamic/drv_extphy_ksz8081.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
@@ -493,8 +492,8 @@
             <logicalFolder name="miim" displayName="miim" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
                 <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
-                  <itemPath>../src/config/sam_a5d2_xult_freertos/driver/miim/src/dynamic/drv_miim.c</itemPath>
                   <itemPath>../src/config/sam_a5d2_xult_freertos/driver/miim/src/dynamic/drv_miim_gmac.c</itemPath>
+                  <itemPath>../src/config/sam_a5d2_xult_freertos/driver/miim/src/dynamic/drv_miim.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
@@ -506,24 +505,24 @@
                   <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/helpers.c</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_packet.c</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_heap_alloc.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_announce.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/icmpv6.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dns.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_heap_alloc.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/icmp.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_notify.c</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/arp.c</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcp.c</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_commands.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/udp.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ndp.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_helpers.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_heap_internal.c</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dns.c</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/oahash.c</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ndp.c</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/hash_fnv.c</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/icmpv6.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ipv4.c</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/udp.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/hash_fnv.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_commands.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/tcpip_manager.c</itemPath>
-                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/icmp.c</itemPath>
                 <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/ipv6.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/oahash.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/arp.c</itemPath>
+                <itemPath>../src/config/sam_a5d2_xult_freertos/library/tcpip/src/dhcp.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -570,8 +569,8 @@
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/command/src/sys_command.c</itemPath>
             </logicalFolder>
             <logicalFolder name="console" displayName="console" projectFiles="true">
-              <itemPath>../src/config/sam_a5d2_xult_freertos/system/console/src/sys_console_uart.c</itemPath>
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/console/src/sys_console.c</itemPath>
+              <itemPath>../src/config/sam_a5d2_xult_freertos/system/console/src/sys_console_uart.c</itemPath>
             </logicalFolder>
             <logicalFolder name="debug" displayName="debug" projectFiles="true">
               <itemPath>../src/config/sam_a5d2_xult_freertos/system/debug/src/sys_debug.c</itemPath>
@@ -588,11 +587,11 @@
             <itemPath>../src/config/sam_a5d2_xult_freertos/system/sys_time_h2_adapter.c</itemPath>
           </logicalFolder>
           <itemPath>../src/config/sam_a5d2_xult_freertos/cstartup.S</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/tasks.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/interrupts.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/initialization.c</itemPath>
-          <itemPath>../src/config/sam_a5d2_xult_freertos/tasks.c</itemPath>
-          <itemPath>../src/config/sam_a5d2_xult_freertos/freertos_hooks.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_freertos/fault_handlers.c</itemPath>
+          <itemPath>../src/config/sam_a5d2_xult_freertos/freertos_hooks.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
@@ -604,24 +603,24 @@
             <logicalFolder name="XC32" displayName="XC32" projectFiles="true">
               <logicalFolder name="SAM" displayName="SAM" projectFiles="true">
                 <logicalFolder name="CA5" displayName="CA5" projectFiles="true">
-                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5/FreeRTOS_tick_config.c</itemPath>
-                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5/portASM.S</itemPath>
                   <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5/port.c</itemPath>
+                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5/portASM.S</itemPath>
+                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5/FreeRTOS_tick_config.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
-          <itemPath>../src/third_party/rtos/FreeRTOS/Source/event_groups.c</itemPath>
-          <itemPath>../src/third_party/rtos/FreeRTOS/Source/FreeRTOS_tasks.c</itemPath>
-          <itemPath>../src/third_party/rtos/FreeRTOS/Source/stream_buffer.c</itemPath>
-          <itemPath>../src/third_party/rtos/FreeRTOS/Source/croutine.c</itemPath>
-          <itemPath>../src/third_party/rtos/FreeRTOS/Source/list.c</itemPath>
           <itemPath>../src/third_party/rtos/FreeRTOS/Source/queue.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/stream_buffer.c</itemPath>
           <itemPath>../src/third_party/rtos/FreeRTOS/Source/timers.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/FreeRTOS_tasks.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/event_groups.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/list.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/croutine.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/main.c</itemPath>
       <itemPath>../src/config/sam_a5d2_xult_freertos/pin_configurations.csv</itemPath>
       <itemPath>../src/app_commands.c</itemPath>
     </logicalFolder>
@@ -674,13 +673,13 @@
         <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -O binary ${ImageDir}/${ConfName}.X.${IMAGE_TYPE}.elf ${ImageDir}/harmony.bin</makeCustomizationPostStep>
+        <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -O binary ${ImageDir}/${ConfName}.X.${IMAGE_TYPE}.elf ${ImageDir}/harmony.bin </makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <C32>
-        <property key="additional-warnings" value="true"/>
+        <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
         <property key="appendMe" value="-marm"/>
         <property key="enable-app-io" value="false"/>
@@ -689,17 +688,16 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_a5d2_xult_freertos;../src/config/sam_a5d2_xult_freertos/library;../src/config/sam_a5d2_xult_freertos/library/tcpip/src;../src/config/sam_a5d2_xult_freertos/library/tcpip/src/common;../src/packs/ATSAMA5D27_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl"/>
+                  value="../src;../src/config/sam_a5d2_xult_freertos;../src/config/sam_a5d2_xult_freertos/library;../src/config/sam_a5d2_xult_freertos/library/tcpip/src;../src/config/sam_a5d2_xult_freertos/library/tcpip/src/common;../src/packs/ATSAMA5D27_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="isolate-each-function" value="true"/>
-        <property key="make-warnings-into-errors" value="true"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-O1"/>
-        <property key="place-data-into-section" value="true"/>
+        <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
-        <property key="preprocessor-macros"
-                  value="HAVE_CONFIG_H;WOLFSSL_IGNORE_FILE_WARN"/>
+        <property key="preprocessor-macros" value=""/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="tentative-definitions" value="-fno-common"/>
@@ -769,7 +767,7 @@
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
-        <property key="remove-unused-sections" value="true"/>
+        <property key="remove-unused-sections" value="false"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
         <property key="serial-origin" value=""/>
@@ -794,7 +792,7 @@
                   value="../src;../src/config/sam_a5d2_xult_freertos;../src/packs/ATSAMA5D27_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA5"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="isolate-each-function" value="true"/>
+        <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-O1"/>
         <property key="place-data-into-section" value="false"/>
@@ -849,8 +847,6 @@
         <property key="programoptions.preservebootflash" value="false"/>
         <property key="programoptions.preserveprogrammemory" value="false"/>
         <property key="programoptions.preserveprogrammemory.ranges"
-                  value="0x200000-0x23ffff"/>
-        <property key="programoptions.preserveprogramrange.ranges"
                   value="0x200000-0x23ffff"/>
         <property key="programoptions.resetafterprogram" value="true"/>
         <property key="script.has_reset" value="true"/>
