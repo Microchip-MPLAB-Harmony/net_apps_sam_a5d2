@@ -3,6 +3,27 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Network Application Examples for SAMA5D2 Family, v3.11.2
+
+### New Features
+- None
+
+### Improvements and Bug Fixes
+- Documentation updates
+
+### Known Issues
+- Same as previous release (v3.11.1)
+
+### Development Tools
+- Same as previous release (v3.11.1)
+
+### Development Kit Support
+- Same as previous release (v3.11.1)
+
+## Net Release Notes
+- Same as previous release (v3.11.1)
+
+---
 ## Network Application Examples for SAMA5D2 Family, v3.11.1
 
 ### New Features
